@@ -1,0 +1,9 @@
+<div class="flex gap-10">
+  @for (category of categories(); track idx; let idx = $index) {
+  <a
+    [routerLink]="[idx + 1]"
+    class="p-5 border-2 border-black text-lg rounded-2xl"
+    >{{ category.start }} - {{ category.end }}</a
+  >
+  }
+</div>

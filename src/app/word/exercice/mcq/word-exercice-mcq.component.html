@@ -1,0 +1,19 @@
+<p class="text-center text-xl pb-9 font-bold">{{ word?.value }}</p>
+<div class="flex flex-wrap justify-center">
+  @for (word of words; track word.id) {
+  <button
+    type="button"
+    class="border border-black p-2 m-3 flex flex-col disabled:border-white"
+    [disabled]="answeredWords.includes(word)"
+    (click)="onClick(word)"
+  >
+    <span>{{ word.translationFr }}</span>
+    @if (answeredWords.includes(word)) {
+    <span class="font-bold">{{ word.value }}</span>
+    }
+    <span class="opacity-0" [class.h-0]="answeredWords.includes(word)">{{
+      mask
+    }}</span>
+  </button>
+  }
+</div>

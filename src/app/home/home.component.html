@@ -1,0 +1,9 @@
+<div class="flex flex-col justify-center items-center gap-10">
+  @for (langCode of langCodes; track langCode) {
+  <a
+    [routerLink]="['/', langCode]"
+    class="w-80 py-8 text-center border-4 border-black"
+    >{{ langLabels[langCode] }}</a
+  >
+  }
+</div>
