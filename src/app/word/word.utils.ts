@@ -33,7 +33,7 @@ export async function findCategoryWords(
   return allWords.slice(start, end);
 }
 
-export function findRandomWords(words: Word[], nbWords: number = 10): Word[] {
+export function findRandomWords(words: Word[], nbWords: number): Word[] {
   const indexes = new Set<number>();
   const maxSize = Math.min(words.length, nbWords);
 

@@ -1,24 +1,19 @@
 <div class="grid grid-cols-2 gap-4">
   @for (word of words; track word.id) {
-  <span class="justify-self-end pb-1">{{ word.translationFr }}</span>
-  <span class="font-bold">{{ word.value }}</span>
+  <span class="justify-self-end font-bold pb-0.5">{{ word.value }}</span>
+  <span>{{ word.translationFr }}</span>
   }
-  <div class="p-2 justify-self-end">
-    <button
-      type="button"
-      class="border-2 border-black font-bold rounded-full px-2"
-      (click)="reinit()"
-    >
-      ↻
-    </button>
-  </div>
-  <div class="p-2">
-    <button
-      type="button"
-      class="border-2 border-black px-4 font-bold"
-      (click)="next()"
-    >
-      >
-    </button>
-  </div>
+</div>
+<div class="flex justify-center gap-4 pt-10">
+  <button
+    type="button"
+    class="border-2 border-black font-bold rounded-full px-2 mx-2"
+    (click)="reinit()"
+  >
+    ↻
+  </button>
+  <a [routerLink]="['qcm']" class="border-2 border-black px-4">qcm</a>
+  <a [routerLink]="['formulaire']" class="border-2 border-black px-4"
+    >formulaire</a
+  >
 </div>

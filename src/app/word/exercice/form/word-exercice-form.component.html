@@ -1,0 +1,35 @@
+<form class="grid grid-cols-2 gap-4" (ngSubmit)="newExercice()">
+  @for (word of words; track word.id; let idx = $index) {
+  <span class="justify-self-end pb-1">{{ word.translationFr }}</span>
+  <span>
+    <input
+      type="text"
+      class="border-b border-black w-48 font-bold"
+      [name]="'answer' + idx"
+      [(ngModel)]="inputValues[idx]"
+      (input)="onInput(idx)"
+      (focus)="lastInputFocusIndex = idx"
+    />
+    @if (word.value === inputValues[idx]) {
+    <span class="px-2 font-bold">✔</span>
+    }
+  </span>
+  }
+  <div class="pt-3 justify-self-end">
+    <a
+      [routerLink]="['..']"
+      class="border-2 border-black px-4 font-bold inline-block"
+    >
+      ↩
+    </a>
+  </div>
+  <div class="pt-3">
+    <button
+      type="submit"
+      class="border-2 border-black px-4 py-0 font-bold disabled:opacity-40"
+      [disabled]="!isWin()"
+    >
+      ↪
+    </button>
+  </div>
+</form>

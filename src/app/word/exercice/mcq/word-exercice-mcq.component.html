@@ -1,19 +1,38 @@
-<p class="text-center text-xl pb-9 font-bold">{{ word?.value }}</p>
-<div class="flex flex-wrap justify-center">
+<p class="text-center text-xl font-bold">{{ word?.value || "✔" }}</p>
+<div class="flex flex-wrap justify-center py-5">
   @for (word of words; track word.id) {
   <button
     type="button"
-    class="border border-black p-2 m-3 flex flex-col disabled:border-white"
-    [disabled]="answeredWords.includes(word)"
+    [class]="
+      'border border-black p-2 m-2 flex flex-col ' +
+      'disabled:select-text disabled:border-white'
+    "
     (click)="onClick(word)"
+    [disabled]="!wordsNotChosen.includes(word)"
+    [style.width]="maskLength + 'ch'"
   >
     <span>{{ word.translationFr }}</span>
-    @if (answeredWords.includes(word)) {
-    <span class="font-bold">{{ word.value }}</span>
-    }
-    <span class="opacity-0" [class.h-0]="answeredWords.includes(word)">{{
-      mask
-    }}</span>
+    <span class="font-bold h-8">
+      @if (!wordsNotChosen.includes(word)) {
+      {{ word.value }}
+      }
+    </span>
   </button>
   }
+</div>
+<div class="flex justify-center gap-4">
+  <a
+    [routerLink]="['..']"
+    class="border-2 border-black px-4 font-bold inline-block"
+  >
+    ↩
+  </a>
+  <button
+    type="submit"
+    class="border-2 border-black px-4 py-0 font-bold disabled:opacity-40"
+    [disabled]="!isWin()"
+    (click)="newExercice()"
+  >
+    ↪
+  </button>
 </div>

@@ -11,6 +11,7 @@ import { canMatchCategory } from './word/category/can-match-category';
 import { WordExerciceComponent } from './word/exercice/word-exercice.component';
 import { WordExercicePreviewComponent } from './word/exercice/preview/word-exercice-preview.component';
 import { WordExerciceMcqComponent } from './word/exercice/mcq/word-exercice-mcq.component';
+import { WordExerciceFormComponent } from './word/exercice/form/word-exercice-form.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -49,8 +50,12 @@ export const routes: Routes = [
                 component: WordExercicePreviewComponent,
               },
               {
-                path: 'mcq',
+                path: 'qcm',
                 component: WordExerciceMcqComponent,
+              },
+              {
+                path: 'formulaire',
+                component: WordExerciceFormComponent,
               },
             ],
           },

@@ -1,37 +1,23 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Word } from '../../word.model';
 import { WordExerciceService } from '../word-exercice.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './word-exercice-preview.component.html',
 })
-export class WordExercicePreviewComponent implements OnInit {
-  words: Word[] = [];
+export class WordExercicePreviewComponent {
+  router = inject(Router);
+  route = inject(ActivatedRoute);
+  wordExerciceService = inject(WordExerciceService);
 
-  constructor(
-    private wordExerciceService: WordExerciceService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
-
-  ngOnInit(): void {
-    this.words = this.wordExerciceService.getWords();
+  get words(): Word[] {
+    return this.wordExerciceService.getWords();
   }
 
   reinit() {
-    this.words = this.wordExerciceService.reinitWords();
-  }
-
-  next() {
-    this.router.navigate(['mcq'], { relativeTo: this.route });
-  }
-
-  @HostListener('document:keydown', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.key === 'Enter') {
-      this.next();
-    }
+    this.wordExerciceService.reinit();
   }
 }
