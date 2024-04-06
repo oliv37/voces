@@ -1,4 +1,6 @@
-<p class="text-center text-xl font-bold">{{ word?.value || "✔" }}</p>
+<p class="text-center text-xl font-bold pt-1 bg-white sticky top-0">
+  {{ word?.value || "✔" }}
+</p>
 <div class="flex flex-wrap justify-center py-5">
   @for (word of words; track word.id) {
   <button
@@ -21,18 +23,13 @@
   }
 </div>
 <div class="flex justify-center gap-4">
+  <a [routerLink]="['..']" class="border-2 border-black px-4 font-bold"> ↩ </a>
   <a
-    [routerLink]="['..']"
-    class="border-2 border-black px-4 font-bold inline-block"
-  >
-    ↩
-  </a>
-  <button
-    type="submit"
-    class="border-2 border-black px-4 py-0 font-bold disabled:opacity-40"
-    [disabled]="!isWin()"
-    (click)="newExercice()"
+    [routerLink]="isWin() ? nextLink : undefined"
+    class="border-2 border-black px-4 py-0 font-bold"
+    [class.opacity-40]="!isWin()"
+    [class.cursor-default]="!isWin()"
   >
     ↪
-  </button>
+  </a>
 </div>

@@ -6,12 +6,13 @@ import { WordHomeComponent } from './word/home/word-home.component';
 import { WordCategoriesComponent } from './word/categories/word-categories.component';
 import { categoriesResolver } from './word/categories/word-categories.resolver';
 import { canMatchWord } from './word/can-match-word';
-import { wordsResolver } from './word/words-resolver';
+import { wordsInCategoryResolver } from './word/words-in-category.resolver';
 import { canMatchCategory } from './word/category/can-match-category';
 import { WordExerciceComponent } from './word/exercice/word-exercice.component';
 import { WordExercicePreviewComponent } from './word/exercice/preview/word-exercice-preview.component';
 import { WordExerciceMcqComponent } from './word/exercice/mcq/word-exercice-mcq.component';
 import { WordExerciceFormComponent } from './word/exercice/form/word-exercice-form.component';
+import { wordsResolver } from './word/words.resolver';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,9 @@ export const routes: Routes = [
     path: ':lang',
     canMatch: [canMatchWord],
     component: WordHomeComponent,
+    resolve: {
+      words: wordsResolver,
+    },
     children: [
       {
         path: '',
@@ -35,14 +39,14 @@ export const routes: Routes = [
             path: '',
             component: WordCategoryComponent,
             resolve: {
-              words: wordsResolver,
+              wordsInCategory: wordsInCategoryResolver,
             },
           },
           {
             path: 'exercice',
             component: WordExerciceComponent,
             resolve: {
-              categoryWords: wordsResolver,
+              wordsInCategory: wordsInCategoryResolver,
             },
             children: [
               {

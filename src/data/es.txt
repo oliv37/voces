@@ -3,3 +3,129 @@ arrancar : démarrer
 arrancar : arracher, enlever
 muneca : poupée
 bastar : suffir, être suffisant 
+risa : rire
+mente : esprit, cerveau
+sello : timbre
+sobre : enveloppe
+rabia : colère
+herramienta : outil
+inversion : investissement
+arrancar : démarrer
+medida : mesure
+derogar : abroger, abolir
+senador : sénateur
+acudir a : aller à, se rendre à
+demas : autre
+sede : siège, quartier général
+seguidor : supporteur
+ejercito : armée
+aislado : isolé
+corredor : couloir
+informe : rapport
+hogar : intérieur, foyer
+oveja : mouton
+senalar : indiqurer, signaler
+enganar : mentir, tromper
+sacudir : secouer
+terremoto : tremblement de terre
+revisar : inspecter, contrôler
+repasar : réviser, vérifier, relire
+temblor : tremblement
+cortina : rideau
+competir : concourir, rivaliser
+aspirar : aspirer à, convoiter
+superar : surmonter, se remettre de
+ingreso : dépôt, versement, revenus
+duda : doute
+sobrecoste : surcoût
+golpear : frapper, battre
+desarrollar : développer
+rescatar : sauver
+herida : blessure
+fuente : source
+regresar : rentrer, revenir
+contra las cuerdas : dos au mur
+protesta : manifestation
+trasladar : déplacer, déménager
+atrapar : attraper, coincer
+replicar : répondre, répliquer
+deslizamiento de tierra : glissement de terrain
+cantera : carrière
+marmol : marbre
+autopista : autoroute
+decena : dizaine
+aguantar : supporter
+oleada : vague
+sequia : sécheresse
+hectarea : hectare
+cucaracha : cafard
+devolver : rendre, redonner
+foco : projecteur, spot
+acoger : accueillir, héberger, donner l'hospitalité à
+acontecimiento : évènement, fait
+retrato : portrait
+semanal : hebdomadaire
+aparcar : garer
+atracar : braquer, dévaliser
+dato : donnée, information
+sostener : tenir, soutenir
+paliar : atténuer, soulager
+gira : tournée
+fiscalia : ministère public, bureau du procureur
+sombra : obscurité, ombre
+crucero : croisière
+estresar : stresser
+mediodia : midi
+sospecha : suspicion, soupçon
+patio : cour, cour intérieure
+nave : hangar
+cementerio : cimetière
+incomodo : malaise, incofort
+raza : race
+delito : délit, crime
+ciudadano : urbain, citoyen
+prensa : presse
+asesor : conseiller
+bufete : cabinet, bureau
+contradecir : contredire, démentir
+salvaguardar : sauvegarder, protéger
+particular : particulier, privé, personnel
+casualidad : hasard
+sanidad : services de santé
+salud : santé
+foro : forum
+subida : montée, augmentation
+mando : télécommande
+espesor : épaisseur
+inquicision : enquête, instruction
+tormenta : tempête
+corredor : courtier
+estafa : arnaque, escroquerie
+tapar : couvrir, cacher
+escotar : ajuster
+meramente : simplement, seulement
+fallecer : décéder, mourir
+entorpecer : engourdir
+hallar : trouver, découvrir
+maldicion : malédiction
+concebir : concevoir
+protagonizar : provoquer, causer
+hazana : exploit, prouesse
+punto de mira : ligne de mire
+destacar : ressortir, se démarquer
+vulgar : vulgaire
+ahundar : creuser, approfondir
+desgastar : user, se fatiguer
+hueso : os
+sendero : sentier
+lecho : lit
+declamar : déclamer
+alterarse : s'énerver
+divisar : apercevoir, discerner
+huesped : hôte, invité, client
+seno : sein
+trasero : derrière, postérieur
+espantar : effrayer
+cesped : gazon, pelouse
+emisora : station de radio, émetteur
+asunto : sujet, affaire

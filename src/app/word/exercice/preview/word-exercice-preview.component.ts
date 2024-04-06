@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { Word } from '../../word.model';
 import { WordExerciceService } from '../word-exercice.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -19,5 +19,12 @@ export class WordExercicePreviewComponent {
 
   reinit() {
     this.wordExerciceService.reinit();
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.router.navigate(['qcm'], { relativeTo: this.route });
+    }
   }
 }

@@ -18,6 +18,7 @@ rule out : écarter
 abduction : enlèvement, kidnapping
 disappearance : disparition
 wander off : s'éloigner
+spark : déclencher
 swindle : escroquer
 monk : moine
 give up : abandonner
@@ -171,7 +172,7 @@ saucy : osé, coquin
 stark : dur, rude, saisissant
 harsh : sévère, dur
 stab : poignarder
-nonce : prédophile
+nonce : pédophile
 withdrawn : renfermé, introverti
 curl : s'enrouler
 sobbing : sanglots, pleurs
@@ -295,6 +296,7 @@ on your back foot : sur la défensive
 bemoan : se lamenter sur, se plaindre de
 manufacturer : fabricant industriel
 insurable : assurable
+welsh : gallois
 carriageway : chaussée, voies
 estate : domaine, propriété
 contempt : mépris, dédain
@@ -352,9 +354,111 @@ backside : fesses, postérieur
 rub : frotter
 rob : cambrioler, voler
 overalls : bleu de travail, combinaison
-facility : établissement, complexe (sportif / hôtelier), équipements
+facility : établissement, complexe (sportif / hôtelier)
 conservative : prudent, conservateur
 speak up : parler plus fort
 sustainable : viable, durable
 affordable : abordable, pas trop cher
 shift : déplacer, décaler
+shortage : manque, pénurie
+spark : étincelle, éclair
+deal with : faire face, gérer
+handle : s'occuper de, se charger de
+grade : note
+welsh : partir sans payer, ne pas tenir un promesse
+villager : villageois
+fury : fureur, colère
+fork out : débourser, claquer
+fork : fourchette
+knife : couteau
+strangle : étrangler
+evil : mal, malfaisant
+officer : policier
+conviction : condamnation
+neglect : négligence, manque de soins
+mistreatment : mauvais traitement
+bruise : bleu, hématome
+squeeze through : se frayer un chemin
+pane : carreau
+frame : cadre, encadrement
+wander : flâner, déambuler, errer, vagabonder
+cot : lit de camp
+belt : ceinture
+spare : épargner, économiser
+to be spared jail : éviter la prison
+look after : s'occuper de
+despite : malgré
+comatose : comateux
+distress : détresse, désarroi
+shout : criter, hurler
+damp : humide
+draught : courant d'air
+prosecution : poursuite judiciaire
+turn on : s'en prendre à
+cope : surmonter
+headbutt : coup de tête
+lash out : s'en prendre à qqn
+sudden : soudain
+overwhelmed : accablé, submergé
+appalling : épouvantable, effroyable, consternant
+deadbeat : bon à rien
+wickedness : méchanceté, cruauté
+sorrow : chagrin, peine
+low : bas, basse
+traveller : gitan, manouche, romanichel
+digger : pelleteuse
+seemingly : apparement
+settle : s'installer
+covenant : engagement, contrat
+afford : se payer, avoir les moyens d'acheter
+redundancy : licenciement 
+sink : couler
+scheme : projet
+unravel : résoudre
+bleak : lugubre, morne
+spell : écrire, épeler
+doom : mort
+diminishing : qui diminue
+beware : faire attention à
+collar : col
+trial : procès
+lay : poser, mettre
+straight : droit
+go straight on : continuer tout droit
+ridden : cribblé de
+boiler : chaudière, chauffe-eau
+flood : inondation
+leak : fuite
+faulty : défectueux
+withdraw : se retirer
+relentless : incessant, continuel
+breaststroke : brasse
+bullshit : conneries
+downward : vers le bas
+numb : engourdi, insensible
+unveiled : dévoiler
+tribute : hommage
+chest : poitrine
+tough : dur, rude, solide
+hilarious : hilarant, extrêmement drôle
+brash : culotté, effronté, imprudent
+fizzle out : tomber à l'eau
+ably : avec compétence
+ordeal : épreuve, supplice
+belly : ventre
+council : conseil municipal
+brand : marque
+estate : domaine, propriété
+rife with : plein de, rempli de
+rusty : rouillé
+slum : quartier pauvre, bidonville
+labour : travailliste
+cramped : exigu, à l'étroit
+dub : surnommer
+allege : prétendre
+bully : tyranniser, persécuter
+disgraceful : honteux, scandaleux
+tenant : locataire
+subhuman : inhumain
+household : famille, foyer, ménage
+arrears : arriéré, défaut de paiement

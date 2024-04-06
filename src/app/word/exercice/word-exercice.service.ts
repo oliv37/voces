@@ -7,11 +7,12 @@ import { shuffle } from '../../shared/array.utils';
 
 @Injectable()
 export class WordExerciceService implements OnDestroy {
-  private categoryWords: Word[] = [];
-  private words: Word[] = [];
+  private wordsInCategory: Word[] = [];
+
+  private exerciceWords: Word[] = [];
 
   // mcq
-  private wordsNotChosen: Word[] = [];
+  private exerciceWordsNotChosen: Word[] = [];
 
   // form
   private inputValues: string[] = [];
@@ -22,7 +23,7 @@ export class WordExerciceService implements OnDestroy {
   constructor(route: ActivatedRoute) {
     this.sub.add(
       route.data.subscribe((data) => {
-        this.categoryWords = data['categoryWords'];
+        this.wordsInCategory = data['wordsInCategory'];
         this.reinit();
       })
     );
@@ -33,7 +34,7 @@ export class WordExerciceService implements OnDestroy {
   }
 
   getWords(): Word[] {
-    return this.words;
+    return this.exerciceWords;
   }
 
   getInputValues(): string[] {
@@ -49,17 +50,17 @@ export class WordExerciceService implements OnDestroy {
   }
 
   getWordsNotChosen(): Word[] {
-    return this.wordsNotChosen;
+    return this.exerciceWordsNotChosen;
   }
 
   popWordNotChosen() {
-    this.wordsNotChosen = this.wordsNotChosen.slice(1);
+    this.exerciceWordsNotChosen = this.exerciceWordsNotChosen.slice(1);
   }
 
   reinit(): void {
-    this.words = findRandomWords(this.categoryWords, 10);
-    this.wordsNotChosen = shuffle(this.words);
-    this.inputValues = this.words.map((_) => '');
+    this.exerciceWords = findRandomWords(this.wordsInCategory, 10);
+    this.exerciceWordsNotChosen = shuffle(this.exerciceWords);
+    this.inputValues = this.exerciceWords.map((_) => '');
     this.lastInputFocusIndex = 0;
   }
 }

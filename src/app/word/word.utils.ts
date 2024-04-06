@@ -1,5 +1,5 @@
 import { LANG } from '../shared/lang.constants';
-import { Word, WordCategory } from './word.model';
+import { Word } from './word.model';
 
 export const CATEGORY_SIZE = 100;
 
@@ -23,7 +23,19 @@ export async function countAllWords(lang: LANG): Promise<number> {
   return (await findAllWords(lang)).length;
 }
 
-export async function findCategoryWords(
+export async function findCategories(lang: LANG): Promise<string[]> {
+  const nbWords = await countAllWords(lang);
+  const nbCategories = Math.ceil(nbWords / CATEGORY_SIZE);
+  return [...Array(nbCategories).keys()].map((i) => toCategory(i + 1, nbWords));
+}
+
+export function toCategory(categoryId: number, nbWords: number): string {
+  const start = (categoryId - 1) * CATEGORY_SIZE + 1;
+  const end = Math.min(categoryId * CATEGORY_SIZE, nbWords);
+  return `${start} - ${end}`;
+}
+
+export async function findWordsInCategory(
   lang: LANG,
   categoryId: number
 ): Promise<Word[]> {
@@ -42,13 +54,4 @@ export function findRandomWords(words: Word[], nbWords: number): Word[] {
   }
 
   return [...indexes].map((v) => words[v]);
-}
-
-export async function findCategories(lang: LANG): Promise<WordCategory[]> {
-  const nbWords = await countAllWords(lang);
-  const nbCategories = Math.ceil(nbWords / CATEGORY_SIZE);
-  return [...Array(nbCategories).keys()].map((i) => ({
-    start: i * CATEGORY_SIZE + 1,
-    end: Math.min((i + 1) * CATEGORY_SIZE, nbWords),
-  }));
 }

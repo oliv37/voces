@@ -3,8 +3,3 @@ export interface Word {
   value: string;
   translationFr: string;
 }
-
-export interface WordCategory {
-  start: number;
-  end: number;
-}

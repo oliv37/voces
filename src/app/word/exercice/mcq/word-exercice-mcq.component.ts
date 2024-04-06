@@ -14,6 +14,8 @@ export class WordExerciceMcqComponent {
   route = inject(ActivatedRoute);
   wordExerciceService = inject(WordExerciceService);
 
+  readonly nextLink = '../formulaire';
+
   get words(): Word[] {
     return this.wordExerciceService.getWords();
   }
@@ -45,16 +47,10 @@ export class WordExerciceMcqComponent {
     return !this.wordsNotChosen.length;
   }
 
-  newExercice(): void {
-    this.router.navigate(['..'], { relativeTo: this.route }).then(() => {
-      this.wordExerciceService.reinit();
-    });
-  }
-
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if (event.key === 'Enter' && this.isWin()) {
-      this.newExercice();
+      this.router.navigate([this.nextLink], { relativeTo: this.route });
     }
   }
 }

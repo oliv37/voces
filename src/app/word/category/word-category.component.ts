@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   templateUrl: './word-category.component.html',
 })
 export class WordCategoryComponent {
-  words = input.required<Word[]>();
+  wordsInCategory = input.required<Word[]>();
 }
