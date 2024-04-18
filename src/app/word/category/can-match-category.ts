@@ -1,5 +1,5 @@
 import { CanMatchFn, Route, UrlSegment } from '@angular/router';
-import { isPositiveInteger } from '../../shared/string.utils';
+import { isPositiveInteger } from '../../shared/utils/string.utils';
 
 export const canMatchCategory: CanMatchFn = async (
   route: Route,

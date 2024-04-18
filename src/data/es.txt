@@ -129,3 +129,4 @@ espantar : effrayer
 cesped : gazon, pelouse
 emisora : station de radio, émetteur
 asunto : sujet, affaire
+nave : navire, vaisseau

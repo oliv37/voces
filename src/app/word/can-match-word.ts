@@ -1,14 +1,15 @@
 import { CanMatchFn, Route, UrlSegment } from '@angular/router';
 import { CATEGORY_SIZE, countAllWords } from './word.utils';
-import { isLang, isPositiveInteger } from '../shared/string.utils';
+import { isPositiveInteger } from '../shared/utils/string.utils';
+import { isLangCode } from '../shared/utils/lang.utils';
 
 export const canMatchWord: CanMatchFn = async (
   route: Route,
   segments: UrlSegment[]
 ) => {
-  const lang = segments[0].path;
+  const langCode = segments[0].path;
 
-  if (!isLang(lang)) {
+  if (!isLangCode(langCode)) {
     return false;
   }
 
@@ -19,7 +20,7 @@ export const canMatchWord: CanMatchFn = async (
       return false;
     }
 
-    const nbWords = await countAllWords(lang);
+    const nbWords = await countAllWords(langCode);
     const nbCategories = Math.ceil(nbWords / CATEGORY_SIZE);
 
     if (+categoryId > nbCategories) {

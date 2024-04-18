@@ -17,7 +17,7 @@ import { wordsResolver } from './word/words.resolver';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: ':lang',
+    path: ':langCode',
     canMatch: [canMatchWord],
     component: WordHomeComponent,
     resolve: {

@@ -206,6 +206,7 @@ intercourse : relations sexuelles
 pander to : céder aux caprices de
 wisely : prudemment, sagement
 rampant : effrené, galopant
+compelling : obligatoire
 vouch : se porter garant
 voucher : bon d'échange, reçu, quittance
 unhinged : déséquilibré, dérangé
@@ -334,6 +335,7 @@ pain : douleur
 workaround : solution de rechange
 shake up : agiter, secouer
 give up : abandonner
+compelling : captivant
 astonish : étonner, stupéfier
 crackdown : répression, mesures répressives
 overtime : heures supplémentaires
@@ -372,6 +374,7 @@ fork out : débourser, claquer
 fork : fourchette
 knife : couteau
 strangle : étrangler
+settlement : implantation, terre
 evil : mal, malfaisant
 officer : policier
 conviction : condamnation
@@ -408,7 +411,7 @@ low : bas, basse
 traveller : gitan, manouche, romanichel
 digger : pelleteuse
 seemingly : apparement
-settle : s'installer
+settle : s'installer, régler, s'occuper de
 covenant : engagement, contrat
 afford : se payer, avoir les moyens d'acheter
 redundancy : licenciement 
@@ -462,3 +465,336 @@ tenant : locataire
 subhuman : inhumain
 household : famille, foyer, ménage
 arrears : arriéré, défaut de paiement
+staircase : escalier
+towards : vers, en direction de
+profiling : profilage
+settlement : décision, accord
+host : animateur, présentateur
+odd : étrange, bizarre
+tongs : pinces
+fireplace : cheminée
+deal : accord, affaire, transaction
+evidence : indice, preuve
+crosswalk : passage piétons
+time clock : pointeuse, badgeuse
+timeline : chronologie
+lazy : paresseux, feignant
+undercover : clandestin, secret
+feed : nourrir, alimenter
+mother-in-law : belle-mère
+witness : témoin
+stand over : surveiller, suivre
+beyond : au-delà de
+plot : intrigue
+hunting : chasse
+run out : ne plus avoir de, être à court de
+compel to do : contraindre à faire, forcer à faire
+compelling : irréfutable, convaincant
+legacy : héritage
+set up : monter, installer
+swear : jurer de faire
+beaten : battu
+sibling : frère ou soeur
+unsettle : perturber, bouleverser
+unsettling : bouleversant, perturbant
+heads-up : prévenir, avertir
+disease : maladie
+rip apart : déchirer, déchiquetter, démolir
+devoted : dévoué, fidèle
+doorway : porte, entrée de porte
+daughter-in-law : belle-fille
+get by : s'en sortir, faire face
+attorney : avocat, avocate
+surrender : abandonner, capituler, se rendre
+unleash : déchaîner
+clipping : coupure
+eyebrow : sourcil
+gardening : jardinage
+basement : sous-sol
+pavement : trottoir
+tape : cassette
+take away : enlever, confisquer
+rise : monter
+among : parmi
+up front : à l'avant, immédiatement
+cold case : affaire classée sans suite
+whenever : n'importe quand, à tout moment, quand
+wherever : partout
+pour : servir, verser
+outfit : tenue, costume
+guarded : prudent, réservé
+grocery : épicerie
+pledge : promesse
+trusting : confiant
+hike : randonnée
+housewife : femme au foyer
+dash : petite quantité
+surrounding : environnant, tout autour
+awful : horrible, affreux
+self-serving : égoïste
+testimony : témoignage, déposition
+coat : manteau
+testify : témoigner
+pull over : se ranger
+carpet : moquette
+stash : réserve, stock
+upper : supérieur, du dessus
+screech : cri strident, hurlement
+wipe : essuyer
+strike : frapper, donner des coups
+turn out : s'avérer que
+scream : crier, hurler
+restless : inquiet, agité, tourmenté
+odd : impair
+even : pair
+thread : fil, fil de discussion
+haunting : obsédant, troublant, envoûtant
+rubbish : ordures, déchets, poubelle
+marble : bille
+stab : poignarder
+pram : landeau
+fixture : rencontre sportive
+neck : cou
+genou : knee
+coude : elbow
+épaule : shoulder
+finger : doigt
+nail : ongle
+hip : hanche
+behind : derrière
+in front of : devant
+believe : croire
+urging : encouragements, insistance
+wanted : recherché
+eyewitness : témoin occulaire
+slim : mince
+duffle : tissu de laine
+trainers : tennis, baskets
+tracksuit : survêtement
+hoody : sweat à capuche
+hood : capuche
+run away : fuir
+sidewalk : trottoir
+convenience store : supérette
+goods : marchandise, produits
+set upon : attaquer
+run out : sortir en courant
+face down : face contre terre
+pushchair : poussette
+turn over : retourner, se retourner
+wound : blessure
+pulse : pouls, battements du coeur
+pick up : aller chercher, passer prendre
+sheet : drap
+whereabouts : emplacement, localisation
+forensic : de la criminalistique, police scientifique
+track down : trouver, localiser
+down the road : plus tard, par la suite
+run off : s'enfuir
+comb : peigne
+bush : arbuste, buisson
+waste ground : terrain vague
+waste : gaspiller, gâcher
+to dump : jeter
+dump : déchetterie, décharge publique
+broad : large, immense
+daylight : journée, lumière du jour
+reassure : rassurer
+tirelessly : inlassablement, sans relâche
+footage : séquences, images
+ward councilor : conseiller de quartier
+saddened : attristé, triste
+deceased : décédé
+constituency : électeurs, circonscription
+loved ones : proches
+get in touch : contacter, prendre contact
+roam : errer, vagabonder
+stick : bâton
+bother : ennuyer, embêter
+wit : esprit
+stun : stupéfier, sidérer
+rot : pourrir
+stunning : magnifique
+row : rang, rangée
+mansion : belle demeure, château
+sorry : déplorable, pitoyable
+widow : veuve
+gate : portail
+moss : mousse
+weed : mauvaise herbe
+lawn : gazon, pelouse
+to be far cry from : être sans comparaison avec
+pastime : passe-temps
+cellar : cave
+boarded-up : condamné
+laundering : blanchissage
+overlook : point de vue
+run down : délabré
+compulsory : obligatoirement
+worthless : sans valeur
+skydiving : parachutisme
+plummet : chuter
+owe : devoir à qqn
+award : récompense, trophée
+unlicensed : sans permis
+pray : prier
+takeoff : décollage
+vineyard : vignoble
+coroner : médecin légiste
+strap : sangler, attacher
+by the time : avant que, lorsque
+alongside : à côté de
+set off : partir, prendre la route
+blow over : se calmer (tempête), s'éclaircir (nuage)
+perish : périr
+issue : problème, objet de litige
+waiver : renonciation, exonération
+callousness : insensibilité, cruauté
+brush off : ignorer, balayer d'un revers de main
+needless : inutile, superflu
+scar : cicatrice, balafre
+come forward : se présenter à la police, se faire connaitre
+shove : pousser, bousculer
+casually : de façon décontractée
+deck : étage
+swerving : faire un écart, faire une embardée
+hail : acclamer, saluer
+entice : inciter
+delve : plonger dans
+convince : convaincre
+shield : bouclier
+mouth : bouche
+craving : envie irrésistible
+fixture : équipement
+outskirts : périphérie, banlieue
+kin : famille, proches
+stage : étape
+utmost : plus haute importance
+accomodate to : s'adapter à, tenir compte de
+stone : pierre
+no stone unturned : ne rien négliger, tout mettre en oeuvre
+cordon : cordon de police
+patrol : patrouille
+rough : violent, brutal, difficile, rugueux
+repent : se repentir de
+evil : mal
+whilst : bien que, même si
+tample : piétiner
+forbid : interdire
+forgive : pardonner
+by now : maintenant, à cette heure-ci
+pass through : traverser, passer
+mobster : gangter, truand, malfrat
+bundle into : pousser dans, faire rentrer dans
+fuss : tapage, histoire
+somehow : d'une manière ou d'une autre
+horrid : horrible, épouvantable
+stricken : touché par
+annoy : énerver, embêter, agacer
+pour in : affluer
+tribute : hommage
+get on nerves : taper sur les nerfs
+grief : chagrin, douleur, peine
+fellow : type, gars, confrère
+cheerful : joyeux, enjoué
+kind : gentil, aimable
+dim : faible
+beyond : au-delà de
+unfathomable : incompréhensible
+the likes of : quelqu'un comme lui
+retire : prendre sa retraite
+punditry : avis d'experts
+heartbreaking : déchirant, qui fend le coeur
+dabble in : s'essayer à
+nonsense : n'importe quoi, idioties, sottises
+grab hold on : s'aggriper à, prendre, saisir
+build up : accroître, développer, monter
+rollercoaster : montagnes russes, haut et bas
+guilt : culpabilité
+meanwhile : pendant ce temps, en attendant
+publicize : promouvoir
+smooth : doux
+overcome : vaincre, battre
+thrive : bien se porter, prospérer
+first hand : avoir vécu, avoir faire l'expérience
+reach out : tendre la main
+boredom : ennui
+grasp : comprendre, saisir, piger
+sack : renvoyer, virer
+slam : claquer, heurter, percuter
+wizard : sorcier, sorcière
+wooden : articiel, pas naturel
+thunder : tonnerre
+deflection : déviation
+mistreat : maltraîter
+slander : calomnie
+hill : colline
+highlands : région montagneuse
+house-hunting : recherche d'une maison
+eccentric : excentrique
+show up : se pointer
+steal : voler, dérober
+skyline : horizon
+fingerprint : empreinte digitale
+thieve : voler
+theft : vol
+advocate : avocat, représentant légal
+case : dossier
+suitcase : valise
+alongside : à côté
+settle in : être à l'aise
+lounge : salon, bar
+attractive : joli, séduisant
+well spoken : qui s'exprime bien
+well groomed : soigné
+awkward : maladroit
+lobby : hall d'entrée, entrée
+con : escroquer, arnaquer
+graceful : gracieux, élégant
+rape : viol
+rip off : arracher
+rope : corde
+struggle : épreuve, lutte
+pass away : mourir
+fine : amende, contravention
+trap : piège
+chilling : effrayant
+chill out : se détendre, se relaxer
+track down : localiser
+goldman : mine d'or, bon filon
+cold storage : au frais
+packer : emballeur
+lineup : séance d'identification
+strangle : étrangler
+spare bedroom : chambre d'amis
+slapper : traînée, salope
+probation : sursis
+cynical : cynique
+lay off : licencier, renvoyer
+dole out : distribuer
+toddler : bambin
+ward : salle hôpital
+embrace : adhérer à
+faulty : défectueux
+crow about : se vanter
+in a flap : paniqué
+culprit : coupable
+cheeky : insolent, effronté, coquin
+crow : corbeau
+blackbird : merle
+rush : se précipiter
+smash : accident
+collide : entrer en collision
+dazzle : éblouir, aveugler
+advocate : préconiser, recommander
+stance : position, point de vue
+staggering : impréssionnant, stupéfiant
+tide : marée, vague
+momentum : élan
+common sense : bon sens
+sanity : santé mentale, raison
+wisdom : sagesse
+rally round : soutenir
+get rid of : se débarasser
+thoroughly : complètement, totalement
+plentiful : abondant

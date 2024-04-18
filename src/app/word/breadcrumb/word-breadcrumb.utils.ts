@@ -1,6 +1,7 @@
 import { UrlSegment } from '@angular/router';
-import { LANG, LANG_LABELS } from '../../shared/lang.constants';
+import { LangCode, LANG_LABELS } from '../../shared/constants/lang.constants';
 import { toCategory } from '../word.utils';
+import { getLangLabel } from '../../shared/utils/lang.utils';
 
 interface Options {
   idx: number;
@@ -12,7 +13,7 @@ type LinkLabelFn = (opts: Options) => string;
 
 const linkLabelProvicers: Record<string, LinkLabelFn> = {
   0: () => 'vocab',
-  1: ({ idx, segments }) => LANG_LABELS[segments[idx].path as LANG],
+  1: ({ idx, segments }) => getLangLabel(segments[idx].path as LangCode),
   2: ({ idx, segments, nbWords }) =>
     toCategory(Number(segments[idx].path), nbWords),
 };

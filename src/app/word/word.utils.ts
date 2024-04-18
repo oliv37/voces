@@ -1,10 +1,10 @@
-import { LANG } from '../shared/lang.constants';
+import { LangCode } from '../shared/constants/lang.constants';
 import { Word } from './word.model';
 
 export const CATEGORY_SIZE = 100;
 
-export async function findAllWords(lang: LANG): Promise<Word[]> {
-  const module = await import(`../../data/${lang}.txt`);
+export async function findAllWords(langCode: LangCode): Promise<Word[]> {
+  const module = await import(`../../data/${langCode}.txt`);
   const text: string = module.default;
   return text
     .split('\n')
@@ -19,12 +19,12 @@ export async function findAllWords(lang: LANG): Promise<Word[]> {
     });
 }
 
-export async function countAllWords(lang: LANG): Promise<number> {
-  return (await findAllWords(lang)).length;
+export async function countAllWords(langCode: LangCode): Promise<number> {
+  return (await findAllWords(langCode)).length;
 }
 
-export async function findCategories(lang: LANG): Promise<string[]> {
-  const nbWords = await countAllWords(lang);
+export async function findCategories(langCode: LangCode): Promise<string[]> {
+  const nbWords = await countAllWords(langCode);
   const nbCategories = Math.ceil(nbWords / CATEGORY_SIZE);
   return [...Array(nbCategories).keys()].map((i) => toCategory(i + 1, nbWords));
 }
@@ -36,10 +36,10 @@ export function toCategory(categoryId: number, nbWords: number): string {
 }
 
 export async function findWordsInCategory(
-  lang: LANG,
+  langCode: LangCode,
   categoryId: number
 ): Promise<Word[]> {
-  const allWords = await findAllWords(lang);
+  const allWords = await findAllWords(langCode);
   const start = (categoryId - 1) * CATEGORY_SIZE;
   const end = Math.min(start + CATEGORY_SIZE, allWords.length);
   return allWords.slice(start, end);

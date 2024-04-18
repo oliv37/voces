@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Word } from '../word.model';
 import { findRandomWords } from '../word.utils';
 import { Subscription } from 'rxjs';
-import { shuffle } from '../../shared/array.utils';
+import { shuffle } from '../../shared/utils/array.utils';
 
 @Injectable()
 export class WordExerciceService implements OnDestroy {
@@ -20,13 +20,8 @@ export class WordExerciceService implements OnDestroy {
 
   private sub = new Subscription();
 
-  constructor(route: ActivatedRoute) {
-    this.sub.add(
-      route.data.subscribe((data) => {
-        this.wordsInCategory = data['wordsInCategory'];
-        this.reinit();
-      })
-    );
+  constructor(public route: ActivatedRoute) {
+    this.sub.add(route.data.subscribe(() => this.reinit()));
   }
 
   ngOnDestroy() {
@@ -58,6 +53,7 @@ export class WordExerciceService implements OnDestroy {
   }
 
   reinit(): void {
+    this.wordsInCategory = this.route.snapshot.data['wordsInCategory'];
     this.exerciceWords = findRandomWords(this.wordsInCategory, 10);
     this.exerciceWordsNotChosen = shuffle(this.exerciceWords);
     this.inputValues = this.exerciceWords.map((_) => '');

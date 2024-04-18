@@ -1,8 +1,9 @@
 import { Component, computed, input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LANG, LANG_LABELS } from '../../shared/lang.constants';
+import { LangCode } from '../../shared/constants/lang.constants';
 import { WordBreadcrumbComponent } from '../breadcrumb/word-breadcrumb.component';
 import { Word } from '../word.model';
+import { getLangLabel } from '../../shared/utils/lang.utils';
 
 @Component({
   standalone: true,
@@ -11,6 +12,6 @@ import { Word } from '../word.model';
 })
 export class WordHomeComponent {
   words = input.required<Word[]>();
-  lang = input.required<LANG>();
-  langLabel = computed(() => LANG_LABELS[this.lang()]);
+  langCode = input.required<LangCode>();
+  langLabel = computed(() => getLangLabel(this.langCode()));
 }
