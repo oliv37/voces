@@ -4,10 +4,10 @@
     <a [routerLink]="['/', langCode]">
       <app-home-lang-title [langCode]="langCode"></app-home-lang-title>
       <app-home-word-count [langCode]="langCode"></app-home-word-count>
+      @if (clientSide) {
+      <app-home-random-words [langCode]="langCode"></app-home-random-words>
+      }
     </a>
-    @if (clientSide) {
-    <app-home-random-words [langCode]="langCode"></app-home-random-words>
-    }
   </div>
   }
 </div>

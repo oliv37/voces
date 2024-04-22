@@ -17,7 +17,7 @@ senador : sénateur
 acudir a : aller à, se rendre à
 demas : autre
 sede : siège, quartier général
-seguidor : supporteur
+seguidor : supporteur, sympathisant
 ejercito : armée
 aislado : isolé
 corredor : couloir
@@ -130,3 +130,104 @@ cesped : gazon, pelouse
 emisora : station de radio, émetteur
 asunto : sujet, affaire
 nave : navire, vaisseau
+rechazar : refuser
+sargento : sergent
+ejercito : armée
+ascender : monter en grade, être promu
+subteniente : sous-lieutenant
+amparo : protection, soutien
+notificar : notifier
+auto : jugement, décision
+perseguir : poursuivre
+solicitud : demande
+encargado : responsable, gérant
+velar : veiller
+llevar a cabo : mener à bien
+diligencia : papiers, formalité administrative
+agregar : ajouter
+referir : faire référence
+solicitante : demandeur, candidat
+indistintamente : indifféremment
+quirurgico : chirurgical
+tardar : être en retard, mettre du temps
+recurso : recours, appel, pourvoi
+por consiguiente : par conséquent
+enfatizar : mettre l'accent sur, souligner
+fraudulento : frauduleux
+ordenamiente : ordre, réglementation
+sometimiento : soumission
+recordar : rappeler
+sospechar : soupçonner
+dar a luz : accoucher de, donner naissance à
+tomar medidas : prendre des mesures
+descartar : écarter, éliminer
+incumplimiento : non-respect, non-exécution
+libra : livre setrling
+portavoz : porte-paraole
+congeniar : s'entendre avec, sympathiser
+no obstante : néanmoins, cependant
+entrevista : entretien
+agotar : épuiser, exténuer
+odio : haine
+delito : délit, crime
+sede : siège
+acudir : se rendre à
+presenciar : assister à
+inmediaciones : abords, environs, alentours
+hincha : supporter, supporteur
+aficionado : supporter, supportrice, amateur
+hombro : épaule
+increpar : interpeller
+detalle : détail
+colchon : matelas
+mojar : mouiller
+peculiar : étrange, bizarre
+hogar : foyer, intérieur
+vivienda : logement
+bruja : sorcière
+trasladar : déplacer, déménager
+obispo : évêque
+atravesar : traverser
+higuera : figuier
+llovizna : bruine
+tierno : tendre
+cagada : merde, chiure
+salpicar : éclabousser
+pajaro : oiseau
+pormenor : détail
+los pormenores de : les tenants et aboutissants
+ingrato : ingrat
+papel de estano : papier alluminium
+tropezar : trébucher
+tropezar con : trébucher sur, se cogner contre
+almendro : amandier
+certero : précis
+ajeno : d'autrui
+sueno : rêve, sommeil
+ayunar : jeûner
+advertir : prévenir, advertir
+agurio : augure, présage
+aciago : funeste
+preceder : précéder
+presagio : présage
+ropa : vêtements
+paladar : palais (bouche)
+resaca : gueule de bois
+aliento : haleine
+sedimento : dépôt, résidu
+parranda : fête, bringue
+estragos : ravages, blessures
+boda : mariage
+destazar : découper, dépecer
+sonoliento : somnolent
+comentar : raconter, expliquer, commenter
+platanal : bananier
+turbio : trouble
+bajo : bas
+desgracia : malheur
+menudo : mineur, peu important
+reponerse : se remettre
+regazo : giron
+campana : campagne, cloche
+lazo : noeud, lien
+lazo afectivo : lien affectif
