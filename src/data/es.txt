@@ -10,7 +10,6 @@ sobre : enveloppe
 rabia : colère
 herramienta : outil
 inversion : investissement
-arrancar : démarrer
 medida : mesure
 derogar : abroger, abolir
 senador : sénateur
@@ -215,6 +214,7 @@ presagio : présage
 ropa : vêtements
 paladar : palais (bouche)
 resaca : gueule de bois
+recurso : recours, moyen de
 aliento : haleine
 sedimento : dépôt, résidu
 parranda : fête, bringue
@@ -527,7 +527,7 @@ novato : novice, néophyte
 fallo : erreur
 fallo : jugement, verdict
 rehen : otage
-alto el fuego : cessez le feu
+alto al fuego : cessez-le-feu
 coleta : aileron
 cuerda : corde
 burlar : semer, esquiver
@@ -839,7 +839,7 @@ lograr : réussir à, parvenir à
 enfrentamiento : affrontement
 incidir : affecter, influencer, avoir une incidence sur
 trazar : élaborer, planifier
-senal : signe, indication
+senal : signe, geste
 borrador : gomme
 atemorizar : terroriser, effrayer
 desestimar : rejeter
@@ -1080,7 +1080,7 @@ bano : toilette
 aseo : toilette
 talego : sac
 cuarto de bano : salle de bain
-plantearse : envisager
+plantearse : envisager, considérer
 criminologia : criminologie
 héroe : héros
 obra : travaux
@@ -1363,7 +1363,6 @@ acojonarse : avoir peur, avoir la trouille
 sartén : poêle
 alzada : appel, pourvoir
 brazalete : bracelet
-pulsera : bracelet
 alcancia : tirelire
 envidiar : jalouser, envier
 bambino : gamin, enfant
@@ -1419,6 +1418,7 @@ pluma : stylo
 dibujar : dessiner
 homenaje : hommage
 coro : choeur
+campamento : campement
 extranar : manquer à
 tarea : tâche, travail
 temor : crainte, peur
@@ -1482,6 +1482,7 @@ plato : assiette
 plata : argent
 fregadero : évier
 fregar : laver, récurer
+pulsera : bracelet
 grifo : robinet
 tireja : ciseau
 escoplo : burin
@@ -1600,6 +1601,7 @@ rapar : raser, tondre
 adelgazar : maigrir, mincir
 fogon : fourneau
 dependencia : pièce, agence
+informal : peu sérieux, peu fiable
 fianza : caution
 arrebatar : arracher
 esposar : épouser
@@ -1691,6 +1693,7 @@ machacar : radoter, répéter, rabâcher
 acudir a : faire appel, avoir recours à
 estrafalario : saugrenu
 bofetada : gifle, claque
+estrellarse : s'écraser, percuter
 encajar : encaisser, imbriquer
 amortiguar : amortir, atténuer
 tajada : cuite
@@ -1864,6 +1867,7 @@ hamaca : hamac
 vejez : vieillesse
 costado : côté
 sien : tempe
+alfareria : poterie
 astilla : éclat
 incorporarse : se redresser
 bautisterio : récipient en pierre
@@ -1907,6 +1911,7 @@ tantear : sonder, tâter
 sarten : poêle
 la medicina : le médicament
 verguenza : honte
+lobo : loup
 ave : oiseau
 presa : proie
 amaestrar : éduquer, dresser
@@ -1914,6 +1919,7 @@ descuartizar : dépecer, démembrer
 acezante : désireux
 cerrero : rustre, obtus
 tazon : grande tasse
+pisar : piétiner, écraser
 cuchichear : chuchoter
 lumbre : feu
 achicar : pomper
@@ -1950,6 +1956,7 @@ caballeriza : écurie
 aduana : douane
 fachada : façade
 camarote : cabine
+machinaria : machines, engins
 alzada : hauteur
 tranca : barre, bâton
 muelle : quai
@@ -1957,6 +1964,7 @@ guirnalda : guirlande
 rama : branche
 detergente : lessive
 ajedrez : échec
+madera : bois
 peon : pion
 resbalar : glisser
 fastidiar : faire capoter, gâcher
@@ -1976,6 +1984,7 @@ estibador : docker
 chusma : racaille
 redondo : rond
 chisme : truc
+amarrar : attacher
 sermonear : sermonner, réprimander, faire la leçon, faire la morale
 trena : taule, trou, placard, gnouf
 procesar : poursuivre, intenter un procès
@@ -2045,11 +2054,13 @@ higiene : hygiène
 reluciente : reluisant, brillant
 bendecir : bénir
 alejar : éloigner
+serpiente : serpent
 reincidente : récidiviste
 chivato : mouchard, délateur
 celda : cellule
 atascar : boucher
 carniceria : boucherie
+halcon : faucon
 charcuteria : charcuterie
 panaderia : boulangerie
 desague : tuyau d'écoulement, évacuation
@@ -2106,16 +2117,19 @@ endurecer : durcir
 salvaje : sauvage
 chivarse : cafter, moucharder
 rebotar : rebondir
+aviso : avertissement
 punalada : coup de couteau
 fregona : serpillière
 humo : fumée
 ambiante libre de humo : espace non-fumeur
+disfraz : déguisement
 helado : gelé
 camilla : brancard, civière
 avaricia : avarice
 silueta : silhouette
 escombro : décombres, débris
 pringado : pauvre type, couillon
+flechazo : tir de flèche
 regordete : rondelet, grassouillet
 revolcon : baise, partie de jambes en l'air
 corredor de apuestas : bookmaker
@@ -2134,21 +2148,213 @@ burgués : bourgeois
 respaldo : soutien, appui
 destapar : révéler
 ofrenda : offrande
+lentilla : lentille (yeux)
 buzon : boîte aux lettres
 repasar : réviser
 reloj : montre
 pillar : surprendre
 alcaide : directeur de prison
 presa : prisonnière, détenue
+discurrir : réfléchir, raisonner
 despistado : distrait
 chupa : veste
 prescindible : superflu
 rescindible : résiliable
 bambino : enfant
 estaca : pieu, gourdin
+raton : souris
 risueno : souriant, avenant
+proveedor : fournisseur
 bendecir : souhaiter bonne chance
 rajarse : se casser
 rajar : couper, fissurer, déchirer
 sobremanera : terriblement, extrêmement, excessivement
 auriculares : écouteur
+taburete : tabouret
+tendedero : étendoir
+en vilo : dans l'attente, dans l'incertitude
+expectacion : attente
+pesimismo : pessimisme
+senal : indication
+firmemente : fermement
+socavar : saper
+estrategia : stratégie
+subalterno : subalterne
+dependiente : dépendant
+juzgado : tribunal
+aforo : capacité
+auditorio : auditorium
+llamamiento : appel, convocation
+caceria : chasse
+lodazal : bourbier
+lema : devise, slogan
+conformarse : se contenter de
+conformar : donner forme, se définir
+palmera : palmier
+escalofriante : effrayant, terrifiant
+escalofrio : frisson, chair de poule
+acero : acier
+ilusion : rêve, espoir, désir
+adobar : faire mariner
+zapatero : cordonnier
+herrero : forgeron
+fuera de juego : hors-jeu
+saque : touche
+taberna : bar, café, bistrot, taverne
+alfarero : potier
+escombrera : déchetterie, décharge
+prejuicio : préjugé
+adobar : tanner
+madero : tronc, bois
+cantaro : cruche, carafe
+cestero : vannier, fabricant de panniers
+informal : informel, décontracté
+flequillo : frange
+agur : au revoir
+flechazo : coup de foudre
+fase : phase, étape
+infalible : infaillible
+perjuicio : préjudice, tort
+buho : hibou
+oso : ours
+ciervo : cerf
+liebre : lièvre
+barba : barbe
+bigote : moustache
+pestana : cil
+parpado : paupière
+lenteja : lentille (aliment)
+rimel : mascara
+gorra : casquette
+fortaleza : forteresse
+oreja : oreille
+diente : dent
+hormiga : fourmi
+bala : balle
+disolver : dissoudre
+descarte : défausse
+violencia : violence
+nariz : nez
+retorica : rhétorique
+traje : tenue, vêtement
+terno : costume
+voto : vote
+pasmar : surprendre
+asombrar : impressionner, émerveiller
+desagradar : déplaire, contrarier
+granja : ferme
+rana : grenouille
+aclarar : éclaircir, lever un doute
+dibujar : dessiner
+disenar : concevoir
+maniobra : manoeuvre
+machinaria : mécanisme
+platear : couvrir d'argent
+dimitir : démissionner
+al reves de : contrairement à
+comparecencia : comparution
+cuello de botella : goulot d'étranglement
+premiar : récompenser
+demora : retard, délai
+alza : hausse, augmentation
+soborno : corruption
+pulso : bras de fer
+tintar : teindre, colorer
+reanudar : reprendre, continuer
+esofago : oesophage
+guadana : faux (outil)
+paradero : endroit, lieu
+ciudadania : citoyenneté
+espiar : épier, espionner
+discurrir : s'écouler (temps)
+eleccion : choix
+acogida : accueil
+zorro : renard
+topo : taupe
+galardon : prix, récompense
+bienestar : bien-être
+aumenter : augmenter
+encarecer : augmenter (prix)
+amparo : protection
+contundente : ferme, catégorique
+enfoque : point de vue
+librarse : échapper à, se débarraser de
+erosionar : éroder
+librar : préserver, protéger
+lastrar : plomber, compromettre
+sujetarse a : se soumettre à
+encabezar : être à la tête de
+alistar : lister, inscrire sur une liste
+descarillar : dérailler
+desvincular : rompre, mettre un terme, arrêter
+ligar : attacher, nouer
+atar : lier
+temer : craindre, avoir peur
+judio : juif
+desalentador : décourageant; démoralisant
+llanto : pleurs, larmes
+rogar : implorer, demander
+tregua : trêve
+fracaso : échec
+disparado : pressé, en coup de vent
+subgenero : sous-genre
+elogiar : faire l'éloge
+goteo : afflux
+estadounidense : américain, états-unien
+umbral : seuil
+enfrentado : opposé, adverse
+enfrentar : affronter
+accarear : provoquer, amener, entraîner
+abrumador : accablant
+maldecir : maudire
+arruinar : ruiner
+flotar : flotter
+suministrador : fournisseur
+afianzar : fixer, accrocher
+trotamundos : globe-trotteur
+propenso : qui a tendance à
+media : moyenne
+chufa : médiocre, pourri
+portada : couverture
+machete : avare, radin
+eufemismo : euphémisme
+insostenible : insoutenable
+ganadero : de l'élevage
+despoblado : dépeuplé
+florear : fleurer
+horroroso : horrible, atroce
+labrar : cultiver
+escasamente : rarement
+envejecido : vieilli
+salvajada : folie, connerie
+hundido : englouti, immergé
+cierre : fermeture, coupure
+invertir : inverser
+rendir : donner des résultats, être performant
+platicar : discuter, bavarder
+rotundamente : catégoriquement
+cavar : creuser
+extrano : bizarre, étrange
+desgarrador : déchirant, poignant
+atender : recevoir, accueillir
+machona : garçon manqué
+sobre todo : surtout, principalement
+asalariado : salarié
+ineludible : incontournable
+verdugo : bourreau
+lodazal : bourbier
+tropa : troupe
+revistar : passer en revue, inspecter
+novedad : nouveauté
+juramento : serment
+sobrevolar : survoler
+transcurrir : s'écouler, passer
+campamento : camping
+exito : réussite
+roca : roche
+alunizar : alunir (atterir sur la Lune)
+resentirse : s'offenser, en vouloir à
+estrellar : lancer
+pisar : marcher sur
+recursos : ressources
+aviso : notification
