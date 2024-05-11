@@ -82,7 +82,7 @@ cementerio : cimetière
 incomodo : malaise, incofort
 raza : race
 delito : délit, crime
-ciudadano : urbain, citoyen
+ciudadano : urbain
 prensa : presse
 asesor : conseiller
 bufete : cabinet, bureau
@@ -1900,6 +1900,7 @@ lastre : obstacle, handicap
 rinon : rein
 aplastamiento : écrasement
 pellejo : peau (animal)
+superar : oubier, passer à autre chose
 coser : coudre
 ternera : veau
 manitas : bricoleur, bricoleuse
@@ -1961,6 +1962,8 @@ alzada : hauteur
 tranca : barre, bâton
 muelle : quai
 guirnalda : guirlande
+mando : commandement
+cruzar : croiser
 rama : branche
 detergente : lessive
 ajedrez : échec
@@ -1982,6 +1985,7 @@ panal : couche
 menudo plan : bon plan
 estibador : docker
 chusma : racaille
+regodearse : se réjouir
 redondo : rond
 chisme : truc
 amarrar : attacher
@@ -1991,6 +1995,7 @@ procesar : poursuivre, intenter un procès
 fontanero : plombier
 pavo : type, mec
 aburguesado : embourgeoisé
+atajar : couper, prendre un raccourci
 pava : meuf
 arrebato : emportement, accès de folie
 esconder : cacher
@@ -2326,6 +2331,7 @@ horroroso : horrible, atroce
 labrar : cultiver
 escasamente : rarement
 envejecido : vieilli
+cargo : charge, responsabilité
 salvajada : folie, connerie
 hundido : englouti, immergé
 cierre : fermeture, coupure
@@ -2358,3 +2364,119 @@ estrellar : lancer
 pisar : marcher sur
 recursos : ressources
 aviso : notification
+atajo : raccourci
+vincular : lier, unir
+costumbre : coutume, habitude
+titular : gros titres
+temporal : tempête, orage
+azotar : battre, fouetter
+apoderar : déléguer, mandater, donner procuration
+odio : haine
+lidiar : combattre
+cruce : passage piétons
+cruzar : traverser
+presionar : faire pression sur
+discutir : discuter
+desafio : défi
+urgir : urger
+desavenencia : désaccord
+burgues : bourgeois
+sorna : sarcasme, ironie
+rostro : visage, face
+abucheos : huées
+teorico : théoricien
+comprometido : engagé
+pabellon : pavillon
+bombardeo : bombardement
+regodearse : se complaire
+cazador : chasseur
+lienzo : toile
+oleo : huile
+cuchillada : coup de couteau
+comprometerse : compromettre, impliquer
+acontecimiento : évènement, fait
+desolador : désolant, navrant
+placentero : plaisant, agréable
+marfil : ivoire
+entresacar : tirer, extraire
+mural : fresque, peinture murale
+campesino : paysan
+igualidad de genero : égalité hommes femmes
+poseer : posséder
+campo : champ
+semilla : graine, semance
+autoridad : autorité
+sembrar : semer
+palo : bâton
+tapadera : couverture
+amparar : protéger
+infravalorar : sous-estimer
+apurar : finir, terminer
+desafio : défi
+bondad : bonté
+plantilla : personnel
+prescindir de : se passer de, faire sans
+decalogo : règlement
+brecha : fossé, distance
+desmenuzar : examiner, disséquer
+vuelco : retournement, renversement
+pesquisa : enquête, investigation
+puerto : port
+inequivoco : clair, sans équivoque
+embestida : assaut, attaque
+arremeter contra : se jeter sur, s'en prendre à
+distinto : différent
+remitir : envoyer, expédier
+reja : grille, barreaux (prison)
+criterio : opinion, avis
+preaviso : préavis
+al raso : à la belle étoile
+custodiar : protéger
+bursatil : boursier
+apercibimiento : avertissement
+agradar : aimer, plaire, aprécier
+farmaco : médicament
+beca : bourse
+plazo : délai
+patera : embarcation de fortune
+prenda : vêtement
+naranja : orange
+descartarse : se défausser
+cargo : charge, accusation
+tripulante : membre de l'équipage
+mando : tableau de bord
+casco : coque
+vetar : interdire, prohiber
+mezquita : mosquée
+suministrar : fournir, approvisionner
+cercania : proximité
+blindado : protégé
+agudo : vif
+lema : slogan, devise
+estrado : barre, salle d'audience
+acuchillar : poignarder
+absolver : acquitter, absoudre
+altercado : altercation
+abuchear : huer, siffler
+envejecer : vieillir
+desencuentro : désaccord, discorde
+amenazar : menacer
+superar : surpasser, dépasser
+atravesar : traverser, passer
+extremar : renforcer
+tachar de : taxer de, accuser de
+soborno : corruption
+antiabortista : anti-avortement, anti-ivg
+incidir en : influencer
+presupuesto : budget, devis
+atajar : contenir, stopper
+sumo : suprême
+saciar : satisfaire, assouvir
+arrastrar : entraîner
+grano : grain
+feretro : cercueil
+cortejar : courtiser
+ensalzar : élever, ériger, offrir une promotion
+arrojar : donner, aboutir à, se solder par
+aplastante : dévastateur, écrasant
+traspasar : déplacer, transférer
