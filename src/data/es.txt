@@ -1584,7 +1584,6 @@ paro : chômage
 desbancar : déloger, détrôner
 ciudadania : population
 en vilo : dans l'attente, dans l'incertitude
-tramite : procédure
 vencedor : vainqueur
 razonadamente : avec raison
 encontrado : contradictoire
@@ -2132,7 +2131,7 @@ helado : gelé
 camilla : brancard, civière
 avaricia : avarice
 silueta : silhouette
-escombro : décombres, débris
+escombros : décombres, débris
 pringado : pauvre type, couillon
 flechazo : tir de flèche
 regordete : rondelet, grassouillet
@@ -2363,6 +2362,7 @@ resentirse : s'offenser, en vouloir à
 estrellar : lancer
 pisar : marcher sur
 recursos : ressources
+ensayar : tester
 aviso : notification
 atajo : raccourci
 vincular : lier, unir
@@ -2460,6 +2460,7 @@ altercado : altercation
 abuchear : huer, siffler
 envejecer : vieillir
 desencuentro : désaccord, discorde
+torno : tour
 amenazar : menacer
 superar : surpasser, dépasser
 atravesar : traverser, passer
@@ -2480,3 +2481,143 @@ ensalzar : élever, ériger, offrir une promotion
 arrojar : donner, aboutir à, se solder par
 aplastante : dévastateur, écrasant
 traspasar : déplacer, transférer
+matricula de honor : félicitations du jury
+asquear : dégoûter, répugner
+ferrocarril : train, chemin de fer
+peldano : marche (escalier)
+escalera : escale
+via ferrea : voie ferrée
+patrullaje : patrouille
+comparecer : comparaître
+compareciencia : comparution
+barrera : barrière
+ensayo : test, essai
+paracadista : parachutiste
+cruce : croisement
+soborno : pot-de-vin
+comicios : élections
+rembolsar : rembourser
+arropar : couvrir, envelopper, emmitoufler
+perjurio : parjure
+visto bueno : accord, approbation
+aprobacion : approbation, autorisation, accord
+tramite : procédure, démarche, formalité
+aplauso : applaudissement
+convalidacion : validation
+indultar : gracier
+pleno : séance plénière
+llamar al orden : rappeler à l'ordre
+caducar : périmer
+honrado : honnête
+augurar : prédire, prévoir
+ensordecedor : assourdissant
+armatoste : objet encombrant
+sudadera : sweat-shirt
+soleado : ensoleillé
+amanecer : lever du soleil
+hervidero : fourmillement, fourmilière
+lentejuela : paillette
+guino : clin d'oeil
+pantomima : farce
+liderar : diriger, mener
+tapadera : couverture
+tramitacion : gestion, conduite, démarche, procédure
+mascarilla : masque
+secuela : séquelle
+macho : mâle
+cosecha : récolte
+abalanzarse : se jeter, se ruer
+asegurar : certifier, assurer, garantir
+arrojar : démontrer, mettre en évidence
+premiar : récompenser, décerner un prix
+demoler : démolir
+apear : faire descendre
+magnitud : ampleur, étendue, importance
+anillo : périphérique, rocade
+albergar : abriter, accueillir, héberger
+pasillo : couloir
+colapsar : paralyser, bloquer
+entranas : entrailles
+convenir : falloir
+senal : indication
+extraviar : perdre, égarer
+escalinata : perron
+remozar : rajeunir
+entorno : environnement
+legado : héritage
+repleto : plein, bondé
+bando : camp, côté
+despajar : dégager, débarrasser
+aquejar : affliger
+tanda : série, séance
+cuajar : prendre forme, se concrétiser
+guinda del pastel : cerise sur le gâteau
+alza : hausse
+intuir : pressentir
+jejatera : direction
+nombre de pila : nom de baptême
+peyorativo : péjoratif
+liderazgo : leadership
+respaldar : épauler, soutenir
+espalda : dos
+alzar : lever, soulever
+hombro : épaule
+agrupacion : regroupement
+destierro : exil
+vencer : vaincre
+soberania : souveraineté
+valedor : protecteur, gardien
+interina : intérimaire, vacataire
+surena : du sud
+temporero : intérimaire
+almendra : amande
+recoleccion : cueillette, récolte
+tercero : tiers
+recelo : suspicion, méfiance
+subsidio : aide, prestation, allocation
+barbecho : jachère
+presupuesto : budget, devis
+subrayar : souligner
+encuesta : sondage
+encabezar : être à la tête de
+en torno de : aux alentours de
+mandatario : chef d'état, dirigeant
+competir con : rivaliser avec
+gozar de algo : profiter de
+apuesta : pari
+contrincante : adversaire
+toma : prise
+fomentar : promouvoir, encourager, développer
+al frente de : à la tête de
+arrojar : jeter, lancer
+escrutinio : dépouillement du scrutin
+mayor : plus grand
+manejar : manipuler
+desafio : défi
+efectivo : efficace
+enfoque : approche
+alzarse : s'emparer
+apostar por : miser sur
+herencia : héritage
+resaltar : se démarquer, resortir
+gozar de algo : jouir de, bénéficier de
+imperar : régner, dominer
+ambito : domaine, secteur, milieu
+centenar : centaine
+llevar a cabo : mener à bien
+enquitarse : se paralyser
+enquistar : incruster
+fortalecimiento : renforcement
+equidad : équité
+cargo : poste, fonction
+jefatura : direction
+contienda electoral : campagne électorale
+contender : lutter, se battre
+semilla : graine, semence
+estelar : magnifique, splendide, prestigieux
+achacar : attribuer à, imputer à
+contienda : dispute, conflit
+pisar : marcher sur
+abogar : plaider, défendre, soutenir
+granjear : attirer
+selva : jungle, forêt tropicale
