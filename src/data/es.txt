@@ -123,7 +123,7 @@ alterarse : s'énerver
 divisar : apercevoir, discerner
 huesped : hôte, invité, client
 seno : sein
-trasero : derrière, postérieur
+trasero : derrière, postérieur, fesses
 espantar : effrayer
 cesped : gazon, pelouse
 emisora : station de radio, émetteur
@@ -1653,7 +1653,7 @@ pecado : péché
 comprobar : vérifier
 traspié : faux-pas, trébucher
 topetar : percuter
-incautar: saisir, confisquer
+incautar : saisir, confisquer
 chaleco antibalas : gilet pare-balles
 chaleco salvavidas : gilet de sauvetage
 aprobar : réussir, admettre à un examen
@@ -1675,7 +1675,7 @@ quejarse : se plaindre
 lamentarse : se plaindre
 compadecer : plaindre, avoir pitié
 cotillear : raconter des potins, jaser
-presunto : supposé; présumé
+presunto : supposé, présumé
 presumir : présumer, supposer
 suponer : présumer, supposer
 sintoma : symptôme
@@ -1820,7 +1820,7 @@ impune : impuni
 deslegitimar : délégitimer
 doblegar : dominer, vaincre
 cinismo : cynisme
-lograr ! obtenir, remporter
+lograr : obtenir, remporter
 intercambio : échange
 rebajar : baisser, diminuer
 rebaja : soldes
@@ -2295,7 +2295,7 @@ ligar : attacher, nouer
 atar : lier
 temer : craindre, avoir peur
 judio : juif
-desalentador : décourageant; démoralisant
+desalentador : décourageant, démoralisant
 llanto : pleurs, larmes
 rogar : implorer, demander
 tregua : trêve
@@ -2454,6 +2454,7 @@ blindado : protégé
 agudo : vif
 lema : slogan, devise
 estrado : barre, salle d'audience
+enquistar : incruster
 acuchillar : poignarder
 absolver : acquitter, absoudre
 altercado : altercation
@@ -2532,10 +2533,12 @@ arrojar : démontrer, mettre en évidence
 premiar : récompenser, décerner un prix
 demoler : démolir
 apear : faire descendre
+atadura : liens, attache
 magnitud : ampleur, étendue, importance
 anillo : périphérique, rocade
 albergar : abriter, accueillir, héberger
 pasillo : couloir
+registro : registre
 colapsar : paralyser, bloquer
 entranas : entrailles
 convenir : falloir
@@ -2597,6 +2600,7 @@ desafio : défi
 efectivo : efficace
 enfoque : approche
 alzarse : s'emparer
+registro : fouille, perquisition
 apostar por : miser sur
 herencia : héritage
 resaltar : se démarquer, resortir
@@ -2606,7 +2610,6 @@ ambito : domaine, secteur, milieu
 centenar : centaine
 llevar a cabo : mener à bien
 enquitarse : se paralyser
-enquistar : incruster
 fortalecimiento : renforcement
 equidad : équité
 cargo : poste, fonction
@@ -2615,9 +2618,316 @@ contienda electoral : campagne électorale
 contender : lutter, se battre
 semilla : graine, semence
 estelar : magnifique, splendide, prestigieux
+tender lazos : tisser des liens
 achacar : attribuer à, imputer à
 contienda : dispute, conflit
 pisar : marcher sur
 abogar : plaider, défendre, soutenir
 granjear : attirer
+melocoton : pêche
 selva : jungle, forêt tropicale
+instar : prier, implorer
+acoger : accepter, recevoir
+carrera : carrière
+gabinete : gouvernement
+logro : succès, réussite
+destacar : souligner, mettre l'accent sur
+aglutinar : rassembler
+atadura : astreinte, entrave
+impedimento : empêchement, obstacle
+impune : impuni
+gasto publico : dépenses publiques
+recaudar : récolter, collecter
+recursos : ressources
+senda : sentier, chemin
+sexenio : sextennat
+tender puentes : bâtir un pont
+choque : affrontement, bagarre, accrochage
+robo con allanamiento : cambriolage
+allanamiento : effraction, violation de domicile
+creible : crédible
+conteo : dépouillement
+apuntarse : s'inscrire
+puntualizar : préciser, spécifier
+penultimo : avant-dernier
+recursos : recours, moyen
+comprometerse : s'engager, promettre
+atajar : contenir, stopper
+padrino : parrain
+mediante : grâce à, moyennant, à l'aide de
+vaticinar : prédire
+marcado : fort, prononcé, accuentué
+atravesar : traverser
+galo : français, gaulois
+desvincular : rompre, mettre un terme, arrêter
+prorroga : prolongation
+astro : star
+recorte : réduction, coupe budgétaire
+terminos interanuales : glissement annuel
+previo a : antérieur à
+estacional : de saison
+registro : enregistrement, inscription
+precariedad : précarité
+valorar : estimer, expertiser
+barrera : barrière
+trabajador autonomo : travailleur indépendant
+cuenta propia : à leur compte
+colocar : placer, poser, mettre
+por encima de : au-dessus de
+conjunto : ensemble, groupe
+contratacion : embauche
+asimismo : de même, de la même manière
+afiliacion : adhésion
+hallar : trouver, retrouver
+suceso : évènement, fait
+invernadero : serre
+en torno a : autour de
+retén : équipe, brigade
+nucleo : noyau
+levantamiento : soulèvement
+actuacion : conduite, façon d'agir
+comparecencia : séance de presse
+luto : deuil
+buceo : fouiller, se plonger
+oso : ours
+melocotonero : pêcher
+padecer : souffrir, être atteint
+tozudo : têtu, obstiné, borné
+forjar : forger
+vinculo : lien, relation
+mordaz : mordant, cinglant
+travieso : espiègle, coquin, malicieux, polisson
+irrumpir : faire irruption, débarquer
+abanderar : jouer un rôle moteur
+alegato : plaidoyer
+mito : mythe
+involucrar : impliquer
+chivo : promotion
+becerro : veau
+expiato : bouc émissaire
+latiazo : coup
+leve : léger
+tropezar : trébucher
+comicios : élections
+vincular : lier, unir
+fallo : jugement, verdict
+vigente : en vigueur
+cautelar : préventif
+tramitar : faire les démarches
+consta : être inscrit, figurer
+estrecho : serré, étroit
+sopesar : examiner, peser le pour et le contre
+cayuco : pirogue
+matanza : tuerie, massacre
+sesgado : biaisé
+madrina : marraine
+sesgar : couper en biais, tordre
+folleto : brochure, prospectus, tract
+librar de : préserver, protéger
+cauce : lit (eau), canal
+gotera : fuite
+vulgar : banal
+listillo : petit malin
+tasa : taxe, impôt
+en jaque : en échec
+deslizarse : se glisser, se faufiler, s'introduire
+turbio : trouble, louche
+genio : génie
+echizo : charme, envoûtement
+sacerdote : prêtre, curé
+capo : parrain (chef mafieux)
+granja : ferme
+graduarse : obtenir son diplôme
+legumbre : légume
+acostar : coucher, allonger
+convicto : détenu, prisonnier
+cautiverio : captivité
+calzar : chausser
+carpintero : menuisier, charpentier
+oporto : porto
+desvelarse : ne pas trouver le sommeil
+conmocionado : bouleversé, touché
+apoderar : déléguer, mandater, transmettre
+apoderarse de alguien : s'emparer de qqn
+estallar : éclater
+largometraje : long-métrage
+sabotear : saboter
+desatar : déclencher, entraîner
+cesar : cesser
+arremeter contra : se jeter sur, foncer sur
+nombramiento : nomination
+reprobar : réprouver, condamner
+subsidio : aide, prestation
+tumbar : renverser, mettre par terre
+reanudar : continuer, reprendre
+tachar de : taxer de, accuser de
+anegar : inonder
+sembrar : semer
+prejuicio : préjudice
+desencadenar : déclencher, entraîner, provoquer
+desmoronarse : s'écrouler, s'effondrer
+improperio : insulte
+extorsionar : escroquer, voler, extorquer
+desatar : détacher
+hilo : fil
+mover los hilos : tirer les ficelles
+arrodillarse : s'agenouiller
+yacer : gésir
+columpio : balançoire
+escurrirse : filer, passer à toute vitesse
+temblor : tremblement
+temblorose : tremblant
+cobre : cuivre
+con lo cual : c'est pourquoi, par conséquent
+espabilar : réveiller
+virgueria : merveille, chef d'oeuvre
+hacinarse : s'entasser
+jurado : juré
+bazofia : daube, bouse
+empenarse en : s'obstiner
+debil : fragile, faible
+tabarra : désagrément, embêtement
+sandez : bêtise, sottise
+superdotado : surdoué
+finca : propriété
+descartar : écarter, éliminer
+destacar : se démarquer, se détacher
+destacar : mettre l'accent sur, souligner
+arrastrar : tirer, traîner
+costura : couture
+levantamiento : soulèvement
+inconveniento : inconvénient
+designar : désigner
+fichaje : recrutement
+abarrotar : remplir
+roto : cassé, brisé
+quebrar : casser, briser
+cascar : frapper, briser
+congregar : réunir, rassembler
+forense : medico-légal
+gruta : grotte
+sàbana : drap
+defraudar : décevoir
+retiro : retrait
+bollera : gouine
+destrozar : détruire
+ola : vague
+pesado : pénible, lourd, énervant
+sacudir : secouer
+imprescindible : indispensable, obligatoire
+percibir : percevoir, remarquer
+pecado : péché
+bollera : gouine, lesbienne
+alejar : éloigner
+coloquio : discussion, débat
+forense : médecin légiste
+bufete : cabinet
+lidia : combat, lutte
+alivio : soulagement, apaisement
+senalar : montrer du doigt, désigner
+debilidad : faiblesse
+dolido : blessé
+agobiar : déranger, incommoder
+concejal : conseiller municipal
+averiguar : découvrir, trouver, chercher à comprendre
+destacar : se démarquer, se détacher
+comprobar : vérifier
+juzgar : juger
+cojonudo : super
+acojonar : foutre la trouille, faire peur
+amargar : gâcher, empoisonner
+venganza : vengeance
+verguenza : honte
+ocultar : cacher, dissimuler
+resecar : dessécher
+arrepentir : regretter
+encajar : coïncider, concorder
+agujero : trou
+reventar : éclater, crever
+hormiga : fourmi
+apoderar : s'emparer, envahir
+transcender : faire connaissance
+transcender : de propager, s'ébruiter
+estafar : escroquer
+estafador : escroc, arnaqueur
+mendigar : mendier, quémander
+recalcar : insister sur, souligner
+ingresar : admettre, intégrer
+gabinete : gouvernement
+escano : siège
+acallar : faire taire
+liderazgo : leadership
+regentar : diriger
+arropar : soutenir, supporter
+cepillo : brosse
+apartar : pousser, écarter, déplacer
+enredar : emmêler
+arrullar : bercer
+atraer : attirer
+hembra : femelle
+coletero : élastique, chouchou
+disfraz : déguisement
+disfrazar : déguiser
+cauto : prudent
+incauto : imprudent
+incauto : naïf
+ingeniudad : innocence, naïveté, ingénuité
+ingeniero : ingénieur
+corretear : courir dans tous les sens
+burbuja : bulle
+arder : embraser, brûler
+burbujear : faire des bulles, pétiller
+morado : violet
+escano : siège (parlement)
+enmendar : corriger, réparer, amender
+subsanar : pallier
+atronador : assourdissant
+canciller : chancelier
+abucheo : huée
+destacar : souligner, mettre l'accent
+gabinete : gouvernement
+gabinete : cabinet, bureau
+achicar : reculer, fuir
+canjear : échanger (personnes, choses)
+encuesta : enquête, sondage
+enfurecer : rendre furieux
+retorcer : tordre
+armadura : armature
+indomito : indomptable
+ensayo : essai (littérature)
+enchufar : brancher
+reblandecer : ramolir
+agujero : trou
+algodon : coton
+escombros : décombres, gravats
+caldera : chaudière
+loco de remate : fou à lier
+arrebatar : arracher, confisquer
+estreno : lancement, première
+estrenar : donner la première de
+conmocionar : bouleverser
+salvamento : sauvetage, secours
+salvajemente : sauvagement
+tortuoso : tortueux
+aterrador : terrifiant, effrayant
+desahogarse : se libérer, se défaire, se débarrasser
+pauta : règle, norme, critère
+paisa : compatriote, du même pays, de la même région
+gafe : porter la poisse, poissard
+faena : mauvais tour
+resuelto : résolu
+resena : critique
+cierre : fermeture éclair
+atras : en arrière, vers l'arrière
+atasco : obstacle, entrave
+laguna : lacune
+cruz : pile
+cara : face
+suministro : approvisionnement, distribution
+fiambre : macchabée, cadavre
+beneficio : bénéfice
+jodido : niqué, foutu, fichu
+cacheo : fouille
+consigo : avec soi
+adorno : décoration
+tela : toile, tissu
