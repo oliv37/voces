@@ -1,9 +1,11 @@
-<div class="flex flex-wrap gap-10">
+<div class="flex flex-wrap">
   @for (category of categories(); track idx; let idx = $index) {
-  <a
-    [routerLink]="[idx + 1]"
-    class="border-2 py-8 border-black text-lg text-center w-40 rounded-2xl"
-    >{{ category }}</a
-  >
+  <div class="w-1/5">
+    <a
+      [routerLink]="[idx + 1]"
+      class="border-2 py-8 mx-2 mb-6 border-black text-lg text-center block"
+      >{{ category }}</a
+    >
+  </div>
   }
 </div>

@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
-import { LANG_CODES, LangCode } from '../shared/constants/lang.constants';
-import { getLangLabel } from '../shared/utils/lang.utils';
-import { HomeRandomWordsComponent } from './random-words/home-random-words.component';
-import { HomeWordCountComponent } from './word-count/home-word-count.component';
-import { HomeLangTitleComponent } from './lang-title/home-lang-title.component';
 import { RouterLink } from '@angular/router';
-import { isClientSide } from '../shared/utils/client-side.utils';
+import { isClientSide } from '@shared/client-side.utils';
+import { LANG_CODES, LangCode } from '@shared/lang/lang.constants';
+import { getLangLabel } from '@shared/lang/lang.utils';
+import { HomeWordCardComponent } from './home-word-card/home-word-card.component';
 
 @Component({
   standalone: true,
-  imports: [
-    RouterLink,
-    HomeRandomWordsComponent,
-    HomeWordCountComponent,
-    HomeLangTitleComponent,
-  ],
+  imports: [RouterLink, HomeWordCardComponent],
   templateUrl: './home.component.html',
 })
 export class HomeComponent {

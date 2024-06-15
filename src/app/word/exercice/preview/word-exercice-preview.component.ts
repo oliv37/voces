@@ -1,7 +1,7 @@
 import { Component, HostListener, inject } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Word } from '../../word.model';
 import { WordExerciceService } from '../word-exercice.service';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,

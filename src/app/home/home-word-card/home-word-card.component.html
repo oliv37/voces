@@ -1,0 +1,10 @@
+<div class="w-80 h-full px-8 py-4 border-4 border-black">
+  <a [routerLink]="['/', langCode()]">
+    <app-home-word-card-title
+      [langCode]="langCode()"
+    ></app-home-word-card-title>
+    @if (clientSide) {
+    <app-home-word-card-body [langCode]="langCode()"></app-home-word-card-body>
+    }
+  </a>
+</div>

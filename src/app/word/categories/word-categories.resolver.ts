@@ -1,6 +1,6 @@
 import { ResolveFn } from '@angular/router';
+import { LangCode } from '@shared/lang/lang.constants';
 import { findCategories } from '../word.utils';
-import { LangCode } from '../../shared/constants/lang.constants';
 
 export const categoriesResolver: ResolveFn<string[]> = async (route) => {
   const langCode = route.paramMap.get('langCode') as LangCode;

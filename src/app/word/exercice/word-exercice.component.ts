@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { WordExerciceService } from './word-exercice.service';
 import { RouterOutlet } from '@angular/router';
-import { isClientSide } from '../../shared/utils/client-side.utils';
+import { isClientSide } from '@shared/client-side.utils';
+import { WordExerciceService } from './word-exercice.service';
 
 @Component({
   standalone: true,

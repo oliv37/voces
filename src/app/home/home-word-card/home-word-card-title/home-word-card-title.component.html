@@ -1,0 +1,6 @@
+<p class="font-bold text-2xl pb-5">
+  {{ getLangLabel(langCode()) }}
+  @if (nbWords()) {
+  <span class="italic font-normal">({{ nbWords() }})</span>
+  }
+</p>

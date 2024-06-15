@@ -1,9 +1,9 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { shuffle } from '@shared/array.utils';
 import { Word } from '../word.model';
 import { findRandomWords } from '../word.utils';
-import { Subscription } from 'rxjs';
-import { shuffle } from '../../shared/utils/array.utils';
 
 @Injectable()
 export class WordExerciceService implements OnDestroy {
