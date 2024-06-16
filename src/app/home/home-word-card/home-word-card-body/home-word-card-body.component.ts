@@ -1,7 +1,7 @@
 import { Component, input, signal } from '@angular/core';
-import { LangCode } from '@shared/lang/lang.constants';
+import { LangCode } from '@shared/lang/lang.constant';
 import { Word } from '@word/word.model';
-import { findAllWords, findRandomWords } from '@word/word.utils';
+import { findAllWords, findRandomWords } from '@word/word.util';
 
 @Component({
   selector: 'app-home-word-card-body',

@@ -2749,7 +2749,6 @@ desvelarse : ne pas trouver le sommeil
 conmocionado : bouleversé, touché
 apoderar : déléguer, mandater, transmettre
 apoderarse de alguien : s'emparer de qqn
-estallar : éclater
 largometraje : long-métrage
 sabotear : saboter
 desatar : déclencher, entraîner
@@ -2775,11 +2774,8 @@ arrodillarse : s'agenouiller
 yacer : gésir
 columpio : balançoire
 escurrirse : filer, passer à toute vitesse
-temblor : tremblement
 temblorose : tremblant
-cobre : cuivre
 con lo cual : c'est pourquoi, par conséquent
-espabilar : réveiller
 virgueria : merveille, chef d'oeuvre
 hacinarse : s'entasser
 jurado : juré
@@ -2789,13 +2785,7 @@ debil : fragile, faible
 tabarra : désagrément, embêtement
 sandez : bêtise, sottise
 superdotado : surdoué
-finca : propriété
-descartar : écarter, éliminer
-destacar : se démarquer, se détacher
-destacar : mettre l'accent sur, souligner
-arrastrar : tirer, traîner
 costura : couture
-levantamiento : soulèvement
 inconveniento : inconvénient
 designar : désigner
 fichaje : recrutement
@@ -2804,11 +2794,11 @@ roto : cassé, brisé
 quebrar : casser, briser
 cascar : frapper, briser
 congregar : réunir, rassembler
-forense : medico-légal
 gruta : grotte
 sàbana : drap
 defraudar : décevoir
 retiro : retrait
+
 bollera : gouine
 destrozar : détruire
 ola : vague
@@ -2931,3 +2921,6 @@ cacheo : fouille
 consigo : avec soi
 adorno : décoration
 tela : toile, tissu
+consejeria : ministère
+maltrecho : mal en point
+embustero : menteur

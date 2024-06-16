@@ -2,29 +2,31 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { WordCategoryComponent } from './word/category/word-category.component';
 import { WordCategoriesComponent } from './word/categories/word-categories.component';
-import { categoriesResolver } from './word/categories/word-categories.resolver';
-import { canMatchWord } from './word/can-match-word';
-import { wordsInCategoryResolver } from './word/words-in-category.resolver';
+import { resolveCategories } from './word/categories/word-categories.resolver';
+import { wordsMatcher } from './word/word.can-match';
 import { WordExerciceComponent } from './word/exercice/word-exercice.component';
 import { WordExercicePreviewComponent } from './word/exercice/preview/word-exercice-preview.component';
 import { WordExerciceMcqComponent } from './word/exercice/mcq/word-exercice-mcq.component';
 import { WordExerciceFormComponent } from './word/exercice/form/word-exercice-form.component';
-import { wordsResolver } from './word/words.resolver';
+import {
+  resolveWords,
+  resolveWordsInCategoryResolver,
+} from './word/word.resolver';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: ':langCode',
-    canMatch: [canMatchWord],
+    canMatch: [wordsMatcher],
     resolve: {
-      words: wordsResolver,
+      words: resolveWords,
     },
     children: [
       {
         path: '',
         component: WordCategoriesComponent,
         resolve: {
-          categories: categoriesResolver,
+          categories: resolveCategories,
         },
       },
       {
@@ -34,14 +36,14 @@ export const routes: Routes = [
             path: '',
             component: WordCategoryComponent,
             resolve: {
-              wordsInCategory: wordsInCategoryResolver,
+              wordsInCategory: resolveWordsInCategoryResolver,
             },
           },
           {
             path: 'exercice',
             component: WordExerciceComponent,
             resolve: {
-              wordsInCategory: wordsInCategoryResolver,
+              wordsInCategory: resolveWordsInCategoryResolver,
             },
             children: [
               {

@@ -1,4 +1,4 @@
-import { LangCode } from '@shared/lang/lang.constants';
+import { LangCode } from '@shared/lang/lang.constant';
 import { Word } from './word.model';
 
 export const CATEGORY_SIZE = 100;

@@ -1,8 +1,8 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { isClientSide } from '@shared/client-side.utils';
-import { LangCode } from '@shared/lang/lang.constants';
-import { getLangLabel } from '@shared/lang/lang.utils';
+import { isClientSide } from '@shared/client-side.util';
+import { LangCode } from '@shared/lang/lang.constant';
+import { getLangLabel } from '@shared/lang/lang.util';
 import { HomeWordCardTitleComponent } from './home-word-card-title/home-word-card-title.component';
 import { HomeWordCardBodyComponent } from './home-word-card-body/home-word-card-body.component';
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { isClientSide } from '@shared/client-side.utils';
+import { isClientSide } from '@shared/client-side.util';
 import { WordExerciceService } from './word-exercice.service';
 
 @Component({

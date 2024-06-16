@@ -1,13 +1,9 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
-import {
-  Navigation,
-  NavigationEnd,
-  Router,
-  RouterLink,
-  UrlSegment,
-} from '@angular/router';
-import { filter, tap } from 'rxjs';
-import { getLinkLabel } from './breadcrumb.utils';
+import { Component, inject } from '@angular/core';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { filter, map } from 'rxjs';
+import { BreadCrumb } from './breadcrumb.model';
+import { findBreadCrumb } from './breadcrumb.util';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -15,37 +11,13 @@ import { getLinkLabel } from './breadcrumb.utils';
   imports: [RouterLink],
   templateUrl: './breadcrumb.component.html',
 })
-export class BreadcrumbComponent implements OnInit {
+export class BreadcrumbComponent {
   router = inject(Router);
 
-  segments = signal<UrlSegment[]>([]);
-
-  ngOnInit(): void {
-    this.segments.set(this.getSegments(this.router.lastSuccessfulNavigation));
-    this.router.events
-      .pipe(filter((e) => e instanceof NavigationEnd))
-      .subscribe(() => {
-        this.segments.set(this.getSegments(this.router.getCurrentNavigation()));
-      });
-  }
-
-  getSegments(navigation: Navigation | null): UrlSegment[] {
-    return [
-      new UrlSegment('/', {}),
-      ...(navigation?.finalUrl?.root.children['primary']?.segments || []),
-    ];
-  }
-
-  getRouterLink(idx: number) {
-    return this.segments()
-      .slice(0, idx + 1)
-      .map((s) => s.path);
-  }
-
-  getLinkLabel(idx: number): string {
-    return getLinkLabel({
-      idx,
-      segments: this.segments(),
-    });
-  }
+  breadCrumb = toSignal<BreadCrumb>(
+    this.router.events.pipe(
+      filter((e) => e instanceof NavigationEnd),
+      map((e) => findBreadCrumb((e as NavigationEnd).urlAfterRedirects))
+    )
+  );
 }

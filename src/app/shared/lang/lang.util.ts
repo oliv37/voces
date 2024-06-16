@@ -1,4 +1,4 @@
-import { LangCode, LANG_LABELS, LANG_CODES } from './lang.constants';
+import { LangCode, LANG_LABELS, LANG_CODES } from './lang.constant';
 
 export function getLangLabel(langCode: LangCode): string {
   return LANG_LABELS[langCode];

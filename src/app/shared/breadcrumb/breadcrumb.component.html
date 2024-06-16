@@ -1,9 +1,9 @@
 <div class="flex flex-wrap gap-2 italic capitalize text-md">
-  @for (segment of segments(); track i; let i = $index, last = $last) {
-  <a [routerLink]="getRouterLink(i)" [class.underline]="!last">{{
-    getLinkLabel(i)
+  @for (breadCrumbItem of breadCrumb(); track i; let i = $index, last = $last) {
+  <a [routerLink]="breadCrumbItem.url" [class.underline]="!last">{{
+    breadCrumbItem.label
   }}</a>
   @if (!last) {
-  <span class="px-1">></span>
+  <span class="px-1">&gt;</span>
   } }
 </div>

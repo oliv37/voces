@@ -1,9 +1,12 @@
 import { CanMatchFn, Route, UrlSegment } from '@angular/router';
-import { CATEGORY_SIZE, countAllWords } from './word.utils';
-import { isPositiveInteger } from '../shared/string.utils';
-import { isLangCode } from '../shared/lang/lang.utils';
+import { isLangCode } from '@shared/lang/lang.util';
+import { CATEGORY_SIZE, countAllWords } from './word.util';
 
-export const canMatchWord: CanMatchFn = async (
+function isPositiveInteger(str?: string): boolean {
+  return str != undefined && /^[1-9]\d*$/.test(str);
+}
+
+export const wordsMatcher: CanMatchFn = async (
   route: Route,
   segments: UrlSegment[]
 ) => {

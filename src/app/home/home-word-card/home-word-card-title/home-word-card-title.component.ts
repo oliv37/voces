@@ -1,7 +1,7 @@
 import { Component, input, signal } from '@angular/core';
-import { LangCode } from '@shared/lang/lang.constants';
-import { getLangLabel } from '@shared/lang/lang.utils';
-import { countAllWords } from '@word/word.utils';
+import { LangCode } from '@shared/lang/lang.constant';
+import { getLangLabel } from '@shared/lang/lang.util';
+import { countAllWords } from '@word/word.util';
 
 @Component({
   selector: 'app-home-word-card-title',
