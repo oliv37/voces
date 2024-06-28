@@ -718,7 +718,6 @@ llevar : porter, emporter
 agotado : épuisé
 quiebra : faillite
 cruzar : croiser
-cruzar : traverser
 frontera : frontière
 pillar : attraper, rattraper
 castigo : punition, châtiment
@@ -815,6 +814,7 @@ chupatintas : gratte-papier
 ambito : domaine, secteur, milieu
 rodado : routier
 jodido : foutu
+cruzar : traverser
 encajar : aller à quelqu'un, coincider avec
 encajar en : être à sa place, se sentir à sa place
 soso : fade, insipide, terne
@@ -1602,7 +1602,6 @@ fogon : fourneau
 dependencia : pièce, agence
 informal : peu sérieux, peu fiable
 fianza : caution
-arrebatar : arracher
 esposar : épouser
 sonar : rêver
 estadio : stade
@@ -1630,7 +1629,7 @@ sudadera : sweat
 extranarse : s'étonner, être surpris
 rematar : couronner, achever
 peleon : bagarreur
-orgullo : fierté
+orgullo : fierté, orgueil
 calvo : chauve
 explotador : exploiteur, profiteur
 precintar : fermer, sceller
@@ -1888,7 +1887,6 @@ anicos : en mille morceaux, en miettes
 remolino : tourbillon
 horrendo : horrible, moche
 enredar : emmêler, entremêler
-enredarse en : se mêler
 martillo : marteau
 turista : touriste
 anhelo : désir, aspiration
@@ -1957,6 +1955,7 @@ aduana : douane
 fachada : façade
 camarote : cabine
 machinaria : machines, engins
+enredarse en : se mêler
 alzada : hauteur
 tranca : barre, bâton
 muelle : quai
@@ -2344,6 +2343,7 @@ desgarrador : déchirant, poignant
 atender : recevoir, accueillir
 machona : garçon manqué
 sobre todo : surtout, principalement
+salvaje : sauvage
 asalariado : salarié
 ineludible : incontournable
 verdugo : bourreau
@@ -2451,6 +2451,7 @@ mezquita : mosquée
 suministrar : fournir, approvisionner
 cercania : proximité
 blindado : protégé
+atentado : attentat
 agudo : vif
 lema : slogan, devise
 estrado : barre, salle d'audience
@@ -2465,6 +2466,7 @@ torno : tour
 amenazar : menacer
 superar : surpasser, dépasser
 atravesar : traverser, passer
+barullo : désordre, bazar
 extremar : renforcer
 tachar de : taxer de, accuser de
 soborno : corruption
@@ -2627,6 +2629,7 @@ granjear : attirer
 melocoton : pêche
 selva : jungle, forêt tropicale
 instar : prier, implorer
+escurrir : sécher, égoutter, essuyer
 acoger : accepter, recevoir
 carrera : carrière
 gabinete : gouvernement
@@ -2789,7 +2792,9 @@ costura : couture
 inconveniento : inconvénient
 designar : désigner
 fichaje : recrutement
+estrenar : donner la première de
 abarrotar : remplir
+ingenieria : ingénierie
 roto : cassé, brisé
 quebrar : casser, briser
 cascar : frapper, briser
@@ -2798,73 +2803,44 @@ gruta : grotte
 sàbana : drap
 defraudar : décevoir
 retiro : retrait
-
-bollera : gouine
-destrozar : détruire
 ola : vague
-pesado : pénible, lourd, énervant
-sacudir : secouer
+salvajemente : sauvagement
 imprescindible : indispensable, obligatoire
 percibir : percevoir, remarquer
+pegar : coler
 pecado : péché
 bollera : gouine, lesbienne
-alejar : éloigner
 coloquio : discussion, débat
 forense : médecin légiste
-bufete : cabinet
 lidia : combat, lutte
 alivio : soulagement, apaisement
 senalar : montrer du doigt, désigner
-debilidad : faiblesse
 dolido : blessé
-agobiar : déranger, incommoder
 concejal : conseiller municipal
 averiguar : découvrir, trouver, chercher à comprendre
-destacar : se démarquer, se détacher
-comprobar : vérifier
 juzgar : juger
-cojonudo : super
-acojonar : foutre la trouille, faire peur
 amargar : gâcher, empoisonner
-venganza : vengeance
-verguenza : honte
 ocultar : cacher, dissimuler
 resecar : dessécher
 arrepentir : regretter
-encajar : coïncider, concorder
 agujero : trou
-reventar : éclater, crever
 hormiga : fourmi
 apoderar : s'emparer, envahir
 transcender : faire connaissance
-transcender : de propager, s'ébruiter
-estafar : escroquer
-estafador : escroc, arnaqueur
 mendigar : mendier, quémander
 recalcar : insister sur, souligner
 ingresar : admettre, intégrer
-gabinete : gouvernement
-escano : siège
-acallar : faire taire
-liderazgo : leadership
-regentar : diriger
 arropar : soutenir, supporter
 cepillo : brosse
 apartar : pousser, écarter, déplacer
-enredar : emmêler
 arrullar : bercer
-atraer : attirer
 hembra : femelle
+yedra : lierre
 coletero : élastique, chouchou
-disfraz : déguisement
 disfrazar : déguiser
 cauto : prudent
 incauto : imprudent
-incauto : naïf
 ingeniudad : innocence, naïveté, ingénuité
-ingeniero : ingénieur
-corretear : courir dans tous les sens
-burbuja : bulle
 arder : embraser, brûler
 burbujear : faire des bulles, pétiller
 morado : violet
@@ -2874,8 +2850,7 @@ subsanar : pallier
 atronador : assourdissant
 canciller : chancelier
 abucheo : huée
-destacar : souligner, mettre l'accent
-gabinete : gouvernement
+ingeniero : ingénieur
 gabinete : cabinet, bureau
 achicar : reculer, fuir
 canjear : échanger (personnes, choses)
@@ -2885,19 +2860,13 @@ retorcer : tordre
 armadura : armature
 indomito : indomptable
 ensayo : essai (littérature)
-enchufar : brancher
 reblandecer : ramolir
-agujero : trou
-algodon : coton
-escombros : décombres, gravats
 caldera : chaudière
 loco de remate : fou à lier
 arrebatar : arracher, confisquer
 estreno : lancement, première
-estrenar : donner la première de
 conmocionar : bouleverser
 salvamento : sauvetage, secours
-salvajemente : sauvagement
 tortuoso : tortueux
 aterrador : terrifiant, effrayant
 desahogarse : se libérer, se défaire, se débarrasser
@@ -2906,7 +2875,6 @@ paisa : compatriote, du même pays, de la même région
 gafe : porter la poisse, poissard
 faena : mauvais tour
 resuelto : résolu
-resena : critique
 cierre : fermeture éclair
 atras : en arrière, vers l'arrière
 atasco : obstacle, entrave
@@ -2924,3 +2892,145 @@ tela : toile, tissu
 consejeria : ministère
 maltrecho : mal en point
 embustero : menteur
+escurrir : couler
+chuleta : antisèche
+cenir : marquer, mouler, être cintré
+escolta : garde du corps
+ondear : ondoyer, ajouter
+llaga : plaie
+lince : lynx
+cachorro : chiot
+atropello : collision
+barriga : ventre, bedaine
+pantano : marécage, marais
+orilla : bord, rive, berge
+embalse : bassin de retenue, lac artificiel, barrage
+termas : thermes (bassin chaud)
+arenoso : sableux, sablonneux
+apartar : exclure, tenir à l'écart
+manantial : source
+chorro : jet (eau)
+humear : fumer
+rencilla : querelle
+foraneo : étranger
+poza : mare
+templar : tempérer, calmer
+papada : double menton
+incauto : naïf
+manchar : tâcher
+transcender : se propager, s'ébruiter
+ajetreo : agitation, effervescence
+relucir : briller, étinceler
+verde : jeune, inexpérimenté, immature
+enésimo : énième
+velero : voilier
+pantomima : farce
+torcer : tourner, tordre
+maleza : broussaille
+balsa : radeau
+ceruleo : bleu ciel
+amoratar : violacer
+espuma : écume, mousse
+rasgos : traits, physionomie
+hinchazon : bosse, gonflement
+enmaranar : emmêler
+tragar : avaler, dévorer
+subyugar : subjuguer
+sujetar : tenir, attacher, fixer
+arcada : nausée
+intrascendente : insignifiant
+benemerita : guarde civile, gendarmerie
+lancha : canot à moteur
+cabo : brigadier, caporal
+resoplar : souffler
+espantoso : horrible, terrifiant
+desprenderse : se débarraser
+fingido : feint
+torpe : maladroit
+tararear : fredonner, chantonner
+hortera : ringard, de mauvais goût
+surtir efector : faire effet
+seriedad : sérieux
+braga : culotte
+arrancar : arracher, enlever
+eludir : esquiver, éviter
+aborto : avortement
+pasmoso : ahurissant, stupéfiant
+computo : calcul, compte
+oposicion : concours
+baja : arrêt de travail
+desaliento : découragement
+enganchar : accrocher, captiver
+hastiar : fatiguer, lasser, excéder
+agrado : goût
+pluralizar : généraliser
+trago : coup dur
+niebla : brouillard, brume
+embutido : charcuterie
+jalear : exciter
+suegro : beau-père
+embate : coup, assaut, bourrasque
+pina : clan, groupe uni, groupe soudé
+sumir : enfoncer, plonger, sombrer
+negrura : noirceur, obscurité
+radicar : se trouver, résider
+cachorro : chiot
+jaleo : foin, histoire, scandale
+intuir : pressentir
+rayos : incroyable, magnifique
+peludo : poilu, velu
+derretir : faire fondre
+cursi : cucul, gnangnan, à l'eau de rose
+ablandar : ramollir, amadouer
+caricia : caresse
+barullo : vacarme, tapage, boucan
+meta : but, objectif
+logro : succès, réussite, victoire
+inconcebible : inconcevable
+desmedido : démesuré
+danzar : danser
+grunir : grogner
+lastimosamente : déplorablement, de façon regrettable
+morrina : mal du pays
+desmontar : démonter
+sensato : sensé, sage, prudent
+regatear : négocier, marchander
+en un pis pas : en un instant, en un clin d'oeil
+cuanto antes : dès que possible
+quitar de encima : débarasser de qch
+rapto : accès
+parlotear : bavarder, jacasser
+colar : s'infiltrer
+chollo : bonne affaire, aubaine
+pijo : bourgeois
+rebatir : réfuter, rejeter
+bodorrio : mariage de débauche
+panfilo : idiot, niais
+antojarse : imaginer, avoir l'impression
+salvaguardar : protéger
+entero : digne
+enloquecer : exaspérer, rendre fou
+desconsuelo : tristesse, chagrin
+mustio : morose, triste
+hacer el papelon : se donner en spectacle, se tourner en ridicule
+forestal : forestier
+pasto : herbe, pâturage
+matorral : fourré, brousse
+nucleo urbano : noyau urbain
+chiste : blague
+bochorno : canicule
+tramo : portion, tronçon
+empedrar : remplir, couvrir
+requisito : condition requise, prérequis
+carraspear : toussoter, se racler la gorge
+mofar : se moquer de
+resfriado : rhume, enrhumé
+jalear : encourager, acclamer
+mediado : à moitié
+exhaustivo : exhaustif
+atento : attentif
+sabio : sage
+ampararse : se servir, invoquer
+ahogamiento : noyaude
+paga : paie, paye
+golear : écraser, marquer de nombreux buts
