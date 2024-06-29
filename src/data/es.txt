@@ -2598,6 +2598,7 @@ arrojar : jeter, lancer
 escrutinio : dépouillement du scrutin
 mayor : plus grand
 manejar : manipuler
+cebra : zèbre
 desafio : défi
 efectivo : efficace
 enfoque : approche
@@ -2726,6 +2727,7 @@ sesgado : biaisé
 madrina : marraine
 sesgar : couper en biais, tordre
 folleto : brochure, prospectus, tract
+plovo : poussière
 librar de : préserver, protéger
 cauce : lit (eau), canal
 gotera : fuite
@@ -2770,6 +2772,7 @@ desencadenar : déclencher, entraîner, provoquer
 desmoronarse : s'écrouler, s'effondrer
 improperio : insulte
 extorsionar : escroquer, voler, extorquer
+patinar : patiner
 desatar : détacher
 hilo : fil
 mover los hilos : tirer les ficelles
@@ -2777,6 +2780,7 @@ arrodillarse : s'agenouiller
 yacer : gésir
 columpio : balançoire
 escurrirse : filer, passer à toute vitesse
+oreja : oreille
 temblorose : tremblant
 con lo cual : c'est pourquoi, par conséquent
 virgueria : merveille, chef d'oeuvre
@@ -2964,6 +2968,7 @@ enganchar : accrocher, captiver
 hastiar : fatiguer, lasser, excéder
 agrado : goût
 pluralizar : généraliser
+asomar : sortir, montrer
 trago : coup dur
 niebla : brouillard, brume
 embutido : charcuterie
@@ -3005,6 +3010,7 @@ chollo : bonne affaire, aubaine
 pijo : bourgeois
 rebatir : réfuter, rejeter
 bodorrio : mariage de débauche
+prendar : plaire, charmer
 panfilo : idiot, niais
 antojarse : imaginer, avoir l'impression
 salvaguardar : protéger
@@ -3012,6 +3018,7 @@ entero : digne
 enloquecer : exaspérer, rendre fou
 desconsuelo : tristesse, chagrin
 mustio : morose, triste
+engano : tromperie, mensonge
 hacer el papelon : se donner en spectacle, se tourner en ridicule
 forestal : forestier
 pasto : herbe, pâturage
@@ -3028,9 +3035,104 @@ resfriado : rhume, enrhumé
 jalear : encourager, acclamer
 mediado : à moitié
 exhaustivo : exhaustif
+dar de lleno : taper dans le mille
 atento : attentif
 sabio : sage
 ampararse : se servir, invoquer
 ahogamiento : noyaude
 paga : paie, paye
 golear : écraser, marquer de nombreux buts
+en cuanto a : concernant, pour ce qui est de
+destartalado : délabré, détérioré, vétuste
+taquilla : casier
+chancla : tong, claquette, sandale
+subidon : montée
+engullir : engloutir
+prenda : vêtement
+vaquero : jean
+dilacion : délai, retard
+pestillo : verrou
+polvo : poudre
+enrollar : enrouler
+raya : ligne, trait
+esnifar : sniffer
+cima : sommet, cime
+pantalon corto : bermuda
+tirillas : sac d'os
+acrecentar : accroître, augmenter
+fatuidad : sottise, bêtise
+tupé : banane (coupe de cheveux)
+laca : laque
+espuma : mousse de coiffage
+chaval : gamin
+peinado : coupe de cheveux
+rapar : raser, tondre
+lata : boîte de conserve
+esparadrapo : sparadrap
+antagonico : antagonique, opposé
+pudoroso : pudique
+ajeno a : étranger à
+frialdad : froideur
+asomar : apparaître, poindre
+ira : colère, fureur, rage
+rondar : tourner autour de, rôder autour de
+calzoncillos : caleçon, slip
+gastado : usé, délavé
+goma : élastique
+percatarse de algo : se rendre compte de
+aranar : égratigner, érafler
+lleno : plein
+paralitico : personne atteinte de paralysie
+bromear : blaguer, plaisanter
+paleto : plouc
+fofo : mou, flasque
+peludo : poilu
+pegar un tiro : se tirer une balle
+desprecio : mépris
+enjabonar : savonner
+no caber duda : sans aucun doute
+loncha : tranche
+dedo corazon : majeur
+advertencia : avertissement
+patinar : gaffer
+entereza : force de caractère
+pinza : pince à linge
+ufano : fier, orgueilleux
+zanjar : régler, résoudre
+gallito : petite terreur, petit chef
+vaho : buée
+gélido : glacé, gelé
+molino : moulin
+planta baja : rez-de-chaussée
+ensueno : rêve
+voy tirando : j'arrive à m'en sortir
+bastante : assez
+bollo : petit pain, viennoiserie
+empeno : tenacité, persévérance
+engano : aveuglement, illusion
+ocurrencia : idée soudaine, fulgurance
+pasado manana : après-demain
+calar : s'infiltrer, pénétrer
+rendija : fente
+colar : glisser, s'introduire
+collar : collier, laisse
+gemido : gémissement
+estornudar : éternuer
+letargo : léthargie
+mermar : réduire, diminuer
+sin estrenar : tout neuf, flambant neuf
+partir : découper, diviser
+embriagador : enivrant
+aun : encore
+espeso : épais
+faro : phare
+bombilla : ampoule
+paso de cebra : passage piétons
+embestir : charger, attaquer
+atropellar : renverser, faucher, écraser
+susto : peur, frayeur
+ojera : cerne
+acuoso : mouillé, humide
+enrojecer : rougir
+nitido : clair
+hechizar : ensorceler, envoûter
