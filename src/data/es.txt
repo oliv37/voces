@@ -401,7 +401,7 @@ reganar : gronder, disputer
 sena : indice, signe
 las senas : adresse (domicile)
 inquilino : locataire
-afueras : banlieue
+afuera : banlieue, périphérie
 barrer : balayer
 roer : ronger
 rescoldo : dernières braises
@@ -2122,6 +2122,7 @@ chivarse : cafter, moucharder
 rebotar : rebondir
 aviso : avertissement
 punalada : coup de couteau
+escalofriante : effrayant, terrifiant
 fregona : serpillière
 humo : fumée
 ambiante libre de humo : espace non-fumeur
@@ -2194,7 +2195,6 @@ lema : devise, slogan
 conformarse : se contenter de
 conformar : donner forme, se définir
 palmera : palmier
-escalofriante : effrayant, terrifiant
 escalofrio : frisson, chair de poule
 acero : acier
 ilusion : rêve, espoir, désir
@@ -2345,6 +2345,7 @@ machona : garçon manqué
 sobre todo : surtout, principalement
 salvaje : sauvage
 asalariado : salarié
+asaltar : attaquer, agresser, assaillir
 ineludible : incontournable
 verdugo : bourreau
 lodazal : bourbier
@@ -2725,6 +2726,7 @@ cayuco : pirogue
 matanza : tuerie, massacre
 sesgado : biaisé
 madrina : marraine
+bullicio : agitation, animation
 sesgar : couper en biais, tordre
 folleto : brochure, prospectus, tract
 plovo : poussière
@@ -2783,6 +2785,7 @@ escurrirse : filer, passer à toute vitesse
 oreja : oreille
 temblorose : tremblant
 con lo cual : c'est pourquoi, par conséquent
+despistar : induire en erreur, donner une fausse impression
 virgueria : merveille, chef d'oeuvre
 hacinarse : s'entasser
 jurado : juré
@@ -2978,6 +2981,7 @@ embate : coup, assaut, bourrasque
 pina : clan, groupe uni, groupe soudé
 sumir : enfoncer, plonger, sombrer
 negrura : noirceur, obscurité
+mentalizar : faire prendre conscience
 radicar : se trouver, résider
 cachorro : chiot
 jaleo : foin, histoire, scandale
@@ -3136,3 +3140,108 @@ acuoso : mouillé, humide
 enrojecer : rougir
 nitido : clair
 hechizar : ensorceler, envoûter
+mandil : tablier
+apurar : finir, terminer
+paisano : compatriote
+acodarse : s'accouder
+barra : bar, comptoir
+desperdigado : dispersé, éparpillé
+puesta de sol : coucher du soleil
+dardo : fléchette
+diana : cible
+cierva : biche
+trigo : blé
+orondo : gros, gras
+presteza : rapidité
+envergadura : envergure, importance
+pillar : surprendre, attraper
+cazar : prendre sur le vif
+desempenar : réaliser, mener à bien
+tanatorio : funérarium
+palo : bâton
+comarca : canton
+bocado : bout, morceau
+calido : chaleureux
+toque : touche, pointe
+acristalado : vitré
+hierro : fer
+auto : ordonnance, jugement, décision
+estrepitoso : retentissant, fracassant
+auxilio : à l'aide, au secours
+preso : prisonnier
+azufre : souffre
+bullicio : brouhaha, bruit
+hastiar : fatiguer, lasser
+clavar : planter, enfoncer
+desdenable : négligeable
+amarillento : jaunâtre
+sereno : tranquille, calme
+reprimir : réprimer, contenir
+ronco : enroué
+tufillo : mauvaise odeur, puanteur
+taponar : boucher
+lingotazo : gorgée
+melena : chevelure
+bachillerato : lycée
+cotizado : courtisé
+al grano : viens-en aux faits, va à l'essentiel
+enrollarse : trop parlé, s'éterniser
+claustro : corps enseignant
+de reojo : du coin de l'oeil
+premura : urgence
+hondo : profond
+procesar : traiter, transformer
+rastro : trace
+osadia : audace, témérité
+convento : couvent
+clausura : clôture
+calada : bouffée, taffe
+rabiar : enrager
+indole : caractère
+currar : bosser, taffer
+carpeta : chemise, dossier
+asaltar : se poser la question
+regular : moyen
+despistar : déconcerter, distraire, dérouter
+mentalizado : préparé mentalement
+atenerse : s'en tenir
+al tanto : au courant
+comecome : démangeaison
+arrepentirse : se rétracter
+destino : destination
+descolocar : déplacer
+escueto : simple, succinct
+firme : décidé, sûr, déterminé
+pito : sifflet, klaxon
+temario : programme
+deje : accent
+birria : daube, merde
+asentir : consentir, acquiescer
+hojear : feuilleter
+candorose : candide
+enternecer : attendrir, émouvoir
+suelta : lâche, détendu
+alabar : louer, vanter, faire l'éloge de
+molar : être super, être génial
+rehuir : fuir, éviter
+mediar : intervenir, servir de médiateur
+apresurar : précipiter
+empenarse en : s'obstiner
+dotar : faire
+tragar : avaler, dévorer
+abismo : précipice, abîme
+acechar : guetter, traquer, être à l'affut de
+aferrarse : s'accrocher à
+curandero : guérisseur
+avispa : guêpe
+bocajarro : à bout portant
+cenido : cintré, moulant
+retar : défier
+torpe : bête, niais, nul
+gorra : casquette
+pizarra : ardoise, tableau
+surtir : jaillir
+bufido : rugissement, soufflement
+tapujo : cachotterie, secret
+germen : germe
+chupinazo : tir
