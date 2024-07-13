@@ -16,20 +16,15 @@
   </span>
   }
   <div class="pt-3 justify-self-end">
-    <a
-      [routerLink]="['..']"
-      class="border-2 border-black px-4 font-bold inline-block"
-    >
-      ↩
-    </a>
+    <a [routerLink]="['../qcm']" class="px-2 font-bold text-lg"> ↩ </a>
   </div>
   <div class="pt-3">
     <button
       type="submit"
-      class="border-2 border-black px-4 py-0 font-bold disabled:opacity-40"
+      class="px-2 font-bold text-lg disabled:opacity-40"
       [disabled]="!isWin()"
     >
-      ↪
+      ↻
     </button>
   </div>
 </form>

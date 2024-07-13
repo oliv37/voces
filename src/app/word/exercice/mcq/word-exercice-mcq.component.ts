@@ -49,7 +49,7 @@ export class WordExerciceMcqComponent {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.key === 'Enter' && this.isWin()) {
+    if (event.key === 'Enter') {
       this.router.navigate([this.nextLink], { relativeTo: this.route });
     }
   }

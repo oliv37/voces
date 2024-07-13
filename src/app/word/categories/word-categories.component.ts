@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import type { Category } from '@word/word.model';
 
 @Component({
   standalone: true,
@@ -7,5 +8,5 @@ import { RouterModule } from '@angular/router';
   templateUrl: './word-categories.component.html',
 })
 export class WordCategoriesComponent {
-  categories = input.required<string[]>();
+  categories = input.required<Category[]>();
 }

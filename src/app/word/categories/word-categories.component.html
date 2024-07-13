@@ -1,11 +1,16 @@
-<div class="flex flex-wrap">
-  @for (category of categories(); track idx; let idx = $index) {
-  <div class="w-1/5">
-    <a
-      [routerLink]="[idx + 1]"
-      class="border-2 py-8 mx-2 mb-6 border-black text-lg text-center block"
-      >{{ category }}</a
-    >
+@for (category of categories(); track $index) {
+<a [routerLink]="[$index + 1]" class="block border-2 border-black mb-6">
+  <div class="flex justify-between items-center bg-black text-white py-1 px-4">
+    <span class="font-bold text-xl">{{ category.id }}</span>
+    <span class="font-bold text-sm">({{ category.words.length }})</span>
   </div>
-  }
-</div>
+
+  <div class="p-1 flex flex-wrap gap-2">
+    @for (word of category.words; track $index;) {
+    <span>{{ word.value }}</span>
+    @if (!$last) {
+    <span>•</span>
+    } }
+  </div>
+</a>
+}

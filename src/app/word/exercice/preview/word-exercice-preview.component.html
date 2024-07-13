@@ -4,16 +4,9 @@
   <span>{{ word.translationFr }}</span>
   }
 </div>
-<div class="flex justify-center gap-4 pt-10">
-  <button
-    type="button"
-    class="border-2 border-black font-bold rounded-full px-2 mx-2"
-    (click)="reinit()"
-  >
+<div class="flex justify-center gap-6 pt-10">
+  <button type="button" class="px-2 font-bold text-lg" (click)="reinit()">
     ↻
   </button>
-  <a [routerLink]="['qcm']" class="border-2 border-black px-4">qcm</a>
-  <a [routerLink]="['formulaire']" class="border-2 border-black px-4"
-    >formulaire</a
-  >
+  <a routerLink="qcm" class="px-2 font-bold text-lg"> ↪ </a>
 </div>

@@ -3,3 +3,8 @@ export interface Word {
   value: string;
   translationFr: string;
 }
+
+export interface Category {
+  id: number;
+  words: Word[];
+}

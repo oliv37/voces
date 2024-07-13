@@ -11,6 +11,7 @@ import { HomeWordCardBodyComponent } from './home-word-card-body/home-word-card-
   standalone: true,
   imports: [RouterLink, HomeWordCardTitleComponent, HomeWordCardBodyComponent],
   templateUrl: './home-word-card.component.html',
+  host: { class: 'w-5/12' },
 })
 export class HomeWordCardComponent {
   langCode = input.required<LangCode>();

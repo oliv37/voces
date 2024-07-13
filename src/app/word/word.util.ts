@@ -1,5 +1,5 @@
 import { LangCode } from '@shared/lang/lang.constant';
-import { Word } from './word.model';
+import { Category, Word } from './word.model';
 
 export const CATEGORY_SIZE = 100;
 
@@ -23,16 +23,15 @@ export async function countAllWords(langCode: LangCode): Promise<number> {
   return (await findAllWords(langCode)).length;
 }
 
-export async function findCategories(langCode: LangCode): Promise<string[]> {
-  const nbWords = await countAllWords(langCode);
+export async function findCategories(langCode: LangCode): Promise<Category[]> {
+  const allWords = await findAllWords(langCode);
+  const nbWords = allWords.length;
   const nbCategories = Math.ceil(nbWords / CATEGORY_SIZE);
-  return [...Array(nbCategories).keys()].map((i) => toCategory(i + 1, nbWords));
-}
-
-export function toCategory(categoryId: number, nbWords: number): string {
-  const start = (categoryId - 1) * CATEGORY_SIZE + 1;
-  const end = Math.min(categoryId * CATEGORY_SIZE, nbWords);
-  return `${start} - ${end}`;
+  return [...Array(nbCategories).keys()].map((i) => {
+    const start = i * CATEGORY_SIZE;
+    const end = Math.min(start + CATEGORY_SIZE, allWords.length);
+    return { id: i + 1, words: allWords.slice(start, end) };
+  });
 }
 
 export async function findWordsInCategory(
