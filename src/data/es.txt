@@ -22,7 +22,7 @@ corredor : couloir
 informe : rapport
 hogar : intérieur, foyer
 oveja : mouton
-senalar : indiqurer, signaler
+senalar : indiquer, signaler
 enganar : mentir, tromper
 sacudir : agiter, secouer, remuer
 terremoto : tremblement de terre
@@ -95,9 +95,8 @@ foro : forum
 subida : montée, augmentation
 mando : télécommande
 espesor : épaisseur
-inquicision : enquête, instruction
+inquisicion : enquête, instruction
 tormenta : tempête, orage
-corredor : courtier
 estafa : arnaque, escroquerie
 tapar : couvrir, cacher
 escotar : ajuster
@@ -111,7 +110,7 @@ hazana : exploit, prouesse
 punto de mira : ligne de mire
 destacar : ressortir, se démarquer
 vulgar : vulgaire
-ahundar : creuser, approfondir
+ahondar : creuser, approfondir
 desgastar : user, se fatiguer
 hueso : os
 sendero : sentier
@@ -130,10 +129,10 @@ asunto : sujet, affaire
 nave : navire, vaisseau
 rechazar : refuser
 sargento : sergent
-ejercito : armée
 ascender : monter en grade, être promu
 subteniente : sous-lieutenant
 amparo : protection, soutien
+corredor : courtier
 notificar : notifier
 auto : jugement, décision
 perseguir : poursuivre
@@ -152,7 +151,7 @@ recurso : recours, appel, pourvoi
 por consiguiente : par conséquent
 enfatizar : mettre l'accent sur, souligner
 fraudulento : frauduleux
-ordenamiente : ordre, réglementation
+ordenamiento : ordre, réglementation
 sometimiento : soumission
 recordar : rappeler
 sospechar : soupçonner
@@ -311,7 +310,6 @@ cuenta : perle
 lentitud : lenteur
 tremulo : tremblotant
 desasir : lâcher prise sur
-desasirse : se libérer de
 joyero : boîte à bijoux
 eterno : éternel
 pena : peine, chagrin
@@ -453,6 +451,7 @@ rienda : rêne
 castano : châtaigner
 vidriera : vitrail, vitrine
 vidrio : vitre
+desasirse : se libérer de
 alzar : lever
 nuevamente : de nouveau
 zaguan : entrée, vestibule
@@ -1725,6 +1724,7 @@ inversor : investisseur
 banador : maillot de bain
 cochino : cochon, porc, dégueulasse
 remar : ramer
+constancia : preuve, certitude
 laguna : trou de mémoire
 pillar : attraper, choper
 vestido : robe
@@ -2187,6 +2187,7 @@ subalterno : subalterne
 dependiente : dépendant
 juzgado : tribunal
 aforo : capacité
+desfallecer : s'évanouir, tomber
 auditorio : auditorium
 llamamiento : appel, convocation
 caceria : chasse
@@ -2593,6 +2594,7 @@ mandatario : chef d'état, dirigeant
 competir con : rivaliser avec
 gozar de algo : profiter de
 apuesta : pari
+amargo : aigri
 contrincante : adversaire
 toma : prise
 fomentar : promouvoir, encourager, développer
@@ -2661,6 +2663,7 @@ recursos : recours, moyen
 comprometerse : s'engager, promettre
 atajar : contenir, stopper
 padrino : parrain
+diario : journal intime
 mediante : grâce à, moyennant, à l'aide de
 vaticinar : prédire
 marcado : fort, prononcé, accuentué
@@ -2688,6 +2691,7 @@ afiliacion : adhésion
 hallar : trouver, retrouver
 suceso : évènement, fait
 invernadero : serre
+ansioso : nerveux, anxieux
 en torno a : autour de
 retén : équipe, brigade
 nucleo : noyau
@@ -2870,6 +2874,7 @@ enfurecer : rendre furieux
 retorcer : tordre
 armadura : armature
 indomito : indomptable
+moho : rouille
 ensayo : essai (littérature)
 reblandecer : ramolir
 caldera : chaudière
@@ -3152,6 +3157,7 @@ hechizar : ensorceler, envoûter
 mandil : tablier
 apurar : finir, terminer
 paisano : compatriote
+colmar : combler, satisfaire
 acodarse : s'accouder
 barra : bar, comptoir
 desperdigado : dispersé, éparpillé
@@ -3307,6 +3313,7 @@ suduroso : en sueur
 rodaballo : turbot
 razon : raison, cause, motif
 consulta : cabinet médical
+pista : piste, trace
 prodigarse : se montrer
 madrugar : se lever tôt
 efusivo : démonstratif, expansif
@@ -3368,6 +3375,7 @@ enrabietarse : se mettre en colère
 anonadado : abasourdi
 burrada : ânerie, énormité, bêtise
 enchufe : prise de courant, prise électrique
+empanarse : somnoler, s'assoupir
 matutino : matinal
 bache : mauvaise passe
 desconcierto : confusion, perplexité
@@ -3449,6 +3457,7 @@ castigador : punisseur
 encadenar : enchaîner
 desacertado : incorrect, inexact
 entrega : dévouement
+roer : ronger
 flanco : flanc
 otorgar : octroyer
 ansiado : désiré, convoité
@@ -3611,3 +3620,143 @@ atisbo : lueur
 reunificacion familiar : regroupement familial
 presa : barrage
 cagon : trouillard, pétochard
+lomo : dos
+acariciar : caresser
+mosqueado : en colère
+lerda : bête, lent d'esprit
+ofuscacion : aveuglement, confusion
+aliviar : soulager
+tirador : tireur
+asumible : acceptable, supportable
+cordura : raison, sagesse
+destierro : exil
+liarse la manta a la cabeza : foncer la tête baissée
+sinsentido : non-sens
+pista : circuit
+cabron : connard, enfoiré, saulaud
+pendiente : côté, pente
+colmar : remplir à ras bord
+conato : tentative
+bronca : engueulade
+ameno : agréable, divertissant
+marica : tapette, pédale
+cuclillas : accroupi
+desencajar : dérégler
+incorporarse : se redresser
+mareo : mal au coeur
+ligero : léger
+taller : atelier
+nene : gamin, gosse
+muermo : ennuyeux, rasoir
+escabullirse : s'échapper, se défaire
+exentar : exempter
+amazona : cavalière
+ansioso : impatient
+chanchullo : escroquerie, magouille
+asolar : dévaster, ravager, détruire
+a rajatabla : au pied de la lettre
+cuentagotas : compte-gouttes
+echar la pota : vomir
+liarse : se tromper
+ansia : désir, envie folle
+morboso : pervers, tordu
+afan : ambition, volonté
+aguarras : essence, white-spirit
+darle bola a : donner de l'importance à
+lamer : lécher
+amargo : amer
+manosear : tripoter
+rajar : couper, fissurer, découper
+galosina : friandises
+zafar : libérer, retirer, extraire
+inusitado ; inhabituel
+descomunal : énorme, gigantesque
+perra : pute, salope, chienne
+apiadarse : avoir pitié
+dudar : hésiter, douter
+interponer : interposer
+levantar la liebre : rendre public
+descalzo : pieds nus
+fama : célébrité, renommée
+costo : haschich
+pillar : attraper, coincer, surprendre
+tan pronto como : dès que, aussitôt que
+diario : quotidien, journalier
+de un plumazo : d'un coup, en un clin d'oeil
+despojar : dépouiller
+cochambroso : crade, dégueulasse
+nudillo : articulation du doigt
+desconchon : écaillure
+mancha : tâche
+moho : moisi, moisissure
+farola : lampadaire
+asfaltar : goudronner
+socavon : nid-de-poule
+ensayar : répéter
+escalon : marche
+acomodarse : s'installer, se mettre à l'aise
+empanar : embuer
+desvio : déviation
+serenar : apaiser, calmer
+constancia : preuve
+salpicadero : tableau de bord
+vanagloriarse : se vanter de
+compincharse : se liguer, comploter
+pinchar en hueso : tomber sur un os
+bicho : bête, bestiole
+verja : grille
+asco : dégoüt, répugnance
+pedalear : pédaler
+corroer : ronger
+llano : plat
+despejado : dégagé
+diluviar : pleuvoir à verse
+sacudirse : se débarrasser
+caldear : chauffer
+poblado : village
+fardar : frimer
+flojo : tranquille, calme
+en pelota : à poil
+marisco : fruits de mer
+atiborrarse : se gaver, se goinfrer
+parienta : femme, bourgeoise
+chapotear : patauger, barboter
+faena : tâche, travail
+cuesta : côte
+alarde : étalage
+despliegue : déploiement, étalage
+desfallecer : flancher, faiblir
+valla : clôture, palissade
+casco urbano : centre-ville
+ensueno : rêve
+mojigato : prude, coincé
+remedo : copie, contrefaçon
+multitudinario : massif, nombreux
+sibarita : raffiné, épicurien
+codazo : coup de coude
+cachete : claque, gifle
+bribon : filou
+previsor : prévoyant
+transcurrir : s'écouler, passer
+enfrascarse : s'absorber dans, se plonger dans
+pinche : commis de cuisine
+rulo : bigoudi
+bata : robe de chambre
+asombrar : étonner, stupéfier
+intermitente : clignotant
+escasez : pénurie
+pellizco : pactole, coquette somme
+garrafal : monumental, colossal
+astillero : chantier naval
+altibajo : mauvaise passe
+menear : remuer
+la pregunta del millon : la question à un million d'euros
+elucubrar : imaginer, élaborer
+amargura : amertume
+ruborizarse : rougir
+albergar : abrîter, héberger
+esparcir : étaler
+sobornar : soudoyer, acheter, corrompre
+monigote : pantin, bonhomme
+ahorcado : pendu
+mogollon : un paquet de, un tas de

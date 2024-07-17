@@ -1,18 +1,17 @@
-<div class="grid grid-cols-2 gap-4 pt-1">
+<div class="grid grid-cols-2 gap-3">
   @for (word of wordsInCategory(); track word.id) {
-  <div class="p-1">
+  <div>
     <span class="font-bold">{{ word.value }}</span>
     &nbsp;
     <span>{{ word.translationFr }}</span>
   </div>
   }
 </div>
-<div class="py-5"></div>
-<div class="flex justify-center">
+<div class="flex justify-center pt-10">
   <a
     [routerLink]="['exercice']"
     [class]="
-      'block px-5 py-2 text-black rounded-lg border-2 border-black ' +
+      'block px-3 py-2 text-black rounded-lg border-2 border-black ' +
       'hover:bg-gray-950 hover:text-white'
     "
     >Exercice</a

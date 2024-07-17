@@ -5,10 +5,15 @@ import { shuffle } from '@shared/array.util';
 import { Word } from '../word.model';
 import { findRandomWords } from '../word.util';
 
+interface ReinitOptions {
+  resetWordsAnswered?: boolean;
+  addToWordsAnswered?: boolean;
+}
+
 @Injectable()
 export class WordExerciceService implements OnDestroy {
   private wordsInCategory: Word[] = [];
-
+  private wordIdsAnswered = new Set<number>();
   private exerciceWords: Word[] = [];
 
   // mcq
@@ -21,7 +26,9 @@ export class WordExerciceService implements OnDestroy {
   private sub = new Subscription();
 
   constructor(public route: ActivatedRoute) {
-    this.sub.add(route.data.subscribe(() => this.reinit()));
+    this.sub.add(
+      route.data.subscribe(() => this.reinit({ resetWordsAnswered: true }))
+    );
   }
 
   ngOnDestroy() {
@@ -34,6 +41,14 @@ export class WordExerciceService implements OnDestroy {
 
   getInputValues(): string[] {
     return this.inputValues;
+  }
+
+  getNbWordsAnswered(): number {
+    return this.wordIdsAnswered.size;
+  }
+
+  getNbWordsInCategory(): number {
+    return this.wordsInCategory.length;
   }
 
   setLastInputFocusIndex(index: number) {
@@ -52,7 +67,17 @@ export class WordExerciceService implements OnDestroy {
     this.exerciceWordsNotChosen = this.exerciceWordsNotChosen.slice(1);
   }
 
-  reinit(): void {
+  reinit(opts?: ReinitOptions): void {
+    if (opts?.addToWordsAnswered) {
+      this.exerciceWords
+        .map((word) => word.id)
+        .forEach((id) => this.wordIdsAnswered.add(id));
+    }
+
+    if (opts?.resetWordsAnswered) {
+      this.wordIdsAnswered.clear();
+    }
+
     this.wordsInCategory = this.route.snapshot.data['wordsInCategory'];
     this.exerciceWords = findRandomWords(this.wordsInCategory, 10);
     this.exerciceWordsNotChosen = shuffle(this.exerciceWords);

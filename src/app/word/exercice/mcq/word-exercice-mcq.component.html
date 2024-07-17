@@ -1,12 +1,12 @@
-<p class="text-center text-xl font-bold pt-1 bg-white sticky top-0 min-h-10">
+<p class="text-center text-xl font-bold bg-white sticky top-0 min-h-10">
   {{ word?.value }}
 </p>
-<div class="flex flex-wrap justify-center py-5">
+<div class="flex flex-wrap justify-center">
   @for (word of words; track word.id) {
   <button
     type="button"
     [class]="
-      'border border-black p-2 m-2 flex flex-col ' +
+      'border border-black p-1 m-2 flex flex-col ' +
       'disabled:select-text disabled:border-white'
     "
     (click)="onClick(word)"
@@ -22,7 +22,7 @@
   </button>
   }
 </div>
-<div class="flex justify-center gap-6">
+<div class="flex justify-center gap-6 pt-2">
   <a [routerLink]="['..']" class="px-2 font-bold text-lg"> ↩ </a>
   <a [routerLink]="nextLink" class="px-2 font-bold text-lg"> ↪ </a>
 </div>

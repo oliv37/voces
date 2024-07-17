@@ -36,19 +36,19 @@ export class WordExerciceFormComponent implements AfterViewInit {
     this.wordExerciceService.setLastInputFocusIndex(index);
   }
 
-  @ViewChildren(NgModel, { read: ElementRef }) vc!: QueryList<
+  @ViewChildren(NgModel, { read: ElementRef }) inputs!: QueryList<
     ElementRef<HTMLInputElement>
   >;
 
   ngAfterViewInit(): void {
-    this.vc.get(this.lastInputFocusIndex)?.nativeElement?.focus();
+    this.inputs.get(this.lastInputFocusIndex)?.nativeElement?.focus();
   }
 
   onInput(currentIndex: number) {
     if (this.isAnswerValid(currentIndex)) {
       const nextIndex = this.findNextIndexToFocus(currentIndex);
       if (nextIndex >= 0) {
-        this.vc.get(nextIndex)?.nativeElement?.focus();
+        this.inputs.get(nextIndex)?.nativeElement?.focus();
       }
     }
   }
@@ -57,9 +57,11 @@ export class WordExerciceFormComponent implements AfterViewInit {
     return this.inputValues.every((_, i) => this.isAnswerValid(i));
   }
 
-  newExercice() {
+  handleSubmit() {
     this.router.navigate(['..'], { relativeTo: this.route }).then(() => {
-      this.wordExerciceService.reinit();
+      this.wordExerciceService.reinit({
+        addToWordsAnswered: true,
+      });
     });
   }
 

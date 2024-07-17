@@ -1,4 +1,4 @@
-<div class="flex flex-wrap gap-2 capitalize text-md">
+<div class="flex flex-wrap gap-2 capitalize text-sm">
   @for (breadCrumbItem of breadCrumb(); track i; let i = $index, last = $last) {
   <a [routerLink]="breadCrumbItem.url" [class.underline]="!last">{{
     breadCrumbItem.label

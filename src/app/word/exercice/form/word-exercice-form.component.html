@@ -1,6 +1,6 @@
-<form class="grid grid-cols-2 gap-4" (ngSubmit)="newExercice()">
+<form class="grid grid-cols-2 gap-4" (ngSubmit)="handleSubmit()">
   @for (word of words; track word.id; let idx = $index) {
-  <span class="justify-self-end pb-1">{{ word.translationFr }}</span>
+  <span class="justify-self-end">{{ word.translationFr }}</span>
   <span>
     <input
       type="text"
@@ -15,10 +15,10 @@
     }
   </span>
   }
-  <div class="pt-3 justify-self-end">
+  <div class="pt-2 justify-self-end">
     <a [routerLink]="['../qcm']" class="px-2 font-bold text-lg"> ↩ </a>
   </div>
-  <div class="pt-3">
+  <div class="pt-2">
     <button
       type="submit"
       class="px-2 font-bold text-lg disabled:opacity-40"
