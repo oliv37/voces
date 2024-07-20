@@ -4,12 +4,12 @@
     <span class="font-bold text-xl bg-gray-900 text-white py-1 px-3">{{
       category.id
     }}</span>
-    <span class="font-bold text-sm py-1 px-3"
+    <span class="font-bold text-sm py-1 px-3 text-gray-500"
       >({{ category.words.length }})</span
     >
   </div>
 
-  <div class="p-3 flex flex-wrap gap-2">
+  <div class="p-3 flex flex-wrap gap-2 text-gray-950">
     @for (word of category.words; track $index;) {
     <span>{{ word.value }}</span>
     @if (!$last) {

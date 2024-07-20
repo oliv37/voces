@@ -1,8 +1,8 @@
-<div class="flex items-center pb-6">
+<div class="flex items-center pb-6 text-gray-800">
   <span class="flex-1 px-2"></span>
   @for (link of links; track $index) {
   <a
-    class="block border-2 border-black m-2 px-4 text-sm"
+    class="block border-2 border-gray-700 m-2 px-4"
     [routerLink]="link.url"
     [routerLinkActive]="['text-white', 'bg-black', 'font-bold']"
     [routerLinkActiveOptions]="{ exact: true }"
@@ -11,8 +11,8 @@
   @if (!$last) {
   <span> > </span>
   } }
-  <span class="text-sm flex-1 px-2">
-    {{ nbWordsAnswered }} / {{ nbWordsInCategory }}
+  <span class="flex-1 px-2 text-gray-700 text-opacity-90">
+    {{ nbWordsAnswered }}/{{ nbWordsInCategory }}
   </span>
 </div>
 
