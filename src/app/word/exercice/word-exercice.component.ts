@@ -15,7 +15,7 @@ interface Link {
   templateUrl: './word-exercice.component.html',
 })
 export class WordExerciceComponent {
-  private wordExerciceService = inject(WordExerciceService);
+  wordExerciceService = inject(WordExerciceService);
 
   clientSide: boolean = isClientSide();
   links: Link[] = [
@@ -23,12 +23,4 @@ export class WordExerciceComponent {
     { url: 'qcm', label: 'qcm' },
     { url: 'formulaire', label: 'formulaire' },
   ];
-
-  get nbWordsAnswered() {
-    return this.wordExerciceService.getNbWordsAnswered();
-  }
-
-  get nbWordsInCategory() {
-    return this.wordExerciceService.getNbWordsInCategory();
-  }
 }

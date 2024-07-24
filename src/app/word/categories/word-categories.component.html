@@ -1,20 +1,29 @@
 @for (category of categories(); track $index) {
-<a [routerLink]="[$index + 1]" class="block border-2 border-gray-800 mb-6">
-  <div class="flex justify-between items-center border-b-2 border-b-gray-800">
-    <span class="font-bold text-xl bg-gray-900 text-white py-1 px-3">{{
-      category.id
-    }}</span>
-    <span class="font-bold text-sm py-1 px-3 text-gray-500"
-      >({{ category.words.length }})</span
+<div class="mb-6">
+  <div class="flex justify-between items-end">
+    <a
+      [routerLink]="[$index + 1]"
+      [class]="
+        'font-bold text-xl bg-gray-900 py-1 px-10 ' +
+        'border-2 border-gray-800 text-white'
+      "
+      >{{ category.id }}</a
+    >
+    <span
+      [class]="
+        'font-bold text-sm px-2 text-gray-600 text-opacity-90 ' +
+        'border-2 border-b-0 border-gray-600 rounded-t-lg'
+      "
+      >{{ category.words.length }}</span
     >
   </div>
 
-  <div class="p-3 flex flex-wrap gap-2 text-gray-950">
+  <div class="p-3 flex flex-wrap gap-2 border-2 border-gray-800 text-gray-950">
     @for (word of category.words; track $index;) {
     <span>{{ word.value }}</span>
     @if (!$last) {
     <span>•</span>
     } }
   </div>
-</a>
+</div>
 }

@@ -17,11 +17,11 @@ export class WordExerciceMcqComponent {
   readonly nextLink = '../formulaire';
 
   get words(): Word[] {
-    return this.wordExerciceService.getWords();
+    return this.wordExerciceService.words;
   }
 
   get wordsNotChosen(): Word[] {
-    return this.wordExerciceService.getWordsNotChosen();
+    return this.wordExerciceService.wordsNotChosen;
   }
 
   get word(): Word | undefined {
@@ -39,7 +39,7 @@ export class WordExerciceMcqComponent {
   onClick(answer: Word) {
     const isValidAnswer = answer === this.word;
     if (isValidAnswer) {
-      this.wordExerciceService.popWordNotChosen();
+      this.wordExerciceService.markWordAsChosen();
     }
   }
 

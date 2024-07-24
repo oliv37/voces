@@ -48,7 +48,7 @@ trasladar : déplacer, déménager
 atrapar : attraper, coincer
 replicar : répondre, répliquer
 deslizamiento de tierra : glissement de terrain
-cantera : carrière
+cantera : carrière (marbre)
 marmol : marbre
 autopista : autoroute
 decena : dizaine
@@ -56,7 +56,6 @@ aguantar : supporter, tenir bon
 oleada : vague
 sequia : sécheresse
 hectarea : hectare
-cucaracha : cafard
 devolver : rendre, redonner
 foco : projecteur, spot
 acoger : accueillir, héberger, donner l'hospitalité à
@@ -305,7 +304,6 @@ pecado : péché, erreur
 figurar : figurer, représenter
 tocador : cabinet de toilette, toilettes
 hallar : trouver, retrouver, découvrir
-rosario : chapelet
 cuenta : perle
 lentitud : lenteur
 tremulo : tremblotant
@@ -322,11 +320,9 @@ aldea : village, hameau
 anochecer : tombée de la nuit
 monte : mont, colline
 trasponer : transférer, déplacer
-herradura : fer à cheval
 paloma : colombe, pigeon
 huir : fuir
 yantar : déjeuner
-molinero : meunier
 piedra : pierre
 desmayar : faiblir
 desmayarse : s'évanouir
@@ -348,17 +344,13 @@ loma : colline
 terreno : terrain
 yermo : terre en friche, désert
 rebano : troupeau
-recua : bêtes de charge
-sudario : linceul
 apuntar : noter
 mujeriego : coureur de jupons, homme à femmes, don juan
 rocin : canasson, cheval de travail
 postrero : dernier
-arriero : muletier
 falda : jupe
 pradera : prairie
 alla : là-bas
-alla : autrefois, jadis
 dominio : pouvoir, domination
 pazo : maison de campagne
 feudo : fief
@@ -366,7 +358,6 @@ hilar : relier, établir un lien
 trebedes : trépied
 ambiente : environnement, entourage
 vaciar : vider
-alfoja : sacoche
 servilleta : serviette de table
 cenicienta : bonne à tout faire
 rafaga : rafale
@@ -399,6 +390,7 @@ las senas : adresse (domicile)
 inquilino : locataire
 afuera : banlieue, périphérie
 barrer : balayer
+pierna : jambe
 roer : ronger
 rescoldo : dernières braises
 bendicion : bénédiction
@@ -435,6 +427,7 @@ atraer : attirer
 al cabo de : au bout de
 poniente : couchant
 cedro : cèdre
+alla : autrefois, jadis
 ciprés : cyprès
 labrar : façonner
 cornisa : corniche
@@ -530,7 +523,7 @@ coleta : aileron
 cuerda : corde
 burlar : semer, esquiver
 prever : prévoir
-almanecer : lever du soleil
+amanecer : lever du soleil
 orilla : bord
 valla : clôture
 difundir : diffuser, répandre
@@ -550,7 +543,7 @@ pertenecer : appartenir
 currar : bosser, taffer
 curro : boulot
 rollo : liaison, flirt
-recharzar : rejeter, refuser
+rechazar : rejeter, refuser
 oler : sentir
 arrimar : approcher, rapprocher
 juntar : joindre, réunir
@@ -2465,6 +2458,7 @@ absolver : acquitter, absoudre
 altercado : altercation
 abuchear : huer, siffler
 envejecer : vieillir
+cucaracha : cafard
 desencuentro : désaccord, discorde
 torno : tour
 amenazar : menacer
@@ -2479,6 +2473,7 @@ incidir en : influencer
 presupuesto : budget, devis
 atajar : contenir, stopper
 sumo : suprême
+rosario : chapelet
 saciar : satisfaire, assouvir
 arrastrar : entraîner
 grano : grain
@@ -2609,6 +2604,7 @@ efectivo : efficace
 enfoque : approche
 alzarse : s'emparer
 registro : fouille, perquisition
+recua : bêtes de charge
 apostar por : miser sur
 herencia : héritage
 resaltar : se démarquer, resortir
@@ -3018,7 +3014,7 @@ sensato : sensé, sage, prudent
 regatear : négocier, marchander
 en un pis pas : en un instant, en un clin d'oeil
 cuanto antes : dès que possible
-quitar de encima : débarasser de qch
+quitar de encima : débarrasser de qch
 rapto : accès
 parlotear : bavarder, jacasser
 colar : s'infiltrer
@@ -3041,6 +3037,7 @@ forestal : forestier
 pasto : herbe, pâturage
 matorral : fourré, brousse
 nucleo urbano : noyau urbain
+sobrar : rester
 chiste : blague
 bochorno : canicule
 tramo : portion, tronçon
@@ -3073,6 +3070,7 @@ polvo : poudre
 enrollar : enrouler
 raya : ligne, trait
 juicio : jugement
+sudario : linceul
 esnifar : sniffer
 cima : sommet, cime
 pantalon corto : bermuda
@@ -3141,6 +3139,7 @@ estornudar : éternuer
 letargo : léthargie
 mermar : réduire, diminuer
 sin estrenar : tout neuf, flambant neuf
+escandalo : scandale
 partir : découper, diviser
 embriagador : enivrant
 aun : encore
@@ -3568,7 +3567,7 @@ a la legua : de loin
 descaro : insolence
 traspapelar : égarer, perdre
 afan : efforts
-blando : moelleux
+blando : moelleux, doux
 dar la talla : être à la hauteur
 lavavajillas : lave-vaisselle
 inmune : immunisé
@@ -3623,6 +3622,7 @@ reunificacion familiar : regroupement familial
 presa : barrage
 cagon : trouillard, pétochard
 lomo : dos
+cohibido : introverti, renfermé, coincé
 acariciar : caresser
 mosqueado : en colère
 lerda : bête, lent d'esprit
@@ -3664,6 +3664,7 @@ liarse : se tromper
 ansia : désir, envie folle
 morboso : pervers, tordu
 afan : ambition, volonté
+puntilla : petit couteau
 aguarras : essence, white-spirit
 darle bola a : donner de l'importance à
 lamer : lécher
@@ -3769,6 +3770,7 @@ rebuscar : fouiller
 papelera : poubelle, corbeille à papier
 guantera : boîte à gants
 mendigo : mendiant
+despejar : dégager, débarrasser
 descalzarse : se déchausser
 derramar : renverser, verser
 echar por la borda : jeter par-dessus bord
@@ -3849,3 +3851,83 @@ demacrado : amaigri
 candado : cadenas
 aliento : souffle
 empapar : tremper
+sobaco : aisselle
+embadurnar : enduire, badigeonner
+paredon : poteau d'exécution
+escoria : racaille, vermine
+resguardo : abri
+puntilla : coup de grâce
+estocada : blessure (à l'arme blanche)
+disponerse a : avoir l'intention de
+cubiculo : cabine
+plateado : argenté
+jaleo : raffut, tapage, bazar
+alborotado : agité
+despejarse : se changer les idées
+trancazo : crève (grippe)
+cuchitril : taudis
+grasiento : gras
+jalar : tirer
+fisgonear : fouiller
+cariz : tournure
+demudarse : changer, se transformer
+mocoso : morveux
+cerciorarse : s'assurer, vérifier
+aguardar : attendre
+arriero : muletier
+molinero : meunier
+herradura : fer à cheval
+desbandada : débandade, bébâcle
+rastrero : vil, mesquin
+chulo : fanfaron, frimeur
+sobrado : impertinent, insolent
+cerda : truie, cochonne
+bocanada : bouffée, bol d'air
+acicalarse : se faire beau
+contraventana : volet
+persiana : store
+mimoso : câlin, affectueux
+cavilacion : réflexion, méditation
+blando : faible, chétif
+calana : de la pire espèce
+citarse : se donner rendez-vous
+conveniente : opportun, judicieux
+testimonio : témoignage
+conyuge : conjoint
+sonoro : sonore
+volcar : faire part de, partager, confier
+garrafal : monumental, colossal
+aminorar : ralentir
+hacha : hache
+lena : bois, bois de chauffage
+salir por peteneras : s'en sortir par une pirouette
+manta : flemmard, fainéant
+cenicero : cendrier
+cuajo : nonchalence
+cazadora : veste, blouson
+cuero : cuir
+fiestero : fêtard
+alterar : rendre nerveux
+ensuciar : salir
+cansancio : fatigue
+mampara : cloison
+empalagoso : écoeurant
+obsequiar : offrir
+mordisco : morsure
+escondite : cachette
+farol : bluff
+ retratar : dessiner, peindre
+ aquiescencia : accord, permission
+ azuzar : exciter
+ enzarzarse : se disputer
+ cohibir : intimider
+ tertulia : réunion entre amis
+ escandalo : bruit, tapage, boucan
+ alameda : allée, promenade
+ cerrojo : verrou
+desenmascarar : démasquer
+calibrar : évaluer
+temeroso : craintif, peureux
+estupefacto : stupéfait, pantois
+yugular : asphyxier
+faldero : petit chien, toutou

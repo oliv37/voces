@@ -8,7 +8,7 @@
       [name]="'answer' + idx"
       [(ngModel)]="inputValues[idx]"
       (input)="onInput(idx)"
-      (focus)="lastInputFocusIndex = idx"
+      (focus)="wordExerciceService.lastInputFocusIndex = idx"
     />
     @if (word.value === inputValues[idx]) {
     <span class="px-2 font-bold">✔</span>

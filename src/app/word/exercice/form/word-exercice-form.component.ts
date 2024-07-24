@@ -21,19 +21,15 @@ export class WordExerciceFormComponent implements AfterViewInit {
   wordExerciceService = inject(WordExerciceService);
 
   get words() {
-    return this.wordExerciceService.getWords();
+    return this.wordExerciceService.words;
   }
 
   get inputValues() {
-    return this.wordExerciceService.getInputValues();
+    return this.wordExerciceService.inputValues;
   }
 
   get lastInputFocusIndex() {
-    return this.wordExerciceService.getLastInputFocusIndex();
-  }
-
-  set lastInputFocusIndex(index: number) {
-    this.wordExerciceService.setLastInputFocusIndex(index);
+    return this.wordExerciceService.lastInputFocusIndex;
   }
 
   @ViewChildren(NgModel, { read: ElementRef }) inputs!: QueryList<

@@ -6,82 +6,83 @@ import { Word } from '../word.model';
 import { findRandomWords } from '../word.util';
 
 interface ReinitOptions {
-  resetWordsAnswered?: boolean;
   addToWordsAnswered?: boolean;
 }
 
 @Injectable()
 export class WordExerciceService implements OnDestroy {
-  private wordsInCategory: Word[] = [];
-  private wordIdsAnswered = new Set<number>();
-  private exerciceWords: Word[] = [];
+  private _wordsInCategory: Word[] = [];
+  private _wordIdsAnswered = new Set<number>();
+  private _words: Word[] = [];
 
   // mcq
-  private exerciceWordsNotChosen: Word[] = [];
+  private _wordsNotChosen: Word[] = [];
 
   // form
-  private inputValues: string[] = [];
-  private lastInputFocusIndex = 0;
+  private _inputValues: string[] = [];
+  lastInputFocusIndex = 0;
 
   private sub = new Subscription();
 
+  get words(): Word[] {
+    return this._words;
+  }
+
+  get inputValues(): string[] {
+    return this._inputValues;
+  }
+
+  get nbWordsAnswered(): number {
+    return this._wordIdsAnswered.size;
+  }
+
+  get nbWordsInCategory(): number {
+    return this._wordsInCategory.length;
+  }
+
+  get wordsNotChosen(): Word[] {
+    return this._wordsNotChosen;
+  }
+
   constructor(public route: ActivatedRoute) {
-    this.sub.add(
-      route.data.subscribe(() => this.reinit({ resetWordsAnswered: true }))
-    );
+    this.sub.add(route.data.subscribe(() => this.reinit()));
   }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
-  getWords(): Word[] {
-    return this.exerciceWords;
-  }
-
-  getInputValues(): string[] {
-    return this.inputValues;
-  }
-
-  getNbWordsAnswered(): number {
-    return this.wordIdsAnswered.size;
-  }
-
-  getNbWordsInCategory(): number {
-    return this.wordsInCategory.length;
-  }
-
-  setLastInputFocusIndex(index: number) {
-    this.lastInputFocusIndex = index;
-  }
-
-  getLastInputFocusIndex(): number {
-    return this.lastInputFocusIndex;
-  }
-
-  getWordsNotChosen(): Word[] {
-    return this.exerciceWordsNotChosen;
-  }
-
-  popWordNotChosen() {
-    this.exerciceWordsNotChosen = this.exerciceWordsNotChosen.slice(1);
+  markWordAsChosen() {
+    this._wordsNotChosen = this._wordsNotChosen.slice(1);
   }
 
   reinit(opts?: ReinitOptions): void {
     if (opts?.addToWordsAnswered) {
-      this.exerciceWords
+      this._words
         .map((word) => word.id)
-        .forEach((id) => this.wordIdsAnswered.add(id));
+        .forEach((id) => this._wordIdsAnswered.add(id));
     }
 
-    if (opts?.resetWordsAnswered) {
-      this.wordIdsAnswered.clear();
-    }
+    this._wordsInCategory = this.route.snapshot.data['wordsInCategory'];
+    this.removeWordIdsAnsweredNotInCategory(this._wordsInCategory);
+    this._words = findRandomWords(this._wordsInCategory, 10, [
+      ...this._wordIdsAnswered,
+    ]);
 
-    this.wordsInCategory = this.route.snapshot.data['wordsInCategory'];
-    this.exerciceWords = findRandomWords(this.wordsInCategory, 10);
-    this.exerciceWordsNotChosen = shuffle(this.exerciceWords);
-    this.inputValues = this.exerciceWords.map((_) => '');
+    // mcq
+    this._wordsNotChosen = shuffle(this._words);
+
+    // form
+    this._inputValues = this._words.map((_) => '');
     this.lastInputFocusIndex = 0;
+  }
+
+  private removeWordIdsAnsweredNotInCategory(wordsInCategory: Word[]) {
+    const wordsIdsInCategory = wordsInCategory.map((w) => w.id);
+    this._wordIdsAnswered.forEach((id) => {
+      if (!wordsIdsInCategory.includes(id)) {
+        this._wordIdsAnswered.delete(id);
+      }
+    });
   }
 }

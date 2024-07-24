@@ -1,7 +1,7 @@
 import { LangCode } from '@shared/lang/lang.constant';
 import { Category, Word } from './word.model';
 
-export const CATEGORY_SIZE = 100;
+export const CATEGORY_SIZE = 50;
 
 export async function findAllWords(langCode: LangCode): Promise<Word[]> {
   const module = await import(`../../data/${langCode}.txt`);
@@ -44,13 +44,25 @@ export async function findWordsInCategory(
   return allWords.slice(start, end);
 }
 
-export function findRandomWords(words: Word[], nbWords: number): Word[] {
-  const indexes = new Set<number>();
-  const maxSize = Math.min(words.length, nbWords);
+export function findRandomWords(
+  words: Word[],
+  nbWords: number,
+  wordsIdsToAvoid: number[] = []
+): Word[] {
+  const wordIds = new Set<number>();
 
-  while (indexes.size < maxSize) {
-    indexes.add(Math.floor(Math.random() * words.length));
+  // Pick random words from the ones not avoided
+  const wordsWished = words.filter((w) => !wordsIdsToAvoid.includes(w.id));
+  const maxSizeWished = Math.min(wordsWished.length, Math.round(nbWords / 2));
+  while (wordIds.size < maxSizeWished) {
+    wordIds.add(wordsWished[Math.floor(Math.random() * wordsWished.length)].id);
   }
 
-  return [...indexes].map((v) => words[v]);
+  // Pick random words from all words
+  const maxSize = Math.min(words.length, nbWords);
+  while (wordIds.size < maxSize) {
+    wordIds.add(words[Math.floor(Math.random() * words.length)].id);
+  }
+
+  return words.filter((w) => wordIds.has(w.id));
 }
