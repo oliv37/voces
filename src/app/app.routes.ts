@@ -12,9 +12,16 @@ import {
   resolveWords,
   resolveWordsInCategoryResolver,
 } from './word/word.resolver';
+import { resolveHomeLangs } from './home/home.resolver';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    resolve: {
+      homeLangs: resolveHomeLangs,
+    },
+  },
   {
     path: ':langCode',
     canMatch: [wordsMatcher],

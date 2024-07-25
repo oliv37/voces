@@ -1,8 +1,6 @@
-export type LangCode = (typeof LANG_CODES)[number];
+export type LangCode = keyof typeof LANGS;
 
-export const LANG_CODES = [/*'en', */ 'es'] as const;
-
-export const LANG_LABELS: Record<LangCode, string> = {
+export const LANGS = {
   /* en: 'Anglais', */
   es: 'Espagnol',
-};
+} as const;

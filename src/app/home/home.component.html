@@ -1,5 +1,5 @@
 <div class="flex justify-around flex-wrap">
-  @for (langCode of langCodes; track langCode) {
-  <app-home-word-card [langCode]="langCode"></app-home-word-card>
+  @for (homeLang of homeLangs(); track homeLang.langCode) {
+  <app-word-card [homeLang]="homeLang" />
   }
 </div>

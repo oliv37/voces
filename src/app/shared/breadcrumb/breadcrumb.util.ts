@@ -1,10 +1,10 @@
 import { getLangLabel } from '@shared/lang/lang.util';
-import {
+import type {
   BreadCrumb,
   BreadCrumbItem,
   BreadCrumbProvider,
 } from './breadcrumb.model';
-import { LangCode } from '@shared/lang/lang.constant';
+import type { LangCode } from '@shared/lang/lang.constant';
 
 function getSegmentUrls(url: string): string[] {
   return url.split('/').filter((s) => s != '');
