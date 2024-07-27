@@ -1410,6 +1410,7 @@ pluma : stylo
 dibujar : dessiner
 homenaje : hommage
 coro : choeur
+rayo : rayon
 campamento : campement
 extranar : manquer à
 tarea : tâche, travail
@@ -1889,7 +1890,7 @@ cerebro : cerveau
 lastre : obstacle, handicap
 rinon : rein
 aplastamiento : écrasement
-pellejo : peau (animal)
+pellejo : peau
 superar : oubier, passer à autre chose
 coser : coudre
 ternera : veau
@@ -3625,7 +3626,7 @@ lomo : dos
 cohibido : introverti, renfermé, coincé
 acariciar : caresser
 mosqueado : en colère
-lerda : bête, lent d'esprit
+lerdo : bête, lent d'esprit
 ofuscacion : aveuglement, confusion
 aliviar : soulager
 tirador : tireur
@@ -3931,3 +3932,46 @@ temeroso : craintif, peureux
 estupefacto : stupéfait, pantois
 yugular : asphyxier
 faldero : petit chien, toutou
+regodearse : se réjouir
+amargado : aigri
+mazazo : coup de massue
+fisgon : fouineur
+acoso : harcèlement
+agarrarse a un clavo ardiendo : se faire des illusions
+digerir : digérer
+chubasquero : imperméable, k-way
+oscurecer : la nuit tombe, s'obscurcir
+pretender que : vouloir que
+chorrear : couler, dégouliner
+espectro: fantôme, spectre
+desparramar : étaler, répandre
+altillo : grenier
+campana extractora de humos : hotte aspirante
+linterna : lampe de poche, torche électrique
+arreciar : s'intensifier
+chillar : crier, hurler
+alambrada : clôture
+trueno : tonnerre, coup de tonnerre
+rayo : foudre
+bordear : longer
+fogonazo : éclair
+ladera : flanc, versant
+agazaparse : se tapir
+zarza : ronce
+matojo : buisson
+pincho : pointe, pique
+lidiar con : faire face à, lutter contre
+embarrar : couvrir de boue
+impotencia : impuissance
+cojo : boiteux
+aupar : encourager
+chillido : cri, hurlement
+caerse de bruces : tomber la tête la première
+barro : boue, gadoue
+meta : ligne d'arrivée
+tobillo : cheville
+empapar : absorber, éponger
+acobardar : se dérober, se dégonfler
+consuelo : consolation, réconfort
+hocico : museau
+aguacero : averse, pluie

@@ -1,29 +1,30 @@
-@for (category of categories(); track $index) {
-<div class="mb-6">
-  <div class="flex justify-between items-end">
+<div class="flex flex-col gap-10">
+  @for (category of categories(); track $index) {
+  <div>
     <a
       [routerLink]="[$index + 1]"
       [class]="
-        'font-bold text-lg bg-gray-900 px-10 ' +
-        'border-2 border-gray-800 text-white'
+        'block text-center font-bold py-1 text-lg bg-gray-900 text-white'
       "
       >{{ category.id }}</a
     >
-    <span
-      [class]="
-        'font-bold text-sm px-2 text-gray-600 text-opacity-90 ' +
-        'border-2 border-b-0 border-gray-600 rounded-t-lg'
-      "
-      >{{ category.words.length }}</span
+    <div
+      class="p-3 flex flex-wrap gap-2 border-2 border-gray-800 text-gray-950 relative"
     >
-  </div>
+      @for (word of category.words; track $index;) {
+      <span>{{ word.value }}</span>
+      @if (!$last) {
+      <span>•</span>
+      } }
 
-  <div class="p-3 flex flex-wrap gap-2 border-2 border-gray-800 text-gray-950">
-    @for (word of category.words; track $index;) {
-    <span>{{ word.value }}</span>
-    @if (!$last) {
-    <span>•</span>
-    } }
+      <span
+        [class]="
+          'font-bold text-xs p-1 text-gray-700 text-opacity-90 bg-white ' +
+          'border-2 border-gray-700 absolute -right-2 -bottom-3 rounded-full'
+        "
+        >{{ category.words.length }}</span
+      >
+    </div>
   </div>
+  }
 </div>
-}

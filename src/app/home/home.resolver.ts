@@ -1,5 +1,5 @@
 import { ResolveFn } from '@angular/router';
-import { LangCode, LANGS } from '@shared/lang/lang.constant';
+import { LangCode, LANGS } from '@shared/lang/lang.model';
 import { HomeLang } from './home.model';
 import { countAllWords } from '@word/word.util';
 
@@ -10,7 +10,6 @@ export const resolveHomeLangs: ResolveFn<HomeLang[]> = async () => {
   for (langCode in LANGS) {
     homeLangs.push({
       langCode,
-      langLabel: LANGS[langCode],
       nbWords: await countAllWords(langCode),
     });
   }

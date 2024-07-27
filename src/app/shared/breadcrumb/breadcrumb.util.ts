@@ -4,7 +4,7 @@ import type {
   BreadCrumbItem,
   BreadCrumbProvider,
 } from './breadcrumb.model';
-import type { LangCode } from '@shared/lang/lang.constant';
+import type { LangCode } from '@shared/lang/lang.model';
 
 function getSegmentUrls(url: string): string[] {
   return url.split('/').filter((s) => s != '');

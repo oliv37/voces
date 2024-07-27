@@ -1,4 +1,4 @@
-import { LangCode, LANGS } from './lang.constant';
+import { LangCode, LANGS } from './lang.model';
 
 export function getLangLabel(langCode: LangCode): string {
   return LANGS[langCode];

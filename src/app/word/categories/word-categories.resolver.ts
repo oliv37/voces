@@ -1,5 +1,5 @@
 import { ResolveFn } from '@angular/router';
-import { LangCode } from '@shared/lang/lang.constant';
+import { LangCode } from '@shared/lang/lang.model';
 import { findCategories } from '../word.util';
 import { Category } from '@word/word.model';
 

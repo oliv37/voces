@@ -1,7 +1,6 @@
-import type { LangCode } from '@shared/lang/lang.constant';
+import type { LangCode } from '@shared/lang/lang.model';
 
 export interface HomeLang {
   langCode: LangCode;
-  langLabel: string;
   nbWords: number;
 }
