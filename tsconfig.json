@@ -24,9 +24,11 @@
       "dom"
     ],
     "paths": {
+      "@core/*": ["./src/app/core/*"],
+      "@features/*": ["./src/app/features/*"],
       "@shared/*": ["./src/app/shared/*"],
-      "@word/*": ["./src/app/word/*"],
-      "@lang/*": ["./src/app/shared/lang/*"],
+      "@data/*": ["./src/data/*"],
+
     }
   },
   "angularCompilerOptions": {

@@ -797,7 +797,7 @@ emocioner : émouvoir
 enhorabuena : félicitation
 norma : règle
 sueldo : salaire
-aguja : aiguiller
+aguja : aiguille
 proveedor : fournisseur
 apretar : serrer, presser, compresser
 sorprender : surprendre
@@ -1464,7 +1464,7 @@ altercado : altercation, dispute
 destrozar : détruire
 alboroto : tapage, vacarme, chahut
 amanar : truquer
-desmoronar : s'écrouler
+desmoronar : s'écrouler, s'effondrer
 ahogar : étouffer, noyer
 galpon : maison de plain-pied
 socorro : secours
@@ -2915,7 +2915,7 @@ ondear : ondoyer, ajouter
 llaga : plaie
 lince : lynx
 cachorro : chiot
-atropello : collision
+atropello : collision, accident
 barriga : ventre, bedaine
 pantano : marécage, marais
 orilla : bord, rive, berge
@@ -3368,7 +3368,7 @@ quejica : pleurnicheur, râleur
 hacerse cuesta arriba : avoir du mal à faire qch
 deslomar : esquinter
 desperdiciar : gaspiller
-en sus treces : sur ses positions
+en sus trece : sur ses positions
 atender a razones : entendre raison
 brindar : offrir
 trascendental : important, fondamental
@@ -3461,7 +3461,7 @@ desacertado : incorrect, inexact
 entrega : dévouement
 roer : ronger
 flanco : flanc
-otorgar : octroyer
+otorgar : octroyer, donner
 ansiado : désiré, convoité
 comprometido : réservé
 varon : garçon, homme
@@ -3975,3 +3975,32 @@ acobardar : se dérober, se dégonfler
 consuelo : consolation, réconfort
 hocico : museau
 aguacero : averse, pluie
+callejuela : ruelle
+pulir : polir
+perdido : crade
+respingo : sursaut
+a palo seco : d'un coup
+descabellado : tiré par les cheveux
+empalmarse : bander (érection)
+pringoso : collant, gluant
+aparador : vitrine
+apacible : paisible, calme
+sigilo : discrétion
+potingue : crème cosmétique
+adefesio : mocheté, laidron
+toalla : serviette
+refunfunar : grommeler, bougonner, râler
+quirofano : bloc opératoire
+nitido : clair, net
+desenlace : dénouement
+alcance : effet, importance
+escudrinar : scruter, examiner
+teson : détermination, persévérance
+resorte : ressort
+violentar : gêner, contrarier
+taxista : chauffeur de taxi
+empenar : mettre en gage
+resoplar : souffler
+calar a alguien : démasquer, percer à jour
+desbocarse : se déchaîner
+profugo : fugitif

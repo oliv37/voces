@@ -1,0 +1,12 @@
+<app-client-side>
+  <app-words-exercice-header
+    [nbWordsAnswered]="wordsExerciceService.nbWordsAnswered()"
+    [nbWordsAvailable]="wordsExerciceService.nbWordsAvailable()"
+  />
+
+  @if (wordsExerciceService.step() === "preview") {
+  <app-words-exercice-step-preview></app-words-exercice-step-preview>
+  } @if (wordsExerciceService.step() === "form") {
+  <app-words-exercice-step-form></app-words-exercice-step-form>
+  }
+</app-client-side>

@@ -1,0 +1,11 @@
+<div class="flex flex-wrap items-center gap-2">
+  @for (breadCrumbItem of breadCrumb(); track $index) {
+  <a
+    [routerLink]="breadCrumbItem.url"
+    class="capitalize text-sm text-gray-700 hover:text-black"
+    >{{ breadCrumbItem.label }}</a
+  >
+  @if (!$last) {
+  <span class="px-1">/</span>
+  } }
+</div>

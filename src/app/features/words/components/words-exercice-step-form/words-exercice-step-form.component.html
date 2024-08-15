@@ -1,0 +1,27 @@
+<div class="grid grid-cols-2 gap-4">
+  @for (word of wordsExerciceService.words(); track word.id) {
+  <span class="justify-self-end">{{ word.translationFr }}</span>
+  <span>
+    <input
+      type="text"
+      class="border-b border-black w-48 font-bold"
+      [name]="'answer' + $index"
+      [value]="wordsExerciceService.getFormValue($index)"
+      (input)="onInput($index, $event)"
+      (focus)="wordsExerciceService.lastInputFocusIndex.set($index)"
+      #formInput
+    />
+    @if (wordsExerciceService.isFormValueValid($index)) {
+    <span class="px-2 font-bold">✔</span>
+    }
+  </span>
+  }
+</div>
+
+<app-words-exercice-footer
+  previousBtnText="←"
+  nextBtnText="✔"
+  (previousBtnClick)="wordsExerciceService.goToPreviousStep()"
+  (nextBtnClick)="wordsExerciceService.goToNextStep()"
+  [nextBtnDisabled]="!wordsExerciceService.isFormWin()"
+/>
