@@ -36,15 +36,9 @@ export class WordsExerciceService {
     );
   });
   private _stepIndex = computed<number>(() => STEPS.indexOf(this.step()));
-  private _allWordsAvailableAreAnswered = computed<boolean>(
+  private _areAllWordsAvailableAnswered = computed<boolean>(
     () => this.nbWordsAnswered() >= this.nbWordsAvailable()
   );
-  private _markAsCompletedEffect = effect(() => {
-    const wordsGroup = this._wordsGroup();
-    if (wordsGroup && this._allWordsAvailableAreAnswered()) {
-      this._wordsCompletionService.markAsCompleted(wordsGroup.id);
-    }
-  });
 
   lastInputFocusIndex = signal<number>(0);
   step = signal<Step>(FIRST_STEP);
@@ -54,9 +48,24 @@ export class WordsExerciceService {
   nbWordsAnswered = computed<number>(() => this._wordIdsAnswered().length);
   nbWords = computed<number>(() => this._words().length);
   nbFormValues = computed<number>(() => this._formValues().length);
+  nbFormValuesValid = computed<number>(() => {
+    const words = this.words();
+    const formValues = this._formValues();
+    return formValues.filter((value, idx) => value === words[idx].value).length;
+  });
   isFormWin = computed<boolean>(() =>
     this._formValuesValidities().every((isValid) => isValid)
   );
+
+  constructor() {
+    // markAsCompleted Effect
+    effect(() => {
+      const wordsGroup = this._wordsGroup();
+      if (wordsGroup && this._areAllWordsAvailableAnswered()) {
+        this._wordsCompletionService.markAsCompleted(wordsGroup.id);
+      }
+    });
+  }
 
   getFormValue(index: number): string {
     return this._formValues()[index];

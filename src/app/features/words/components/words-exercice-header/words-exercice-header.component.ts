@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-words-exercice-header',
@@ -8,4 +8,8 @@ import { Component, input } from '@angular/core';
 export class WordsExerciceHeaderComponent {
   nbWordsAnswered = input.required<number>();
   nbWordsAvailable = input.required<number>();
+
+  areAllWordsAnswered = computed<boolean>(
+    () => this.nbWordsAnswered() >= this.nbWordsAvailable()
+  );
 }

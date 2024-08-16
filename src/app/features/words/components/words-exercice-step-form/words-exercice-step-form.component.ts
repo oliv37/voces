@@ -4,8 +4,9 @@ import {
   QueryList,
   ElementRef,
   inject,
-  afterNextRender,
   HostListener,
+  effect,
+  untracked,
 } from '@angular/core';
 import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceFooterComponent } from '../words-exercice-footer/words-exercice-footer.component';
@@ -17,29 +18,47 @@ import { WordsExerciceFooterComponent } from '../words-exercice-footer/words-exe
   imports: [WordsExerciceFooterComponent],
   host: {
     tabIndex: '-1',
+    class: 'outline-none',
   },
 })
 export class WordsExerciceStepFormComponent {
+  private _elementRef = inject(ElementRef);
+
   wordsExerciceService = inject(WordsExerciceService);
 
   @ViewChildren('formInput') inputs!: QueryList<ElementRef<HTMLInputElement>>;
 
   constructor() {
-    afterNextRender(() => {
-      this.inputs
-        .get(this.wordsExerciceService.lastInputFocusIndex())
-        ?.nativeElement?.focus();
+    // focusInputToAnswer Effect
+    effect(() => {
+      const nbFormValues = this.wordsExerciceService.nbFormValues();
+      const nbFormValuesValid = this.wordsExerciceService.nbFormValuesValid();
+      const areAllFormValuesValid = nbFormValuesValid >= nbFormValues;
+      const lastFocusIndex = untracked(
+        this.wordsExerciceService.lastInputFocusIndex
+      );
+
+      if (areAllFormValuesValid) {
+        this._elementRef?.nativeElement?.focus();
+        return;
+      }
+
+      for (let i = 0; i < nbFormValues; i++) {
+        const idx = (lastFocusIndex + i) % nbFormValues;
+        const isFormValueValid = untracked(() =>
+          this.wordsExerciceService.isFormValueValid(idx)
+        );
+        if (!isFormValueValid) {
+          this.inputs.get(idx)?.nativeElement?.focus();
+          return;
+        }
+      }
     });
   }
 
   onInput(index: number, event: Event) {
     const value = (event.target as HTMLInputElement).value;
-
     this.wordsExerciceService.setFormValue(index, value);
-
-    if (this.wordsExerciceService.isFormValueValid(index)) {
-      this.focusNextInvalidFormInput(index);
-    }
   }
 
   @HostListener('keydown.Enter')
@@ -49,25 +68,5 @@ export class WordsExerciceStepFormComponent {
     } else {
       this.wordsExerciceService.goToPreviousStep();
     }
-  }
-
-  private focusNextInvalidFormInput(currentIndex: number): void {
-    const nextIndex = this.findNextInvalidFormInputIndex(currentIndex);
-    if (nextIndex >= 0) {
-      this.inputs.get(nextIndex)?.nativeElement?.focus();
-    }
-  }
-
-  private findNextInvalidFormInputIndex(currentIndex: number): number {
-    const nbFormValues = this.wordsExerciceService.nbFormValues();
-
-    for (let i = 0; i < nbFormValues; i++) {
-      const nextIndex = (currentIndex + i + 1) % nbFormValues;
-      if (!this.wordsExerciceService.isFormValueValid(nextIndex)) {
-        return nextIndex;
-      }
-    }
-
-    return -1;
   }
 }

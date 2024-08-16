@@ -4,11 +4,12 @@
   <span>
     <input
       type="text"
-      class="border-b border-black w-48 font-bold"
+      class="border-b border-black w-48 font-bold disabled:border-transparent"
       [name]="'answer' + $index"
       [value]="wordsExerciceService.getFormValue($index)"
       (input)="onInput($index, $event)"
       (focus)="wordsExerciceService.lastInputFocusIndex.set($index)"
+      [disabled]="wordsExerciceService.isFormValueValid($index)"
       #formInput
     />
     @if (wordsExerciceService.isFormValueValid($index)) {

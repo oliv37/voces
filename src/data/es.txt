@@ -939,7 +939,6 @@ aliento : souffle, haleine
 abuchear : huer, siffler
 ausencia : absence
 quedarse sin blanca : se retrouver sans le sous
-remate : touche finale, fin
 rematar : achever, couronner
 meter la pata : faire une gaffe
 bote : cagnotte, lot, prix
@@ -989,6 +988,7 @@ acabar : finir, terminer
 coger : prendre
 juicio : procès
 follar : baiser, niquer
+remate : touche finale, fin
 luchar : lutter, combattre
 caminito : sentier, petit chemin
 desgraciado : malheureux
@@ -1285,7 +1285,6 @@ cadena : chaîne
 apanar : réparer, rafistoler
 denegar : refuser, rejeter
 coraje : courage
-rematar : achever
 fiscalia : parquet, bureau du procureur
 una : ongle
 logro : succès, réussite
@@ -3887,6 +3886,7 @@ bocanada : bouffée, bol d'air
 acicalarse : se faire beau
 contraventana : volet
 persiana : store
+rematar : tirer (ballon)
 mimoso : câlin, affectueux
 cavilacion : réflexion, méditation
 blando : faible, chétif
@@ -4004,3 +4004,6 @@ resoplar : souffler
 calar a alguien : démasquer, percer à jour
 desbocarse : se déchaîner
 profugo : fugitif
+remate : tir, frappe
+aguantar : soutenir, porter
+sopesar : soupeser

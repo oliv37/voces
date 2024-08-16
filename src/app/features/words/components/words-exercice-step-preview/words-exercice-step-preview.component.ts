@@ -19,11 +19,12 @@ import { WordsExerciceFooterComponent } from '../words-exercice-footer/words-exe
   },
 })
 export class WordsExerciceStepPreviewComponent {
-  elementRef = inject(ElementRef);
+  private _elementRef = inject(ElementRef);
+
   wordsExerciceService = inject(WordsExerciceService);
 
   constructor() {
-    afterNextRender(() => this.elementRef.nativeElement.focus());
+    afterNextRender(() => this._elementRef.nativeElement.focus());
   }
 
   @HostListener('keydown.Enter')
