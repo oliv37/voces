@@ -6,6 +6,8 @@
     "start": "ng serve",
     "prebuild": "npx tsx build-routes.ts",
     "build": "ng build",
+    "prebuild-gh": "npx tsx build-routes.ts",
+    "build-gh": "ng build --output-path site --base-href /voces/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:voces": "node dist/voces/server/server.mjs"
