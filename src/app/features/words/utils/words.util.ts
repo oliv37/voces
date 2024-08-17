@@ -15,6 +15,8 @@ export const ALL_WORDS: Word[] = data
     };
   });
 
+export const NB_WORDS_GROUPS = Math.ceil(ALL_WORDS.length / WORDS_GROUP_SIZE);
+
 export function findWordsGroupList(): WordsGroup[] {
   const nbWords = ALL_WORDS.length;
   const nbWordsGroup = Math.ceil(nbWords / WORDS_GROUP_SIZE);

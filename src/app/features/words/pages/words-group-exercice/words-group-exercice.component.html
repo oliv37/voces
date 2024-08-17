@@ -2,6 +2,7 @@
   <app-words-exercice-header
     [nbWordsAnswered]="wordsExerciceService.nbWordsAnswered()"
     [nbWordsAvailable]="wordsExerciceService.nbWordsAvailable()"
+    [wordsGroupId]="wordsGroupId()"
   />
 
   @if (wordsExerciceService.step() === "preview") {

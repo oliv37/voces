@@ -1,3 +1,3 @@
 # Voces
 
-Spanish - French dictionnary
+Spanish - French dictionary
