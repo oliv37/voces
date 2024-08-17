@@ -8,7 +8,7 @@ function toUrl(segmentUrls: string[], idx: number) {
   return '/' + segmentUrls.slice(0, idx + 1).join('/');
 }
 
-const ROOT_BREADCRUMB_ITEM: BreadCrumbItem = { url: '/', label: 'Vocab' };
+const ROOT_BREADCRUMB_ITEM: BreadCrumbItem = { url: '/', label: 'voces' };
 
 export function buildBreadCrumb(url: string): BreadCrumb {
   const segmentUrls = getSegmentUrls(url);
