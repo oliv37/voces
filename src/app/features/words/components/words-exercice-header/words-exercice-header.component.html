@@ -20,7 +20,7 @@
     {{ nbWordsAnswered() }} / {{ nbWordsAvailable() }}
   </span>
 
-  <div class="flex-1">
+  <div class="flex-1 flex justify-start">
     @if (areAllWordsAnswered() && nextWordsGroupId()) {
     <a
       [routerLink]="['/', nextWordsGroupId()]"

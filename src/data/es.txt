@@ -3374,6 +3374,7 @@ trascendental : important, fondamental
 duelo : deuil
 enrabietarse : se mettre en colère
 anonadado : abasourdi
+inasequible : inaccessible
 burrada : ânerie, énormité, bêtise
 enchufe : prise de courant, prise électrique
 empanarse : somnoler, s'assoupir
@@ -3939,6 +3940,7 @@ fisgon : fouineur
 acoso : harcèlement
 agarrarse a un clavo ardiendo : se faire des illusions
 digerir : digérer
+repuntar : émerger
 chubasquero : imperméable, k-way
 oscurecer : la nuit tombe, s'obscurcir
 pretender que : vouloir que
@@ -4007,3 +4009,12 @@ profugo : fugitif
 remate : tir, frappe
 aguantar : soutenir, porter
 sopesar : soupeser
+a destajo : d'arrache-pied
+tejado : toit
+estampa : image, illustration
+escaso : rare
+inasequible : exorbitant, inabordable (prix)
+reembolsar : rembourser
+eximir : exempter
+portada : première page
+repunta : cap
