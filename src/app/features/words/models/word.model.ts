@@ -9,10 +9,7 @@ export interface WordsGroup {
   words: Word[];
 }
 
-export enum CompletionAge {
-  LESS_THAN_A_DAY,
-  LESS_THAN_TWO_DAYS,
-  LESS_THAN_THREE_DAYS,
-  LONG_TIME_AGO,
-  NEVER,
-}
+export type CompletionAge =
+  | 'LESS_THAN_TWO_DAYS'
+  | 'LESS_THAN_FOUR_DAYS'
+  | 'LONG_TIME_AGO_OR_NEVER';

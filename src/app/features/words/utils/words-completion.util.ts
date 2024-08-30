@@ -3,24 +3,23 @@ import { CompletionAge } from '../models/word.model';
 const ONE_DAY_AGE_IN_MS = 24 * 60 * 60 * 1000;
 
 const COMPLETION_AGES_ASC: [CompletionAge, number][] = [
-  [CompletionAge.LESS_THAN_A_DAY, ONE_DAY_AGE_IN_MS],
-  [CompletionAge.LESS_THAN_TWO_DAYS, 2 * ONE_DAY_AGE_IN_MS],
-  [CompletionAge.LESS_THAN_THREE_DAYS, 3 * ONE_DAY_AGE_IN_MS],
+  ['LESS_THAN_TWO_DAYS', 2 * ONE_DAY_AGE_IN_MS],
+  ['LESS_THAN_FOUR_DAYS', 4 * ONE_DAY_AGE_IN_MS],
 ];
 
-export function toCompletionAge(distanceInMs: number): CompletionAge {
-  // The ascending order of COMPLETION_AGES_ASC is important
-  const completionAge = COMPLETION_AGES_ASC.find(
-    ([_, completionAgeDistanceInMs]) => distanceInMs < completionAgeDistanceInMs
-  )?.[0];
+export function toCompletionAge(
+  completionDateInMs: number | string | null
+): CompletionAge {
+  if (completionDateInMs == null || isNaN(+completionDateInMs)) {
+    return 'LONG_TIME_AGO_OR_NEVER';
+  }
 
-  return completionAge ?? CompletionAge.LONG_TIME_AGO;
-}
+  const nowInMs = new Date().getTime();
+  const distanceInMs = nowInMs - +completionDateInMs;
 
-export function toWordsGroupCompletedKey(wordsGroupId: number): string {
-  return `WORDS-GROUP-${wordsGroupId}-COMPLETED`;
-}
-
-export function matchWordsGroupCompletedKey(key: string): boolean {
-  return /WORDS-GROUP-([0-9]+)-COMPLETED/.test(key);
+  return (
+    COMPLETION_AGES_ASC.find(
+      ([_, maxDistanceInMs]) => distanceInMs < maxDistanceInMs
+    )?.[0] ?? 'LONG_TIME_AGO_OR_NEVER'
+  );
 }

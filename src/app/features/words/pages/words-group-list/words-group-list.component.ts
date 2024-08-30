@@ -4,11 +4,9 @@ import { CompletionAge, WordsGroup } from '@features/words/models/word.model';
 import { WordsCompletionService } from '@features/words/services/words-completion.service';
 
 const COMPLETION_AGE_CLASS: Record<CompletionAge, string> = {
-  [CompletionAge.LESS_THAN_A_DAY]: 'bg-black text-white bg-opacity-100',
-  [CompletionAge.LESS_THAN_TWO_DAYS]: 'bg-black text-white bg-opacity-70 ',
-  [CompletionAge.LESS_THAN_THREE_DAYS]: 'bg-black text-white bg-opacity-55',
-  [CompletionAge.LONG_TIME_AGO]: 'bg-black text-white bg-opacity-40',
-  [CompletionAge.NEVER]: '',
+  ['LESS_THAN_TWO_DAYS']: 'bg-black text-white bg-opacity-100',
+  ['LESS_THAN_FOUR_DAYS']: 'bg-black text-white bg-opacity-60',
+  ['LONG_TIME_AGO_OR_NEVER']: '',
 };
 
 @Component({

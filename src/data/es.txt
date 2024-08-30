@@ -1523,7 +1523,7 @@ abanico : éventail
 supermercado : supermarché
 cotejo : confrontation, comparaison
 certeza : certitude
-sospechoso : suspect
+sospechoso : suspect, louche
 plagar : remplir de, couvrir de
 venganza : vengeance
 empresario : chef d'entreprise, entrepreneur
@@ -1538,7 +1538,6 @@ paradero : être introuvable, être porté disparu
 sicario : tueur à gages
 culminar : achever
 nave industrial : hangar, entrepôt
-arrojar : jeter, lancer
 cadaver : cadabre
 maleta : valise
 guante : gant
@@ -2876,7 +2875,7 @@ ensayo : essai (littérature)
 reblandecer : ramolir
 caldera : chaudière
 loco de remate : fou à lier
-arrebatar : arracher, confisquer
+arrebatar algo a alguien : confisquer
 estreno : lancement, première
 conmocionar : bouleverser
 salvamento : sauvetage, secours
@@ -3308,7 +3307,6 @@ enclaustrat : cloîtrer, enfermer
 halago : compliment, éloge
 acertar : deviner, trouver
 de puntillas : sur la pointe des pieds
-entereza : force de caractère
 sonrosado : rosé
 suduroso : en sueur
 rodaballo : turbot
@@ -3436,6 +3434,7 @@ abofetear : gifler
 mejillon : moule (mollusque)
 tormenta : tourmente
 rastro : marché aux puces
+carisma : charisme
 portatil : ordinateur portable
 reverenciar : vénérer, honorer
 pleitesia : rendre hommage à
@@ -3588,6 +3587,7 @@ malograr : gâcher
 sacar de quicio : énerver, taper sur les nerfs
 pinzar : pincer
 crujir : ruer de coups
+aprieto : embarras, pétrin
 escritorio : bureau
 dar la murga : bassiner, emmerder
 zorra : salope
@@ -3607,7 +3607,6 @@ cebarse : s'acharner sur
 acusar : accuser
 husmear : renifler
 repisa : étagère
-cinta : ruban
 casete : cassette
 chasco : déception
 afeitar : raser
@@ -3644,6 +3643,7 @@ bronca : engueulade
 ameno : agréable, divertissant
 marica : tapette, pédale
 cuclillas : accroupi
+aflojar : desserrer, détendre
 desencajar : dérégler
 incorporarse : se redresser
 mareo : mal au coeur
@@ -3694,12 +3694,12 @@ nudillo : articulation du doigt
 desconchon : écaillure
 mancha : tâche
 moho : moisi, moisissure
-farola : lampadaire
 asfaltar : goudronner
 socavon : nid-de-poule
 ensayar : répéter
 escalon : marche
 acomodarse : s'installer, se mettre à l'aise
+alumbrar : éclairer
 empanar : embuer
 desvio : déviation
 serenar : apaiser, calmer
@@ -4018,3 +4018,75 @@ reembolsar : rembourser
 eximir : exempter
 portada : première page
 repunta : cap
+derrotar : vaincre
+arrebatarse : s'emporter, se fâcher
+jarro : pichet, cruche
+tipejo : type, sale type
+aval : garantie
+disparate : folie, fou, folle
+entrampar : piéger
+reflotar : remettre à flot
+lastimoso : pitoyable
+iman : aimant
+insalvable : insurmontable
+irse al trase : tomber à l'eau
+desvario : bêtise, absurdité
+encubierto : dissimulé, caché
+increpar : réprimander
+saldar : solder
+surtir efecto : faire effet
+cuajar : prendre forme, se concrétiser
+malherido : blessé grave
+contundente : contondant
+pergenar : ébaucher
+alumbrado : éclairage public
+suplir : remplacer
+escaparate : vitrine
+vericueto : chemin escarpé
+cortapisa : contrainte, obstacle
+inducir : inciter
+empatizar : compatir
+pudiente : riche, puissant
+sonsacar : soutirer
+dudoso : suspect, louche
+cantar : chanter
+tira y afloja : lutte acharnée
+desinflar : dégonfler
+aprieto : problème économique
+trizar : fêler, fissurer
+macizo : massif
+abejorro : bourdon
+corral : enclos
+festejar : célébrer
+lata : boîte de conserve
+bisabuelo : arrière-grand-père
+infante : enfant
+charol : cuir vernis
+gallinazo : vautour
+alambre : fil de fer
+proveer de : approvisionner de
+solapar : couvrir, recouvrir
+nalgada : fessée
+silla de ruedas : chaise roulante
+horquilla : épingle à cheveux
+bellaco : scélérat, voyou
+truhan : truand, voyou, escroc
+mascullar : marmonner
+muslo : cuisse
+arropar : couvrir, emmitoufler
+trinitaria : pensée (fleur)
+gamuza : daim
+tibieza : tiédeur
+hiedra : lierre
+teja : tuile
+rocio : rosée
+sequito : conséquence
+delantal : tablier
+postizo : faux
+nuera : belle-fille
+arrullar : bercer
+rascar : gratter
+pinga : bite, zizi
+embajada : ambassade
+atrasar : retarder, ralentir
+ocioso : oisif

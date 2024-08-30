@@ -1,11 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { StorageService } from '@core/services/storage.service';
 import { CompletionAge } from '../models/word.model';
-import {
-  matchWordsGroupCompletedKey,
-  toCompletionAge,
-  toWordsGroupCompletedKey,
-} from '../utils/words-completion.util';
+import { toCompletionAge } from '../utils/words-completion.util';
 
 @Injectable()
 export class WordsCompletionService {
@@ -17,43 +13,27 @@ export class WordsCompletionService {
 
   markAsCompleted(wordsGroupId: number): void {
     this._storageService.write(
-      toWordsGroupCompletedKey(wordsGroupId),
+      'WORDS_GROUP_COMPLETION',
+      wordsGroupId,
       new Date().getTime().toString()
     );
   }
 
   getCompletionAge(wordsGroupId: number): CompletionAge {
-    const wordsGroupCompletedKey = toWordsGroupCompletedKey(wordsGroupId);
-    return this.getCompletionAgeByKey(wordsGroupCompletedKey);
-  }
-
-  private getCompletionAgeByKey(wordsGroupCompletedKey: string) {
-    const completionDateInMsStr = this._storageService.read(
-      wordsGroupCompletedKey
+    const completionDateInMs = this._storageService.read(
+      'WORDS_GROUP_COMPLETION',
+      wordsGroupId
     );
-
-    if (completionDateInMsStr == null || isNaN(+completionDateInMsStr)) {
-      return CompletionAge.NEVER;
-    }
-
-    const nowInMs = new Date().getTime();
-    const completionDateInMs = +completionDateInMsStr;
-    const distanceInMs = nowInMs - completionDateInMs;
-
-    return toCompletionAge(distanceInMs);
+    return toCompletionAge(completionDateInMs);
   }
 
   private removeOldWordsCompletedKeys(): void {
     this._storageService
-      .getAllKeys()
-      .filter((key) => matchWordsGroupCompletedKey(key))
-      .filter((key) => {
-        const completionAge = this.getCompletionAgeByKey(key);
-        return (
-          completionAge === CompletionAge.LONG_TIME_AGO ||
-          completionAge === CompletionAge.NEVER
-        );
-      })
-      .forEach((key) => this._storageService.remove(key));
+      .getAllByType('WORDS_GROUP_COMPLETION')
+      .filter(
+        ([_, completionDateInMs]) =>
+          toCompletionAge(completionDateInMs) === 'LONG_TIME_AGO_OR_NEVER'
+      )
+      .forEach(([key, _]) => this._storageService.remove(key));
   }
 }
