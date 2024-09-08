@@ -1,11 +1,11 @@
 import { Component, EventEmitter, input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-words-exercice-footer',
-  templateUrl: './words-exercice-footer.component.html',
+  selector: 'app-words-exercice-button-bar',
+  templateUrl: './words-exercice-button-bar.component.html',
   standalone: true,
 })
-export class WordsExerciceFooterComponent {
+export class WordsExerciceButtonBarComponent {
   previousBtnText = input('');
   nextBtnText = input('');
 

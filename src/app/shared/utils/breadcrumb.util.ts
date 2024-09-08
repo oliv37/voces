@@ -1,7 +1,11 @@
 import type { BreadCrumb, BreadCrumbItem } from '../models/breadcrumb.model';
 
 function getSegmentUrls(url: string): string[] {
-  return url.split('/').filter((s) => s != '');
+  return url
+    .split('?')[0]
+    .split('#')[0]
+    .split('/')
+    .filter((s) => s != '');
 }
 
 function toUrl(segmentUrls: string[], idx: number) {

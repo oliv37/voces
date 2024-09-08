@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { findRandomWords } from '../utils/words.util';
 import { Word, WordsGroup } from '../models/word.model';
-import { WordsCompletionService } from './words-completion.service';
+import { WordsGroupCompletionService } from './words-group-completion.service';
 
 type Step = (typeof STEPS)[number];
 
@@ -20,7 +20,7 @@ const NB_WORDS_IN_EXERCICE = 10;
 
 @Injectable()
 export class WordsExerciceService {
-  private _wordsCompletionService = inject(WordsCompletionService);
+  private _wordsGroupCompletionService = inject(WordsGroupCompletionService);
 
   private _wordsGroup = signal<WordsGroup | undefined>(undefined);
   private _wordsAvailable = computed<Word[]>(
@@ -56,13 +56,16 @@ export class WordsExerciceService {
   isFormWin = computed<boolean>(() =>
     this._formValuesValidities().every((isValid) => isValid)
   );
+  areAllWordsAnswered = computed<boolean>(
+    () => this.nbWordsAnswered() >= this.nbWordsAvailable()
+  );
 
   constructor() {
     // markAsCompleted Effect
     effect(() => {
       const wordsGroup = this._wordsGroup();
       if (wordsGroup && this._areAllWordsAvailableAnswered()) {
-        this._wordsCompletionService.markAsCompleted(wordsGroup.id);
+        this._wordsGroupCompletionService.markAsCompleted(wordsGroup);
       }
     });
   }

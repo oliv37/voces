@@ -4,15 +4,18 @@ import {
   ElementRef,
   HostListener,
   inject,
+  input,
 } from '@angular/core';
 import { WordsExerciceService } from '../../services/words-exercice.service';
-import { WordsExerciceFooterComponent } from '../words-exercice-footer/words-exercice-footer.component';
+import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
+import { RouterLink } from '@angular/router';
+import { WordsGroup } from '@features/words/models/word.model';
 
 @Component({
   selector: 'app-words-exercice-step-preview',
   standalone: true,
   templateUrl: './words-exercice-step-preview.component.html',
-  imports: [WordsExerciceFooterComponent],
+  imports: [WordsExerciceButtonBarComponent, RouterLink],
   host: {
     tabIndex: '-1',
     class: 'outline-none',
@@ -20,8 +23,9 @@ import { WordsExerciceFooterComponent } from '../words-exercice-footer/words-exe
 })
 export class WordsExerciceStepPreviewComponent {
   private _elementRef = inject(ElementRef);
-
   wordsExerciceService = inject(WordsExerciceService);
+
+  nextWordsGroup = input<WordsGroup>();
 
   constructor() {
     afterNextRender(() => this._elementRef.nativeElement.focus());

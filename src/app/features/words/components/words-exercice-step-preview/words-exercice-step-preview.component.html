@@ -5,9 +5,22 @@
   }
 </div>
 
-<app-words-exercice-footer
+<app-words-exercice-button-bar
   previousBtnText="↻"
   nextBtnText="→"
   (previousBtnClick)="wordsExerciceService.reinit()"
   (nextBtnClick)="wordsExerciceService.goToNextStep()"
-/>
+>
+  @if (wordsExerciceService.areAllWordsAnswered() && nextWordsGroup()) {
+  <a
+    right
+    [routerLink]="['../..', nextWordsGroup()?.pathParam]"
+    [class]="
+      'px-3 font-bold text-xl border border-black bg-black text-white ' +
+      'rounded-md shadow-lg hover:opacity-80'
+    "
+  >
+    {{ nextWordsGroup()?.pathParam }}
+  </a>
+  }
+</app-words-exercice-button-bar>

@@ -2,11 +2,13 @@
   <app-words-exercice-header
     [nbWordsAnswered]="wordsExerciceService.nbWordsAnswered()"
     [nbWordsAvailable]="wordsExerciceService.nbWordsAvailable()"
-    [wordsGroupId]="wordsGroupId()"
+    [areAllWordsAnswered]="wordsExerciceService.areAllWordsAnswered()"
   />
 
   @if (wordsExerciceService.step() === "preview") {
-  <app-words-exercice-step-preview></app-words-exercice-step-preview>
+  <app-words-exercice-step-preview
+    [nextWordsGroup]="nextWordsGroup()"
+  ></app-words-exercice-step-preview>
   } @if (wordsExerciceService.step() === "form") {
   <app-words-exercice-step-form></app-words-exercice-step-form>
   }

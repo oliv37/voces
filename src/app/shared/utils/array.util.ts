@@ -6,3 +6,14 @@ export function shuffle<T>(arr: T[]): T[] {
   }
   return res;
 }
+
+export function groupBy<T, K extends string>(
+  arr: T[],
+  toKey: (t: T) => K
+): Partial<Record<K, T[]>> {
+  return arr.reduce((res, elem) => {
+    const key = toKey(elem);
+    res[key] = [...(res[key] ?? []), elem];
+    return res;
+  }, {} as Partial<Record<K, T[]>>);
+}

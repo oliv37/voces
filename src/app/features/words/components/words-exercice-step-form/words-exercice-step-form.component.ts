@@ -9,13 +9,13 @@ import {
   untracked,
 } from '@angular/core';
 import { WordsExerciceService } from '../../services/words-exercice.service';
-import { WordsExerciceFooterComponent } from '../words-exercice-footer/words-exercice-footer.component';
+import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
 
 @Component({
   selector: 'app-words-exercice-step-form',
   standalone: true,
   templateUrl: './words-exercice-step-form.component.html',
-  imports: [WordsExerciceFooterComponent],
+  imports: [WordsExerciceButtonBarComponent],
   host: {
     tabIndex: '-1',
     class: 'outline-none',

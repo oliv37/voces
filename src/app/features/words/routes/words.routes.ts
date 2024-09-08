@@ -1,38 +1,54 @@
 import { Routes } from '@angular/router';
 import { WordsGroupComponent } from '../pages/words-group/words-group.component';
-import { WordsGroupListComponent } from '../pages/words-group-list/words-group-list.component';
 import { WordsGroupExerciceComponent } from '../pages/words-group-exercice/words-group-exercice.component';
-import { resolveWordsGroup } from '../resolvers/words-group.resolver';
-import { findWordsGroupList } from '../utils/words.util';
-import { WordsCompletionService } from '../services/words-completion.service';
-
-const WORDS_GROUP_LIST = findWordsGroupList();
+import { WORDS_CATEGORIES } from '../utils/words.util';
+import { WordsGroupCompletionService } from '../services/words-group-completion.service';
+import { WordsCategoryListComponent } from '../pages/words-category-list/words-category-list.component';
+import { WordsCategoryComponent } from '../pages/words-category/words-category.component';
+import { canMatchWords } from '../guards/words.guard';
+import {
+  resolveWordsCategory,
+  resolveWordsGroup,
+} from '../resolvers/words.resolver';
 
 export const wordsRoutes: Routes = [
   {
     path: '',
-    providers: [WordsCompletionService],
+    canMatch: [canMatchWords],
+    providers: [WordsGroupCompletionService],
     children: [
       {
         path: '',
-        component: WordsGroupListComponent,
+        component: WordsCategoryListComponent,
         resolve: {
-          wordsGroupList: () => WORDS_GROUP_LIST,
+          wordsCategories: () => WORDS_CATEGORIES,
         },
       },
       {
-        path: ':wordsGroupId',
+        path: ':wordsCategory',
         resolve: {
-          wordsGroup: resolveWordsGroup,
+          wordsCategory: resolveWordsCategory,
         },
         children: [
           {
             path: '',
-            component: WordsGroupComponent,
+            component: WordsCategoryComponent,
           },
           {
-            path: 'exercice',
-            component: WordsGroupExerciceComponent,
+            path: ':wordsGroup',
+            resolve: {
+              wordsGroup: resolveWordsGroup,
+            },
+            children: [
+              {
+                path: '',
+                component: WordsGroupComponent,
+              },
+              {
+                path: 'exercice',
+                component: WordsGroupExerciceComponent,
+              },
+            ],
           },
         ],
       },

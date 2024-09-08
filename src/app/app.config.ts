@@ -3,6 +3,7 @@ import {
   provideRouter,
   withComponentInputBinding,
   withInMemoryScrolling,
+  withRouterConfig,
 } from '@angular/router';
 import { provideClientHydration } from '@angular/platform-browser';
 import { routes } from './app.routes';

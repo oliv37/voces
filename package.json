@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prebuild": "npx tsx build-routes.ts",
+    "prebuild": "npx vite build -c scripts/vite.config.js && node scripts/dist/build-routes.mjs",
     "build": "ng build",
-    "prebuild-gh": "npx tsx build-routes.ts",
+    "prebuild-gh": "npm run prebuild",
     "build-gh": "ng build --output-path site --base-href /voces/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
