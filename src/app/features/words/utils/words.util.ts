@@ -4,6 +4,7 @@ import {
   WordsCategoryId,
   WordsGroup,
 } from '../models/word.model';
+// TODO : load txt files at startup from assets folder
 import _dataLevel1 from '@data/level1.txt';
 import _dataLevel2 from '@data/level2.txt';
 import _dataLevel3 from '@data/level3.txt';

@@ -11,7 +11,7 @@ git add site/browser
 
 git commit -m "ci: deploy site"
 
-git subtree push --prefix site/browser origin gh-pages
+git push origin `git subtree split --prefix site/browser`:gh-pages --force
 
-git reset --hard origin/main
+git reset --hard origin/main && git clean site -f
 ```
