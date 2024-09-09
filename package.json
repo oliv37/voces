@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prebuild": "npx vite build -c scripts/vite.config.js && node scripts/dist/build-routes.mjs",
+    "prebuild": "npm run build-routes",
     "build": "ng build",
     "prebuild-gh": "npm run prebuild",
     "build-gh": "ng build --output-path site --base-href /voces/",
+    "build-routes": "npx vite build -c scripts/vite.config.mjs && node scripts/dist/build-routes.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:voces": "node dist/voces/server/server.mjs"
@@ -45,7 +46,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "tsx": "^4.17.0",
     "typescript": "~5.4.5"
   }
 }

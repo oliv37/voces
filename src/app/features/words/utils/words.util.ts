@@ -4,28 +4,17 @@ import {
   WordsCategoryId,
   WordsGroup,
 } from '../models/word.model';
-// TODO : load txt files at startup from assets folder
-import _dataLevel1 from '@data/level1.txt';
-import _dataLevel2 from '@data/level2.txt';
-import _dataLevel3 from '@data/level3.txt';
+import dataLevel1 from '@data/level1.txt';
+import dataLevel2 from '@data/level2.txt';
+import dataLevel3 from '@data/level3.txt';
 import { shuffle } from '@shared/utils/array.util';
-
-const base64Prefix = 'data:text/plain;base64,';
-
-const dataLevel1 = decode(_dataLevel1);
-const dataLevel2 = decode(_dataLevel2);
-const dataLevel3 = decode(_dataLevel3);
 
 const WORDS_GROUP_SIZE = 40;
 
-const WORDS_LEVEL1: Word[] = dataToWords(dataLevel1);
-const WORDS_LEVEL2: Word[] = dataToWords(dataLevel2);
-const WORDS_LEVEL3: Word[] = dataToWords(dataLevel3);
-
 export const WORDS_CATEGORIES: Readonly<WordsCategory>[] = [
-  buildWordsCategory('LEVEL1', 'Niveau 1', 'niveau1', WORDS_LEVEL1),
-  buildWordsCategory('LEVEL2', 'Niveau 2', 'niveau2', WORDS_LEVEL2),
-  buildWordsCategory('LEVEL3', 'Niveau 3', 'niveau3', WORDS_LEVEL3),
+  buildWordsCategory('LEVEL1', 'Niveau 1', 'niveau1', dataToWords(dataLevel1)),
+  buildWordsCategory('LEVEL2', 'Niveau 2', 'niveau2', dataToWords(dataLevel2)),
+  buildWordsCategory('LEVEL3', 'Niveau 3', 'niveau3', dataToWords(dataLevel3)),
 ];
 
 export function findRandomWords(
@@ -68,20 +57,6 @@ export function findWordsGroup(
   );
 }
 
-function dataToWords(data: string): Word[] {
-  return data
-    .split('\n')
-    .filter((line) => !!line)
-    .map((line, id) => {
-      const [value, translationFr] = line.split(' : ');
-      return {
-        id,
-        value,
-        translationFr,
-      };
-    });
-}
-
 function buildWordsCategory(
   id: WordsCategoryId,
   label: string,
@@ -115,7 +90,23 @@ function toWordsGroups(
   });
 }
 
+function dataToWords(data: string): Word[] {
+  return decode(data)
+    .split('\n')
+    .filter((line) => !!line)
+    .map((line, id) => {
+      const [value, translationFr] = line.split(' : ');
+      return {
+        id,
+        value,
+        translationFr,
+      };
+    });
+}
+
 function decode(str: string) {
+  const base64Prefix = 'data:text/plain;base64,';
+
   if (str.startsWith(base64Prefix)) {
     return atob(str.substring(base64Prefix.length));
   }

@@ -3,10 +3,11 @@ import {
   provideRouter,
   withComponentInputBinding,
   withInMemoryScrolling,
-  withRouterConfig,
 } from '@angular/router';
 import { provideClientHydration } from '@angular/platform-browser';
 import { routes } from './app.routes';
+
+// TODO : add service worker
 
 export const appConfig: ApplicationConfig = {
   providers: [
