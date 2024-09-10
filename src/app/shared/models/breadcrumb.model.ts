@@ -1,6 +1,6 @@
-export interface BreadCrumbItem {
+export interface BreadcrumbItem {
   url: string;
   label: string;
 }
 
-export type BreadCrumb = BreadCrumbItem[];
+export type Breadcrumb = BreadcrumbItem[];

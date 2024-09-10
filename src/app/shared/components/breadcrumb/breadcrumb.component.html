@@ -1,9 +1,9 @@
 <div class="flex flex-wrap items-center gap-2 text-sm">
-  @for (breadCrumbItem of breadCrumb(); track $index) {
+  @for (breadcrumbItem of breadcrumb(); track $index) {
   <a
-    [routerLink]="breadCrumbItem.url"
+    [routerLink]="breadcrumbItem.url"
     class="capitalize text-gray-700 hover:text-black"
-    >{{ breadCrumbItem.label }}</a
+    >{{ breadcrumbItem.label }}</a
   >
   @if (!$last) {
   <span class="px-1">/</span>

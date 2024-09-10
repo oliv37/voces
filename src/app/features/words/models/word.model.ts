@@ -1,7 +1,5 @@
-export type WordsCategoryId = 'LEVEL1' | 'LEVEL2' | 'LEVEL3';
-
 export interface WordsCategory {
-  id: WordsCategoryId;
+  id: string;
   label: string;
   pathParam: string;
   nbWords: number;

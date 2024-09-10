@@ -7,8 +7,8 @@ import {
 } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
-import { BreadCrumb } from '../../models/breadcrumb.model';
-import { buildBreadCrumb } from '../../utils/breadcrumb.util';
+import { Breadcrumb } from '../../models/breadcrumb.model';
+import { buildBreadcrumb } from '../../utils/breadcrumb.util';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -20,22 +20,10 @@ export class BreadcrumbComponent {
   router = inject(Router);
   route = inject(ActivatedRoute);
 
-  breadCrumb = toSignal<BreadCrumb>(
+  breadcrumb = toSignal<Breadcrumb>(
     this.router.events.pipe(
       filter((e) => e instanceof NavigationEnd),
-      map((e) => {
-        // TODO : build breadcrumb from this.route.root.snapshot (ActivatedRouteSnapshot)
-        /* 
-        console.log(this.route.root.snapshot.url);
-        console.log(this.route.root.snapshot?.children[0].component);
-        console.log(this.route.root.snapshot?.children[0]?.children[0]);
-        console.log(
-          this.route.root.snapshot?.children[0]?.children[0]?.children[0]
-            ?.children[0].children
-        );
-        */
-        return buildBreadCrumb((e as NavigationEnd).urlAfterRedirects);
-      })
+      map(() => buildBreadcrumb(this.route.root.snapshot))
     )
   );
 }

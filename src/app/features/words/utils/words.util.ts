@@ -1,9 +1,4 @@
-import {
-  WordsCategory,
-  Word,
-  WordsCategoryId,
-  WordsGroup,
-} from '../models/word.model';
+import { WordsCategory, Word, WordsGroup } from '../models/word.model';
 import dataLevel1 from '@data/level1.txt';
 import dataLevel2 from '@data/level2.txt';
 import dataLevel3 from '@data/level3.txt';
@@ -11,11 +6,11 @@ import { shuffle } from '@shared/utils/array.util';
 
 const WORDS_GROUP_SIZE = 40;
 
-export const WORDS_CATEGORIES: Readonly<WordsCategory>[] = [
+export const WORDS_CATEGORIES = [
   buildWordsCategory('LEVEL1', 'Niveau 1', 'niveau1', dataToWords(dataLevel1)),
   buildWordsCategory('LEVEL2', 'Niveau 2', 'niveau2', dataToWords(dataLevel2)),
   buildWordsCategory('LEVEL3', 'Niveau 3', 'niveau3', dataToWords(dataLevel3)),
-];
+] as const;
 
 export function findRandomWords(
   words: Word[],
@@ -58,7 +53,7 @@ export function findWordsGroup(
 }
 
 function buildWordsCategory(
-  id: WordsCategoryId,
+  id: string,
   label: string,
   pathParam: string,
   words: Word[]
@@ -72,10 +67,7 @@ function buildWordsCategory(
   };
 }
 
-function toWordsGroups(
-  wordsCategoryId: WordsCategoryId,
-  words: Word[]
-): WordsGroup[] {
+function toWordsGroups(wordsCategoryId: string, words: Word[]): WordsGroup[] {
   const nbWords = words.length;
   const nbWordsGroup = Math.ceil(nbWords / WORDS_GROUP_SIZE);
   return [...Array(nbWordsGroup).keys()].map((i) => {

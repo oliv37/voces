@@ -1,26 +1,38 @@
-import type { BreadCrumb, BreadCrumbItem } from '../models/breadcrumb.model';
+import { ActivatedRouteSnapshot } from '@angular/router';
+import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb.model';
+import { Type } from '@angular/core';
+import { NotFoundComponent } from '@core/pages/not-found/not-found.component';
 
-function getSegmentUrls(url: string): string[] {
-  return url
-    .split('?')[0]
-    .split('#')[0]
-    .split('/')
-    .filter((s) => s != '');
+const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = { url: '/', label: 'voces' };
+
+export function buildBreadcrumb(
+  route: ActivatedRouteSnapshot | null
+): Breadcrumb {
+  const breadcrumb: Breadcrumb = [ROOT_BREADCRUMB_ITEM];
+  let component: Type<any> | null = null;
+
+  while (route != null) {
+    if (route.url.length > 0) {
+      addBreadcrumbItem(breadcrumb, route);
+    }
+    component = route.component;
+    route = route.firstChild;
+  }
+
+  return component != null && component != NotFoundComponent
+    ? breadcrumb
+    : [ROOT_BREADCRUMB_ITEM];
 }
 
-function toUrl(segmentUrls: string[], idx: number) {
-  return '/' + segmentUrls.slice(0, idx + 1).join('/');
-}
+function addBreadcrumbItem(
+  breadcrumb: Breadcrumb,
+  route: ActivatedRouteSnapshot
+): void {
+  const previousUrl: string =
+    breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
 
-const ROOT_BREADCRUMB_ITEM: BreadCrumbItem = { url: '/', label: 'voces' };
-
-export function buildBreadCrumb(url: string): BreadCrumb {
-  const segmentUrls = getSegmentUrls(url);
-  return [
-    ROOT_BREADCRUMB_ITEM,
-    ...segmentUrls.map((segmentUrl, idx) => {
-      const label = segmentUrl;
-      return { url: toUrl(segmentUrls, idx), label };
-    }),
-  ];
+  breadcrumb.push({
+    label: route.url.join(' '),
+    url: [previousUrl, ...route.url].join('/'),
+  });
 }
