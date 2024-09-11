@@ -3165,9 +3165,6 @@ sequito : conséquence
 delantal : tablier
 postizo : faux
 nuera : belle-fille
-arrullar : bercer
 rascar : gratter
 pinga : bite, zizi
 embajada : ambassade
-atrasar : retarder, ralentir
-ocioso : oisif

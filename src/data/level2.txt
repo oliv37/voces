@@ -835,3 +835,6 @@ poza : mare
 descenso : descente
 ruta : randonnée, parcours
 racha : rafale
+atrasar : retarder, ralentir
+ocioso : oisif
+arrullar : bercer
