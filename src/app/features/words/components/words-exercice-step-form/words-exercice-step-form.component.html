@@ -10,6 +10,7 @@
       (input)="onInput($index, $event)"
       (focus)="wordsExerciceService.lastInputFocusIndex.set($index)"
       [disabled]="wordsExerciceService.isFormValueValid($index)"
+      autocomplete="off"
       #formInput
     />
     @if (wordsExerciceService.isFormValueValid($index)) {
