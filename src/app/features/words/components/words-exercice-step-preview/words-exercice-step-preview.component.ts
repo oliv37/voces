@@ -33,7 +33,7 @@ export class WordsExerciceStepPreviewComponent {
   }
 
   @HostListener('keydown.Enter', ['$event'])
-  @ignoreEventTarget('button')
+  @ignoreEventTarget('button', 'a')
   onEnter() {
     this.wordsExerciceService.goToNextStep();
   }

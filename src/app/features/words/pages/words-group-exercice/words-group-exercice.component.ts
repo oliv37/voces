@@ -61,23 +61,17 @@ export class WordsGroupExerciceComponent {
   }
 }
 
-function getOtherWordsGroup(wordsGroups: WordsGroup[], wordsGroup: WordsGroup) {
+function getOtherWordsGroup(
+  wordsGroups: WordsGroup[],
+  wordsGroup: WordsGroup
+): WordsGroup[] {
   const nbWordsGroups = wordsGroups.length;
-  const otherWordsGroups = wordsGroups.filter(
-    (otherWordsGroup) => otherWordsGroup.id !== wordsGroup.id
-  );
   const wordsGroupIdx = wordsGroups.indexOf(wordsGroup);
+  const otherWordsGroups: WordsGroup[] = [];
 
-  otherWordsGroups.sort((wordsGroup1, wordsGroup2) => {
-    const wordsGroup1Idx = wordsGroups.indexOf(wordsGroup1);
-    const wordsGroup2Idx = wordsGroups.indexOf(wordsGroup2);
-
-    const distance1 =
-      (wordsGroup1Idx - wordsGroupIdx + nbWordsGroups) % nbWordsGroups;
-    const distance2 =
-      (wordsGroup2Idx - wordsGroupIdx + nbWordsGroups) % nbWordsGroups;
-    return distance1 - distance2;
-  });
+  for (let i = 1; i < nbWordsGroups; i++) {
+    otherWordsGroups.push(wordsGroups[(wordsGroupIdx + i) % nbWordsGroups]);
+  }
 
   return otherWordsGroups;
 }
