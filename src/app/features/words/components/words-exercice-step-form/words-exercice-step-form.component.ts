@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
+import { ignoreEventTarget } from '@shared/decorators/ignore-event-target.decorator';
 
 @Component({
   selector: 'app-words-exercice-step-form',
@@ -29,30 +30,29 @@ export class WordsExerciceStepFormComponent {
   @ViewChildren('formInput') inputs!: QueryList<ElementRef<HTMLInputElement>>;
 
   constructor() {
-    // focusInputToAnswer Effect
+    // [Effect] focus next input
     effect(() => {
       const nbFormValues = this.wordsExerciceService.nbFormValues();
       const nbFormValuesValid = this.wordsExerciceService.nbFormValuesValid();
-      const areAllFormValuesValid = nbFormValuesValid >= nbFormValues;
-      const lastFocusIndex = untracked(
-        this.wordsExerciceService.lastInputFocusIndex
-      );
 
+      const areAllFormValuesValid = nbFormValuesValid >= nbFormValues;
       if (areAllFormValuesValid) {
         this._elementRef?.nativeElement?.focus();
         return;
       }
 
-      for (let i = 0; i < nbFormValues; i++) {
-        const idx = (lastFocusIndex + i) % nbFormValues;
-        const isFormValueValid = untracked(() =>
-          this.wordsExerciceService.isFormValueValid(idx)
-        );
-        if (!isFormValueValid) {
-          this.inputs.get(idx)?.nativeElement?.focus();
-          return;
+      untracked(() => {
+        const lastFocusIndex = this.wordsExerciceService.lastInputFocusIndex();
+        for (let i = 0; i < nbFormValues; i++) {
+          const idx = (lastFocusIndex + i) % nbFormValues;
+          const isFormValueValid =
+            this.wordsExerciceService.isFormValueValid(idx);
+          if (!isFormValueValid) {
+            this.inputs.get(idx)?.nativeElement?.focus();
+            return;
+          }
         }
-      }
+      });
     });
   }
 
@@ -61,7 +61,8 @@ export class WordsExerciceStepFormComponent {
     this.wordsExerciceService.setFormValue(index, value);
   }
 
-  @HostListener('keydown.Enter')
+  @HostListener('keydown.Enter', ['$event'])
+  @ignoreEventTarget('button')
   onEnter() {
     if (this.wordsExerciceService.isFormWin()) {
       this.wordsExerciceService.goToNextStep();

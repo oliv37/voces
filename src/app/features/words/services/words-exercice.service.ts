@@ -32,7 +32,8 @@ export class WordsExerciceService {
   private _formValuesValidities = computed<boolean[]>(() => {
     const words = this.words();
     return this.formValues().map(
-      (formValue, i) => formValue === words[i].value
+      (formValue, i) =>
+        formValue?.toLowerCase() === words[i].value.toLowerCase()
     );
   });
   private _stepIndex = computed<number>(() => STEPS.indexOf(this.step()));
@@ -48,11 +49,9 @@ export class WordsExerciceService {
   nbWordsAnswered = computed<number>(() => this._wordIdsAnswered().length);
   nbWords = computed<number>(() => this._words().length);
   nbFormValues = computed<number>(() => this._formValues().length);
-  nbFormValuesValid = computed<number>(() => {
-    const words = this.words();
-    const formValues = this._formValues();
-    return formValues.filter((value, idx) => value === words[idx].value).length;
-  });
+  nbFormValuesValid = computed<number>(
+    () => this._formValuesValidities().filter((isValid) => isValid).length
+  );
   isFormWin = computed<boolean>(() =>
     this._formValuesValidities().every((isValid) => isValid)
   );
@@ -61,7 +60,7 @@ export class WordsExerciceService {
   );
 
   constructor() {
-    // markAsCompleted Effect
+    // [Effect] mark wordsGroup as completed if all words are answered
     effect(() => {
       const wordsGroup = this._wordsGroup();
       if (wordsGroup && this._areAllWordsAvailableAnswered()) {

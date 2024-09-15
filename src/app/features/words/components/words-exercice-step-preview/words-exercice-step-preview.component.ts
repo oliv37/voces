@@ -10,6 +10,7 @@ import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
 import { RouterLink } from '@angular/router';
 import { WordsGroup } from '@features/words/models/word.model';
+import { ignoreEventTarget } from '@shared/decorators/ignore-event-target.decorator';
 
 @Component({
   selector: 'app-words-exercice-step-preview',
@@ -31,7 +32,8 @@ export class WordsExerciceStepPreviewComponent {
     afterNextRender(() => this._elementRef.nativeElement.focus());
   }
 
-  @HostListener('keydown.Enter')
+  @HostListener('keydown.Enter', ['$event'])
+  @ignoreEventTarget('button')
   onEnter() {
     this.wordsExerciceService.goToNextStep();
   }

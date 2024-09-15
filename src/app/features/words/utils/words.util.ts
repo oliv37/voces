@@ -1,15 +1,51 @@
 import { WordsCategory, Word, WordsGroup } from '../models/word.model';
-import dataLevel1 from '@data/level1.txt';
-import dataLevel2 from '@data/level2.txt';
-import dataLevel3 from '@data/level3.txt';
+import dataLevel1a from '@data/level1a.txt';
+import dataLevel1b from '@data/level1b.txt';
+import dataLevel2a from '@data/level2a.txt';
+import dataLevel2b from '@data/level2b.txt';
+import dataLevel2c from '@data/level2c.txt';
+import dataLevel3a from '@data/level3a.txt';
 import { shuffle } from '@shared/utils/array.util';
 
 const WORDS_GROUP_SIZE = 40;
 
 export const WORDS_CATEGORIES = [
-  buildWordsCategory('LEVEL1', 'Niveau 1', 'niveau1', dataToWords(dataLevel1)),
-  buildWordsCategory('LEVEL2', 'Niveau 2', 'niveau2', dataToWords(dataLevel2)),
-  buildWordsCategory('LEVEL3', 'Niveau 3', 'niveau3', dataToWords(dataLevel3)),
+  buildWordsCategory(
+    'LEVEL1A',
+    'Niveau 1a',
+    'niveau-1a',
+    dataToWords(dataLevel1a)
+  ),
+  buildWordsCategory(
+    'LEVEL1B',
+    'Niveau 1b',
+    'niveau-1b',
+    dataToWords(dataLevel1b)
+  ),
+  buildWordsCategory(
+    'LEVEL2A',
+    'Niveau 2a',
+    'niveau-2a',
+    dataToWords(dataLevel2a)
+  ),
+  buildWordsCategory(
+    'LEVEL2B',
+    'Niveau 2b',
+    'niveau-2b',
+    dataToWords(dataLevel2b)
+  ),
+  buildWordsCategory(
+    'LEVEL2C',
+    'Niveau 2c',
+    'niveau-2c',
+    dataToWords(dataLevel2c)
+  ),
+  buildWordsCategory(
+    'LEVEL3A',
+    'Niveau 3a',
+    'niveau-3a',
+    dataToWords(dataLevel3a)
+  ),
 ] as const;
 
 export function findRandomWords(

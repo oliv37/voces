@@ -4,11 +4,11 @@
 
 ## Dictionary
 
-Data are stored in text files into [src/data](./src/data)
+Data are stored in text files in folder [src/data](./src/data)
 
-A text file contains at most 500 translations
+Each text file contains at most 400 translations
 
-Each translation is written into a single line and has the following format :
+Each translation represent a line with the following format :
 
 `<spanish_word> : <french_translation>`
 

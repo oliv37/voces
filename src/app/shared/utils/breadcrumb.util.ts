@@ -32,7 +32,7 @@ function addBreadcrumbItem(
     breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
 
   breadcrumb.push({
-    label: route.url.join(' '),
+    label: route.url.join(' ').replaceAll('-', ' '),
     url: [previousUrl, ...route.url].join('/'),
   });
 }
