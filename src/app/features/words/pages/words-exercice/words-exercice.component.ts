@@ -10,8 +10,8 @@ import { ClientSideComponent } from '@shared/components/client-side/client-side.
 import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceStepPreviewComponent } from '../../components/words-exercice-step-preview/words-exercice-step-preview.component';
 import { WordsExerciceStepFormComponent } from '../../components/words-exercice-step-form/words-exercice-step-form.component';
-import { WordsCategory, WordsGroup } from '../../models/word.model';
-import { WordsGroupCompletionService } from '@features/words/services/words-group-completion.service';
+import { WordsCategory, WordsGroup } from '../../models/words.model';
+import { WordsCompletionService } from '@features/words/services/words-completion.service';
 import { WordsExerciceHeaderComponent } from '@features/words/components/words-exercice-header/words-exercice-header.component';
 import { groupBy } from '@shared/utils/array.util';
 
@@ -23,14 +23,14 @@ import { groupBy } from '@shared/utils/array.util';
     WordsExerciceStepPreviewComponent,
     WordsExerciceStepFormComponent,
   ],
-  templateUrl: './words-group-exercice.component.html',
+  templateUrl: './words-exercice.component.html',
   providers: [WordsExerciceService],
   host: {
     tabIndex: '-1',
   },
 })
-export class WordsGroupExerciceComponent {
-  private _wordsGroupCompletionService = inject(WordsGroupCompletionService);
+export class WordsExerciceComponent {
+  private _wordsCompletionService = inject(WordsCompletionService);
   wordsExerciceService = inject(WordsExerciceService);
 
   wordsCategory = input.required<WordsCategory>();
@@ -42,8 +42,7 @@ export class WordsGroupExerciceComponent {
     const otherWordsGroups = getOtherWordsGroup(wordsGroups, wordsGroup);
     const otherWordsGroupsByCompletionAge = groupBy(
       otherWordsGroups,
-      (wordsGroup) =>
-        this._wordsGroupCompletionService.getCompletionAge(wordsGroup)
+      (wordsGroup) => this._wordsCompletionService.getCompletionAge(wordsGroup)
     );
 
     return (

@@ -7,7 +7,7 @@ import {
   input,
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { WordsGroup } from '../../models/word.model';
+import { WordsGroup } from '../../models/words.model';
 
 @Component({
   standalone: true,

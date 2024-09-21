@@ -1,11 +1,11 @@
 import { inject, Injectable } from '@angular/core';
 import { StorageService } from '@core/services/storage.service';
-import { WordsGroup, WordsGroupCompletionAge } from '../models/word.model';
+import { WordsGroup } from '../models/words.model';
 import { toWordsGroupCompletionAge } from '../utils/words-group-completion.util';
-import { StorageKey } from '@core/models/storage.model';
+import { WordsCompletionAge } from '../models/words-completion.model';
 
 @Injectable()
-export class WordsGroupCompletionService {
+export class WordsCompletionService {
   private _storageService = inject(StorageService);
 
   constructor() {
@@ -13,24 +13,29 @@ export class WordsGroupCompletionService {
   }
 
   markAsCompleted(wordsGroup: WordsGroup): void {
-    const key = new StorageKey('WORDS_GROUP_COMPLETION', wordsGroup.id);
-    this._storageService.write(key, new Date().getTime().toString());
+    this._storageService.write(
+      'WORDS_GROUP_COMPLETION',
+      wordsGroup.id,
+      new Date().getTime().toString()
+    );
   }
 
-  getCompletionAge(wordsGroup: WordsGroup): WordsGroupCompletionAge {
-    const key = new StorageKey('WORDS_GROUP_COMPLETION', wordsGroup.id);
-    const completionDateInMs = this._storageService.read(key);
+  getCompletionAge(wordsGroup: WordsGroup): WordsCompletionAge {
+    const completionDateInMs = this._storageService.read(
+      'WORDS_GROUP_COMPLETION',
+      wordsGroup.id
+    );
     return toWordsGroupCompletionAge(completionDateInMs);
   }
 
   private removeOldWordsGroupCompletion(): void {
     this._storageService
-      .getAllByType('WORDS_GROUP_COMPLETION')
+      .readAllByKeyPrefix('WORDS_GROUP_COMPLETION')
       .filter(
         ([_key, completionDateInMs]) =>
           toWordsGroupCompletionAge(completionDateInMs) ===
           'LONG_TIME_AGO_OR_NEVER'
       )
-      .forEach(([key]) => this._storageService.remove(key));
+      .forEach(([key, _value]) => this._storageService.remove(key));
   }
 }

@@ -1,6 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WordsCategory } from '@features/words/models/word.model';
+import { WordsCategory } from '@features/words/models/words.model';
 
 @Component({
   standalone: true,

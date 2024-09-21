@@ -21,9 +21,10 @@ interponer : déposer
 vaticinar : prédire
 pantomima : farce
 plasmar : reproduire
-vulneracion : violacion
+vulneracion : violation
 ponente : conférencier, intervenant
 cauto : prudent
+saque de banda : touche (football)
 traspasar : déplacer, transférer
 desempenar : exécuter, réaliser, effectuer
 solemne : solennel
@@ -79,3 +80,5 @@ quisquilloso : susceptible
 grato : agréable, plaisant
 pleitesia : rendre hommage à
 indulto : grâce
+saque de esquina : corner
+colegiado : arbitre

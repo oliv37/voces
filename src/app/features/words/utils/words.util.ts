@@ -1,4 +1,4 @@
-import { WordsCategory, Word, WordsGroup } from '../models/word.model';
+import { WordsCategory, Word, WordsGroup } from '../models/words.model';
 import dataLevel1a from '@data/level1a.txt';
 import dataLevel1b from '@data/level1b.txt';
 import dataLevel2a from '@data/level2a.txt';

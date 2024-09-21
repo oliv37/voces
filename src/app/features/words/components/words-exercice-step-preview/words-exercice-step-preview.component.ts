@@ -9,7 +9,7 @@ import {
 import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
 import { RouterLink } from '@angular/router';
-import { WordsGroup } from '@features/words/models/word.model';
+import { WordsGroup } from '@features/words/models/words.model';
 import { ignoreEventTarget } from '@shared/decorators/ignore-event-target.decorator';
 
 @Component({

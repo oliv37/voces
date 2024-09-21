@@ -1,5 +1,5 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
-import { WordsCategory, WordsGroup } from '../models/word.model';
+import { WordsCategory, WordsGroup } from '../models/words.model';
 import { findWordsCategory, findWordsGroup } from '../utils/words.util';
 
 export const resolveWordsCategory: ResolveFn<WordsCategory> = (route) => {

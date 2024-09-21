@@ -7,8 +7,6 @@ import {
 import { provideClientHydration } from '@angular/platform-browser';
 import { routes } from './app.routes';
 
-// TODO : add service worker
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(

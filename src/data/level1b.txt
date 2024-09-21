@@ -116,3 +116,6 @@ ajo : ail
 demonio : diable, démon
 maloliente : malodorant
 sencillez : simplicité
+potencia : puissance
+competencia : concurrence
+arbitro : arbitre

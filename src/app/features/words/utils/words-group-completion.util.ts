@@ -1,15 +1,15 @@
-import { WordsGroupCompletionAge } from '../models/word.model';
+import { WordsCompletionAge } from '../models/words-completion.model';
 
 const ONE_DAY_AGE_IN_MS = 24 * 60 * 60 * 1000;
 
-const WORDS_GROUP_COMPLETION_AGES_ASC: [WordsGroupCompletionAge, number][] = [
+const WORDS_COMPLETION_AGES_ASC: [WordsCompletionAge, number][] = [
   ['LESS_THAN_TWO_DAYS', 2 * ONE_DAY_AGE_IN_MS],
   ['LESS_THAN_FOUR_DAYS', 4 * ONE_DAY_AGE_IN_MS],
 ];
 
 export function toWordsGroupCompletionAge(
   completionDateInMs: number | string | null
-): WordsGroupCompletionAge {
+): WordsCompletionAge {
   if (completionDateInMs == null || isNaN(+completionDateInMs)) {
     return 'LONG_TIME_AGO_OR_NEVER';
   }
@@ -18,7 +18,7 @@ export function toWordsGroupCompletionAge(
   const distanceInMs = nowInMs - +completionDateInMs;
 
   return (
-    WORDS_GROUP_COMPLETION_AGES_ASC.find(
+    WORDS_COMPLETION_AGES_ASC.find(
       ([_, maxDistanceInMs]) => distanceInMs < maxDistanceInMs
     )?.[0] ?? 'LONG_TIME_AGO_OR_NEVER'
   );

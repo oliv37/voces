@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { WordsGroupComponent } from '../pages/words-group/words-group.component';
-import { WordsGroupExerciceComponent } from '../pages/words-group-exercice/words-group-exercice.component';
+import { WordsExerciceComponent } from '../pages/words-exercice/words-exercice.component';
 import { WORDS_CATEGORIES } from '../utils/words.util';
-import { WordsGroupCompletionService } from '../services/words-group-completion.service';
+import { WordsCompletionService } from '../services/words-completion.service';
 import { WordsCategoryListComponent } from '../pages/words-category-list/words-category-list.component';
 import { WordsCategoryComponent } from '../pages/words-category/words-category.component';
 import { canMatchWords } from '../guards/words.guard';
@@ -10,15 +10,22 @@ import {
   resolveWordsCategory,
   resolveWordsGroup,
 } from '../resolvers/words.resolver';
+import {
+  resolveWordsCategoryTitle,
+  resolveWordsExerciceTitle,
+  resolveWordsGroupTitle,
+} from '../resolvers/words-title.resolver';
+import { WordsSettingService } from '../services/words-setting.service';
 
 export const wordsRoutes: Routes = [
   {
     path: '',
     canMatch: [canMatchWords],
-    providers: [WordsGroupCompletionService],
+    providers: [WordsCompletionService, WordsSettingService],
     children: [
       {
         path: '',
+        title: 'Vocabulaire Espagnol - Voces',
         component: WordsCategoryListComponent,
         resolve: {
           wordsCategories: () => WORDS_CATEGORIES,
@@ -32,6 +39,7 @@ export const wordsRoutes: Routes = [
         children: [
           {
             path: '',
+            title: resolveWordsCategoryTitle,
             component: WordsCategoryComponent,
           },
           {
@@ -42,11 +50,13 @@ export const wordsRoutes: Routes = [
             children: [
               {
                 path: '',
+                title: resolveWordsGroupTitle,
                 component: WordsGroupComponent,
               },
               {
                 path: 'exercice',
-                component: WordsGroupExerciceComponent,
+                title: resolveWordsExerciceTitle,
+                component: WordsExerciceComponent,
               },
             ],
           },

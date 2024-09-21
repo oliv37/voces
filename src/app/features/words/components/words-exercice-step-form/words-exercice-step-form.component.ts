@@ -64,7 +64,7 @@ export class WordsExerciceStepFormComponent {
   @HostListener('keydown.Enter', ['$event'])
   @ignoreEventTarget('button')
   onEnter() {
-    if (this.wordsExerciceService.isFormWin()) {
+    if (this.wordsExerciceService.areAllFormValuesValid()) {
       this.wordsExerciceService.goToNextStep();
     } else {
       this.wordsExerciceService.goToPreviousStep();

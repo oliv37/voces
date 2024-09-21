@@ -5,55 +5,79 @@ import {
   Injectable,
   Signal,
   signal,
+  untracked,
 } from '@angular/core';
 import { findRandomWords } from '../utils/words.util';
-import { Word, WordsGroup } from '../models/word.model';
-import { WordsGroupCompletionService } from './words-group-completion.service';
-
-type Step = (typeof STEPS)[number];
-
-const STEPS = ['preview', 'form'] as const;
-
-const FIRST_STEP = STEPS[0];
-
-const NB_WORDS_IN_EXERCICE = 10;
+import { Word, WordsGroup } from '../models/words.model';
+import { WordsCompletionService } from './words-completion.service';
+import {
+  WordsFormDirection,
+  WordsStep,
+  FIRST_STEP,
+  NB_WORDS_IN_EXERCICE,
+  STEPS,
+} from '../models/words-exercice.model';
+import { WordsSettingService } from './words-setting.service';
 
 @Injectable()
 export class WordsExerciceService {
-  private _wordsGroupCompletionService = inject(WordsGroupCompletionService);
+  private _wordsCompletionService = inject(WordsCompletionService);
+  private _wordsSettingService = inject(WordsSettingService);
 
   private _wordsGroup = signal<WordsGroup | undefined>(undefined);
-  private _wordsAvailable = computed<Word[]>(
-    () => this._wordsGroup()?.words ?? []
-  );
   private _words = signal<Word[]>([]);
   private _wordIdsAnswered = signal<number[]>([]);
   private _formValues = signal<string[]>([]);
-  private _formValuesValidities = computed<boolean[]>(() => {
+  private _lastInputFocusIndex = signal<number>(0);
+  private _step = signal<WordsStep>(FIRST_STEP);
+
+  private _formDirection = computed<WordsFormDirection>(
+    () => this._wordsSettingService.setting().formDirection
+  );
+  private _wordsAvailable = computed<Word[]>(
+    () => this._wordsGroup()?.words ?? []
+  );
+  private _formValuesValidations = computed<boolean[]>(() => {
     const words = this.words();
+    const wordAnswerFn = this._wordAnswerFn();
     return this.formValues().map(
       (formValue, i) =>
-        formValue?.toLowerCase() === words[i].value.toLowerCase()
+        formValue?.toLowerCase() === wordAnswerFn(words[i])?.toLowerCase()
     );
   });
   private _stepIndex = computed<number>(() => STEPS.indexOf(this.step()));
   private _areAllWordsAvailableAnswered = computed<boolean>(
     () => this.nbWordsAnswered() >= this.nbWordsAvailable()
   );
+  private _wordLabelFn = computed<(word: Word) => string>(() => {
+    if (this._formDirection() === 'ES-FR') {
+      return (word) => word.value;
+    }
 
-  lastInputFocusIndex = signal<number>(0);
-  step = signal<Step>(FIRST_STEP);
+    return (word) => word.translationFr;
+  });
+  private _wordAnswerFn = computed<(word: Word) => string>(() => {
+    if (this._formDirection() === 'ES-FR') {
+      return (word) => word.translationFr;
+    }
+
+    return (word) => word.value;
+  });
+
+  lastInputFocusIndex: Signal<number> = this._lastInputFocusIndex.asReadonly();
+  step: Signal<WordsStep> = this._step.asReadonly();
   words: Signal<Word[]> = this._words.asReadonly();
   formValues: Signal<string[]> = this._formValues.asReadonly();
+
   nbWordsAvailable = computed<number>(() => this._wordsAvailable().length);
   nbWordsAnswered = computed<number>(() => this._wordIdsAnswered().length);
   nbWords = computed<number>(() => this._words().length);
   nbFormValues = computed<number>(() => this._formValues().length);
   nbFormValuesValid = computed<number>(
-    () => this._formValuesValidities().filter((isValid) => isValid).length
+    () => this._formValuesValidations().filter((isValid) => isValid).length
   );
-  isFormWin = computed<boolean>(() =>
-    this._formValuesValidities().every((isValid) => isValid)
+  areAllFormValuesValid = computed<boolean>(() =>
+    this._formValuesValidations().every((isValid) => isValid)
   );
   areAllWordsAnswered = computed<boolean>(
     () => this.nbWordsAnswered() >= this.nbWordsAvailable()
@@ -64,9 +88,25 @@ export class WordsExerciceService {
     effect(() => {
       const wordsGroup = this._wordsGroup();
       if (wordsGroup && this._areAllWordsAvailableAnswered()) {
-        this._wordsGroupCompletionService.markAsCompleted(wordsGroup);
+        this._wordsCompletionService.markAsCompleted(wordsGroup);
       }
     });
+
+    // [Effect] update wordIdsAnswered when all form values are valid
+    effect(
+      () => {
+        if (this.nbFormValuesValid() > 0) {
+          this._wordIdsAnswered.set(
+            untracked(() => this.computeWordsIdAnswered())
+          );
+        }
+      },
+      { allowSignalWrites: true }
+    );
+  }
+
+  getFormLabel(word: Word): string {
+    return this._wordLabelFn()(word);
   }
 
   getFormValue(index: number): string {
@@ -80,22 +120,20 @@ export class WordsExerciceService {
   }
 
   isFormValueValid(index: number): boolean {
-    return this._formValuesValidities()[index];
+    return this._formValuesValidations()[index];
+  }
+
+  setLastInputFocusIndex(index: number) {
+    this._lastInputFocusIndex.set(index);
   }
 
   reinit(wordsGroup?: WordsGroup): void {
     this._wordsGroup.set(wordsGroup ?? this._wordsGroup());
     this._wordIdsAnswered.set([]);
-    this._words.set(
-      findRandomWords(this._wordsAvailable(), NB_WORDS_IN_EXERCICE)
-    );
-    this._formValues.set(this._words().map((_) => ''));
-    this.lastInputFocusIndex.set(0);
-    this.step.set(FIRST_STEP);
+    this.nextExercice();
   }
 
   nextExercice(): void {
-    this._wordIdsAnswered.set(this.computeWordsIdAnswered());
     this._words.set(
       findRandomWords(
         this._wordsAvailable(),
@@ -104,21 +142,21 @@ export class WordsExerciceService {
       )
     );
     this._formValues.set(this._words().map((_) => ''));
-    this.lastInputFocusIndex.set(0);
-    this.step.set(FIRST_STEP);
+    this._lastInputFocusIndex.set(0);
+    this._step.set(FIRST_STEP);
   }
 
   goToPreviousStep(): void {
     const previousStepIndex = this._stepIndex() - 1;
     if (previousStepIndex >= 0) {
-      this.step.set(STEPS[previousStepIndex]);
+      this._step.set(STEPS[previousStepIndex]);
     }
   }
 
   goToNextStep(): void {
     const nextStepIndex = this._stepIndex() + 1;
     if (nextStepIndex < STEPS.length) {
-      this.step.set(STEPS[nextStepIndex]);
+      this._step.set(STEPS[nextStepIndex]);
     } else {
       this.nextExercice();
     }

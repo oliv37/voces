@@ -1,6 +1,8 @@
 <div class="grid grid-cols-2 gap-4">
   @for (word of wordsExerciceService.words(); track word.id) {
-  <span class="justify-self-end">{{ word.translationFr }}</span>
+  <label class="justify-self-end" [for]="'answer' + $index">{{
+    wordsExerciceService.getFormLabel(word)
+  }}</label>
   <div class="flex items-start">
     <input
       type="text"
@@ -8,10 +10,11 @@
         'flex-1 min-w-0 max-w-48 border-b border-black font-bold ' +
         'disabled:border-gray-400'
       "
+      [id]="'answer' + $index"
       [name]="'answer' + $index"
       [value]="wordsExerciceService.getFormValue($index)"
       (input)="onInput($index, $event)"
-      (focus)="wordsExerciceService.lastInputFocusIndex.set($index)"
+      (focus)="wordsExerciceService.setLastInputFocusIndex($index)"
       [disabled]="wordsExerciceService.isFormValueValid($index)"
       autocomplete="off"
       autocapitalize="off"
@@ -29,5 +32,5 @@
   nextBtnText="✔"
   (previousBtnClick)="wordsExerciceService.goToPreviousStep()"
   (nextBtnClick)="wordsExerciceService.goToNextStep()"
-  [nextBtnDisabled]="!wordsExerciceService.isFormWin()"
+  [nextBtnDisabled]="!wordsExerciceService.areAllFormValuesValid()"
 />
