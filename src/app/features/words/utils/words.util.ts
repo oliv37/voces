@@ -123,11 +123,11 @@ function dataToWords(data: string): Word[] {
     .split('\n')
     .filter((line) => !!line)
     .map((line, id) => {
-      const [value, translationFr] = line.split(' : ');
+      const [es, fr] = line.split(' : ');
       return {
         id,
-        value,
-        translationFr,
+        es,
+        fr,
       };
     });
 }

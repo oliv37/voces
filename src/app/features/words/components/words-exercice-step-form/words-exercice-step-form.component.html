@@ -1,7 +1,7 @@
 <div class="grid grid-cols-2 gap-4">
   @for (word of wordsExerciceService.words(); track word.id) {
   <label class="justify-self-end" [for]="'answer' + $index">{{
-    wordsExerciceService.getFormLabel(word)
+    wordsExerciceService.getWordTranslation(word)
   }}</label>
   <div class="flex items-start">
     <input

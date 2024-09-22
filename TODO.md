@@ -1,5 +1,4 @@
-- Add input for Exercice FormDirection
 - Add service worker
 - Define meta description for each route
-- Github Workflow (Build + Release + Deploy)
+- Github Actions Workflow (Build + Release + Deploy)
 - Add linter (ESLint)

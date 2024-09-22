@@ -1,9 +1,7 @@
-import { WordsFormDirection } from './words-exercice.model';
-
 export interface WordsSetting {
-  formDirection: WordsFormDirection;
+  isExerciceReversed: boolean;
 }
 
 export const DEFAULT_SETTING: WordsSetting = {
-  formDirection: 'FR-ES',
+  isExerciceReversed: false,
 };

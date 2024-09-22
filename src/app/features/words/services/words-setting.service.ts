@@ -1,7 +1,6 @@
 import { effect, inject, Injectable, signal, Signal } from '@angular/core';
 import { StorageService } from '@core/services/storage.service';
 import { DEFAULT_SETTING, WordsSetting } from '../models/words-setting.model';
-import { WordsFormDirection } from '../models/words-exercice.model';
 
 @Injectable()
 export class WordsSettingService {
@@ -21,11 +20,11 @@ export class WordsSettingService {
     );
   }
 
-  setFormDirection(formDirection: WordsFormDirection) {
+  setIsExerciceReversed(isExerciceReversed: boolean) {
     this._setting.update((setting) => {
       const newSetting: WordsSetting = {
         ...setting,
-        formDirection,
+        isExerciceReversed,
       };
       return newSetting;
     });

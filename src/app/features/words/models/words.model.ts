@@ -14,6 +14,6 @@ export interface WordsGroup {
 
 export interface Word {
   id: number;
-  value: string;
-  translationFr: string;
+  es: string;
+  fr: string;
 }

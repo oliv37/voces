@@ -11,7 +11,6 @@ import { findRandomWords } from '../utils/words.util';
 import { Word, WordsGroup } from '../models/words.model';
 import { WordsCompletionService } from './words-completion.service';
 import {
-  WordsFormDirection,
   WordsStep,
   FIRST_STEP,
   NB_WORDS_IN_EXERCICE,
@@ -31,37 +30,26 @@ export class WordsExerciceService {
   private _lastInputFocusIndex = signal<number>(0);
   private _step = signal<WordsStep>(FIRST_STEP);
 
-  private _formDirection = computed<WordsFormDirection>(
-    () => this._wordsSettingService.setting().formDirection
-  );
   private _wordsAvailable = computed<Word[]>(
     () => this._wordsGroup()?.words ?? []
   );
   private _formValuesValidations = computed<boolean[]>(() => {
     const words = this.words();
-    const wordAnswerFn = this._wordAnswerFn();
+    const wordValueFn = this._wordValueFn();
     return this.formValues().map(
       (formValue, i) =>
-        formValue?.toLowerCase() === wordAnswerFn(words[i])?.toLowerCase()
+        formValue?.toLowerCase() === wordValueFn(words[i])?.toLowerCase()
     );
   });
   private _stepIndex = computed<number>(() => STEPS.indexOf(this.step()));
   private _areAllWordsAvailableAnswered = computed<boolean>(
     () => this.nbWordsAnswered() >= this.nbWordsAvailable()
   );
-  private _wordLabelFn = computed<(word: Word) => string>(() => {
-    if (this._formDirection() === 'ES-FR') {
-      return (word) => word.value;
-    }
-
-    return (word) => word.translationFr;
+  private _wordValueFn = computed<(word: Word) => string>(() => {
+    return this.isReversed() ? (word) => word.fr : (word) => word.es;
   });
-  private _wordAnswerFn = computed<(word: Word) => string>(() => {
-    if (this._formDirection() === 'ES-FR') {
-      return (word) => word.translationFr;
-    }
-
-    return (word) => word.value;
+  private _wordTranslationFn = computed<(word: Word) => string>(() => {
+    return this.isReversed() ? (word) => word.es : (word) => word.fr;
   });
 
   lastInputFocusIndex: Signal<number> = this._lastInputFocusIndex.asReadonly();
@@ -81,6 +69,9 @@ export class WordsExerciceService {
   );
   areAllWordsAnswered = computed<boolean>(
     () => this.nbWordsAnswered() >= this.nbWordsAvailable()
+  );
+  isReversed = computed<boolean>(
+    () => this._wordsSettingService.setting().isExerciceReversed
   );
 
   constructor() {
@@ -105,8 +96,12 @@ export class WordsExerciceService {
     );
   }
 
-  getFormLabel(word: Word): string {
-    return this._wordLabelFn()(word);
+  getWordValue(word: Word): string {
+    return this._wordValueFn()(word);
+  }
+
+  getWordTranslation(word: Word): string {
+    return this._wordTranslationFn()(word);
   }
 
   getFormValue(index: number): string {
@@ -131,6 +126,13 @@ export class WordsExerciceService {
     this._wordsGroup.set(wordsGroup ?? this._wordsGroup());
     this._wordIdsAnswered.set([]);
     this.nextExercice();
+  }
+
+  reverse(): void {
+    this._wordsSettingService.setIsExerciceReversed(!this.isReversed());
+    this._wordIdsAnswered.set([]);
+    this._formValues.set(this._words().map((_) => ''));
+    this._lastInputFocusIndex.set(0);
   }
 
   nextExercice(): void {

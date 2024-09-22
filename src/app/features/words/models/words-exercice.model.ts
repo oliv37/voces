@@ -1,4 +1,3 @@
-export type WordsFormDirection = 'FR-ES' | 'ES-FR';
 export type WordsStep = (typeof STEPS)[number];
 
 export const STEPS = ['preview', 'form'] as const;

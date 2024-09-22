@@ -1,7 +1,11 @@
 <div class="grid grid-cols-2 gap-4">
   @for (word of wordsExerciceService.words(); track word.id) {
-  <span class="justify-self-end font-bold">{{ word.value }}</span>
-  <span class="border-b border-transparent">{{ word.translationFr }}</span>
+  <span class="justify-self-end font-bold">{{
+    wordsExerciceService.getWordValue(word)
+  }}</span>
+  <span class="border-b border-transparent">{{
+    wordsExerciceService.getWordTranslation(word)
+  }}</span>
   }
 </div>
 
@@ -11,9 +15,24 @@
   (previousBtnClick)="wordsExerciceService.reinit()"
   (nextBtnClick)="wordsExerciceService.goToNextStep()"
 >
+  <button
+    ngProjectAs="[left]"
+    type="button"
+    [class]="
+      'border border-black px-2 ' + 'rounded-md shadow-lg hover:opacity-80'
+    "
+    (click)="wordsExerciceService.reverse()"
+  >
+    @if (wordsExerciceService.isReversed()) {
+    <span class="font-bold">FR</span> - <span>ES</span>
+    } @else {
+    <span class="font-bold">ES</span> - <span>FR</span>
+    }
+  </button>
+
   @if (wordsExerciceService.areAllWordsAnswered() && nextWordsGroup()) {
   <a
-    right
+    ngProjectAs="[right]"
     [routerLink]="['../..', nextWordsGroup()?.pathParam]"
     [class]="
       'px-3 font-bold text-xl border border-black bg-black text-white ' +

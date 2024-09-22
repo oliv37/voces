@@ -1,9 +1,9 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
   @for (word of wordsGroup().words; track word.id) {
   <div>
-    <span class="font-bold">{{ word.value }}</span>
+    <span class="font-bold">{{ word.es }}</span>
     &nbsp;
-    <span>{{ word.translationFr }}</span>
+    <span>{{ word.fr }}</span>
   </div>
   }
 </div>
