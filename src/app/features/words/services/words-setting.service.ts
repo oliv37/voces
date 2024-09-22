@@ -31,20 +31,38 @@ export class WordsSettingService {
   }
 
   private readSetting(): WordsSetting {
-    const settingStr: string | null =
-      this._storageService.read('WORDS_SETTING');
+    const settingStr = this._storageService.read('WORDS_SETTING');
+    const setting = fromString(settingStr);
 
-    return fromString(settingStr) ?? DEFAULT_SETTING;
+    return {
+      isExerciceReversed: getOrDefault(setting, 'isExerciceReversed'),
+    };
   }
 }
 
-function fromString(str: string | null | undefined): WordsSetting | null {
+function getOrDefault<T extends keyof typeof DEFAULT_SETTING>(
+  existingSetting: Record<string, any> | null,
+  propName: T
+): (typeof DEFAULT_SETTING)[T] {
+  if (
+    existingSetting?.hasOwnProperty(propName) &&
+    typeof existingSetting[propName] === typeof DEFAULT_SETTING[propName]
+  ) {
+    return existingSetting[propName];
+  }
+
+  return DEFAULT_SETTING[propName];
+}
+
+function fromString(
+  str: string | null | undefined
+): Record<string, any> | null {
   if (!str) {
     return null;
   }
 
   try {
-    return JSON.parse(str) as WordsSetting;
+    return JSON.parse(str);
   } catch (e) {
     console.error(e);
     return null;
