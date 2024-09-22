@@ -27,10 +27,24 @@
   }
 </div>
 
-<app-words-exercice-button-bar
-  previousBtnText="←"
-  nextBtnText="✔"
-  (previousBtnClick)="wordsExerciceService.goToPreviousStep()"
-  (nextBtnClick)="wordsExerciceService.goToNextStep()"
-  [nextBtnDisabled]="!wordsExerciceService.areAllFormValuesValid()"
-/>
+<app-words-exercice-button-bar>
+  <button
+    type="button"
+    ngProjectAs="[left]"
+    appBtn
+    (click)="wordsExerciceService.goToPreviousStep()"
+  >
+    ←
+  </button>
+
+  <button
+    type="button"
+    ngProjectAs="[right]"
+    appBtn
+    btnInverse="true"
+    [disabled]="!wordsExerciceService.areAllFormValuesValid()"
+    (click)="wordsExerciceService.goToNextStep()"
+  >
+    ✔
+  </button>
+</app-words-exercice-button-bar>

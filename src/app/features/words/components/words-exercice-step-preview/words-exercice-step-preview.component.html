@@ -9,37 +9,51 @@
   }
 </div>
 
-<app-words-exercice-button-bar
-  previousBtnText="↻"
-  nextBtnText="→"
-  (previousBtnClick)="wordsExerciceService.reinit()"
-  (nextBtnClick)="wordsExerciceService.goToNextStep()"
->
+<app-words-exercice-button-bar>
   <button
-    ngProjectAs="[left]"
     type="button"
-    [class]="
-      'border border-black px-2 ' + 'rounded-md shadow-lg hover:opacity-80'
-    "
+    ngProjectAs="[left]"
+    appBtn
+    btnTextXl="false"
+    btnFontBold="false"
     (click)="wordsExerciceService.reverse()"
   >
-    @if (wordsExerciceService.isReversed()) {
-    <span class="font-bold">FR</span> - <span>ES</span>
-    } @else {
+    @if (!wordsExerciceService.isReversed()) {
     <span class="font-bold">ES</span> - <span>FR</span>
+    } @else {
+    <span class="font-bold">FR</span> - <span>ES</span>
     }
   </button>
 
-  @if (wordsExerciceService.areAllWordsAnswered() && nextWordsGroup()) {
-  <a
-    ngProjectAs="[right]"
-    [routerLink]="['../..', nextWordsGroup()?.pathParam]"
-    [class]="
-      'px-3 font-bold text-xl border border-black bg-black text-white ' +
-      'rounded-md shadow-lg hover:opacity-80'
-    "
+  <button
+    type="button"
+    ngProjectAs="[left]"
+    appBtn
+    (click)="wordsExerciceService.reinit()"
   >
-    {{ nextWordsGroup()?.pathParam }}
+    ↻
+  </button>
+
+  <button
+    type="button"
+    ngProjectAs="[right]"
+    appBtn
+    btnInverse="true"
+    (click)="wordsExerciceService.goToNextStep()"
+  >
+    →
+  </button>
+
+  @if (nextWordGroupPathParam(); as nextWordsGroupPathParam) {
+  <a
+    class="px-3"
+    [routerLink]="['../..', nextWordsGroupPathParam]"
+    ngProjectAs="[right]"
+    appBtn
+    btnInverse="true"
+    btnPadding="false"
+  >
+    {{ nextWordsGroupPathParam }}
   </a>
   }
 </app-words-exercice-button-bar>

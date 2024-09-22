@@ -1,30 +1,8 @@
-<div class="flex justify-center gap-6 pt-6">
+<div class="flex gap-6 pt-8">
   <div class="flex-1 flex justify-end gap-4">
     <ng-content select="[left]"></ng-content>
-    <button
-      type="button"
-      [class]="
-        'px-2 font-bold text-xl border border-black ' +
-        'rounded-md shadow-lg hover:opacity-80 disabled:opacity-40'
-      "
-      [disabled]="previousBtnDisabled()"
-      (click)="previousBtnClick.emit()"
-    >
-      {{ previousBtnText() }}
-    </button>
   </div>
   <div class="flex-1 flex gap-4">
-    <button
-      type="button"
-      [class]="
-        'px-2 font-bold text-xl border border-black bg-black text-white ' +
-        'rounded-md shadow-lg hover:opacity-80 disabled:opacity-40'
-      "
-      [disabled]="nextBtnDisabled()"
-      (click)="nextBtnClick.emit()"
-    >
-      {{ nextBtnText() }}
-    </button>
     <ng-content select="[right]"></ng-content>
   </div>
 </div>

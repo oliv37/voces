@@ -133,6 +133,7 @@ export class WordsExerciceService {
     this._wordIdsAnswered.set([]);
     this._formValues.set(this._words().map((_) => ''));
     this._lastInputFocusIndex.set(0);
+    this._step.set(FIRST_STEP);
   }
 
   nextExercice(): void {

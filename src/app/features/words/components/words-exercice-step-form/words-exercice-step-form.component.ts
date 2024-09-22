@@ -11,12 +11,13 @@ import {
 import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
 import { ignoreEventTarget } from '@shared/decorators/ignore-event-target.decorator';
+import { BtnDirective } from '@shared/directives/btn/btn.directive';
 
 @Component({
   selector: 'app-words-exercice-step-form',
   standalone: true,
   templateUrl: './words-exercice-step-form.component.html',
-  imports: [WordsExerciceButtonBarComponent],
+  imports: [WordsExerciceButtonBarComponent, BtnDirective],
   host: {
     tabIndex: '-1',
     class: 'outline-none',
