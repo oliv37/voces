@@ -41,11 +41,13 @@ export class WordsSettingService {
 }
 
 function getOrDefault<T extends keyof typeof DEFAULT_SETTING>(
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   existingSetting: Record<string, any> | null,
   propName: T
 ): (typeof DEFAULT_SETTING)[T] {
   if (
-    existingSetting?.hasOwnProperty(propName) &&
+    existingSetting &&
+    Object.hasOwn(existingSetting, propName) &&
     typeof existingSetting[propName] === typeof DEFAULT_SETTING[propName]
   ) {
     return existingSetting[propName];
@@ -56,6 +58,7 @@ function getOrDefault<T extends keyof typeof DEFAULT_SETTING>(
 
 function fromString(
   str: string | null | undefined
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 ): Record<string, any> | null {
   if (!str) {
     return null;

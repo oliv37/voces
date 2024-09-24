@@ -9,7 +9,7 @@ export function buildBreadcrumb(
   route: ActivatedRouteSnapshot | null
 ): Breadcrumb {
   const breadcrumb: Breadcrumb = [ROOT_BREADCRUMB_ITEM];
-  let component: Type<any> | null = null;
+  let component: Type<unknown> | null = null;
 
   while (route != null) {
     if (route.url.length > 0) {

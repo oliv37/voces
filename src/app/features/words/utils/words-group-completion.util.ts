@@ -19,7 +19,7 @@ export function toWordsGroupCompletionAge(
 
   return (
     WORDS_COMPLETION_AGES_ASC.find(
-      ([_, maxDistanceInMs]) => distanceInMs < maxDistanceInMs
+      ([, maxDistanceInMs]) => distanceInMs < maxDistanceInMs
     )?.[0] ?? 'LONG_TIME_AGO_OR_NEVER'
   );
 }

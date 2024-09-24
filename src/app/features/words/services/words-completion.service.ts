@@ -32,10 +32,10 @@ export class WordsCompletionService {
     this._storageService
       .readAllByKeyPrefix('WORDS_GROUP_COMPLETION')
       .filter(
-        ([_key, completionDateInMs]) =>
+        ([, completionDateInMs]) =>
           toWordsGroupCompletionAge(completionDateInMs) ===
           'LONG_TIME_AGO_OR_NEVER'
       )
-      .forEach(([key, _value]) => this._storageService.remove(key));
+      .forEach(([key]) => this._storageService.remove(key));
   }
 }

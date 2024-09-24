@@ -25,8 +25,7 @@ export class StorageService {
 
   readAllByKeyPrefix(keyPrefix: StorageKey): [string, string][] {
     return Object.entries(this._storage || {}).filter(
-      ([entryKey, entryValue]: [string, string]) =>
-        entryKey?.startsWith(keyPrefix)
+      ([entryKey]: [string, string]) => entryKey?.startsWith(keyPrefix)
     );
   }
 }

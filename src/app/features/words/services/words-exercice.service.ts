@@ -150,7 +150,7 @@ export class WordsExerciceService {
   reverse(): void {
     this._wordsSettingService.setIsExerciceReversed(!this.isReversed());
     this._wordIdsAnswered.set([]);
-    this._formValues.set(this._words().map((_) => ''));
+    this._formValues.set(this._words().map(() => ''));
     this._lastInputFocusIndex.set(0);
     this._step.set(FIRST_STEP);
   }
@@ -163,7 +163,7 @@ export class WordsExerciceService {
         this._wordIdsAnswered()
       )
     );
-    this._formValues.set(this._words().map((_) => ''));
+    this._formValues.set(this._words().map(() => ''));
     this._lastInputFocusIndex.set(0);
     this._step.set(FIRST_STEP);
   }
