@@ -8,7 +8,7 @@ import {
   untracked,
 } from '@angular/core';
 import { findRandomWords } from '../utils/words.util';
-import { Word, WordsGroup } from '../models/words.model';
+import { Word, WordsCategory, WordsGroup } from '../models/words.model';
 import { WordsCompletionService } from './words-completion.service';
 import {
   WordsStep,
@@ -17,12 +17,14 @@ import {
   STEPS,
 } from '../models/words-exercice.model';
 import { WordsSettingService } from './words-setting.service';
+import { getNextElems, groupBy } from '@shared/utils/array.util';
 
 @Injectable()
 export class WordsExerciceService {
   private _wordsCompletionService = inject(WordsCompletionService);
   private _wordsSettingService = inject(WordsSettingService);
 
+  private _wordsCategory = signal<WordsCategory | undefined>(undefined);
   private _wordsGroup = signal<WordsGroup | undefined>(undefined);
   private _words = signal<Word[]>([]);
   private _wordIdsAnswered = signal<number[]>([]);
@@ -73,6 +75,20 @@ export class WordsExerciceService {
   isReversed = computed<boolean>(
     () => this._wordsSettingService.setting().isExerciceReversed
   );
+  nextWordsGroup = computed<WordsGroup | undefined>(() => {
+    const wordsGroups = this._wordsCategory()?.wordsGroups;
+    const wordsGroup = this._wordsGroup();
+    const nextWordsGroups = getNextElems(wordsGroups, wordsGroup);
+    const nextWordsGroupsByCompletionAge = groupBy(
+      nextWordsGroups,
+      (wordsGroup) => this._wordsCompletionService.getCompletionAge(wordsGroup)
+    );
+
+    return (
+      nextWordsGroupsByCompletionAge['LONG_TIME_AGO_OR_NEVER']?.[0] ??
+      nextWordsGroupsByCompletionAge['LESS_THAN_FOUR_DAYS']?.[0]
+    );
+  });
 
   constructor() {
     // [Effect] mark wordsGroup as completed if all words are answered
@@ -122,7 +138,10 @@ export class WordsExerciceService {
     this._lastInputFocusIndex.set(index);
   }
 
-  reinit(wordsGroup?: WordsGroup): void {
+  reinit(): void;
+  reinit(wordsCategory: WordsCategory, wordsGroup: WordsGroup): void;
+  reinit(wordsCategory?: WordsCategory, wordsGroup?: WordsGroup): void {
+    this._wordsCategory.set(wordsCategory ?? this._wordsCategory());
     this._wordsGroup.set(wordsGroup ?? this._wordsGroup());
     this._wordIdsAnswered.set([]);
     this.nextExercice();

@@ -17,3 +17,23 @@ export function groupBy<T, K extends string>(
     return res;
   }, {} as Partial<Record<K, T[]>>);
 }
+
+export function getNextElems<T>(elems?: T[], elem?: T): T[] | [] {
+  if (!elems || !elem) {
+    return [];
+  }
+
+  const nbElems = elems.length;
+  const elemIdx = elems.indexOf(elem);
+  const startIdx = elemIdx !== -1 ? elemIdx : 0;
+  const nextElems: T[] = [];
+
+  for (let i = 0; i < nbElems; i++) {
+    const nextElem = elems[(startIdx + i) % nbElems];
+    if (nextElem && nextElem != elem) {
+      nextElems.push(nextElem);
+    }
+  }
+
+  return nextElems;
+}

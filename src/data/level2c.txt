@@ -79,6 +79,6 @@ comadrona : sage-femme
 quisquilloso : susceptible
 grato : agréable, plaisant
 pleitesia : rendre hommage à
-indulto : grâce
+indulto : grâce (pardon)
 saque de esquina : corner
 colegiado : arbitre

@@ -44,16 +44,17 @@
     →
   </button>
 
-  @if (nextWordGroupPathParam(); as nextWordsGroupPathParam) {
+  @if (wordsExerciceService.areAllWordsAnswered() &&
+  wordsExerciceService.nextWordsGroup(); as nextWordsGroup) {
   <a
     class="px-3"
-    [routerLink]="['../..', nextWordsGroupPathParam]"
+    [routerLink]="['../..', nextWordsGroup.pathParam]"
     ngProjectAs="[right]"
     appBtn
     btnInverse="true"
     btnPadding="false"
   >
-    {{ nextWordsGroupPathParam }}
+    {{ nextWordsGroup.pathParam }}
   </a>
   }
 </app-words-exercice-button-bar>

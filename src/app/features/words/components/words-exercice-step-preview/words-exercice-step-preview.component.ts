@@ -1,16 +1,13 @@
 import {
   afterNextRender,
   Component,
-  computed,
   ElementRef,
   HostListener,
   inject,
-  input,
 } from '@angular/core';
 import { WordsExerciceService } from '../../services/words-exercice.service';
 import { WordsExerciceButtonBarComponent } from '../words-exercice-button-bar/words-exercice-button-bar.component';
 import { RouterLink } from '@angular/router';
-import { WordsGroup } from '@features/words/models/words.model';
 import { ignoreEventTarget } from '@shared/decorators/ignore-event-target.decorator';
 import { BtnDirective } from '@shared/directives/btn/btn.directive';
 
@@ -27,13 +24,6 @@ import { BtnDirective } from '@shared/directives/btn/btn.directive';
 export class WordsExerciceStepPreviewComponent {
   private _elementRef = inject(ElementRef);
   wordsExerciceService = inject(WordsExerciceService);
-
-  nextWordsGroup = input<WordsGroup>();
-
-  nextWordGroupPathParam = computed<string | undefined>(() => {
-    const areAllWordsAnswered = this.wordsExerciceService.areAllWordsAnswered();
-    return areAllWordsAnswered ? this.nextWordsGroup()?.pathParam : undefined;
-  });
 
   constructor() {
     afterNextRender(() => this._elementRef.nativeElement.focus());
