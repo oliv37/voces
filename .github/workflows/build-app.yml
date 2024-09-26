@@ -26,4 +26,9 @@ jobs:
     - run: npm ci
     - run: npm run lint
     - run: npm run build
-    
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.2.1-node20
+      with:
+        name: voces-app
+        path: dist/voces/browser
+        
