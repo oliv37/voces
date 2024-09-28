@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20.x
       - run: git config --local user.name "github-actions[bot]"
-+     - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - run: npm ci
       - run: npm run lint
       - run: npm run build
