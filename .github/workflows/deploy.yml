@@ -14,8 +14,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20.x
-      - run: echo ${{ github.ref_name }}
-      - run: git config --local user.name "github-actions[bot]"
-      - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - run: npm ci
-      - run: npm run deploy
+      - run: npm run predeploy
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/voces/browser
+          commit-message: "ci: deploy ${{ github.ref_name }}"
