@@ -9,7 +9,7 @@ on:
         default: "patch"
         required: true
       deploy:
-        description: "Deploy ?"
+        description: "Deploy"
         type: boolean
         default: "true"
         required: true
@@ -33,7 +33,7 @@ jobs:
       - run: npm run predeploy
       - run: git push --follow-tags
       - name: deploy
-        if: ${{ inputs.deploy == 'true' }}
+        if: ${{ inputs.deploy }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/voces/browser
