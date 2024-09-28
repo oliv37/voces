@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "predeploy": "npm run build -- --base-href /voces/",
+    "predeploy": "npm run lint && npm run build -- --base-href /voces/",
     "deploy": "gh-pages -d dist/voces/browser -m 'ci: deploy site'",
     "serve:ssr:voces": "node dist/voces/server/server.mjs"
   },

@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version"
+        type: string
+        default: "patch"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm version ${{ inputs.version }} --tag-version-prefix ""
+      - run: git push --follow-tags
