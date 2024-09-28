@@ -119,3 +119,8 @@ sencillez : simplicité
 potencia : puissance
 competencia : concurrence
 arbitro : arbitre
+excluir : exclure
+competencia : compétence
+arrodillar : s'agenouiller
+juguete : jouet
+habilitar : aménager, habiliter

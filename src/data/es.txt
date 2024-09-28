@@ -245,7 +245,6 @@ camaleon : caméléon
 fallecido : défunt, décédé
 fallecer : décéder, mourrir
 luna llena : pleine lune
-atender : recevoir, accueillir
 tramitar : faire les démarches
 debilitar : affaiblir
 parado : debout
@@ -1355,7 +1354,6 @@ bienestar : bien-être
 aumenter : augmenter
 encarecer : augmenter (prix)
 amparo : protection
-contundente : ferme, catégorique
 enfoque : point de vue
 librarse : échapper à, se débarraser de
 erosionar : éroder
