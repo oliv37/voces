@@ -8,6 +8,11 @@ on:
         type: string
         default: "patch"
         required: true
+      deploy:
+        description: "Deploy ?"
+        type: boolean
+        default: "true"
+        required: true
 
 jobs:
   release:
@@ -24,7 +29,14 @@ jobs:
       - run: git config --local user.name "github-actions[bot]"
       - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - run: npm ci
-      - run: npm run lint
-      - run: npm run build
       - run: npm version ${{ inputs.version }} --tag-version-prefix ""
+      - run: npm run predeploy
       - run: git push --follow-tags
+      - name: deploy
+        if: ${{ inputs.deploy == 'true' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/voces/browser
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
+          commit-message: "ci: deploy ${{ github.ref_name }}"

@@ -4,14 +4,10 @@
 
 ## Dictionary
 
-Data are stored in text files in folder [src/data](./src/data)
+Data are stored in text files in [src/data](./src/data) folder
 
 Each text file contains at most 400 translations
 
-Each translation represent a line with the following format :
+Each translation is represented by a single line with the following format :
 
 `<spanish_word> : <french_translation>`
-
-## Deploy to GitHub Pages
-
-`npm run deploy`
