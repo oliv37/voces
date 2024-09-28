@@ -30,6 +30,7 @@ jobs:
       - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - run: npm ci
       - run: npm version ${{ inputs.version }} --tag-version-prefix ""
+      - run: echo "PACKAGE_VERSION=$(jq -r '.version' package.json)" >> $env:GITHUB_ENV
       - run: npm run predeploy
       - run: git push --follow-tags
       - name: deploy
@@ -39,4 +40,4 @@ jobs:
           folder: dist/voces/browser
           git-config-name: github-actions[bot]
           git-config-email: github-actions[bot]@users.noreply.github.com
-          commit-message: "ci: deploy ${{ github.ref_name }}"
+          commit-message: "ci: deploy ${{ env.PACKAGE_VERSION }}"
