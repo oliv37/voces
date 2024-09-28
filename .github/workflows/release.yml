@@ -18,6 +18,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
+    if: github.ref_name == 'main'
+
     permissions:
       contents: write
 
@@ -30,8 +32,8 @@ jobs:
       - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - run: npm ci
       - run: npm version ${{ inputs.version }} --tag-version-prefix ""
-      - run: echo "PACKAGE_VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
       - run: npm run predeploy
+      - run: echo "PACKAGE_VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
       - run: git push --follow-tags
       - name: deploy
         if: ${{ inputs.deploy }}
