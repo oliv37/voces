@@ -1,9 +1,9 @@
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-2 gap-4 items-center">
   @for (word of wordsExerciceService.words(); track word.id) {
-  <span class="justify-self-end font-bold">{{
+  <span class="justify-self-end font-bold py-1">{{
     wordsExerciceService.getWordValue(word)
   }}</span>
-  <span class="border-b border-transparent">{{
+  <span class="border-b border-transparent py-1">{{
     wordsExerciceService.getWordTranslation(word)
   }}</span>
   }

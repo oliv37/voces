@@ -88,3 +88,4 @@ rebotar : rebondir
 albergar : abriter, héberger
 atender : recevoir, accueillir
 contundente : ferme, catégorique
+punetero : casse-pieds, chieur

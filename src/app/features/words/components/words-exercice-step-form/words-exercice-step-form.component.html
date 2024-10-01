@@ -1,4 +1,4 @@
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-2 gap-4 items-center">
   @for (word of wordsExerciceService.words(); track word.id) {
   <label class="justify-self-end" [for]="'answer' + $index">{{
     wordsExerciceService.getWordTranslation(word)
@@ -7,8 +7,8 @@
     <input
       type="text"
       [class]="
-        'flex-1 min-w-0 max-w-48 border-b border-black font-bold ' +
-        'disabled:border-gray-400'
+        'flex-1 min-w-0 max-w-48 p-1 border-b border-black ' +
+        'font-bold disabled:border-gray-400'
       "
       [id]="'answer' + $index"
       [name]="'answer' + $index"
@@ -21,7 +21,7 @@
       #formInput
     />
     @if (wordsExerciceService.isFormValueValid($index)) {
-    <span class="px-2 font-bold">✔</span>
+    <span class="px-2 font-black">✓</span>
     }
   </div>
   }
@@ -45,6 +45,6 @@
     [disabled]="!wordsExerciceService.areAllFormValuesValid()"
     (click)="wordsExerciceService.goToNextStep()"
   >
-    ✔
+    ✓
   </button>
 </app-words-exercice-button-bar>

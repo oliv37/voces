@@ -70,7 +70,7 @@ comodin : excuse, prétexte
 destacar : souligner, mettre l'accent sur
 polvo : baiser, tirer un coup
 proceder : venir de, provenir de
-franja : bande
+franja : bande (Gaza)
 cohete : fusée, roquette
 cobrar : toucher, encaisser
 sobrante : restant, en plus, trop
@@ -203,7 +203,7 @@ aflorar : émerger
 matizar : nuancer, atténuer
 pupila : élève
 aligerar : alléger
-procedencia : origin, provenance
+procedencia : origine, provenance
 fingir : faire semblant de
 aguardar : attendre
 eldredon : couette
@@ -219,7 +219,7 @@ rebotar : rebondir
 fisgonear : fouiller, fouiner
 entrometerse : se mêler des affaires des autres
 lamer : lécher
-migajar : miette de pain
+migaja : miette de pain
 enfundarse : enfiler
 albornoz : peignoir
 malva : mauve
@@ -247,7 +247,7 @@ heredar : hériter de
 solvencia : solvabilité
 rozar : frôler
 comprometido : risqué
-adentrase en : entrer dans, pénétrer dans
+adentrarse en : entrer dans, pénétrer dans
 reparo : objection
 leve : léger
 ademan : geste

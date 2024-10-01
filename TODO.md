@@ -1,3 +1,2 @@
 - Add service worker
 - Define meta description for each route
-- Github Actions Workflow (Build + Release + Deploy)
