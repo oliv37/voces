@@ -86,7 +86,7 @@ export class WordsExerciceService {
 
     return (
       nextWordsGroupsByCompletionAge['LONG_TIME_AGO_OR_NEVER']?.[0] ??
-      nextWordsGroupsByCompletionAge['LESS_THAN_FOUR_DAYS']?.[0]
+      nextWordsGroupsByCompletionAge['LESS_THAN_SIX_DAYS']?.[0]
     );
   });
 

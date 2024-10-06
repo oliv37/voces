@@ -18,6 +18,7 @@ export class BtnDirective {
   btnFontBold = true;
 
   @HostBinding('class.px-2')
+  @HostBinding('class.py-1')
   @Input({ transform: booleanAttribute })
   btnPadding = true;
 

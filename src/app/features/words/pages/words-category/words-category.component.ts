@@ -27,8 +27,8 @@ export class WordsCategoryComponent {
 }
 
 const HEADER_CLASS_BY_COMPLETION_AGE: Record<WordsCompletionAge, string> = {
-  ['LESS_THAN_TWO_DAYS']: 'bg-black text-white bg-opacity-100',
-  ['LESS_THAN_FOUR_DAYS']: 'bg-black text-white bg-opacity-60',
+  ['LESS_THAN_THREE_DAYS']: 'bg-black text-white bg-opacity-100',
+  ['LESS_THAN_SIX_DAYS']: 'bg-black text-white bg-opacity-60',
   ['LONG_TIME_AGO_OR_NEVER']: '',
 };
 
