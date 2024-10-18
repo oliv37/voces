@@ -1,0 +1,12 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  @for (word of group().words; track word.id) {
+  <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] md:gap-2">
+    <span class="font-bold">{{ word.es }}</span>
+    <span>{{ word.fr }}</span>
+  </div>
+  }
+</div>
+
+<div class="flex justify-center pt-10">
+  <a [routerLink]="['exercice']" appBtn appBtnPadding="lg">Exercice</a>
+</div>

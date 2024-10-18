@@ -2,17 +2,16 @@ import * as fs from 'node:fs';
 import { EOL } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { WORDS_CATEGORIES } from '@features/words/utils/words.util';
+import { CATEGORIES } from '@utils/category.util';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let content = '';
-for (let wordsCategory of WORDS_CATEGORIES) {
-  content += `/${wordsCategory.pathParam}` + EOL;
-  for (let wordsGroup of wordsCategory.wordsGroups) {
-    content += `/${wordsCategory.pathParam}/${wordsGroup.pathParam}` + EOL;
-    content +=
-      `/${wordsCategory.pathParam}/${wordsGroup.pathParam}/exercice` + EOL;
+for (const category of CATEGORIES) {
+  content += `/${category.pathParam}` + EOL;
+  for (const group of category.groups) {
+    content += `/${category.pathParam}/${group.pathParam}` + EOL;
+    content += `/${category.pathParam}/${group.pathParam}/exercice` + EOL;
   }
 }
 

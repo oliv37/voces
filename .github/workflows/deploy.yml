@@ -23,4 +23,4 @@ jobs:
           folder: dist/voces/browser
           git-config-name: github-actions[bot]
           git-config-email: github-actions[bot]@users.noreply.github.com
-          commit-message: "ci: deploy ${{ env.PACKAGE_VERSION }} from ${{ github.ref_name }}"
+          commit-message: "ci: deploy from branch ${{ github.ref_name }}"

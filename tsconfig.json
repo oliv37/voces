@@ -23,11 +23,15 @@
       "dom"
     ],
     "paths": {
-      "@core/*": ["./src/app/core/*"],
-      "@features/*": ["./src/app/features/*"],
-      "@shared/*": ["./src/app/shared/*"],
+      "@components/*": ["./src/app/components/*"],
+      "@decorators/*": ["./src/app/decorators/*"],
+      "@directives/*": ["./src/app/directives/*"],
+      "@models/*": ["./src/app/models/*"],
+      "@pages/*": ["./src/app/pages/*"],
+      "@resolvers/*": ["./src/app/resolvers/*"],
+      "@services/*": ["./src/app/services/*"],
+      "@utils/*": ["./src/app/utils/*"],
       "@data/*": ["./src/data/*"],
-
     }
   },
   "angularCompilerOptions": {

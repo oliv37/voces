@@ -180,7 +180,7 @@ quimera : chimère
 fantasia : immagination, fantaisie
 dominio : domaine, territoires
 deshojarse : effeuiller, perdre ses feuilles
-sepultura : sépulture, tombre, enterrement
+sepultura : sépulture, tombe, enterrement
 monja : religieuse, soeur, nonne
 locutorio : cabine téléphonique
 pilar : pilier, poteau, colonne

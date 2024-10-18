@@ -1,0 +1,52 @@
+<div class="grid grid-cols-2 gap-4 items-center">
+  @for (word of exerciceService.words(); track word.id) {
+  <label class="text-right py-1" [for]="'answer' + $index">{{
+    exerciceService.getWordTranslation(word)
+  }}</label>
+  <div class="flex items-start">
+    <input
+      type="text"
+      [class]="
+        'flex-1 min-w-0 max-w-48 p-1 border-b border-black ' +
+        'font-bold disabled:border-gray-400'
+      "
+      [id]="'answer' + $index"
+      [name]="'answer' + $index"
+      [value]="exerciceService.getFormValue($index)"
+      (input)="onInput($index, $event)"
+      (focus)="exerciceService.setLastInputFocusIndex($index)"
+      [disabled]="exerciceService.isFormValueValid($index)"
+      autocomplete="off"
+      autocapitalize="off"
+      #formInput
+    />
+    @if (exerciceService.isFormValueValid($index)) {
+    <span class="px-2 font-black">✓</span>
+    }
+  </div>
+  }
+</div>
+
+<app-exercice-button-bar>
+  <button
+    type="button"
+    ngProjectAs="[left]"
+    appBtn
+    appBtnFont="bold"
+    (click)="exerciceService.goToPreviousStep()"
+  >
+    ←
+  </button>
+
+  <button
+    type="button"
+    ngProjectAs="[right]"
+    appBtn
+    appBtnType="secondary"
+    appBtnFont="bold"
+    [disabled]="!exerciceService.areAllFormValuesValid()"
+    (click)="exerciceService.goToNextStep()"
+  >
+    ✓
+  </button>
+</app-exercice-button-bar>

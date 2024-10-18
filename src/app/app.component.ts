@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { BreadcrumbComponent } from '@shared/components/breadcrumb/breadcrumb.component';
-import { HeaderComponent } from './core/components/header/header.component';
+import { BreadcrumbComponent } from '@components/breadcrumb/breadcrumb.component';
+import { HeaderComponent } from '@components/header/header.component';
 
 @Component({
   selector: 'app-root',
