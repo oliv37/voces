@@ -1,11 +1,13 @@
-<div class="grid grid-cols-2 gap-x-4 gap-y-3 items-center">
+<div class="flex flex-col gap-5">
   @for (word of exerciceService.words(); track word.id) {
-  <span class="text-right font-bold py-1">{{
-    exerciceService.getWordValue(word)
-  }}</span>
-  <span class="border-b border-transparent py-1">{{
-    exerciceService.getWordTranslation(word)
-  }}</span>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 md:items-center">
+    <span class="md:text-right font-bold">{{
+      exerciceService.getWordValue(word)
+    }}</span>
+    <span class="border-b border-transparent">{{
+      exerciceService.getWordTranslation(word)
+    }}</span>
+  </div>
   }
 </div>
 

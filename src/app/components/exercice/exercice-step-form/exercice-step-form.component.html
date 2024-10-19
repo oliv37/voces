@@ -1,28 +1,30 @@
-<div class="grid grid-cols-2 gap-x-4 gap-y-3 items-center">
+<div class="flex flex-col gap-5">
   @for (word of exerciceService.words(); track word.id) {
-  <label class="text-right py-1" [for]="'answer' + $index">{{
-    exerciceService.getWordTranslation(word)
-  }}</label>
-  <div class="flex items-center">
-    <input
-      type="text"
-      [class]="
-        'flex-1 min-w-0 max-w-48 p-1 border-b border-black ' +
-        'font-bold disabled:border-gray-400'
-      "
-      [id]="'answer' + $index"
-      [name]="'answer' + $index"
-      [value]="exerciceService.getFormValue($index)"
-      (input)="onInput($index, $event)"
-      (focus)="exerciceService.setLastInputFocusIndex($index)"
-      [disabled]="exerciceService.isFormValueValid($index)"
-      autocomplete="off"
-      autocapitalize="off"
-      #formInput
-    />
-    @if (exerciceService.isFormValueValid($index)) {
-    <app-check-svg />
-    }
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 items-center">
+    <label class="md:text-right" [for]="'answer' + $index">{{
+      exerciceService.getWordTranslation(word)
+    }}</label>
+    <div class="flex items-center">
+      <input
+        type="text"
+        [class]="
+          'flex-1 min-w-0 md:max-w-48 px-0.5 border-b border-black ' +
+          'font-bold disabled:border-gray-400'
+        "
+        [id]="'answer' + $index"
+        [name]="'answer' + $index"
+        [value]="exerciceService.getFormValue($index)"
+        (input)="onInput($index, $event)"
+        (focus)="exerciceService.setLastInputFocusIndex($index)"
+        [disabled]="exerciceService.isFormValueValid($index)"
+        autocomplete="off"
+        autocapitalize="off"
+        #formInput
+      />
+      @if (exerciceService.isFormValueValid($index)) {
+      <app-check-svg />
+      }
+    </div>
   </div>
   }
 </div>
@@ -34,7 +36,7 @@
     type="button"
     #btn
     appBtn
-    [appBtnType]="
+    [appBtnTheme]="
       exerciceService.areAllFormValuesValid() ? 'primary' : 'secondary'
     "
     (click)="onEnter()"

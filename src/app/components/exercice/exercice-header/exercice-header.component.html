@@ -1,17 +1,12 @@
-<div class="flex items-center bg-white gap-10">
-  <div class="flex-1"></div>
-
-  <span class="text-gray-800" [class.font-bold]="areAllWordsAnswered()">
-    {{ nbWordsAnswered() }} / {{ nbWordsAvailable() }}
-  </span>
-
-  <div class="flex-1 flex justify-start items-center gap-3">
+<div class="flex items-center bg-white gap-5 md:gap-8">
+  <div class="flex-1 flex justify-end items-center gap-3">
     <button
       type="button"
-      class="border-none p-1"
+      class="p-1"
       appBtn
-      appBtnType="secondary"
+      appBtnTheme="secondary"
       appBtnPadding="none"
+      appBtnBorder="none"
       (click)="exerciceService.reinit()"
     >
       <app-arrow-clockwise-svg />
@@ -19,15 +14,22 @@
 
     <button
       type="button"
-      class="border-none p-1"
+      class="p-1 rounded-md"
       appBtn
-      [appBtnType]="exerciceService.isReversed() ? 'primary' : 'secondary'"
+      [appBtnTheme]="exerciceService.isReversed() ? 'primary' : 'secondary'"
       appBtnPadding="none"
+      appBtnBorder="none"
       (click)="exerciceService.reverse()"
     >
       <app-arrow-left-right-svg />
     </button>
+  </div>
 
+  <span class="text-gray-800" [class.font-bold]="areAllWordsAnswered()">
+    {{ nbWordsAnswered() }} / {{ nbWordsAvailable() }}
+  </span>
+
+  <div class="flex-1 flex justify-start items-center gap-3">
     @if (exerciceService.areAllWordsAnswered() && exerciceService.nextGroup();
     as nextGroup) {
     <a
@@ -35,7 +37,7 @@
       class="px-2 rounded-full"
       appBtn
       appBtnPadding="none"
-      appBtnFont="bold"
+      appBtnFontWeight="bold"
     >
       {{ nextGroup.pathParam }}
     </a>
