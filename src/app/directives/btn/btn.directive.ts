@@ -15,12 +15,13 @@ export class BtnDirective {
   appBtnFont: 'normal' | 'bold' = 'normal';
 
   @Input()
-  appBtnPadding: 'none' | 'md' | 'lg' = 'md';
+  appBtnPadding: 'none' | 'sm' | 'md' | 'lg' = 'md';
 
   @HostBinding('class')
   get class() {
     return (
-      'border border-black rounded-md shadow-lg ' +
+      'flex justify-center items-center gap-1 ' +
+      'border border-black rounded-md ' +
       'hover:opacity-80 disabled:opacity-40'
     );
   }
@@ -59,12 +60,18 @@ export class BtnDirective {
 
   @HostBinding('class.px-2')
   @HostBinding('class.py-1')
-  get isPaddingMd() {
-    return this.appBtnPadding === 'md';
+  get isPaddingSm() {
+    return this.appBtnPadding === 'sm';
   }
 
   @HostBinding('class.px-3')
   @HostBinding('class.py-2')
+  get isPaddingMd() {
+    return this.appBtnPadding === 'md';
+  }
+
+  @HostBinding('class.px-4')
+  @HostBinding('class.py-3')
   get isPaddingLg() {
     return this.appBtnPadding === 'lg';
   }

@@ -6,6 +6,7 @@ import { Category } from '@models/category.model';
 import { Group } from '@models/group.model';
 import { ExerciceStepPreviewComponent } from '@components/exercice/exercice-step-preview/exercice-step-preview.component';
 import { ExerciceStepFormComponent } from '@components/exercice/exercice-step-form/exercice-step-form.component';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   standalone: true,
@@ -14,6 +15,7 @@ import { ExerciceStepFormComponent } from '@components/exercice/exercice-step-fo
     ExerciceHeaderComponent,
     ExerciceStepPreviewComponent,
     ExerciceStepFormComponent,
+    SpacerComponent,
   ],
   templateUrl: './exercice-page.component.html',
   providers: [ExerciceService],

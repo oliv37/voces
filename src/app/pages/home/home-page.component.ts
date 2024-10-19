@@ -1,10 +1,11 @@
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Category } from '@models/category.model';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, SpacerComponent],
   templateUrl: './home-page.component.html',
 })
 export class HomePageComponent {

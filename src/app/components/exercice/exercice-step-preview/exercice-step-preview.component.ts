@@ -9,13 +9,14 @@ import { ExerciceService } from '@services/exercice.service';
 import { RouterLink } from '@angular/router';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 import { BtnDirective } from '@directives/btn/btn.directive';
-import { ExerciceButtonBarComponent } from '../exercice-button-bar/exercice-button-bar.component';
+import { SpacerComponent } from '@components/spacer/spacer.component';
+import { CaretRightSvgComponent } from '../../svg/caret-right-svg/caret-right-svg.component';
 
 @Component({
   selector: 'app-exercice-step-preview',
   standalone: true,
   templateUrl: './exercice-step-preview.component.html',
-  imports: [ExerciceButtonBarComponent, RouterLink, BtnDirective],
+  imports: [RouterLink, BtnDirective, SpacerComponent, CaretRightSvgComponent],
   host: {
     tabIndex: '-1',
     class: 'outline-none',

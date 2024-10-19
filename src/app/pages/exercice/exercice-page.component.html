@@ -5,6 +5,8 @@
     [areAllWordsAnswered]="exerciceService.areAllWordsAnswered()"
   />
 
+  <app-spacer />
+
   @if (exerciceService.step() === "preview") {
   <app-exercice-step-preview></app-exercice-step-preview>
   } @if (exerciceService.step() === "form") {

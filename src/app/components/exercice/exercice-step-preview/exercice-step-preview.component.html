@@ -1,4 +1,4 @@
-<div class="grid grid-cols-2 gap-4 items-center">
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 items-center">
   @for (word of exerciceService.words(); track word.id) {
   <span class="text-right font-bold py-1">{{
     exerciceService.getWordValue(word)
@@ -9,46 +9,11 @@
   }
 </div>
 
-<app-exercice-button-bar>
-  <button
-    type="button"
-    ngProjectAs="[left]"
-    appBtn
-    appBtnType="secondary"
-    (click)="exerciceService.reverse()"
-  >
-    @if (!exerciceService.isReversed()) {
-    <span class="font-bold">ES</span> - <span>FR</span>
-    } @else {
-    <span class="font-bold">FR</span> - <span>ES</span>
-    }
-  </button>
+<app-spacer />
 
-  <button
-    type="button"
-    ngProjectAs="[left]"
-    appBtn
-    appBtnType="secondary"
-    appBtnFont="bold"
-    (click)="exerciceService.reinit()"
-  >
-    ↻
+<div class="flex justify-center">
+  <button type="button" appBtn (click)="exerciceService.goToNextStep()">
+    Suivant
+    <app-caret-right-svg />
   </button>
-
-  <button
-    type="button"
-    ngProjectAs="[right]"
-    appBtn
-    appBtnFont="bold"
-    (click)="exerciceService.goToNextStep()"
-  >
-    →
-  </button>
-
-  @if (exerciceService.areAllWordsAnswered() && exerciceService.nextGroup(); as
-  nextGroup) {
-  <a [routerLink]="['../..', nextGroup.pathParam]" ngProjectAs="[right]" appBtn>
-    {{ nextGroup.pathParam }}
-  </a>
-  }
-</app-exercice-button-bar>
+</div>

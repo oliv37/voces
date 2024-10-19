@@ -1,6 +1,9 @@
 <div class="px-4 text-base">
-  <app-header />
-  <main class="min-h-[calc(100vh-6rem)] pb-10 flex flex-col justify-center">
+  <header class="h-[3rem] py-2">
+    <app-breadcrumb></app-breadcrumb>
+  </header>
+
+  <main class="min-h-[calc(100vh-4rem)] pb-10 flex flex-col justify-center">
     <router-outlet></router-outlet>
   </main>
 </div>

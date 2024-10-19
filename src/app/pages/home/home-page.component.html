@@ -5,7 +5,9 @@
   mots
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center pt-8">
+<app-spacer size="lg" />
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
   @for (category of categories(); track $index) {
   <a
     [routerLink]="category.pathParam"

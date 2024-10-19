@@ -1,8 +1,44 @@
-<div class="flex justify-center pb-4 gap-5">
-  <span
-    class="py-1 px-2 text-gray-800"
-    [class.font-bold]="areAllWordsAnswered()"
-  >
+<div class="flex items-center bg-white gap-10">
+  <div class="flex-1"></div>
+
+  <span class="text-gray-800" [class.font-bold]="areAllWordsAnswered()">
     {{ nbWordsAnswered() }} / {{ nbWordsAvailable() }}
   </span>
+
+  <div class="flex-1 flex justify-start items-center gap-3">
+    <button
+      type="button"
+      class="border-none p-1"
+      appBtn
+      appBtnType="secondary"
+      appBtnPadding="none"
+      (click)="exerciceService.reinit()"
+    >
+      <app-arrow-clockwise-svg />
+    </button>
+
+    <button
+      type="button"
+      class="border-none p-1"
+      appBtn
+      [appBtnType]="exerciceService.isReversed() ? 'primary' : 'secondary'"
+      appBtnPadding="none"
+      (click)="exerciceService.reverse()"
+    >
+      <app-arrow-left-right-svg />
+    </button>
+
+    @if (exerciceService.areAllWordsAnswered() && exerciceService.nextGroup();
+    as nextGroup) {
+    <a
+      [routerLink]="['../..', nextGroup.pathParam]"
+      class="px-2 rounded-full"
+      appBtn
+      appBtnPadding="none"
+      appBtnFont="bold"
+    >
+      {{ nextGroup.pathParam }}
+    </a>
+    }
+  </div>
 </div>

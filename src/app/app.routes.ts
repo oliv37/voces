@@ -8,9 +8,9 @@ import { HomePageComponent } from './pages/home/home-page.component';
 import { ExercicePageComponent } from '@pages/exercice/exercice-page.component';
 import { resolveCategory } from '@resolvers/category.resolver';
 import { resolveGroup } from '@resolvers/group.resolver';
-import { resolveCategoryTitle } from '@resolvers/category-title.resolver';
-import { resolveGroupTitle } from '@resolvers/group-title.resolver';
-import { resolveExerciceTitle } from '@resolvers/exercice-title.resolver';
+import { resolveCategoryTitle } from '@resolvers/title/category-title.resolver';
+import { resolveGroupTitle } from '@resolvers/title/group-title.resolver';
+import { resolveExerciceTitle } from '@resolvers/title/exercice-title.resolver';
 
 export const routes: Routes = [
   {

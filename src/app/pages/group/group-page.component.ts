@@ -9,10 +9,11 @@ import {
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { BtnDirective } from '@directives/btn/btn.directive';
 import { Group } from '@models/group.model';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   standalone: true,
-  imports: [RouterLink, BtnDirective],
+  imports: [RouterLink, BtnDirective, SpacerComponent],
   templateUrl: './group-page.component.html',
   host: {
     tabIndex: '-1',
