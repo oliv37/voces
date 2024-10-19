@@ -1,6 +1,6 @@
-<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-3 md:gap-5">
   @for (word of exerciceService.words(); track word.id) {
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
     <label class="md:text-right" [for]="'answer' + $index">{{
       exerciceService.getWordTranslation(word)
     }}</label>
