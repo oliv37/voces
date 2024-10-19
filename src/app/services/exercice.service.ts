@@ -35,14 +35,17 @@ export class ExerciceService {
   private _step = signal<Step>(FIRST_STEP);
 
   private _wordsAvailable = computed<Word[]>(() => this._group()?.words ?? []);
-  private _formValuesValidations = computed<boolean[]>(() => {
-    const words = this.words();
-    const wordValueFn = this._wordValueFn();
-    return this.formValues().map(
-      (formValue, i) =>
-        formValue?.toLowerCase() === wordValueFn(words[i])?.toLowerCase()
-    );
-  });
+  private _formValuesValidations = computed<boolean[]>(
+    () => {
+      const words = this.words();
+      const wordValueFn = this._wordValueFn();
+      return this.formValues().map(
+        (formValue, i) =>
+          formValue?.toLowerCase() === wordValueFn(words[i])?.toLowerCase()
+      );
+    },
+    { equal: (arr1, arr2) => arr1.toString() === arr2.toString() }
+  );
   private _stepIndex = computed<number>(() => STEPS.indexOf(this.step()));
   private _areAllWordsAvailableAnswered = computed<boolean>(
     () => this.nbWordsAnswered() >= this.nbWordsAvailable()
@@ -98,17 +101,18 @@ export class ExerciceService {
       }
     });
 
-    // [Effect] update wordIdsAnswered when all form values are valid
-    effect(
-      () => {
-        if (this.nbFormValuesValid() > 0) {
-          this._wordIdsAnswered.set(
-            untracked(() => this.computeWordsIdAnswered())
-          );
-        }
-      },
-      { allowSignalWrites: true }
-    );
+    // [Effect] update wordIdsAnswered when a word is answered
+    effect(() => {
+      const currentWordIdsAnswered: number[] = this._words()
+        .filter((_, i) => this.isFormValueValid(i))
+        .map((word) => word.id);
+
+      untracked(() => {
+        this._wordIdsAnswered.update((existingWordsIdsAnswered) => [
+          ...new Set([...existingWordsIdsAnswered, ...currentWordIdsAnswered]),
+        ]);
+      });
+    });
   }
 
   getWordValue(word: Word): string {
@@ -181,12 +185,5 @@ export class ExerciceService {
     } else {
       this.nextExercice();
     }
-  }
-
-  private computeWordsIdAnswered(): number[] {
-    const wordIdsAnsweredToAdd: number[] = this._words()
-      .filter((_, i) => this.isFormValueValid(i))
-      .map((word) => word.id);
-    return [...new Set([...this._wordIdsAnswered(), ...wordIdsAnsweredToAdd])];
   }
 }

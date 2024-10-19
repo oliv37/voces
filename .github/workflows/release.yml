@@ -31,8 +31,9 @@ jobs:
       - run: git config --local user.name "github-actions[bot]"
       - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
       - run: npm ci
+      - run: npm run lint
       - run: npm version ${{ inputs.version }} --tag-version-prefix ""
-      - run: npm run predeploy
+      - run: npm run build:prod
       - run: echo "PACKAGE_VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
       - run: git push --follow-tags
       - name: deploy

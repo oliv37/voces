@@ -6,8 +6,7 @@ import {
   inject,
   HostListener,
   effect,
-  untracked,
-  ViewChild,
+  computed,
 } from '@angular/core';
 import { ExerciceService } from '@services/exercice.service';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
@@ -20,43 +19,33 @@ import { CheckSvgComponent } from '../../svg/check-svg/check-svg.component';
   standalone: true,
   templateUrl: './exercice-step-form.component.html',
   imports: [BtnDirective, SpacerComponent, CheckSvgComponent],
-  host: {
-    tabIndex: '-1',
-    class: 'outline-none',
-  },
 })
 export class ExerciceStepFormComponent {
-  @ViewChild('btn', { static: false, read: ElementRef })
-  private _btn!: ElementRef;
+  private _inputIndexToFocus = computed<number | undefined>(() => {
+    const nbFormValues = this.exerciceService.nbFormValues();
+    const lastFocusIndex = this.exerciceService.lastInputFocusIndex();
+
+    for (let i = 0; i < nbFormValues; i++) {
+      const idx = (lastFocusIndex + i) % nbFormValues;
+      if (!this.exerciceService.isFormValueValid(idx)) {
+        return idx;
+      }
+    }
+
+    return undefined;
+  });
 
   exerciceService = inject(ExerciceService);
 
   @ViewChildren('formInput') inputs!: QueryList<ElementRef<HTMLInputElement>>;
 
   constructor() {
-    // [Effect] focus next element
+    // [Effect] focus next input
     effect(() => {
-      const nbFormValues = this.exerciceService.nbFormValues();
-      const nbFormValuesValid = this.exerciceService.nbFormValuesValid();
-
-      untracked(() => {
-        const areAllFormValuesValid = nbFormValuesValid >= nbFormValues;
-        if (areAllFormValuesValid) {
-          console.log(this._btn);
-          this._btn?.nativeElement?.focus();
-          return;
-        }
-
-        const lastFocusIndex = this.exerciceService.lastInputFocusIndex();
-        for (let i = 0; i < nbFormValues; i++) {
-          const idx = (lastFocusIndex + i) % nbFormValues;
-          const isFormValueValid = this.exerciceService.isFormValueValid(idx);
-          if (!isFormValueValid) {
-            this.inputs.get(idx)?.nativeElement?.focus();
-            return;
-          }
-        }
-      });
+      const inputIndexToFocus = this._inputIndexToFocus();
+      if (typeof inputIndexToFocus == 'number') {
+        this.inputs.get(inputIndexToFocus)?.nativeElement?.focus();
+      }
     });
   }
 
@@ -65,8 +54,8 @@ export class ExerciceStepFormComponent {
     this.exerciceService.setFormValue(index, value);
   }
 
-  @HostListener('keydown.Enter', ['$event'])
-  @IgnoreTarget('button')
+  @HostListener('window:keydown.enter', ['$event'])
+  @IgnoreTarget('button', 'a')
   onEnter() {
     if (this.exerciceService.areAllFormValuesValid()) {
       this.exerciceService.goToNextStep();

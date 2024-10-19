@@ -31,17 +31,26 @@
 
 <app-spacer />
 
-<div class="flex justify-center">
-  <button
-    type="button"
-    #btn
-    appBtn
-    [appBtnTheme]="
-      exerciceService.areAllFormValuesValid() ? 'primary' : 'secondary'
-    "
-    (click)="onEnter()"
-  >
-    @if(exerciceService.areAllFormValuesValid()) { Valider <app-check-svg />
-    } @else { Retour }
-  </button>
+<div class="grid grid-cols-2 gap-4">
+  <div class="justify-self-end">
+    <button
+      type="button"
+      appBtn
+      appBtnTheme="secondary"
+      (click)="exerciceService.goToPreviousStep()"
+    >
+      Précédent
+    </button>
+  </div>
+  <div>
+    <button
+      type="button"
+      appBtn
+      appBtnTheme="primary"
+      [disabled]="!exerciceService.areAllFormValuesValid()"
+      (click)="exerciceService.goToNextStep()"
+    >
+      Valider <app-check-svg />
+    </button>
+  </div>
 </div>

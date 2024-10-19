@@ -17,10 +17,6 @@ import { CaretRightSvgComponent } from '../../svg/caret-right-svg/caret-right-sv
   standalone: true,
   templateUrl: './exercice-step-preview.component.html',
   imports: [RouterLink, BtnDirective, SpacerComponent, CaretRightSvgComponent],
-  host: {
-    tabIndex: '-1',
-    class: 'outline-none',
-  },
 })
 export class ExerciceStepPreviewComponent {
   private _elementRef = inject(ElementRef);
@@ -30,7 +26,7 @@ export class ExerciceStepPreviewComponent {
     afterNextRender(() => this._elementRef.nativeElement.focus());
   }
 
-  @HostListener('keydown.Enter', ['$event'])
+  @HostListener('window:keydown.Enter', ['$event'])
   @IgnoreTarget('button', 'a')
   onEnter() {
     this.exerciceService.goToNextStep();
