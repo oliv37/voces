@@ -7,7 +7,7 @@ import { CATEGORIES } from '@utils/category.util';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let content = '';
-for (const category of CATEGORIES) {
+for (const category of CATEGORIES.flat()) {
   content += `/${category.pathParam}` + EOL;
   for (const group of category.groups) {
     content += `/${category.pathParam}/${group.pathParam}` + EOL;
