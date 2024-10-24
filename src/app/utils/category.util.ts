@@ -11,19 +11,26 @@ import dataLevel3a from '@data/level3a.txt';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { getData } from './route.util';
 
-export const CATEGORIES = [
-  buildCategory('LEVEL1A', 'Niveau 1a', 'niveau-1a', buildWords(dataLevel1a)),
-  buildCategory('LEVEL1B', 'Niveau 1b', 'niveau-1b', buildWords(dataLevel1b)),
-  buildCategory('LEVEL2A', 'Niveau 2a', 'niveau-2a', buildWords(dataLevel2a)),
-  buildCategory('LEVEL2B', 'Niveau 2b', 'niveau-2b', buildWords(dataLevel2b)),
-  buildCategory('LEVEL2C', 'Niveau 2c', 'niveau-2c', buildWords(dataLevel2c)),
-  buildCategory('LEVEL3A', 'Niveau 3a', 'niveau-3a', buildWords(dataLevel3a)),
+export const CATEGORIES: Category[][] = [
+  [
+    buildCategory('LEVEL1A', 'Niveau 1a', 'niveau-1a', buildWords(dataLevel1a)),
+    buildCategory('LEVEL1B', 'Niveau 1b', 'niveau-1b', buildWords(dataLevel1b)),
+  ],
+  [
+    buildCategory('LEVEL2A', 'Niveau 2a', 'niveau-2a', buildWords(dataLevel2a)),
+    buildCategory('LEVEL2B', 'Niveau 2b', 'niveau-2b', buildWords(dataLevel2b)),
+
+    buildCategory('LEVEL2C', 'Niveau 2c', 'niveau-2c', buildWords(dataLevel2c)),
+  ],
+  [buildCategory('LEVEL3A', 'Niveau 3a', 'niveau-3a', buildWords(dataLevel3a))],
 ] as const;
 
 export function findCategory(
   categoryPathParam: string | null
 ): Category | undefined {
-  return CATEGORIES.find(({ pathParam }) => pathParam === categoryPathParam);
+  return CATEGORIES.flat().find(
+    ({ pathParam }) => pathParam === categoryPathParam
+  );
 }
 
 export function getCategoryLabel(route: ActivatedRouteSnapshot | null): string {
@@ -40,7 +47,7 @@ function buildCategory(
     id,
     label,
     pathParam,
-    nbWords: words.length,
     groups: buildGroups(id, words),
+    nbWords: words.length,
   };
 }

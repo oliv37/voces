@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { NotFoundPageComponent } from './pages/not-found/not-found-page.component';
 import { GroupPageComponent } from '@pages/group/group-page.component';
-import { CATEGORIES } from '@utils/category.util';
 import { CategoryPageComponent } from './pages/category/category-page.component';
 import { canMatchApp } from './app.guard';
 import { HomePageComponent } from './pages/home/home-page.component';
@@ -21,9 +20,6 @@ export const routes: Routes = [
         path: '',
         title: 'Vocabulaire Espagnol - Voces',
         component: HomePageComponent,
-        resolve: {
-          categories: () => CATEGORIES,
-        },
       },
       {
         path: ':category',
