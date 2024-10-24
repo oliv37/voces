@@ -22,7 +22,7 @@
         #formInput
       />
       @if (exerciceService.isFormValueValid($index)) {
-      <app-check-svg />
+      <app-check-icon />
       }
     </div>
   </div>
@@ -39,6 +39,7 @@
       appBtnTheme="secondary"
       (click)="exerciceService.goToPreviousStep()"
     >
+      <app-arrow-left-icon />
       Précédent
     </button>
   </div>
@@ -50,7 +51,7 @@
       [disabled]="!exerciceService.areAllFormValuesValid()"
       (click)="exerciceService.goToNextStep()"
     >
-      Valider <app-check-svg />
+      Valider <app-check-icon />
     </button>
   </div>
 </div>

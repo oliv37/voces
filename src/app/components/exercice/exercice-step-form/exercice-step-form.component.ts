@@ -11,14 +11,20 @@ import {
 import { ExerciceService } from '@services/exercice.service';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 import { BtnDirective } from '@directives/btn/btn.directive';
-import { SpacerComponent } from '../../spacer/spacer.component';
-import { CheckSvgComponent } from '../../svg/check-svg/check-svg.component';
+import { SpacerComponent } from '@components/spacer/spacer.component';
+import { CheckIconComponent } from '@components/icon/check-icon/check-icon.component';
+import { ArrowLeftIconComponent } from '../../icon/arrow-left-icon/arrow-left-icon.component';
 
 @Component({
   selector: 'app-exercice-step-form',
   standalone: true,
   templateUrl: './exercice-step-form.component.html',
-  imports: [BtnDirective, SpacerComponent, CheckSvgComponent],
+  imports: [
+    BtnDirective,
+    SpacerComponent,
+    CheckIconComponent,
+    ArrowLeftIconComponent,
+  ],
 })
 export class ExerciceStepFormComponent {
   private _inputIndexToFocus = computed<number | undefined>(() => {

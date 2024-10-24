@@ -10,13 +10,13 @@ import { RouterLink } from '@angular/router';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 import { BtnDirective } from '@directives/btn/btn.directive';
 import { SpacerComponent } from '@components/spacer/spacer.component';
-import { CaretRightSvgComponent } from '../../svg/caret-right-svg/caret-right-svg.component';
+import { ArrowRightIconComponent } from '@components/icon/arrow-right-icon/arrow-right-icon.component';
 
 @Component({
   selector: 'app-exercice-step-preview',
   standalone: true,
   templateUrl: './exercice-step-preview.component.html',
-  imports: [RouterLink, BtnDirective, SpacerComponent, CaretRightSvgComponent],
+  imports: [RouterLink, BtnDirective, SpacerComponent, ArrowRightIconComponent],
 })
 export class ExerciceStepPreviewComponent {
   private _elementRef = inject(ElementRef);

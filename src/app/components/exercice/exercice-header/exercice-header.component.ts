@@ -2,8 +2,8 @@ import { Component, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BtnDirective } from '@directives/btn/btn.directive';
 import { ExerciceService } from '@services/exercice.service';
-import { ArrowClockwiseSvgComponent } from '../../svg/arrow-clockwise-svg/arrow-clockwise-svg.component';
-import { ArrowLeftRightSvgComponent } from '../../svg/arrow-left-right-svg/arrow-left-right-svg.component';
+import { ArrowLeftRightIconComponent } from '@components/icon/arrow-left-right-icon/arrow-left-right-icon.component';
+import { ArrowClockwiseIconComponent } from '@components/icon/arrow-clockwise-icon/arrow-clockwise-icon.component';
 
 @Component({
   selector: 'app-exercice-header',
@@ -11,8 +11,8 @@ import { ArrowLeftRightSvgComponent } from '../../svg/arrow-left-right-svg/arrow
   imports: [
     BtnDirective,
     RouterLink,
-    ArrowClockwiseSvgComponent,
-    ArrowLeftRightSvgComponent,
+    ArrowClockwiseIconComponent,
+    ArrowLeftRightIconComponent,
   ],
   standalone: true,
 })
