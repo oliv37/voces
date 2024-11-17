@@ -23,26 +23,3 @@ export function findRandomWords(
 
   return shuffle(words.filter((w) => wordIds.has(w.id)));
 }
-
-export function buildWords(data: string): Word[] {
-  return decode(data)
-    .split('\n')
-    .filter((line) => !!line)
-    .map((line, id) => {
-      const [es, fr] = line.split(' : ');
-      return {
-        id,
-        es,
-        fr,
-      };
-    });
-}
-
-function decode(str: string) {
-  const base64Prefix = 'data:text/plain;base64,';
-
-  if (str.startsWith(base64Prefix)) {
-    return atob(str.substring(base64Prefix.length));
-  }
-  return str;
-}

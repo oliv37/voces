@@ -1,19 +1,19 @@
-<div class="text-center text-2xl">
+<div class="text-center text-3xl">
   <span class="font-bold text-white bg-black px-1 rounded-md">{{
     nbWords()
   }}</span>
   mots
 </div>
 
-<app-spacer size="lg" />
+<app-spacer size="2xl" />
 
-<div class="flex flex-col gap-20 items-stretch">
-  @for (groupOfCategories of categories(); track $index) {
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    @for (category of groupOfCategories; track $index) {
+<div class="flex flex-col gap-10 items-stretch">
+  @for (categories of data(); track $index) {
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    @for (category of categories; track $index) {
     <a
       [routerLink]="category.pathParam"
-      class="py-12 text-lg text-center border border-gray-400 rounded-t-md shadow-md"
+      class="py-12 text-center border border-gray-400 rounded-t-md shadow-md"
       ><b>{{ category.label }}</b> ({{ category.nbWords }})</a
     >
     }

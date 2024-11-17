@@ -14,7 +14,7 @@ type Border = 'none' | 'normal' | 'large';
 })
 export class BtnDirective {
   appBtnTheme = input<Type>('primary');
-  appBtnTextSize = input<Size>('md');
+  appBtnTextSize = input<Size>('xl');
   appBtnFontWeight = input<Weight>('normal');
   appBtnPadding = input<Size>('md');
   appBtnBorder = input<Border>('normal');

@@ -1,6 +1,6 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
-type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '4xl';
 
 const CLASS_BY_SIZE: Record<Size, string> = {
   xs: 'py-1',
@@ -8,6 +8,8 @@ const CLASS_BY_SIZE: Record<Size, string> = {
   md: 'py-3',
   lg: 'py-4',
   xl: 'py-5',
+  '2xl': 'py-6',
+  '4xl': 'py-8',
 };
 
 @Component({

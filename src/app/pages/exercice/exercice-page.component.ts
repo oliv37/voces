@@ -19,9 +19,6 @@ import { SpacerComponent } from '../../components/spacer/spacer.component';
   ],
   templateUrl: './exercice-page.component.html',
   providers: [ExerciceService],
-  host: {
-    tabIndex: '-1',
-  },
 })
 export class ExercicePageComponent {
   exerciceService = inject(ExerciceService);

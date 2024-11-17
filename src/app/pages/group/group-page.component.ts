@@ -10,15 +10,12 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { BtnDirective } from '@directives/btn/btn.directive';
 import { Group } from '@models/group.model';
 import { SpacerComponent } from '../../components/spacer/spacer.component';
+import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 
 @Component({
   standalone: true,
   imports: [RouterLink, BtnDirective, SpacerComponent],
   templateUrl: './group-page.component.html',
-  host: {
-    tabIndex: '-1',
-    class: 'outline-none',
-  },
 })
 export class GroupPageComponent {
   router = inject(Router);
@@ -31,7 +28,8 @@ export class GroupPageComponent {
     afterNextRender(() => this.elementRef.nativeElement.focus());
   }
 
-  @HostListener('keydown.Enter')
+  @HostListener('window:keydown.enter', ['$event'])
+  @IgnoreTarget('button', 'a')
   handleKeyboardEvent() {
     this.router.navigate(['exercice'], { relativeTo: this.route });
   }
