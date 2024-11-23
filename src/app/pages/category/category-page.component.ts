@@ -6,9 +6,8 @@ import { CompletionService } from '@services/completion.service';
 import { Category } from '@models/category.model';
 
 @Component({
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './category-page.component.html',
+    imports: [RouterLink],
+    templateUrl: './category-page.component.html'
 })
 export class CategoryPageComponent {
   private _completionService = inject(CompletionService);

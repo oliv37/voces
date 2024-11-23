@@ -15,10 +15,9 @@ import { Group } from '@models/group.model';
 import { Word } from '@models/word.model';
 
 @Component({
-  standalone: true,
-  imports: [ClientSideComponent],
-  templateUrl: './exercice-page.component.html',
-  providers: [ExerciceService],
+    imports: [ClientSideComponent],
+    templateUrl: './exercice-page.component.html',
+    providers: [ExerciceService]
 })
 export class ExercicePageComponent implements AfterViewInit {
   category = input.required<Category>();

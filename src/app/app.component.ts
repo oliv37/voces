@@ -3,9 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { BreadcrumbComponent } from '@components/breadcrumb/breadcrumb.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, BreadcrumbComponent],
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    imports: [RouterOutlet, BreadcrumbComponent],
+    templateUrl: './app.component.html'
 })
 export class AppComponent {}

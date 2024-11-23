@@ -16,8 +16,6 @@ const CLASS_BY_SIZE: Record<Size, string> = {
 
 @Component({
   selector: 'app-spacer',
-  standalone: true,
-  imports: [],
   template: '',
   host: {
     class: 'block',

@@ -13,9 +13,8 @@ import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 
 @Component({
-  standalone: true,
-  imports: [RouterLink, BtnDirective, SpacerComponent],
-  templateUrl: './group-page.component.html',
+    imports: [RouterLink, BtnDirective, SpacerComponent],
+    templateUrl: './group-page.component.html'
 })
 export class GroupPageComponent {
   router = inject(Router);
