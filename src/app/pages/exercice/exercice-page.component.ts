@@ -6,7 +6,7 @@ import {
   input,
   signal,
   untracked,
-  ViewChild,
+  viewChild,
 } from '@angular/core';
 import { ClientSideComponent } from '@components/client-side/client-side.component';
 import { ExerciceService } from '@services/exercice.service';
@@ -15,20 +15,19 @@ import { Group } from '@models/group.model';
 import { Word } from '@models/word.model';
 
 @Component({
-    imports: [ClientSideComponent],
-    templateUrl: './exercice-page.component.html',
-    providers: [ExerciceService]
+  imports: [ClientSideComponent],
+  templateUrl: './exercice-page.component.html',
+  providers: [ExerciceService],
 })
 export class ExercicePageComponent implements AfterViewInit {
   category = input.required<Category>();
   group = input.required<Group>();
 
+  inputEl = viewChild<ElementRef>('inputEl');
+
   word = signal<Word | undefined>(undefined);
   text = signal('');
   index = 0;
-
-  @ViewChild('inputEl', { static: false })
-  inputEl?: ElementRef;
 
   constructor() {
     effect(() => {
@@ -43,7 +42,7 @@ export class ExercicePageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.inputEl?.nativeElement.focus();
+    this.inputEl()?.nativeElement.focus();
   }
 
   onInput(e: Event) {

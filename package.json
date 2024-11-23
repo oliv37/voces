@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prebuild": "npm run build-routes",
     "build": "ng build",
     "build:prod": "npm run build -- --base-href /voces/",
     "watch": "ng build --watch --configuration development",
@@ -13,7 +12,6 @@
     "predeploy": "npm run lint && npm run build:prod",
     "deploy": "gh-pages -d dist/voces/browser -m 'ci: deploy site'",
     "serve:ssr:voces": "node dist/voces/server/server.mjs",
-    "build-routes": "npx vite build -c scripts/vite.config.mjs && node scripts/dist/build-routes.mjs",
     "update": "ng update @angular/core @angular/cli"
   },
   "private": true,
