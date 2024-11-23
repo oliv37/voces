@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './client-side.component.html',
 })
 export class ClientSideComponent {
-  render = typeof window !== 'undefined';
+  isWindowDefined = typeof window !== 'undefined';
 }
