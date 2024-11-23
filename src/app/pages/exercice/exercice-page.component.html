@@ -1,15 +1,28 @@
 <app-client-side>
-  <app-exercice-header
-    [nbWordsAnswered]="exerciceService.nbWordsAnswered()"
-    [nbWordsAvailable]="exerciceService.nbWordsAvailable()"
-    [areAllWordsAnswered]="exerciceService.areAllWordsAnswered()"
-  />
+  <div class="flex flex-col items-center gap-16 cursor-default relative">
+    <input
+      type="text"
+      class="absolute top-0 left-0 w-0 h-0 opacity-0"
+      [value]="text()"
+      (keydown)="onKeydown($event)"
+      (input)="onInput($event)"
+      #inputEl
+    />
+    <div class="flex justify-center text-neutral-800">
+      {{ index + 1 }} / {{ group().words.length }}
+    </div>
+    @if (word(); as w) {
+    <div class="text-8xl" (click)="inputEl.focus()">
+      @for(letter of w.es; track $index) { @if($index >= text().length) {
+      <span class="inline-block opacity-60 text-neutral-700">{{ letter }}</span>
+      } @else if (letter === text()[$index]) {
+      <span class="inline-block text-neutral-950">{{ letter }}</span>
+      } @else {
+      <span class="inline-block text-red-700">{{ letter }}</span>
 
-  <app-spacer size="xl" />
-
-  @if (exerciceService.step() === "preview") {
-  <app-exercice-step-preview></app-exercice-step-preview>
-  } @if (exerciceService.step() === "form") {
-  <app-exercice-step-form></app-exercice-step-form>
-  }
+      } }
+    </div>
+    <div class="text-7xl text-gray-900">{{ w.fr }}</div>
+    }
+  </div>
 </app-client-side>
