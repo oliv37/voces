@@ -56,13 +56,15 @@ function buildCategory(
   pathParam: string,
   words: Word[]
 ): Category {
-  return {
+  const category: Category = {
     id,
     label,
     pathParam,
     groups: buildGroups(id, words),
     nbWords: words.length,
   };
+  category.groups.forEach((g) => (g.category = category));
+  return category;
 }
 
 function buildGroups(categoryId: string, words: Word[]): Group[] {
@@ -77,12 +79,12 @@ function buildGroups(categoryId: string, words: Word[]): Group[] {
       label: `${index}`,
       pathParam: `${index}`,
       words: words.slice(start, end),
-    };
+    } as Group;
   });
 }
 
 function buildWords(data: string): Word[] {
-  return decode(data)
+  return data
     .split('\n')
     .filter((line) => !!line)
     .map((line, id) => {
@@ -93,13 +95,4 @@ function buildWords(data: string): Word[] {
         fr,
       };
     });
-}
-
-function decode(str: string) {
-  const base64Prefix = 'data:text/plain;base64,';
-
-  if (str.startsWith(base64Prefix)) {
-    return atob(str.substring(base64Prefix.length));
-  }
-  return str;
 }

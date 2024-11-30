@@ -1,3 +1,4 @@
+import { Category } from './category.model';
 import { Word } from './word.model';
 
 export interface Group {
@@ -5,4 +6,5 @@ export interface Group {
   label: string;
   pathParam: string;
   words: Word[];
+  category: Category;
 }

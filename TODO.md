@@ -1,2 +1,6 @@
-- Add service worker
-- Define meta description for each route
+- fix level 2 large words
+- add buttons to go to previous and next group
+- mark group as completed
+- add level progress bar
+- add service worker
+- define meta description for each route

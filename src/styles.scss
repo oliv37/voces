@@ -8,3 +8,21 @@
     margin: 0;
   }
 }
+
+@layer utilities {
+  @keyframes caret {
+    from,
+    to {
+      @apply border-opacity-100;
+    }
+    22% {
+      @apply border-opacity-100;
+    }
+    50% {
+      @apply border-opacity-0;
+    }
+    77% {
+      @apply border-opacity-100;
+    }
+  }
+}

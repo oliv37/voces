@@ -1,0 +1,29 @@
+<div
+  class="font-mono relative text-8xl leading-tight border-b-4 border-b-transparent"
+>
+  <input
+    type="text"
+    class="absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-default"
+    [value]="text()"
+    (keydown)="onKeydown($event)"
+    (input)="onInput($event)"
+    (focus)="hasFocus.set(true)"
+    (blur)="hasFocus.set(false)"
+    #inputEl
+  />
+  @for(letter of letters(); track $index) {
+  <app-caret [active]="hasFocus() && text().length === $index"></app-caret>
+  <span
+    class="border-b-4"
+    [class.text-transparent]="letter.status === 'UNKNOWN'"
+    [class.border-b-neutral-400]="letter.status === 'UNKNOWN'"
+    [class.text-neutral-950]="letter.status === 'VALID'"
+    [class.border-b-neutral-700]="letter.status === 'VALID'"
+    [class.text-red-700]="letter.status === 'INVALID'"
+    [class.border-b-red-700]="letter.status === 'INVALID'"
+    >{{ letter.value }}</span
+  >
+  @if ($last) {
+  <app-caret [active]="hasFocus() && text().length > $index"></app-caret>
+  } }
+</div>
