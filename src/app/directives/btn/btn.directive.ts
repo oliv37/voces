@@ -7,7 +7,6 @@ type Border = 'none' | 'normal' | 'large';
 
 @Directive({
   selector: '[appBtn]',
-  standalone: true,
   host: {
     '[class]': 'class()',
   },

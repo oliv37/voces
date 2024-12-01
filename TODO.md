@@ -1,6 +1,5 @@
-- fix level 2 large words
-- add buttons to go to previous and next group
-- mark group as completed
-- add level progress bar
+- shuffle words
+- mark group as completed when all words of level3 are answered
+- add level color
 - add service worker
 - define meta description for each route

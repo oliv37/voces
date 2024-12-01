@@ -18,6 +18,26 @@ export function getGroupLabel(route: ActivatedRouteSnapshot | null): string {
   return getData<Group>(route, 'group')?.label || '';
 }
 
+export function findPreviousGroup(group: Group): Group {
+  const categories: Category[] = DATA.flat();
+  const category = group.category;
+
+  const categoryIdx = categories.findIndex((c) => c.id === category.id);
+  const groupIdx = category.groups.findIndex((g) => g.id === group.id);
+  if (categoryIdx === -1 || groupIdx === -1) {
+    return categories[0].groups[0];
+  }
+
+  const isFirstGroup = groupIdx === 0;
+  if (isFirstGroup) {
+    const previousCategory =
+      categories[(categoryIdx - 1 + categories.length) % categories.length];
+    return previousCategory.groups[previousCategory.groups.length - 1];
+  }
+
+  return category.groups[groupIdx - 1];
+}
+
 export function findNextGroup(group: Group): Group {
   const categories: Category[] = DATA.flat();
   const category = group.category;

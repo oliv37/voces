@@ -1,4 +1,8 @@
 <app-client-side>
+  <div
+    class="fixed top-0 left-0 h-0.5 bg-neutral-600 transition-all duration-500"
+    [style.width]="progressPercent() + '%'"
+  ></div>
   <div class="flex flex-col items-center gap-20 cursor-default relative">
     <div class="flex flex-col items-center">
       <div class="flex gap-5">
@@ -14,10 +18,10 @@
       </div>
       <app-spacer size="lg" />
       <span class="text-neutral-900"
-        >{{ wordIdx() + 1 }} / {{ group().words.length }}</span
+        >{{ wordIdx() + 1 }} / {{ nbWords() }}</span
       >
     </div>
-    <div class="text-5xl text-gray-800 tracking-wide">{{ word().fr }}</div>
+    <div class="text-6xl text-gray-800 tracking-wide">{{ word().fr }}</div>
     @if (level() === 1) {
     <app-exercice-level-1
       #exerciceLevelCmp
@@ -38,52 +42,15 @@
     ></app-exercice-level-3>
     }
 
-    <div class="flex justify-center gap-10">
-      <button
-        type="button"
-        appBtn
-        appBtnTheme="secondary"
-        appBtnBorder="none"
-        (click)="previousLevel()"
-      >
-        <app-arrow-left-icon className="w-8 h-8 fill-neutral-900" />
-      </button>
-      <button
-        type="button"
-        appBtn
-        appBtnTheme="secondary"
-        appBtnBorder="none"
-        (click)="help()"
-      >
-        <app-patch-question-icon className="w-8 h-8 fill-neutral-900" />
-      </button>
-      <button
-        type="button"
-        appBtn
-        appBtnTheme="secondary"
-        appBtnBorder="none"
-        (click)="resetExercice()"
-      >
-        <app-arrow-repeat-icon className="w-8 h-8 fill-neutral-900" />
-      </button>
-      <button
-        type="button"
-        appBtn
-        appBtnTheme="secondary"
-        appBtnBorder="none"
-        (click)="resetLevel()"
-      >
-        <app-arrow-clockwise-icon className="w-8 h-8 fill-neutral-900" />
-      </button>
-      <button
-        type="button"
-        appBtn
-        appBtnTheme="secondary"
-        appBtnBorder="none"
-        (click)="nextLevel()"
-      >
-        <app-arrow-right-icon className="w-8 h-8 fill-neutral-900" />
-      </button>
-    </div>
+    <app-exercice-button-bar
+      (arrowLeftCircleFill)="goToPreviousExercice()"
+      (arrowLeft)="previousLevel()"
+      (arrowLeftShort)="previousWord()"
+      (patchQuestion)="help()"
+      (arrowClockwise)="resetLevel()"
+      (arrowRightShort)="nextWord()"
+      (arrowRight)="nextLevel()"
+      (arrowRightCircle)="goToNextExercice()"
+    />
   </div>
 </app-client-side>

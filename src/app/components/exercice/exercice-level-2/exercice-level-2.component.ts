@@ -15,7 +15,8 @@ export class ExerciceLevel2Component extends ExerciceLevelComponent {
     return this.word()
       .split('')
       .map((wordLetter, idx) => {
-        const value = idx < text.length ? text[idx] : '_';
+        const value =
+          idx < text.length ? text[idx] : wordLetter.replace(' ', '-');
         const status =
           idx >= text.length
             ? 'UNKNOWN'

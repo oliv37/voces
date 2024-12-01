@@ -1,5 +1,8 @@
 <div
-  class="font-mono relative text-8xl leading-tight border-b-4 border-b-transparent"
+  [class]="
+    'font-mono relative text-8xl text-center ' +
+    'leading-normal border-b-4 border-b-transparent'
+  "
 >
   <input
     type="text"
@@ -21,7 +24,8 @@
     [class.border-b-neutral-700]="letter.status === 'VALID'"
     [class.text-red-700]="letter.status === 'INVALID'"
     [class.border-b-red-700]="letter.status === 'INVALID'"
-    >{{ letter.value }}</span
+    [class.!text-transparent]="letter.value === ' '"
+    >{{ letter.value.replace(" ", "-") }}</span
   >
   @if ($last) {
   <app-caret [active]="hasFocus() && text().length > $index"></app-caret>

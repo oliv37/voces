@@ -41,8 +41,9 @@ export abstract class ExerciceLevelComponent {
   onInput(e: Event) {
     const target = e.target as HTMLInputElement;
     const targetValue = target.value;
+    const maxLength = this.word().length;
 
-    if (this.isTextValid()) {
+    if (this.isTextValid() || targetValue.length > maxLength) {
       target.value = this.text();
       return;
     }
