@@ -5,7 +5,7 @@ import {
   ElementRef,
   inject,
   input,
-  signal,
+  linkedSignal,
   untracked,
   viewChild,
 } from '@angular/core';
@@ -20,9 +20,10 @@ import { ExerciceLevel1Component } from '../../components/exercice/exercice-leve
 import { ExerciceLevel2Component } from '../../components/exercice/exercice-level-2/exercice-level-2.component';
 import { ExerciceLevel3Component } from '../../components/exercice/exercice-level-3/exercice-level-3.component';
 import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
-import { Level, LEVELS } from '@models/exercice.model';
+import { State, Level, LEVELS } from '@models/exercice.model';
 import { findNextGroup, findPreviousGroup } from '@utils/group.util';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
+import { shuffle } from '@utils/array.util';
 
 @Component({
   imports: [
@@ -45,61 +46,91 @@ export class ExercicePageComponent {
 
   group = input.required<Group>();
 
-  level = signal<Level>(1);
-  wordIdx = signal<number>(0);
+  state = linkedSignal<State>(() => ({
+    words: shuffle(this.group().words),
+    wordIdx: 0,
+    level: 1,
+  }));
 
-  words = computed(() => this.group().words);
-  word = computed<Word>(() => this.words()[this.wordIdx()]);
-  nbWords = computed<number>(() => this.words().length);
+  word = computed<Word>(() => this.state().words[this.state().wordIdx]);
+  nbWords = computed<number>(() => this.state().words.length);
   progressPercent = computed<number>(
-    () => (this.wordIdx() * 100) / this.nbWords()
+    () => (this.state().wordIdx * 100) / this.nbWords()
   );
 
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');
 
-  resetExerciceEffect = effect(() => {
+  resetEffect = effect(() => {
     this.group();
-    untracked(() => this.resetExercice());
+
+    untracked(() => this.reset());
   });
 
-  resetExercice() {
-    this.wordIdx.set(0);
-    this.level.set(1);
-    this.exerciceLevelCmp()?.focusInput();
+  focusEffect = effect(() => {
+    this.state();
+
+    this.exerciceLevelCmp()?.focus();
+  });
+
+  reset() {
+    this.state.set({
+      words: shuffle(this.group().words),
+      wordIdx: 0,
+      level: 1,
+    });
   }
 
   resetLevel() {
-    this.wordIdx.set(0);
-    this.exerciceLevelCmp()?.focusInput();
+    this.state.update(({ level }) => ({
+      words: shuffle(this.group().words),
+      wordIdx: 0,
+      level,
+    }));
   }
 
   help() {
     this.exerciceLevelCmp()?.help();
-    this.exerciceLevelCmp()?.focusInput();
+    this.exerciceLevelCmp()?.focus();
   }
 
   previousWord() {
-    const nbWords = this.nbWords();
-    this.wordIdx.update((idx) => (idx - 1 + nbWords) % nbWords);
-    this.exerciceLevelCmp()?.focusInput();
+    this.state.update(({ words, wordIdx, level }) => ({
+      words,
+      wordIdx: (wordIdx - 1 + words.length) % words.length,
+      level,
+    }));
   }
 
   nextWord() {
-    const nbWords = this.nbWords();
-    this.wordIdx.update((idx) => (idx + 1) % nbWords);
-    this.exerciceLevelCmp()?.focusInput();
+    this.state.update(({ words, wordIdx, level }) => ({
+      words: wordIdx == words.length - 1 ? shuffle(words) : words,
+      wordIdx: (wordIdx + 1) % words.length,
+      level,
+    }));
   }
 
   previousLevel() {
-    this.level.update((lvl) => (lvl === 1 ? 3 : ((lvl - 1) as Level)));
-    this.wordIdx.set(0);
-    this.exerciceLevelCmp()?.focusInput();
+    this.state.update(({ words, level }) => ({
+      words: shuffle(words),
+      wordIdx: 0,
+      level: level === 1 ? 3 : ((level - 1) as Level),
+    }));
   }
 
   nextLevel() {
-    this.level.update((lvl) => (lvl === 3 ? 1 : ((lvl + 1) as Level)));
-    this.wordIdx.set(0);
-    this.exerciceLevelCmp()?.focusInput();
+    this.state.update(({ words, level }) => ({
+      words: shuffle(words),
+      wordIdx: 0,
+      level: level === 3 ? 1 : ((level + 1) as Level),
+    }));
+  }
+
+  setLevel(level: Level) {
+    this.state.update(({ words }) => ({
+      words: shuffle(words),
+      wordIdx: 0,
+      level,
+    }));
   }
 
   goToPreviousExercice() {

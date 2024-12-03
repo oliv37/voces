@@ -22,7 +22,7 @@ export abstract class ExerciceLevelComponent {
 
   inputEl = viewChild<ElementRef>('inputEl');
 
-  resetTextEffect = effect(() => {
+  resetEffect = effect(() => {
     this.word();
 
     this.text.set('');
@@ -31,11 +31,12 @@ export abstract class ExerciceLevelComponent {
   nextEffect = effect(() => {
     if (this.isTextValid()) {
       this.next.emit();
+      this.text.set('');
     }
   });
 
   constructor() {
-    afterNextRender(() => this.focusInput());
+    afterNextRender(() => this.focus());
   }
 
   onInput(e: Event) {
@@ -43,7 +44,7 @@ export abstract class ExerciceLevelComponent {
     const targetValue = target.value;
     const maxLength = this.word().length;
 
-    if (this.isTextValid() || targetValue.length > maxLength) {
+    if (targetValue.length > maxLength) {
       target.value = this.text();
       return;
     }
@@ -57,7 +58,7 @@ export abstract class ExerciceLevelComponent {
     }
   }
 
-  focusInput() {
+  focus() {
     this.inputEl()?.nativeElement.focus();
   }
 
@@ -69,6 +70,7 @@ export abstract class ExerciceLevelComponent {
     while (i < word.length - 1 && word[i] === text[i]) {
       i++;
     }
+
     this.text.set(word.substring(0, i + 1));
   }
 }
