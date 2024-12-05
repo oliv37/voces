@@ -11,19 +11,25 @@ import dataAvance1 from '@data/avance1.txt';
 
 const GROUP_SIZE = 20;
 
+const BG_COLOR_DEBUTANT = 'bg-green-600';
+const BG_COLOR_INTERMEDIAIRE = 'bg-blue-600';
+const BG_COLOR_AVANCEE = 'bg-purple-600';
+
 export const DATA: Category[][] = [
   [
     buildCategory(
       'DEBUTANT1',
       'Débutant 1',
       'debutant-1',
-      buildWords(dataDebutant1)
+      buildWords(dataDebutant1),
+      BG_COLOR_DEBUTANT
     ),
     buildCategory(
       'DEBUTANT2',
       'Débutant 2',
       'debutant-2',
-      buildWords(dataDebutant2)
+      buildWords(dataDebutant2),
+      BG_COLOR_DEBUTANT
     ),
   ],
   [
@@ -31,30 +37,42 @@ export const DATA: Category[][] = [
       'INTERMEDIAIRE1',
       'Intermédiaire 1',
       'intermediaire-1',
-      buildWords(dataIntermediaire1)
+      buildWords(dataIntermediaire1),
+      BG_COLOR_INTERMEDIAIRE
     ),
     buildCategory(
       'INTERMEDIAIRE2',
       'Intermédiaire 2',
       'intermediaire-2',
-      buildWords(dataIntermediaire2)
+      buildWords(dataIntermediaire2),
+      BG_COLOR_INTERMEDIAIRE
     ),
 
     buildCategory(
       'INTERMEDIAIRE3',
       'Intermédiaire 3',
       'intermediaire-3',
-      buildWords(dataIntermediaire3)
+      buildWords(dataIntermediaire3),
+      BG_COLOR_INTERMEDIAIRE
     ),
   ],
-  [buildCategory('AVANCE1', 'Avancé 1', 'avance-1', buildWords(dataAvance1))],
+  [
+    buildCategory(
+      'AVANCE1',
+      'Avancé 1',
+      'avance-1',
+      buildWords(dataAvance1),
+      BG_COLOR_AVANCEE
+    ),
+  ],
 ] as const;
 
 function buildCategory(
   id: string,
   label: string,
   pathParam: string,
-  words: Word[]
+  words: Word[],
+  bgColor: string
 ): Category {
   const category: Category = {
     id,
@@ -62,6 +80,7 @@ function buildCategory(
     pathParam,
     groups: buildGroups(id, words),
     nbWords: words.length,
+    bgColor,
   };
   category.groups.forEach((g) => (g.category = category));
   return category;

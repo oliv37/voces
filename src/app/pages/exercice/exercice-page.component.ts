@@ -24,6 +24,7 @@ import { State, Level, LEVELS } from '@models/exercice.model';
 import { findNextGroup, findPreviousGroup } from '@utils/group.util';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { shuffle } from '@utils/array.util';
+import { GroupCompletionService } from '@services/group-completion.service';
 
 @Component({
   imports: [
@@ -43,6 +44,7 @@ export class ExercicePageComponent {
 
   el = inject(ElementRef);
   router = inject(Router);
+  groupCompletionService = inject(GroupCompletionService);
 
   group = input.required<Group>();
 
@@ -50,6 +52,7 @@ export class ExercicePageComponent {
     words: shuffle(this.group().words),
     wordIdx: 0,
     level: 1,
+    wordsAnswered: new Set(),
   }));
 
   word = computed<Word>(() => this.state().words[this.state().wordIdx]);
@@ -77,6 +80,7 @@ export class ExercicePageComponent {
       words: shuffle(this.group().words),
       wordIdx: 0,
       level: 1,
+      wordsAnswered: new Set(),
     });
   }
 
@@ -85,6 +89,7 @@ export class ExercicePageComponent {
       words: shuffle(this.group().words),
       wordIdx: 0,
       level,
+      wordsAnswered: new Set(),
     }));
   }
 
@@ -94,42 +99,66 @@ export class ExercicePageComponent {
   }
 
   previousWord() {
-    this.state.update(({ words, wordIdx, level }) => ({
+    this.state.update(({ words, wordIdx, level, wordsAnswered }) => ({
       words,
       wordIdx: (wordIdx - 1 + words.length) % words.length,
       level,
+      wordsAnswered,
     }));
   }
 
   nextWord() {
+    this.state.update(({ words, wordIdx, level, wordsAnswered }) => ({
+      words: wordIdx == words.length - 1 ? shuffle(words) : words,
+      wordIdx: (wordIdx + 1) % words.length,
+      level,
+      wordsAnswered,
+    }));
+  }
+
+  answerWord() {
+    const newWordsAnswered = new Set([
+      ...this.state().wordsAnswered,
+      this.word().es,
+    ]);
+    const allWordsAnswered = this.areAllWordsAnswered(newWordsAnswered);
+
+    if (allWordsAnswered) {
+      this.groupCompletionService.markAsCompleted(this.group());
+    }
+
     this.state.update(({ words, wordIdx, level }) => ({
       words: wordIdx == words.length - 1 ? shuffle(words) : words,
       wordIdx: (wordIdx + 1) % words.length,
       level,
+      wordsAnswered: allWordsAnswered ? new Set() : newWordsAnswered,
     }));
   }
 
   previousLevel() {
-    this.state.update(({ words, level }) => ({
+    this.state.update(({ words, level, wordsAnswered }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level: level === 1 ? 3 : ((level - 1) as Level),
+      wordsAnswered,
     }));
   }
 
   nextLevel() {
-    this.state.update(({ words, level }) => ({
+    this.state.update(({ words, level, wordsAnswered }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level: level === 3 ? 1 : ((level + 1) as Level),
+      wordsAnswered,
     }));
   }
 
   setLevel(level: Level) {
-    this.state.update(({ words }) => ({
+    this.state.update(({ words, wordsAnswered }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level,
+      wordsAnswered,
     }));
   }
 
@@ -151,5 +180,9 @@ export class ExercicePageComponent {
       nextGroup.pathParam,
       'exercice',
     ]);
+  }
+
+  private areAllWordsAnswered(wordsAnswered: Set<string>): boolean {
+    return this.state().words.every((word) => wordsAnswered.has(word.es));
   }
 }

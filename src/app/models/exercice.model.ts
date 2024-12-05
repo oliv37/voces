@@ -13,4 +13,5 @@ export interface State {
   words: Word[];
   wordIdx: number;
   level: Level;
+  wordsAnswered: Set<string>;
 }

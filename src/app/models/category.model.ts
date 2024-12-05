@@ -6,4 +6,5 @@ export interface Category {
   pathParam: string;
   groups: Group[];
   nbWords: number;
+  bgColor: string;
 }

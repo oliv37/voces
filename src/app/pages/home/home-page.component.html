@@ -13,9 +13,16 @@
     @for (category of categories; track $index) {
     <a
       [routerLink]="category.pathParam"
-      class="py-16 text-center border border-gray-400 rounded-t-md shadow-md"
-      ><b>{{ category.label }}</b> ({{ category.nbWords }})</a
+      class="py-16 text-center border border-gray-400 rounded-t-md shadow-md relative"
     >
+      <span
+        class="absolute rounded-full w-4 h-4 top-2 left-2"
+        [class]="category.bgColor"
+      ></span>
+      <span
+        ><b>{{ category.label }}</b> ({{ category.nbWords }})</span
+      >
+    </a>
     }
   </div>
   }

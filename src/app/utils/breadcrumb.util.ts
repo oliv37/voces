@@ -30,6 +30,9 @@ function addBreadcrumbItem(
   route: ActivatedRouteSnapshot
 ): void {
   const category: Category | undefined = route.data['category'];
+  const previousUrl: string =
+    breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
+
   const label = route.url
     .map((segment) => segment.toString())
     .map((segment) =>
@@ -37,13 +40,12 @@ function addBreadcrumbItem(
     )
     .join(' ')
     .replaceAll('-', ' ');
-
-  const previousUrl: string =
-    breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
   const url = [previousUrl, ...route.url].join('/');
+  const dotBgColor = label === category?.label ? category?.bgColor : undefined;
 
   breadcrumb.push({
     label,
     url,
+    dotBgColor,
   });
 }

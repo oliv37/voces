@@ -1,5 +1,9 @@
 <div class="flex flex-wrap items-center gap-2 text-lg">
-  @for (breadcrumbItem of breadcrumb(); track $index) {
+  @for (breadcrumbItem of breadcrumb(); track $index) { @if
+  (breadcrumbItem.dotBgColor) {
+  <span class="w-2 h-2 rounded-full" [class]="breadcrumbItem.dotBgColor"></span>
+  }
+
   <a
     [routerLink]="breadcrumbItem.url"
     class="capitalize text-gray-700 hover:text-black"
