@@ -1,4 +1,4 @@
-- mark group as completed when all words of level3 are answered
-- add level color
+- exercice page footer => previous and next group
+- exercice page for all words (link on home page)
 - add service worker
 - define meta description for each route

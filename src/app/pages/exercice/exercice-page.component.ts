@@ -84,15 +84,6 @@ export class ExercicePageComponent {
     });
   }
 
-  resetLevel() {
-    this.state.update(({ level }) => ({
-      words: shuffle(this.group().words),
-      wordIdx: 0,
-      level,
-      wordsAnswered: new Set(),
-    }));
-  }
-
   help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();

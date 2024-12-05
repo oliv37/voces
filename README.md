@@ -1,8 +1,8 @@
 # Voces
 
-[Spanish - French dictionary](https://oliv37.github.io/voces/)
+[Spanish - French translations](https://oliv37.github.io/voces/)
 
-## Dictionary
+## Translations
 
 Data are stored in text files in [src/data](./src/data) folder
 
