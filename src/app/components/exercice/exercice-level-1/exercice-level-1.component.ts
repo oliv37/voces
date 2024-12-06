@@ -1,12 +1,12 @@
 import { Component, computed } from '@angular/core';
-import { CaretComponent } from '../caret/caret.component';
+import { ExerciceCaretComponent } from '../exercice-caret/exercice-caret.component';
 import { ExerciceLevelComponent } from '../exercice-level.component';
 import { Letter } from '@models/exercice.model';
 
 @Component({
   selector: 'app-exercice-level-1',
   templateUrl: './exercice-level-1.component.html',
-  imports: [CaretComponent],
+  imports: [ExerciceCaretComponent],
 })
 export class ExerciceLevel1Component extends ExerciceLevelComponent {
   letters = computed<Letter[]>(() => {

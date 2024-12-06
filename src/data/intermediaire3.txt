@@ -89,3 +89,24 @@ albergar : abriter, héberger
 atender : recevoir, accueillir
 contundente : ferme, catégorique
 punetero : casse-pieds, chieur
+encabezar : être à la tête de
+diputado : député
+asiento : poste, siège
+embajador : embassadeur
+respaldo : soutien, appui
+tibieza : tiédeur
+retorcer : tordre
+claudicar : céder, abandonner
+fomentar : promouvoir, encourager
+boletin : bulletin
+subrayar : souligner
+honrado : honnête
+falacia : mensonge
+vileza : bassesse
+volcado : transfert, envoi
+cohecho : corruption
+pinza : pince
+expectacion : attente
+quiniela : grille de loto
+portada : couverture, première page
+saldar : solder

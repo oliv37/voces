@@ -6,8 +6,6 @@ import { ArrowClockwiseIconComponent } from '../../icon/arrow-clockwise-icon/arr
 import { ArrowRightShortIconComponent } from '../../icon/arrow-right-short-icon/arrow-right-short-icon.component';
 import { ArrowRightIconComponent } from '../../icon/arrow-right-icon/arrow-right-icon.component';
 import { BtnDirective } from '@directives/btn/btn.directive';
-import { ArrowLeftCircleFillIconComponent } from '../../icon/arrow-left-circle-fill/arrow-left-circle-fill-icon.component';
-import { ArrowRightCircleFillIconComponent } from '../../icon/arrow-right-circle-fill/arrow-right-circle-fill-icon.component';
 
 @Component({
   selector: 'app-exercice-button-bar',
@@ -20,17 +18,13 @@ import { ArrowRightCircleFillIconComponent } from '../../icon/arrow-right-circle
     ArrowClockwiseIconComponent,
     ArrowRightShortIconComponent,
     ArrowRightIconComponent,
-    ArrowLeftCircleFillIconComponent,
-    ArrowRightCircleFillIconComponent,
   ],
 })
 export class ExerciceButtonBarComponent {
-  arrowLeftCircleFill = output();
   arrowLeft = output();
   arrowLeftShort = output();
   patchQuestion = output();
   arrowClockwise = output();
   arrowRightShort = output();
   arrowRight = output();
-  arrowRightCircle = output();
 }

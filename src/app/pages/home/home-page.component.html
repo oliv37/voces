@@ -1,9 +1,9 @@
-<div class="text-center text-3xl">
+<h1 class="text-center text-3xl">
   <span class="font-bold text-white bg-black px-1 rounded-md">{{
     nbWords()
   }}</span>
   mots
-</div>
+</h1>
 
 <app-spacer size="2xl" />
 
@@ -19,9 +19,9 @@
         class="absolute rounded-full w-4 h-4 top-2 left-2"
         [class]="category.bgColor"
       ></span>
-      <span
-        ><b>{{ category.label }}</b> ({{ category.nbWords }})</span
-      >
+      <h2>
+        <b>{{ category.label }}</b> ({{ category.nbWords }})
+      </h2>
     </a>
     }
   </div>

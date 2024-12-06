@@ -44,14 +44,14 @@
     }
 
     <app-exercice-button-bar
-      (arrowLeftCircleFill)="goToPreviousExercice()"
       (arrowLeft)="previousLevel()"
       (arrowLeftShort)="previousWord()"
       (patchQuestion)="help()"
       (arrowClockwise)="reset()"
       (arrowRightShort)="nextWord()"
       (arrowRight)="nextLevel()"
-      (arrowRightCircle)="goToNextExercice()"
     />
+
+    <app-group-link [group]="nextGroup()" displayNextIcon="true" />
   </div>
 </app-client-side>

@@ -3,8 +3,6 @@ pozo sin fondo : puits sans fond
 reubicar : déplacer, transférer
 bolsillo : poche
 honrar: honorer
-diputado : député
-asiento : siège
 paliza : raclée, branlée
 contratacion : embauche
 matadero : abattoir
@@ -198,7 +196,6 @@ palo : bâton
 desposeimiento : dépossession
 cesarea : césarienne
 ingreso : entrée, admission
-valiente : courageux
 punetera : maudit, saleté de, fichu, satané, foutu
 ausencia : absence
 vengativo : vindicatif, rancunier
@@ -1360,7 +1357,6 @@ erosionar : éroder
 librar : préserver, protéger
 lastrar : plomber, compromettre
 sujetarse a : se soumettre à
-encabezar : être à la tête de
 alistar : lister, inscrire sur une liste
 descarillar : dérailler
 desvincular : rompre, mettre un terme, arrêter
@@ -1392,7 +1388,6 @@ trotamundos : globe-trotteur
 propenso : qui a tendance à
 media : moyenne
 chufa : médiocre, pourri
-portada : couverture
 machete : avare, radin
 eufemismo : euphémisme
 insostenible : insoutenable
@@ -1588,7 +1583,6 @@ indultar : gracier
 pleno : séance plénière
 llamar al orden : rappeler à l'ordre
 caducar : périmer
-honrado : honnête
 augurar : prédire, prévoir
 ensordecedor : assourdissant
 armatoste : objet encombrant
@@ -1659,7 +1653,6 @@ recelo : suspicion, méfiance
 subsidio : aide, prestation, allocation
 barbecho : jachère
 presupuesto : budget, devis
-subrayar : souligner
 encuesta : sondage
 encabezar : être à la tête de
 en torno de : aux alentours de
@@ -1670,7 +1663,6 @@ apuesta : pari
 amargo : aigri
 contrincante : adversaire
 toma : prise
-fomentar : promouvoir, encourager, développer
 al frente de : à la tête de
 arrojar : jeter, lancer
 escrutinio : dépouillement du scrutin
@@ -1934,7 +1926,6 @@ ingeniudad : innocence, naïveté, ingénuité
 arder : embraser, brûler
 burbujear : faire des bulles, pétiller
 morado : violet
-escano : siège (parlement)
 enmendar : corriger, réparer, amender
 subsanar : pallier
 atronador : assourdissant
@@ -1946,7 +1937,6 @@ achicar : reculer, fuir
 canjear : échanger (personnes, choses)
 encuesta : enquête, sondage
 enfurecer : rendre furieux
-retorcer : tordre
 armadura : armature
 indomito : indomptable
 moho : rouille
@@ -2373,7 +2363,6 @@ jabali : sanglier
 toparse : se croiser
 cabezon : têtu, entêté
 arramblar : rafler (avec violence)
-claudicar : céder, abandonner
 gilipollez : connerie
 gamberro : voyou, vandale
 rejuvenecer : rajeunir, rafraîchir
@@ -3112,7 +3101,6 @@ irse al trase : tomber à l'eau
 desvario : bêtise, absurdité
 encubierto : dissimulé, caché
 increpar : réprimander
-saldar : solder
 surtir efecto : faire effet
 cuajar : prendre forme, se concrétiser
 malherido : blessé grave

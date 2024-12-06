@@ -15,7 +15,9 @@
     #inputEl
   />
   @for(letter of letters(); track $index) {
-  <app-caret [active]="hasFocus() && text().length === $index"></app-caret>
+  <app-exercice-caret
+    [active]="hasFocus() && text().length === $index"
+  ></app-exercice-caret>
   <span
     class="border-b-4"
     [class.text-transparent]="letter.status === 'UNKNOWN'"
@@ -28,6 +30,8 @@
     >{{ letter.value.replace(" ", "-") }}</span
   >
   @if ($last) {
-  <app-caret [active]="hasFocus() && text().length > $index"></app-caret>
+  <app-exercice-caret
+    [active]="hasFocus() && text().length > $index"
+  ></app-exercice-caret>
   } }
 </div>

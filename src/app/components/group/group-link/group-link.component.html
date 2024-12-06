@@ -1,0 +1,34 @@
+<a
+  class="flex gap-6 border border-neutral-500 py-8 px-3 h-full rounded-md shadow-md"
+  [routerLink]="[
+    '/',
+    group().category.pathParam,
+    group().pathParam,
+    'exercice'
+  ]"
+>
+  @if (displayPreviousIcon()) {
+  <div class="self-center">
+    <app-arrow-left-circle-fill-icon className="w-8 h-8 fill-neutral-900" />
+  </div>
+  }
+  <div class="flex-1 flex flex-col gap-4">
+    <div class="text-2xl font-bold">
+      {{ group().category.label }} - {{ group().label }}
+      <span
+        class="inline-block mx-1 pl-2 w-2 h-2 rounded-full"
+        [class]="group().category.bgColor"
+      ></span>
+    </div>
+    <div class="flex-1 leading-relaxed">
+      @for (w of group().words; track $index) {
+      {{ w.es }}
+      @if (!$last) { {{ " - " }} } }
+    </div>
+  </div>
+  @if (displayNextIcon()) {
+  <div class="self-center">
+    <app-arrow-right-circle-fill-icon className="w-8 h-8 fill-neutral-900" />
+  </div>
+  }
+</a>

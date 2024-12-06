@@ -6,10 +6,11 @@ import {
   inject,
   input,
   linkedSignal,
+  OnDestroy,
+  OnInit,
   untracked,
   viewChild,
 } from '@angular/core';
-import { Router } from '@angular/router';
 import { ClientSideComponent } from '@components/client-side/client-side.component';
 import { Group } from '@models/group.model';
 import { Word } from '@models/word.model';
@@ -25,6 +26,8 @@ import { findNextGroup, findPreviousGroup } from '@utils/group.util';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { shuffle } from '@utils/array.util';
 import { GroupCompletionService } from '@services/group-completion.service';
+import { GroupLinkComponent } from '../../components/group/group-link/group-link.component';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   imports: [
@@ -36,14 +39,15 @@ import { GroupCompletionService } from '@services/group-completion.service';
     ExerciceLevel2Component,
     ExerciceLevel3Component,
     ExerciceButtonBarComponent,
+    GroupLinkComponent,
   ],
   templateUrl: './exercice-page.component.html',
 })
-export class ExercicePageComponent {
+export class ExercicePageComponent implements OnInit, OnDestroy {
   readonly levels = LEVELS;
 
   el = inject(ElementRef);
-  router = inject(Router);
+  meta = inject(Meta);
   groupCompletionService = inject(GroupCompletionService);
 
   group = input.required<Group>();
@@ -60,6 +64,8 @@ export class ExercicePageComponent {
   progressPercent = computed<number>(
     () => (this.state().wordIdx * 100) / this.nbWords()
   );
+  previousGroup = computed<Group>(() => findPreviousGroup(this.group()));
+  nextGroup = computed<Group>(() => findNextGroup(this.group()));
 
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');
 
@@ -74,6 +80,14 @@ export class ExercicePageComponent {
 
     this.exerciceLevelCmp()?.focus();
   });
+
+  ngOnInit(): void {
+    this.meta.addTag({ name: 'robots', content: 'noindex' });
+  }
+
+  ngOnDestroy(): void {
+    this.meta.removeTag('name=robots');
+  }
 
   reset() {
     this.state.set({
@@ -151,26 +165,6 @@ export class ExercicePageComponent {
       level,
       wordsAnswered,
     }));
-  }
-
-  goToPreviousExercice() {
-    const previousGroup = findPreviousGroup(this.group());
-    this.router.navigate([
-      '/',
-      previousGroup.category.pathParam,
-      previousGroup.pathParam,
-      'exercice',
-    ]);
-  }
-
-  goToNextExercice() {
-    const nextGroup = findNextGroup(this.group());
-    this.router.navigate([
-      '/',
-      nextGroup.category.pathParam,
-      nextGroup.pathParam,
-      'exercice',
-    ]);
   }
 
   private areAllWordsAnswered(wordsAnswered: Set<string>): boolean {

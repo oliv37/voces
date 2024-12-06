@@ -124,3 +124,5 @@ competencia : compétence
 arrodillar : s'agenouiller
 juguete : jouet
 habilitar : aménager, habiliter
+feroz : féroce
+hipocresia : hypocrisie
