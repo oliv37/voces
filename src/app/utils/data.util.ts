@@ -21,14 +21,14 @@ export const DATA: Category[][] = [
       'DEBUTANT1',
       'Débutant 1',
       'debutant-1',
-      buildWords(dataDebutant1),
+      dataDebutant1,
       BG_COLOR_DEBUTANT
     ),
     buildCategory(
       'DEBUTANT2',
       'Débutant 2',
       'debutant-2',
-      buildWords(dataDebutant2),
+      dataDebutant2,
       BG_COLOR_DEBUTANT
     ),
   ],
@@ -37,14 +37,14 @@ export const DATA: Category[][] = [
       'INTERMEDIAIRE1',
       'Intermédiaire 1',
       'intermediaire-1',
-      buildWords(dataIntermediaire1),
+      dataIntermediaire1,
       BG_COLOR_INTERMEDIAIRE
     ),
     buildCategory(
       'INTERMEDIAIRE2',
       'Intermédiaire 2',
       'intermediaire-2',
-      buildWords(dataIntermediaire2),
+      dataIntermediaire2,
       BG_COLOR_INTERMEDIAIRE
     ),
 
@@ -52,7 +52,7 @@ export const DATA: Category[][] = [
       'INTERMEDIAIRE3',
       'Intermédiaire 3',
       'intermediaire-3',
-      buildWords(dataIntermediaire3),
+      dataIntermediaire3,
       BG_COLOR_INTERMEDIAIRE
     ),
   ],
@@ -61,7 +61,7 @@ export const DATA: Category[][] = [
       'AVANCE1',
       'Avancé 1',
       'avance-1',
-      buildWords(dataAvance1),
+      dataAvance1,
       BG_COLOR_AVANCEE
     ),
   ],
@@ -71,9 +71,10 @@ function buildCategory(
   id: string,
   label: string,
   pathParam: string,
-  words: Word[],
+  data: string,
   bgColor: string
 ): Category {
+  const words: Word[] = buildWords(id, data);
   const category: Category = {
     id,
     label,
@@ -102,14 +103,14 @@ function buildGroups(categoryId: string, words: Word[]): Group[] {
   });
 }
 
-function buildWords(data: string): Word[] {
+function buildWords(categoryId: string, data: string): Word[] {
   return data
     .split('\n')
     .filter((line) => !!line)
-    .map((line, id) => {
+    .map((line, i) => {
       const [es, fr] = line.split(' : ');
       return {
-        id,
+        id: `${categoryId}_${i}`,
         es,
         fr,
       };

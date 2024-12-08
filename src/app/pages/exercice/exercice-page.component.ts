@@ -1,173 +1,61 @@
-import {
-  Component,
-  computed,
-  effect,
-  ElementRef,
-  inject,
-  input,
-  linkedSignal,
-  OnDestroy,
-  OnInit,
-  untracked,
-  viewChild,
-} from '@angular/core';
-import { ClientSideComponent } from '@components/client-side/client-side.component';
-import { Group } from '@models/group.model';
+import { Component, computed, effect, inject, viewChild } from '@angular/core';
 import { Word } from '@models/word.model';
-import { StarIconComponent } from '../../components/icon/star-icon/star-icon.component';
-import { SpacerComponent } from '../../components/spacer/spacer.component';
-import { StarFillIconComponent } from '../../components/icon/star-fill-icon/star-fill-icon.component';
+import { ClientSideComponent } from '../../components/client-side/client-side.component';
+import { Level, LEVELS } from '@models/exercice.model';
 import { ExerciceLevel1Component } from '../../components/exercice/exercice-level-1/exercice-level-1.component';
 import { ExerciceLevel2Component } from '../../components/exercice/exercice-level-2/exercice-level-2.component';
 import { ExerciceLevel3Component } from '../../components/exercice/exercice-level-3/exercice-level-3.component';
-import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
-import { State, Level, LEVELS } from '@models/exercice.model';
-import { findNextGroup, findPreviousGroup } from '@utils/group.util';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
-import { shuffle } from '@utils/array.util';
-import { GroupCompletionService } from '@services/group-completion.service';
-import { GroupLinkComponent } from '../../components/group/group-link/group-link.component';
-import { Meta } from '@angular/platform-browser';
+import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
+import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice-level-picker/exercice-level-picker.component';
+import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
+import { ExerciceService } from '@services/exercice.service';
+import { NoIndexDirective } from '@directives/no-index.directive';
 
 @Component({
+  selector: 'app-exercice-page',
   imports: [
     ClientSideComponent,
-    StarIconComponent,
-    SpacerComponent,
-    StarFillIconComponent,
     ExerciceLevel1Component,
     ExerciceLevel2Component,
     ExerciceLevel3Component,
     ExerciceButtonBarComponent,
-    GroupLinkComponent,
+    SpacerComponent,
+    ExerciceLevelPickerComponent,
+    WordsGridComponent,
+    NoIndexDirective,
   ],
   templateUrl: './exercice-page.component.html',
 })
-export class ExercicePageComponent implements OnInit, OnDestroy {
+export class ExercicePageComponent {
   readonly levels = LEVELS;
 
-  el = inject(ElementRef);
-  meta = inject(Meta);
-  groupCompletionService = inject(GroupCompletionService);
+  exerciceService = inject(ExerciceService);
 
-  group = input.required<Group>();
-
-  state = linkedSignal<State>(() => ({
-    words: shuffle(this.group().words),
-    wordIdx: 0,
-    level: 1,
-    wordsAnswered: new Set(),
-  }));
-
-  word = computed<Word>(() => this.state().words[this.state().wordIdx]);
-  nbWords = computed<number>(() => this.state().words.length);
-  progressPercent = computed<number>(
-    () => (this.state().wordIdx * 100) / this.nbWords()
+  nbWords = computed<number>(() => this.exerciceService.nbWords());
+  wordsAnswered = computed<Word[]>(
+    () => this.exerciceService.state().wordsAnswered
   );
-  previousGroup = computed<Group>(() => findPreviousGroup(this.group()));
-  nextGroup = computed<Group>(() => findNextGroup(this.group()));
+  wordsRemaining = computed<Word[]>(
+    () => this.exerciceService.state().wordsRemaining
+  );
+  word = computed<Word | undefined>(() => this.wordsRemaining()[0]);
+  level = computed<Level>(() => this.exerciceService.state().level);
+  progressPercent = computed<number>(
+    () => (this.wordsAnswered().length * 100) / this.nbWords()
+  );
 
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');
 
-  resetEffect = effect(() => {
-    this.group();
-
-    untracked(() => this.reset());
-  });
-
   focusEffect = effect(() => {
-    this.state();
+    this.exerciceService.state();
 
     this.exerciceLevelCmp()?.focus();
   });
-
-  ngOnInit(): void {
-    this.meta.addTag({ name: 'robots', content: 'noindex' });
-  }
-
-  ngOnDestroy(): void {
-    this.meta.removeTag('name=robots');
-  }
-
-  reset() {
-    this.state.set({
-      words: shuffle(this.group().words),
-      wordIdx: 0,
-      level: 1,
-      wordsAnswered: new Set(),
-    });
-  }
 
   help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();
-  }
-
-  previousWord() {
-    this.state.update(({ words, wordIdx, level, wordsAnswered }) => ({
-      words,
-      wordIdx: (wordIdx - 1 + words.length) % words.length,
-      level,
-      wordsAnswered,
-    }));
-  }
-
-  nextWord() {
-    this.state.update(({ words, wordIdx, level, wordsAnswered }) => ({
-      words: wordIdx == words.length - 1 ? shuffle(words) : words,
-      wordIdx: (wordIdx + 1) % words.length,
-      level,
-      wordsAnswered,
-    }));
-  }
-
-  answerWord() {
-    const newWordsAnswered = new Set([
-      ...this.state().wordsAnswered,
-      this.word().es,
-    ]);
-    const allWordsAnswered = this.areAllWordsAnswered(newWordsAnswered);
-
-    if (allWordsAnswered) {
-      this.groupCompletionService.markAsCompleted(this.group());
-    }
-
-    this.state.update(({ words, wordIdx, level }) => ({
-      words: wordIdx == words.length - 1 ? shuffle(words) : words,
-      wordIdx: (wordIdx + 1) % words.length,
-      level,
-      wordsAnswered: allWordsAnswered ? new Set() : newWordsAnswered,
-    }));
-  }
-
-  previousLevel() {
-    this.state.update(({ words, level, wordsAnswered }) => ({
-      words: shuffle(words),
-      wordIdx: 0,
-      level: level === 1 ? 3 : ((level - 1) as Level),
-      wordsAnswered,
-    }));
-  }
-
-  nextLevel() {
-    this.state.update(({ words, level, wordsAnswered }) => ({
-      words: shuffle(words),
-      wordIdx: 0,
-      level: level === 3 ? 1 : ((level + 1) as Level),
-      wordsAnswered,
-    }));
-  }
-
-  setLevel(level: Level) {
-    this.state.update(({ words, wordsAnswered }) => ({
-      words: shuffle(words),
-      wordIdx: 0,
-      level,
-      wordsAnswered,
-    }));
-  }
-
-  private areAllWordsAnswered(wordsAnswered: Set<string>): boolean {
-    return this.state().words.every((word) => wordsAnswered.has(word.es));
   }
 }

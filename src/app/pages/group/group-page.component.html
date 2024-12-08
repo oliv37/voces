@@ -1,11 +1,4 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-  @for (word of group().words; track word.id) {
-  <div class="grid grid-cols-1">
-    <div class="font-bold">{{ word.es }}</div>
-    <div>{{ word.fr }}</div>
-  </div>
-  }
-</div>
+<app-words-grid [words]="group().words" />
 
 <app-spacer size="xl" />
 

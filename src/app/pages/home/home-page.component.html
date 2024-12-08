@@ -1,8 +1,13 @@
 <h1 class="text-center text-3xl">
-  <span class="font-bold text-white bg-black px-1 rounded-md">{{
-    nbWords()
-  }}</span>
-  mots
+  <a
+    [routerLink]="['/exercice']"
+    class="inline-block p-5 transition-transform duration-300 hover:scale-110"
+  >
+    <span class="font-bold text-white bg-black px-1 rounded-md">{{
+      nbWords()
+    }}</span>
+    mots
+  </a>
 </h1>
 
 <app-spacer size="2xl" />

@@ -1,57 +1,48 @@
-<app-client-side>
+<app-client-side appNoIndex>
   <div
-    class="fixed top-0 left-0 h-1 transition-all duration-500"
-    [class]="group().category.bgColor"
+    class="fixed top-0 left-0 h-1 transition-all duration-500 bg-slate-600"
     [style.width]="progressPercent() + '%'"
   ></div>
   <div class="flex flex-col items-center gap-20 cursor-default relative">
     <div class="flex flex-col items-center">
-      <div class="flex gap-5">
-        @for (level of levels; track $index) {
-        <button type="button" class="px-3 py-1" (click)="setLevel(level)">
-          @if (level <= state().level) {
-          <app-star-fill-icon className="w-10 h-10 fill-neutral-800" />
-          } @else {
-          <app-star-icon className="w-10 h-10" />
-          }
-        </button>
-        }
-      </div>
+      <app-exercice-level-picker
+        [level]="level()"
+        (levelChange)="exerciceService.setLevel($event)"
+      ></app-exercice-level-picker>
       <app-spacer size="lg" />
       <span class="text-neutral-900"
-        >{{ state().wordIdx + 1 }} / {{ nbWords() }}</span
+        >{{ wordsAnswered().length }} / {{ nbWords() }}</span
       >
     </div>
-    <div class="text-6xl text-gray-800 tracking-wide">{{ word().fr }}</div>
-    @if (state().level === 1) {
+
+    @if(word(); as w) {
+    <div class="text-6xl text-gray-800 tracking-wide">{{ w.fr }}</div>
+    @if (level() === 1) {
     <app-exercice-level-1
       #exerciceLevelCmp
-      [word]="word().es"
-      (next)="nextWord()"
+      [word]="w.es"
+      (next)="exerciceService.answerWord()"
     ></app-exercice-level-1>
-    } @else if (state().level === 2) {
+    } @else if (level() === 2) {
     <app-exercice-level-2
       #exerciceLevelCmp
-      [word]="word().es"
-      (next)="nextWord()"
+      [word]="w.es"
+      (next)="exerciceService.answerWord()"
     ></app-exercice-level-2>
-    } @else if (state().level === 3) {
+    } @else if (level() === 3) {
     <app-exercice-level-3
       #exerciceLevelCmp
-      [word]="word().es"
-      (next)="answerWord()"
+      [word]="w.es"
+      (next)="exerciceService.answerWord()"
     ></app-exercice-level-3>
-    }
+    } }
 
     <app-exercice-button-bar
-      (arrowLeft)="previousLevel()"
-      (arrowLeftShort)="previousWord()"
+      showArrow="false"
       (patchQuestion)="help()"
-      (arrowClockwise)="reset()"
-      (arrowRightShort)="nextWord()"
-      (arrowRight)="nextLevel()"
+      (arrowClockwise)="exerciceService.reset()"
     />
-
-    <app-group-link [group]="nextGroup()" displayNextIcon="true" />
   </div>
+  <app-spacer size="8xl" />
+  <app-words-grid [words]="wordsAnswered()" />
 </app-client-side>

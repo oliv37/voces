@@ -1,5 +1,5 @@
 export interface Word {
-  id: number;
+  id: string;
   es: string;
   fr: string;
 }

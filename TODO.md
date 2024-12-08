@@ -1,3 +1,3 @@
-- exercice page for all words (link on home page)
+- exercice page link on home page
 - add service worker
-- define meta description for each route
+- define meta description for each route (homePage / categoryPage / groupPage)

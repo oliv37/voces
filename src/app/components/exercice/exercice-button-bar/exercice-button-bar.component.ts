@@ -1,11 +1,11 @@
-import { Component, output } from '@angular/core';
+import { booleanAttribute, Component, input, output } from '@angular/core';
 import { ArrowLeftIconComponent } from '../../icon/arrow-left-icon/arrow-left-icon.component';
 import { ArrowLeftShortIconComponent } from '../../icon/arrow-left-short-icon/arrow-left-short-icon.component';
 import { PatchQuestionIconComponent } from '../../icon/patch-question-icon/patch-question-icon.component';
 import { ArrowClockwiseIconComponent } from '../../icon/arrow-clockwise-icon/arrow-clockwise-icon.component';
 import { ArrowRightShortIconComponent } from '../../icon/arrow-right-short-icon/arrow-right-short-icon.component';
 import { ArrowRightIconComponent } from '../../icon/arrow-right-icon/arrow-right-icon.component';
-import { BtnDirective } from '@directives/btn/btn.directive';
+import { BtnDirective } from '@directives/btn.directive';
 
 @Component({
   selector: 'app-exercice-button-bar',
@@ -21,6 +21,7 @@ import { BtnDirective } from '@directives/btn/btn.directive';
   ],
 })
 export class ExerciceButtonBarComponent {
+  showArrow = input(true, { transform: booleanAttribute });
   arrowLeft = output();
   arrowLeftShort = output();
   patchQuestion = output();

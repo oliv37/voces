@@ -7,14 +7,15 @@ import {
   input,
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { BtnDirective } from '@directives/btn/btn.directive';
+import { BtnDirective } from '@directives/btn.directive';
 import { Group } from '@models/group.model';
 import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
+import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
 
 @Component({
-    imports: [RouterLink, BtnDirective, SpacerComponent],
-    templateUrl: './group-page.component.html'
+  imports: [RouterLink, BtnDirective, SpacerComponent, WordsGridComponent],
+  templateUrl: './group-page.component.html',
 })
 export class GroupPageComponent {
   router = inject(Router);

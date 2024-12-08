@@ -5,8 +5,8 @@ import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { DATA } from '@utils/data.util';
 
 @Component({
-    imports: [RouterLink, SpacerComponent],
-    templateUrl: './home-page.component.html'
+  imports: [RouterLink, SpacerComponent],
+  templateUrl: './home-page.component.html',
 })
 export class HomePageComponent {
   data = signal<Category[][]>(DATA).asReadonly();

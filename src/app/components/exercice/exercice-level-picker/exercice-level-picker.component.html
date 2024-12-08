@@ -1,0 +1,11 @@
+<div class="flex gap-5">
+  @for (_lvl of levels; track $index) {
+  <button type="button" class="px-3 py-1" (click)="level.set(_lvl)">
+    @if (_lvl <= level()) {
+    <app-star-fill-icon className="w-10 h-10 fill-neutral-800" />
+    } @else {
+    <app-star-icon className="w-10 h-10" />
+    }
+  </button>
+  }
+</div>

@@ -86,7 +86,7 @@ destruir : détruire
 administrar : administrer, diriger
 arriesgar : risquer
 tratamiento : traitement
-procentaje : pourcentage
+porcentaje : pourcentage
 aproximadamente : environ, approximativement
 asimismo : de même, aussi
 recaida : rechute

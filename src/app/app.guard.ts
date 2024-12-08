@@ -7,6 +7,10 @@ export const canMatchApp: CanMatchFn = (route, segments) => {
     return true;
   }
 
+  if (segments.length === 1 && segments[0].path === 'exercice') {
+    return true;
+  }
+
   if (segments.length === 1) {
     const categoryPathParam = segments[0].path;
     return !!findCategory(categoryPathParam);

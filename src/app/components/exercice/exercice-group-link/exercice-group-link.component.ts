@@ -5,15 +5,15 @@ import { ArrowRightCircleFillIconComponent } from '@components/icon/arrow-right-
 import { Group } from '@models/group.model';
 
 @Component({
-  selector: 'app-group-link',
+  selector: 'app-exercice-group-link',
   imports: [
     ArrowLeftCircleFillIconComponent,
     ArrowRightCircleFillIconComponent,
     RouterLink,
   ],
-  templateUrl: './group-link.component.html',
+  templateUrl: './exercice-group-link.component.html',
 })
-export class GroupLinkComponent {
+export class ExerciceGroupLinkComponent {
   group = input.required<Group>();
   displayPreviousIcon = input(false, { transform: booleanAttribute });
   displayNextIcon = input(false, { transform: booleanAttribute });
