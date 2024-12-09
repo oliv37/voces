@@ -1,3 +1,3 @@
-- exercice page link on home page
-- add service worker
+- create exercice-group.service
 - define meta description for each route (homePage / categoryPage / groupPage)
+- add service worker

@@ -31,17 +31,17 @@ import { NoIndexDirective } from '@directives/no-index.directive';
 export class ExercicePageComponent {
   readonly levels = LEVELS;
 
-  exerciceService = inject(ExerciceService);
+  private _exerciceService = inject(ExerciceService);
 
-  nbWords = computed<number>(() => this.exerciceService.nbWords());
+  nbWords = computed<number>(() => this._exerciceService.nbWords());
   wordsAnswered = computed<Word[]>(
-    () => this.exerciceService.state().wordsAnswered
+    () => this._exerciceService.state().wordsAnswered
   );
   wordsRemaining = computed<Word[]>(
-    () => this.exerciceService.state().wordsRemaining
+    () => this._exerciceService.state().wordsRemaining
   );
   word = computed<Word | undefined>(() => this.wordsRemaining()[0]);
-  level = computed<Level>(() => this.exerciceService.state().level);
+  level = computed<Level>(() => this._exerciceService.state().level);
   progressPercent = computed<number>(
     () => (this.wordsAnswered().length * 100) / this.nbWords()
   );
@@ -49,10 +49,22 @@ export class ExercicePageComponent {
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');
 
   focusEffect = effect(() => {
-    this.exerciceService.state();
+    this._exerciceService.state();
 
     this.exerciceLevelCmp()?.focus();
   });
+
+  answerWord() {
+    this._exerciceService.answerWord();
+  }
+
+  setLevel(level: Level) {
+    this._exerciceService.setLevel(level);
+  }
+
+  reset() {
+    this._exerciceService.reset();
+  }
 
   help() {
     this.exerciceLevelCmp()?.help();

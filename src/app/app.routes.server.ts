@@ -3,7 +3,7 @@ import { DATA } from '@utils/data.util';
 
 export const serverRoutes: ServerRoute[] = [
   {
-    path: ':category/:group',
+    path: '**',
     renderMode: RenderMode.Prerender,
     fallback: PrerenderFallback.None,
     async getPrerenderParams() {
@@ -16,9 +16,5 @@ export const serverRoutes: ServerRoute[] = [
         )
         .flat();
     },
-  },
-  {
-    path: '**',
-    renderMode: RenderMode.Prerender,
   },
 ];

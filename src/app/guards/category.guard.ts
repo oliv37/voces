@@ -2,12 +2,8 @@ import { CanMatchFn } from '@angular/router';
 import { findCategory } from '@utils/category.util';
 import { findGroup } from '@utils/group.util';
 
-export const canMatchApp: CanMatchFn = (route, segments) => {
+export const canMatchCategory: CanMatchFn = (route, segments) => {
   if (segments.length === 0) {
-    return true;
-  }
-
-  if (segments.length === 1 && segments[0].path === 'exercice') {
     return true;
   }
 

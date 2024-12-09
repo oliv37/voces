@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { NotFoundPageComponent } from './pages/not-found/not-found-page.component';
 import { GroupPageComponent } from '@pages/group/group-page.component';
 import { CategoryPageComponent } from './pages/category/category-page.component';
-import { canMatchApp } from './app.guard';
+import { canMatchCategory } from './guards/category.guard';
 import { HomePageComponent } from './pages/home/home-page.component';
 import { ExerciceGroupPageComponent } from '@pages/exercice-group/exercice-group-page.component';
 import { resolveCategory } from '@resolvers/category.resolver';
@@ -16,19 +16,19 @@ import { ExerciceService } from '@services/exercice.service';
 export const routes: Routes = [
   {
     path: '',
-    canMatch: [canMatchApp],
+    title: 'Vocabulaire Espagnol - Voces',
+    component: HomePageComponent,
+  },
+  {
+    path: 'exercice',
+    title: 'Exercice Vocabulaire Espagnol - Voces',
+    component: ExercicePageComponent,
+    providers: [ExerciceService],
+  },
+  {
+    path: '',
+    canMatch: [canMatchCategory],
     children: [
-      {
-        path: '',
-        title: 'Vocabulaire Espagnol - Voces',
-        component: HomePageComponent,
-      },
-      {
-        path: 'exercice',
-        title: 'Exercice Vocabulaire Espagnol - Voces',
-        component: ExercicePageComponent,
-        providers: [ExerciceService],
-      },
       {
         path: ':category',
         resolve: {
