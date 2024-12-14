@@ -1,4 +1,4 @@
-import { effect, inject, Injectable, signal } from '@angular/core';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Level } from '@models/exercice.model';
 import { Word } from '@models/word.model';
 import { shuffle } from '@utils/array.util';
@@ -18,7 +18,15 @@ export class ExerciceService {
   nbWords = signal<number>(ALL_WORDS.length).asReadonly();
   state = signal<State>(this.getState(LEVEL_1));
 
-  saveStateEffect = effect(() => {
+  level = computed<Level>(() => this.state().level);
+  wordsAnswered = computed<Word[]>(() => this.state().wordsAnswered);
+  wordsRemaining = computed<Word[]>(() => this.state().wordsRemaining);
+  word = computed<Word | undefined>(() => this.wordsRemaining()[0]);
+  progressPercent = computed<number>(
+    () => (this.wordsAnswered().length * 100) / this.nbWords()
+  );
+
+  _saveStateEffect = effect(() => {
     const state = this.state();
     this._storageService.write(
       `EXERCICE_STATE_LEVEL_${state.level}`,

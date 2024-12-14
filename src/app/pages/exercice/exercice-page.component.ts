@@ -1,5 +1,4 @@
 import { Component, computed, effect, inject, viewChild } from '@angular/core';
-import { Word } from '@models/word.model';
 import { ClientSideComponent } from '../../components/client-side/client-side.component';
 import { Level, LEVELS } from '@models/exercice.model';
 import { ExerciceLevel1Component } from '../../components/exercice/exercice-level-1/exercice-level-1.component';
@@ -12,6 +11,7 @@ import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice
 import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
 import { ExerciceService } from '@services/exercice.service';
 import { NoIndexDirective } from '@directives/no-index.directive';
+import { Word } from '@models/word.model';
 
 @Component({
   selector: 'app-exercice-page',
@@ -26,6 +26,7 @@ import { NoIndexDirective } from '@directives/no-index.directive';
     WordsGridComponent,
     NoIndexDirective,
   ],
+  providers: [ExerciceService],
   templateUrl: './exercice-page.component.html',
 })
 export class ExercicePageComponent {
@@ -33,17 +34,15 @@ export class ExercicePageComponent {
 
   private _exerciceService = inject(ExerciceService);
 
-  nbWords = computed<number>(() => this._exerciceService.nbWords());
-  wordsAnswered = computed<Word[]>(
-    () => this._exerciceService.state().wordsAnswered
-  );
-  wordsRemaining = computed<Word[]>(
-    () => this._exerciceService.state().wordsRemaining
-  );
-  word = computed<Word | undefined>(() => this.wordsRemaining()[0]);
-  level = computed<Level>(() => this._exerciceService.state().level);
-  progressPercent = computed<number>(
-    () => (this.wordsAnswered().length * 100) / this.nbWords()
+  nbWords = this._exerciceService.nbWords;
+  wordsAnswered = this._exerciceService.wordsAnswered;
+  wordsRemaining = this._exerciceService.wordsRemaining;
+  word = this._exerciceService.word;
+  level = this._exerciceService.level;
+  progressPercent = this._exerciceService.progressPercent;
+
+  wordsAnsweredReversed = computed<Word[]>(() =>
+    this.wordsAnswered().reverse()
   );
 
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');

@@ -1,3 +1,4 @@
-- create exercice-group.service
 - define meta description for each route (homePage / categoryPage / groupPage)
+- define meta robots
+- define og tags
 - add service worker

@@ -11,7 +11,6 @@ import { resolveCategoryTitle } from '@resolvers/title/category-title.resolver';
 import { resolveGroupTitle } from '@resolvers/title/group-title.resolver';
 import { resolveExerciceGroupTitle } from '@resolvers/title/exercice-group-title.resolver';
 import { ExercicePageComponent } from '@pages/exercice/exercice-page.component';
-import { ExerciceService } from '@services/exercice.service';
 
 export const routes: Routes = [
   {
@@ -23,7 +22,6 @@ export const routes: Routes = [
     path: 'exercice',
     title: 'Exercice Vocabulaire Espagnol - Voces',
     component: ExercicePageComponent,
-    providers: [ExerciceService],
   },
   {
     path: '',
