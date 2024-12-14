@@ -18,8 +18,8 @@ import { findNextGroup } from '@utils/group.util';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceGroupLinkComponent } from '../../components/exercice/exercice-group-link/exercice-group-link.component';
 import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice-level-picker/exercice-level-picker.component';
-import { NoIndexDirective } from '@directives/no-index.directive';
 import { ExerciceGroupService } from '@services/exercice-group.service';
+import { MetaDirective } from '../../directives/meta.directive';
 
 @Component({
   imports: [
@@ -31,7 +31,7 @@ import { ExerciceGroupService } from '@services/exercice-group.service';
     ExerciceButtonBarComponent,
     ExerciceGroupLinkComponent,
     ExerciceLevelPickerComponent,
-    NoIndexDirective,
+    MetaDirective,
   ],
   providers: [ExerciceGroupService],
   templateUrl: './exercice-group-page.component.html',

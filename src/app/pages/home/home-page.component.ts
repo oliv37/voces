@@ -3,9 +3,10 @@ import { RouterLink } from '@angular/router';
 import { Category } from '@models/category.model';
 import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { DATA } from '@utils/data.util';
+import { MetaDirective } from '@directives/meta.directive';
 
 @Component({
-  imports: [RouterLink, SpacerComponent],
+  imports: [RouterLink, SpacerComponent, MetaDirective, MetaDirective],
   templateUrl: './home-page.component.html',
 })
 export class HomePageComponent {

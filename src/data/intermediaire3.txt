@@ -110,3 +110,48 @@ expectacion : attente
 quiniela : grille de loto
 portada : couverture, première page
 saldar : solder
+pellejo : peau
+ruborizar : rougir
+caricia : caresse
+forastero : étranger
+arropar : couvrir, emmitoufler
+transcurso : cours, passage (temps)
+alba : aube
+sarten : poêle
+parir : accoucher de
+semejanza : ressemblance
+tieso : raide, droit
+camison : chemise de nuit
+amamantar : allaiter
+bulla : vacarme
+alboroto : tapage, vacarme
+alumbramiento : accouchement
+pezon : téton
+sabiduria : savoir
+liebre : lièvre
+tijeras : ciseaux
+palmada : tape
+trajin : agitation
+pudoroso : pudique
+curiosear : fouiner
+acartonar : durcir
+rinon : rein
+chiquillo : enfant
+manso : doux, paisible
+carestia : pénurie
+cacharro : casserole
+estufa : radiateur, chauffage
+jaula : cage
+costado : côte
+consuelo : consolation
+calloso : rugueux
+sufragar : financer
+plomero : plombier
+preso : prisonnier
+amparar : protéger
+hosco : bourru
+piedad : pitié
+congoja : angoisse
+ternura : tendresse
+inconmovible : inébranlable
+rascar : gratter

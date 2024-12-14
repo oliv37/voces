@@ -1,4 +1,2 @@
-- define meta description for each route (homePage / categoryPage / groupPage)
-- define meta robots
-- define og tags
+- define meta og tags
 - add service worker

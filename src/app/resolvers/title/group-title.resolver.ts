@@ -7,5 +7,5 @@ export function resolveGroupTitle(
 ): string {
   const categoryLabel = getCategoryLabel(route);
   const groupLabel = getGroupLabel(route);
-  return `Vocabulaire Espagnol | ${categoryLabel} | ${groupLabel} - Voces`;
+  return `Vocabulaire Espagnol | ${categoryLabel} | Groupe ${groupLabel} - Voces`;
 }

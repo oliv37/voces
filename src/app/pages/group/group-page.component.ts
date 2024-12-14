@@ -1,6 +1,7 @@
 import {
   afterNextRender,
   Component,
+  computed,
   ElementRef,
   HostListener,
   inject,
@@ -12,9 +13,16 @@ import { Group } from '@models/group.model';
 import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
+import { MetaDirective } from '../../directives/meta.directive';
 
 @Component({
-  imports: [RouterLink, BtnDirective, SpacerComponent, WordsGridComponent],
+  imports: [
+    RouterLink,
+    BtnDirective,
+    SpacerComponent,
+    WordsGridComponent,
+    MetaDirective,
+  ],
   templateUrl: './group-page.component.html',
 })
 export class GroupPageComponent {
@@ -23,6 +31,11 @@ export class GroupPageComponent {
   elementRef = inject(ElementRef);
 
   group = input.required<Group>();
+
+  metaDescription = computed<string>(() => {
+    const group = this.group();
+    return `Vocabulaire Espagnol ${group.category.label} Groupe ${group.label}`;
+  });
 
   constructor() {
     afterNextRender(() => this.elementRef.nativeElement.focus());

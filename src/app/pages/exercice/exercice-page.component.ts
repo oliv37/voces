@@ -10,8 +10,8 @@ import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice-level-picker/exercice-level-picker.component';
 import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
 import { ExerciceService } from '@services/exercice.service';
-import { NoIndexDirective } from '@directives/no-index.directive';
 import { Word } from '@models/word.model';
+import { MetaDirective } from '../../directives/meta.directive';
 
 @Component({
   selector: 'app-exercice-page',
@@ -24,7 +24,7 @@ import { Word } from '@models/word.model';
     SpacerComponent,
     ExerciceLevelPickerComponent,
     WordsGridComponent,
-    NoIndexDirective,
+    MetaDirective,
   ],
   providers: [ExerciceService],
   templateUrl: './exercice-page.component.html',
