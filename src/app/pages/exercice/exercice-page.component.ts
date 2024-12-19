@@ -6,10 +6,9 @@ import { ExerciceLevel2Component } from '../../components/exercice/exercice-leve
 import { ExerciceLevel3Component } from '../../components/exercice/exercice-level-3/exercice-level-3.component';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
-import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice-level-picker/exercice-level-picker.component';
 import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
-import { ExerciceService } from '@services/exercice.service';
+import { ExerciceService } from './exercice.service';
 import { Word } from '@models/word.model';
 import { MetaDirective } from '../../directives/meta.directive';
 
@@ -21,7 +20,6 @@ import { MetaDirective } from '../../directives/meta.directive';
     ExerciceLevel2Component,
     ExerciceLevel3Component,
     ExerciceButtonBarComponent,
-    SpacerComponent,
     ExerciceLevelPickerComponent,
     WordsGridComponent,
     MetaDirective,

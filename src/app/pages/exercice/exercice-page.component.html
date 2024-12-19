@@ -14,7 +14,7 @@
         [level]="level()"
         (levelChange)="setLevel($event)"
       ></app-exercice-level-picker>
-      <app-spacer size="lg" />
+      <div class="py-4"></div>
       <span class="text-neutral-900"
         >{{ wordsAnswered().length }} / {{ nbWords() }}</span
       >
@@ -48,6 +48,6 @@
       (arrowClockwise)="reset()"
     />
   </div>
-  <app-spacer size="8xl" />
+  <div class="py-12"></div>
   <app-words-grid [words]="wordsAnsweredReversed()" />
 </app-client-side>

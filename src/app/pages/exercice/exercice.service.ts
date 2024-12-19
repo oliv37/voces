@@ -3,7 +3,7 @@ import { Level } from '@models/exercice.model';
 import { Word } from '@models/word.model';
 import { shuffle } from '@utils/array.util';
 import { DATA } from '@utils/data.util';
-import { StorageService } from './storage.service';
+import { StorageService } from '@services/storage.service';
 
 const ALL_WORDS: Word[] = DATA.flat()
   .flatMap((category) => category.groups)

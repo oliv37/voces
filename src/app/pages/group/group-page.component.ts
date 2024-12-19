@@ -10,19 +10,12 @@ import {
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { BtnDirective } from '@directives/btn.directive';
 import { Group } from '@models/group.model';
-import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { IgnoreTarget } from '@decorators/ignore-event-target.decorator';
 import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
 import { MetaDirective } from '../../directives/meta.directive';
 
 @Component({
-  imports: [
-    RouterLink,
-    BtnDirective,
-    SpacerComponent,
-    WordsGridComponent,
-    MetaDirective,
-  ],
+  imports: [RouterLink, BtnDirective, WordsGridComponent, MetaDirective],
   templateUrl: './group-page.component.html',
 })
 export class GroupPageComponent {

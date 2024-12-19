@@ -8,7 +8,7 @@ import {
   untracked,
   WritableSignal,
 } from '@angular/core';
-import { GroupCompletionService } from './group-completion.service';
+import { GroupCompletionService } from '../../services/group-completion.service';
 import { Word } from '@models/word.model';
 import { Level } from '@models/exercice.model';
 import { shuffle } from '@utils/array.util';
@@ -22,12 +22,12 @@ export class ExerciceGroupService {
   private _route = inject(ActivatedRoute);
   private _groupCompletionService = inject(GroupCompletionService);
 
-  private _group: Signal<Group | undefined> = toSignal(
+  group: Signal<Group | undefined> = toSignal(
     this._route.data.pipe(map((data) => data['group'] as Group))
   );
 
   private _state: WritableSignal<State> = linkedSignal<State>(() => {
-    const words: Word[] = this._group()?.words || [];
+    const words: Word[] = this.group()?.words || [];
     return {
       words: shuffle(words),
       wordIdx: 0,
@@ -50,14 +50,14 @@ export class ExerciceGroupService {
   );
 
   _resetEffect = effect(() => {
-    this._group();
+    this.group();
 
     untracked(() => this.reset());
   });
 
   reset() {
     this._state.set({
-      words: shuffle(this._group()?.words || []),
+      words: shuffle(this.group()?.words || []),
       wordIdx: 0,
       level: 1,
       wordsAnswered: new Set(),
@@ -83,7 +83,7 @@ export class ExerciceGroupService {
   }
 
   answerWord() {
-    const group = this._group();
+    const group = this.group();
     const word = this.word();
     const level = this.level();
     const wordsAnswered = this.state().wordsAnswered;

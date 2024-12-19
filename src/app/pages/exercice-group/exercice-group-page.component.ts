@@ -1,14 +1,6 @@
-import {
-  Component,
-  computed,
-  effect,
-  inject,
-  input,
-  viewChild,
-} from '@angular/core';
+import { Component, computed, effect, inject, viewChild } from '@angular/core';
 import { ClientSideComponent } from '@components/client-side/client-side.component';
 import { Group } from '@models/group.model';
-import { SpacerComponent } from '../../components/spacer/spacer.component';
 import { ExerciceLevel1Component } from '../../components/exercice/exercice-level-1/exercice-level-1.component';
 import { ExerciceLevel2Component } from '../../components/exercice/exercice-level-2/exercice-level-2.component';
 import { ExerciceLevel3Component } from '../../components/exercice/exercice-level-3/exercice-level-3.component';
@@ -18,13 +10,12 @@ import { findNextGroup } from '@utils/group.util';
 import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceGroupLinkComponent } from '../../components/exercice/exercice-group-link/exercice-group-link.component';
 import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice-level-picker/exercice-level-picker.component';
-import { ExerciceGroupService } from '@services/exercice-group.service';
+import { ExerciceGroupService } from './exercice-group.service';
 import { MetaDirective } from '../../directives/meta.directive';
 
 @Component({
   imports: [
     ClientSideComponent,
-    SpacerComponent,
     ExerciceLevel1Component,
     ExerciceLevel2Component,
     ExerciceLevel3Component,
@@ -41,28 +32,25 @@ export class ExerciceGroupPageComponent {
 
   private _exerciceGroupService = inject(ExerciceGroupService);
 
-  group = input.required<Group>();
-
-  nextGroup = computed<Group>(() => findNextGroup(this.group()));
-
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');
 
+  group = this._exerciceGroupService.group;
   level = this._exerciceGroupService.level;
   wordIdx = this._exerciceGroupService.wordIdx;
   word = this._exerciceGroupService.word;
   nbWords = this._exerciceGroupService.nbWords;
   progressPercent = this._exerciceGroupService.progressPercent;
 
+  nextGroup = computed<Group | undefined>(() => {
+    const group = this.group();
+    return group ? findNextGroup(group) : undefined;
+  });
+
   _focusEffect = effect(() => {
     this._exerciceGroupService.state();
 
     this.exerciceLevelCmp()?.focus();
   });
-
-  help() {
-    this.exerciceLevelCmp()?.help();
-    this.exerciceLevelCmp()?.focus();
-  }
 
   reset() {
     this._exerciceGroupService.reset();
@@ -90,5 +78,10 @@ export class ExerciceGroupPageComponent {
 
   setLevel(level: Level) {
     this._exerciceGroupService.setLevel(level);
+  }
+
+  help() {
+    this.exerciceLevelCmp()?.help();
+    this.exerciceLevelCmp()?.focus();
   }
 }

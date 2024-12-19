@@ -126,3 +126,6 @@ juguete : jouet
 habilitar : aménager, habiliter
 feroz : féroce
 hipocresia : hypocrisie
+azucar : sucre
+ajo : ail
+defecto : défaut

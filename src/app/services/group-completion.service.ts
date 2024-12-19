@@ -37,9 +37,6 @@ export class GroupCompletionService {
 
   private readGroupCompletion(): GroupCompletion {
     const value = this._storageService.read('GROUP_COMPLETION');
-
-    // TODO : remove old groupCompletion
-
     return value ? (JSON.parse(value) as GroupCompletion) : {};
   }
 }

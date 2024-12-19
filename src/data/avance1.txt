@@ -74,3 +74,11 @@ surco : sillon
 villorio : bled
 socarron : narquois
 no dar abastos : ne pas s'en sortir
+alpargata : espadrille
+labranza : labourage
+terron : morceau
+regar : répandre
+cilantro : coriande
+mana : manne providentielle
+ganzua : crochet
+ventarron : bourrasque
