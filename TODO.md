@@ -1,3 +1,5 @@
+- change home page card color
+- move exercice level in header
 - add animation
 - define meta og tags
 - add service worker

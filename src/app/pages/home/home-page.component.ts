@@ -5,7 +5,7 @@ import { DATA } from '@utils/data.util';
 import { MetaDirective } from '@directives/meta.directive';
 
 @Component({
-  imports: [RouterLink, MetaDirective, MetaDirective],
+  imports: [RouterLink, MetaDirective],
   templateUrl: './home-page.component.html',
 })
 export class HomePageComponent {
