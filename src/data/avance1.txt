@@ -82,3 +82,5 @@ cilantro : coriande
 mana : manne providentielle
 ganzua : crochet
 ventarron : bourrasque
+tarambana : écervelé
+cantinela : rengaine

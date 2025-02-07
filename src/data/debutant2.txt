@@ -129,3 +129,4 @@ hipocresia : hypocrisie
 azucar : sucre
 ajo : ail
 defecto : défaut
+panuelo : mouchoir

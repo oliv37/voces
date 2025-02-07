@@ -224,3 +224,19 @@ adecuar : adapter
 grada : marche
 resarcirse : obtenir réparation
 affliccion : peine, chagrin
+felonia : crime
+escabullirse : s'échapper
+fiera : bête féroce
+atesorar : accumuler
+truhaneria : truanderie
+despilfarro : gaspillage
+rasgos : traits, physionomie
+desparpajo : aisance
+barniz : apparence
+linaje : lignée
+descabellado : fou, insensé
+trepar : grimper
+hostigar : harcerler
+atadura : attache
+panuelo : foulard
+tumbar : renverser
