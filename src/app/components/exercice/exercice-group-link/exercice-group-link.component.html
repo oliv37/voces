@@ -14,11 +14,12 @@
   }
   <div class="flex-1 flex flex-col gap-4">
     <div class="text-2xl font-bold">
-      {{ group().category.label }} - {{ group().label }}
       <span
-        class="inline-block mx-1 pl-2 w-2 h-2 rounded-full"
-        [class]="group().category.bgColor"
-      ></span>
+        class="px-1 rounded text-white"
+        [class]="group().category.color.bgColor"
+        >{{ group().category.label }}</span
+      >
+      <span class="mx-4">{{ group().label }}</span>
     </div>
     <div class="flex-1 leading-relaxed">
       @for (w of group().words; track $index) {

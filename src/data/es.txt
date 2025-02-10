@@ -359,22 +359,17 @@ ahorrar : économiser
 cachondear : se moquer de
 prestamo : prêt
 cadena : chaîne
-apanar : réparer, rafistoler
-denegar : refuser, rejeter
-coraje : courage
 fiscalia : parquet, bureau du procureur
 una : ongle
 logro : succès, réussite
 herencia : héritage
 emprendimiento : entreprise, entrepreneuriat
 rebote : ricochet, rebond
-seudo : pseudo
 morbo : curiosité malsaine, curiosité morbide
 lacra : fléau
 extranar : surprendre
 lujo : luxe
 paradero : lieu, endroit
-balacera : fusillade
 aduenarse de : s'emparer de
 cabecilla : leader, meneur
 borde : rustre, malpoli
@@ -1477,7 +1472,6 @@ poseer : posséder
 campo : champ
 semilla : graine, semance
 autoridad : autorité
-sembrar : semer
 palo : bâton
 tapadera : couverture
 amparar : protéger
@@ -1486,7 +1480,6 @@ apurar : finir, terminer
 desafio : défi
 bondad : bonté
 plantilla : personnel
-prescindir de : se passer de, faire sans
 decalogo : règlement
 brecha : fossé, distance
 desmenuzar : examiner, disséquer
@@ -1582,7 +1575,6 @@ convalidacion : validation
 indultar : gracier
 pleno : séance plénière
 llamar al orden : rappeler à l'ordre
-caducar : périmer
 augurar : prédire, prévoir
 ensordecedor : assourdissant
 armatoste : objet encombrant
@@ -1843,7 +1835,6 @@ tumbar : renverser, mettre par terre
 reanudar : continuer, reprendre
 tachar de : taxer de, accuser de
 anegar : inonder
-sembrar : semer
 prejuicio : préjudice
 desencadenar : déclencher, entraîner, provoquer
 desmoronarse : s'écrouler, s'effondrer
@@ -2711,7 +2702,6 @@ bronca : engueulade
 ameno : agréable, divertissant
 marica : tapette, pédale
 cuclillas : accroupi
-aflojar : desserrer, détendre
 desencajar : dérégler
 incorporarse : se redresser
 mareo : mal au coeur
@@ -3077,7 +3067,6 @@ profugo : fugitif
 remate : tir, frappe
 aguantar : soutenir, porter
 sopesar : soupeser
-a destajo : d'arrache-pied
 tejado : toit
 estampa : image, illustration
 escaso : rare

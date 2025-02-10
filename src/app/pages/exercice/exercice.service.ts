@@ -1,75 +1,141 @@
-import { computed, effect, inject, Injectable, signal } from '@angular/core';
-import { Level } from '@models/exercice.model';
+import {
+  computed,
+  effect,
+  inject,
+  Injectable,
+  linkedSignal,
+  signal,
+  untracked,
+  WritableSignal,
+} from '@angular/core';
+import { GroupCompletionService } from '../../services/group-completion.service';
 import { Word } from '@models/word.model';
+import { Level } from '@models/exercice.model';
 import { shuffle } from '@utils/array.util';
-import { DATA } from '@utils/data.util';
-import { StorageService } from '@services/storage.service';
+import { Group } from '@models/group.model';
 
-const ALL_WORDS: Word[] = DATA.flat()
-  .flatMap((category) => category.groups)
-  .flatMap((group) => group.words);
-
-const LEVEL_1: Level = 1;
-
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ExerciceService {
-  private _storageService = inject(StorageService);
+  private _groupCompletionService = inject(GroupCompletionService);
 
-  nbWords = signal<number>(ALL_WORDS.length).asReadonly();
-  state = signal<State>(this.getState(LEVEL_1));
+  group = signal<Group | undefined>(undefined);
 
-  level = computed<Level>(() => this.state().level);
-  wordsAnswered = computed<Word[]>(() => this.state().wordsAnswered);
-  wordsRemaining = computed<Word[]>(() => this.state().wordsRemaining);
-  word = computed<Word | undefined>(() => this.wordsRemaining()[0]);
-  progressPercent = computed<number>(
-    () => (this.wordsAnswered().length * 100) / this.nbWords()
-  );
-
-  _saveStateEffect = effect(() => {
-    const state = this.state();
-    this._storageService.write(
-      `EXERCICE_STATE_LEVEL_${state.level}`,
-      JSON.stringify(state)
-    );
+  private _state: WritableSignal<State> = linkedSignal<State>(() => {
+    const words: Word[] = this.group()?.words || [];
+    return {
+      words: shuffle(words),
+      wordIdx: 0,
+      level: 1,
+      wordsAnswered: new Set(),
+    };
   });
 
-  answerWord() {
-    this.state.update(({ wordsRemaining, wordsAnswered, level }) => {
-      return {
-        wordsRemaining: wordsRemaining.slice(1),
-        wordsAnswered: [...wordsAnswered, wordsRemaining[0]],
-        level,
-      };
+  state = this._state.asReadonly();
+  word = computed<Word | undefined>(
+    () => this.state().words[this.state().wordIdx]
+  );
+  level = computed<Level>(() => this.state().level);
+  wordIdx = computed<number>(() => this.state().wordIdx);
+  nbWords = computed<number>(() => this.state().words.length);
+  nbWordsAnswered = computed<number>(() => this.state().wordsAnswered.size);
+
+  progressPercent = computed<number>(
+    () => (this.nbWordsAnswered() * 100) / this.nbWords()
+  );
+
+  _resetEffect = effect(() => {
+    this.group();
+
+    untracked(() => this.reset());
+  });
+
+  reset() {
+    this._state.set({
+      words: shuffle(this.group()?.words || []),
+      wordIdx: 0,
+      level: 1,
+      wordsAnswered: new Set(),
     });
   }
 
-  setLevel(level: Level) {
-    this.state.set(this.getState(level));
-  }
-
-  reset() {
-    this.state.update(({ level }) => ({
-      wordsRemaining: shuffle(ALL_WORDS),
-      wordsAnswered: [],
+  previousWord() {
+    this._state.update(({ words, wordIdx, level, wordsAnswered }) => ({
+      words,
+      wordIdx: (wordIdx - 1 + words.length) % words.length,
       level,
+      wordsAnswered,
     }));
   }
 
-  private getState(level: Level): State {
-    const data = this._storageService.read(`EXERCICE_STATE_LEVEL_${level}`);
-    return data
-      ? (JSON.parse(data) as State)
-      : {
-          wordsRemaining: shuffle(ALL_WORDS),
-          wordsAnswered: [],
-          level: level,
-        };
+  nextWord() {
+    this._state.update(({ words, wordIdx, level, wordsAnswered }) => ({
+      words,
+      wordIdx: (wordIdx + 1) % words.length,
+      level,
+      wordsAnswered,
+    }));
+  }
+
+  answerWord() {
+    const group = this.group();
+    const word = this.word();
+    const level = this.level();
+    const wordsAnswered = this.state().wordsAnswered;
+
+    if (!group || !word) {
+      return;
+    }
+
+    const newWordsAnswered = new Set([...wordsAnswered, word.es]);
+    const areAllWordsAnswered = this.areAllWordsAnswered(newWordsAnswered);
+
+    this._state.update(({ words, wordIdx, level }) => ({
+      words: areAllWordsAnswered ? shuffle(words) : words,
+      wordIdx: (wordIdx + 1) % words.length,
+      level,
+      wordsAnswered: areAllWordsAnswered ? new Set() : newWordsAnswered,
+    }));
+
+    if (areAllWordsAnswered && level === 3) {
+      this._groupCompletionService.markAsCompleted(group);
+    }
+  }
+
+  previousLevel() {
+    this._state.update(({ words, level, wordsAnswered }) => ({
+      words: shuffle(words),
+      wordIdx: 0,
+      level: level === 1 ? 3 : ((level - 1) as Level),
+      wordsAnswered,
+    }));
+  }
+
+  nextLevel() {
+    this._state.update(({ words, level, wordsAnswered }) => ({
+      words: shuffle(words),
+      wordIdx: 0,
+      level: level === 3 ? 1 : ((level + 1) as Level),
+      wordsAnswered,
+    }));
+  }
+
+  setLevel(level: Level) {
+    this._state.update(({ words, wordsAnswered }) => ({
+      words: shuffle(words),
+      wordIdx: 0,
+      level,
+      wordsAnswered,
+    }));
+  }
+
+  private areAllWordsAnswered(wordsAnswered: Set<string>): boolean {
+    return this.state().words.every((word) => wordsAnswered.has(word.es));
   }
 }
 
 interface State {
-  wordsRemaining: Word[];
-  wordsAnswered: Word[];
+  words: Word[];
+  wordIdx: number;
   level: Level;
+  wordsAnswered: Set<string>;
 }

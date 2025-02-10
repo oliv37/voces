@@ -27,7 +27,7 @@ export class CategoryPageComponent {
   });
 
   getHeaderClass(completionStatus: CompletionStatus) {
-    const bgColor = this.category().bgColor;
+    const bgColor = this.category().color.bgColor;
     return HEADER_CLASS[completionStatus](bgColor);
   }
 }

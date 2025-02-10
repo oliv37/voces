@@ -130,3 +130,4 @@ azucar : sucre
 ajo : ail
 defecto : défaut
 panuelo : mouchoir
+mezquino : mesquin

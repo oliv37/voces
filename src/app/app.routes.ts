@@ -4,13 +4,13 @@ import { GroupPageComponent } from '@pages/group/group-page.component';
 import { CategoryPageComponent } from './pages/category/category-page.component';
 import { canMatchCategory } from './guards/category.guard';
 import { HomePageComponent } from './pages/home/home-page.component';
-import { ExerciceGroupPageComponent } from '@pages/exercice-group/exercice-group-page.component';
+import { ExercicePageComponent } from '@pages/exercice/exercice-page.component';
 import { resolveCategory } from '@resolvers/category.resolver';
 import { resolveGroup } from '@resolvers/group.resolver';
 import { resolveCategoryTitle } from '@resolvers/title/category-title.resolver';
 import { resolveGroupTitle } from '@resolvers/title/group-title.resolver';
-import { resolveExerciceGroupTitle } from '@resolvers/title/exercice-group-title.resolver';
-import { ExercicePageComponent } from '@pages/exercice/exercice-page.component';
+import { resolveExerciceTitle } from '@resolvers/title/exercice-title.resolver';
+import { ExerciceAllPageComponent } from '@pages/exercice-all/exercice-all-page.component';
 
 export const routes: Routes = [
   {
@@ -21,7 +21,7 @@ export const routes: Routes = [
   {
     path: 'exercice',
     title: 'Exercice Vocabulaire Espagnol - Voces',
-    component: ExercicePageComponent,
+    component: ExerciceAllPageComponent,
   },
   {
     path: '',
@@ -51,8 +51,8 @@ export const routes: Routes = [
               },
               {
                 path: 'exercice',
-                title: resolveExerciceGroupTitle,
-                component: ExerciceGroupPageComponent,
+                title: resolveExerciceTitle,
+                component: ExercicePageComponent,
               },
             ],
           },

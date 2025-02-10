@@ -14,20 +14,21 @@
 
 <div class="py-6"></div>
 
-<div class="flex flex-col gap-10 items-stretch">
+<div class="flex flex-col gap-16 items-stretch">
   @for (categories of data(); track $index) {
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     @for (category of categories; track $index) {
     <a
       [routerLink]="category.pathParam"
       class="py-16 text-center border border-gray-400 rounded-t-md shadow-md relative"
     >
-      <span
-        class="absolute rounded-full w-4 h-4 top-2 left-2"
-        [class]="category.bgColor"
-      ></span>
       <h2>
-        <b>{{ category.label }}</b> ({{ category.nbWords }})
+        <span
+          class="font-bold rounded text-white px-2"
+          [class]="category.color.bgColor"
+          >{{ category.label }}</span
+        >
+        ({{ category.nbWords }})
       </h2>
     </a>
     }

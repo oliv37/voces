@@ -41,11 +41,12 @@ function addBreadcrumbItem(
     .join(' ')
     .replaceAll('-', ' ');
   const url = [previousUrl, ...route.url].join('/');
-  const dotBgColor = label === category?.label ? category?.bgColor : undefined;
+  const bgColor =
+    label === category?.label ? category?.color.bgColor : undefined;
 
   breadcrumb.push({
     label,
     url,
-    dotBgColor,
+    bgColor,
   });
 }

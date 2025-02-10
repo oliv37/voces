@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { Component, input, model } from '@angular/core';
 import { StarFillIconComponent } from '../../icon/star-fill-icon/star-fill-icon.component';
 import { StarIconComponent } from '../../icon/star-icon/star-icon.component';
 import { Level, LEVELS } from '@models/exercice.model';
@@ -11,5 +11,6 @@ import { Level, LEVELS } from '@models/exercice.model';
 export class ExerciceLevelPickerComponent {
   readonly levels = LEVELS;
 
+  fillColor = input<string>('fill-gray-800');
   level = model.required<Level>();
 }

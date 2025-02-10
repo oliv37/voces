@@ -1,7 +1,7 @@
 export interface BreadcrumbItem {
   url: string;
   label: string;
-  dotBgColor?: string;
+  bgColor?: string;
 }
 
 export type Breadcrumb = BreadcrumbItem[];

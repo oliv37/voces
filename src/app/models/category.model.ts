@@ -1,3 +1,4 @@
+import { Color } from './color.model';
 import { Group } from './group.model';
 
 export interface Category {
@@ -6,5 +7,5 @@ export interface Category {
   pathParam: string;
   groups: Group[];
   nbWords: number;
-  bgColor: string;
+  color: Color;
 }

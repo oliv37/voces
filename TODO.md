@@ -1,5 +1,5 @@
-- change home page card color
-- move exercice level in header
+- rework home page card
+- rework all exercice page
 - add animation
 - define meta og tags
 - add service worker

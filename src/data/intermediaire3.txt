@@ -240,3 +240,23 @@ hostigar : harcerler
 atadura : attache
 panuelo : foulard
 tumbar : renverser
+aduana : douane
+prescindir de : se passer de
+desmantelar : démanteler
+arancel : droit de douane
+incentivar : stimuler, encourager
+recorte : coupe budgétaire
+sembrar : semer
+inmune : immunisé
+aflojar : desserrer, détendre
+caducar : périmer
+lema : devise, slogan
+demandar : poursuivre
+desembocar : déboucher sur
+aferrarse : s'accrocher
+denegar : refuser, rejeter
+coraje : courage
+balacera : fusillade
+brecha : brèche, fissure
+aforo : capacité
+escarnio : humiliation, moquerie

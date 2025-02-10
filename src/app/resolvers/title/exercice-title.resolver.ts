@@ -2,7 +2,7 @@ import { ActivatedRouteSnapshot } from '@angular/router';
 import { getCategoryLabel } from '@utils/category.util';
 import { getGroupLabel } from '@utils/group.util';
 
-export function resolveExerciceGroupTitle(
+export function resolveExerciceTitle(
   route: ActivatedRouteSnapshot | null
 ): string {
   const categoryLabel = getCategoryLabel(route);

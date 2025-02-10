@@ -328,8 +328,8 @@ chuleta : insolent
 espejismo : mirage, illusion
 grua : grue
 alargarse : se prolonger
-desplomar : s'effondrer, s'écrouler
 puja : enchère
+apanar : réparer, rafistoler
 foco : projecteur, spot
 chispa : étincelle
 pujar : se battre, lutter

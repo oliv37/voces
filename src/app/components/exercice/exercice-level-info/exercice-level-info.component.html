@@ -1,0 +1,12 @@
+@if (group(); as g) {
+
+<div class="flex items-center gap-4 h-full">
+  <span class="text-neutral-900 text-base font-bold relative top-0.5"
+    >{{ wordIdx() + 1 }} / {{ nbWords() }}</span
+  >
+  <app-exercice-level-picker
+    [level]="level()"
+    (levelChange)="setLevel($event)"
+  ></app-exercice-level-picker>
+</div>
+}
