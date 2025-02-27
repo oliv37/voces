@@ -34,7 +34,7 @@ export class CategoryPageComponent {
 
 const HEADER_CLASS: Record<CompletionStatus, (bgColor: string) => string> = {
   ['RECENT']: (bgColor) => `${bgColor} text-white`,
-  ['OLD']: (bgColor) => `${bgColor} text-white bg-opacity-70`,
+  ['OLD']: (bgColor) => `${bgColor} text-white opacity-70`,
   ['NEVER']: () => '',
 };
 
