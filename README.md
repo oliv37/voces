@@ -11,3 +11,8 @@ Each text file contains at most 400 translations
 Each translation is represented by a single line with the following format :
 
 `<spanish_word> : <french_translation>`
+
+## Upgrade
+
+- `npm install -g @angular/cli@latest`
+- `ng update @angular/cli @angular/core`
