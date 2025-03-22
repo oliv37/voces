@@ -5,6 +5,7 @@ import {
   inject,
   input,
   OnDestroy,
+  untracked,
   viewChild,
 } from '@angular/core';
 import { ClientSideComponent } from '@components/client-side/client-side.component';
@@ -54,7 +55,9 @@ export class ExercicePageComponent implements OnDestroy {
   _focusEffect = effect(() => {
     this._exerciceService.state();
 
-    this.exerciceLevelCmp()?.focus();
+    untracked(() => {
+      this.exerciceLevelCmp()?.focus();
+    });
   });
 
   _groupEffect = effect(() => {
@@ -96,5 +99,9 @@ export class ExercicePageComponent implements OnDestroy {
   help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
   }
 }

@@ -1,7 +1,9 @@
-<div class="flex flex-wrap items-center gap-2 text-lg h-full">
+<div
+  [@scaleUpDown]="breadcrumb().length"
+  class="flex flex-wrap items-center gap-2 text-lg h-full"
+>
   @for (breadcrumbItem of breadcrumb(); track $index) { @if
   (breadcrumbItem.bgColor) {
-
   <a
     [routerLink]="breadcrumbItem.url"
     [class]="
@@ -17,6 +19,6 @@
     >{{ breadcrumbItem.label }}</a
   >
   } @if (!$last) {
-  <span class="px-1">/</span>
+  <app-chevron-right-icon className="w-4 h-4 mx-1"></app-chevron-right-icon>
   } }
 </div>

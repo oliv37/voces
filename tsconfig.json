@@ -26,6 +26,7 @@
       "@components/*": ["./src/app/components/*"],
       "@decorators/*": ["./src/app/decorators/*"],
       "@directives/*": ["./src/app/directives/*"],
+      "@animations/*": ["./src/app/animations/*"],
       "@models/*": ["./src/app/models/*"],
       "@pages/*": ["./src/app/pages/*"],
       "@resolvers/*": ["./src/app/resolvers/*"],

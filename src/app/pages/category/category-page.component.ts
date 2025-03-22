@@ -5,10 +5,12 @@ import { GroupCompletionService } from '@services/group-completion.service';
 import { Category } from '@models/category.model';
 import { CompletionStatus } from '@models/group-completion.model';
 import { MetaDirective } from '../../directives/meta.directive';
+import { fadeIn } from '@animations/fade-in.animation';
 
 @Component({
   imports: [RouterLink, MetaDirective],
   templateUrl: './category-page.component.html',
+  animations: [fadeIn('a', '50ms', '0.4s')],
 })
 export class CategoryPageComponent {
   private _groupCompletionService = inject(GroupCompletionService);

@@ -42,7 +42,7 @@ const CLASS_TEXT_SIZE: Record<Size, string> = {
   none: '',
   xs: 'text-xs',
   sm: 'text-sm',
-  md: 'text-md',
+  md: 'text-base',
   lg: 'text-lg',
   xl: 'text-xl',
 };

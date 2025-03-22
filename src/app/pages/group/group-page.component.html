@@ -1,9 +1,18 @@
 <app-meta [description]="metaDescription()" />
 
+<div class="py-2"></div>
+
 <app-words-grid [words]="group().words" />
 
-<div class="py-5"></div>
+<div class="py-8"></div>
 
 <div class="flex justify-center">
-  <a [routerLink]="['exercice']" appBtn>Exercice</a>
+  <a
+    [routerLink]="['exercice']"
+    appBtn
+    appBtnTheme="secondary"
+    appBtnPadding="lg"
+    class="transition-all border-3 hover:scale-105 uppercase tracking-wider"
+    >Exercice</a
+  >
 </div>

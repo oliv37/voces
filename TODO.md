@@ -1,5 +1,5 @@
-- rework home page card
-- rework all exercice page
+- rework exercice page
 - add animation
+- remove old completed groups from local storage
 - define meta og tags
 - add service worker

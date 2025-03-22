@@ -1,11 +1,9 @@
 import {
   computed,
-  effect,
   inject,
   Injectable,
   linkedSignal,
   signal,
-  untracked,
   WritableSignal,
 } from '@angular/core';
 import { GroupCompletionService } from '../../services/group-completion.service';
@@ -42,12 +40,6 @@ export class ExerciceService {
   progressPercent = computed<number>(
     () => (this.nbWordsAnswered() * 100) / this.nbWords()
   );
-
-  _resetEffect = effect(() => {
-    this.group();
-
-    untracked(() => this.reset());
-  });
 
   reset() {
     this._state.set({
