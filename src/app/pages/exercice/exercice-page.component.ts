@@ -16,10 +16,10 @@ import { ExerciceLevel3Component } from '../../components/exercice/exercice-leve
 import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
 import { Level, LEVELS } from '@models/exercice.model';
 import { findNextGroup } from '@utils/group.util';
-import { ExerciceButtonBarComponent } from '../../components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceGroupLinkComponent } from '../../components/exercice/exercice-group-link/exercice-group-link.component';
 import { ExerciceService } from './exercice.service';
 import { MetaDirective } from '../../directives/meta.directive';
+import { ExerciceBarComponent } from '../../components/exercice/exercice-bar/exercice-bar.component';
 
 @Component({
   imports: [
@@ -27,9 +27,9 @@ import { MetaDirective } from '../../directives/meta.directive';
     ExerciceLevel1Component,
     ExerciceLevel2Component,
     ExerciceLevel3Component,
-    ExerciceButtonBarComponent,
     ExerciceGroupLinkComponent,
     MetaDirective,
+    ExerciceBarComponent,
   ],
   templateUrl: './exercice-page.component.html',
 })
@@ -82,14 +82,6 @@ export class ExercicePageComponent implements OnDestroy {
 
   answerWord() {
     this._exerciceService.answerWord();
-  }
-
-  previousLevel() {
-    this._exerciceService.previousLevel();
-  }
-
-  nextLevel() {
-    this._exerciceService.nextLevel();
   }
 
   setLevel(level: Level) {

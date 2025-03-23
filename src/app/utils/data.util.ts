@@ -8,30 +8,15 @@ import dataIntermediaire1 from '@data/intermediaire1.txt';
 import dataIntermediaire2 from '@data/intermediaire2.txt';
 import dataIntermediaire3 from '@data/intermediaire3.txt';
 import dataAvance1 from '@data/avance1.txt';
-import { Color } from '@models/color.model';
+import {
+  Level,
+  LEVEL_AVANCE,
+  LEVEL_DEBUTANT,
+  LEVEL_INTERMEDIAIRE,
+} from '@models/level.model';
+import { COLORS } from '@models/color.model';
 
 const GROUP_SIZE = 20;
-
-const COLOR_DEBUTANT: Color = {
-  bgColor: 'bg-green-600',
-  textColor: 'text-green-600',
-  fillColor: 'fill-green-600',
-  borderColor: 'border-green-600',
-};
-
-const COLOR_INTERMEDIAIRE: Color = {
-  bgColor: 'bg-blue-600',
-  textColor: 'text-blue-600',
-  fillColor: 'fill-blue-600',
-  borderColor: 'border-blue-600',
-};
-
-const COLOR_AVANCEE: Color = {
-  bgColor: 'bg-purple-600',
-  textColor: 'text-purple-600',
-  fillColor: 'fill-purple-600',
-  borderColor: 'border-purple-600',
-};
 
 export const DATA: Category[][] = [
   [
@@ -40,14 +25,14 @@ export const DATA: Category[][] = [
       'Débutant 1',
       'debutant-1',
       dataDebutant1,
-      COLOR_DEBUTANT
+      LEVEL_DEBUTANT
     ),
     buildCategory(
       'DEBUTANT2',
       'Débutant 2',
       'debutant-2',
       dataDebutant2,
-      COLOR_DEBUTANT
+      LEVEL_DEBUTANT
     ),
   ],
   [
@@ -56,14 +41,14 @@ export const DATA: Category[][] = [
       'Intermédiaire 1',
       'intermediaire-1',
       dataIntermediaire1,
-      COLOR_INTERMEDIAIRE
+      LEVEL_INTERMEDIAIRE
     ),
     buildCategory(
       'INTERMEDIAIRE2',
       'Intermédiaire 2',
       'intermediaire-2',
       dataIntermediaire2,
-      COLOR_INTERMEDIAIRE
+      LEVEL_INTERMEDIAIRE
     ),
 
     buildCategory(
@@ -71,18 +56,10 @@ export const DATA: Category[][] = [
       'Intermédiaire 3',
       'intermediaire-3',
       dataIntermediaire3,
-      COLOR_INTERMEDIAIRE
+      LEVEL_INTERMEDIAIRE
     ),
   ],
-  [
-    buildCategory(
-      'AVANCE1',
-      'Avancé 1',
-      'avance-1',
-      dataAvance1,
-      COLOR_AVANCEE
-    ),
-  ],
+  [buildCategory('AVANCE1', 'Avancé 1', 'avance-1', dataAvance1, LEVEL_AVANCE)],
 ] as const;
 
 function buildCategory(
@@ -90,7 +67,7 @@ function buildCategory(
   label: string,
   pathParam: string,
   data: string,
-  color: Color
+  level: Level
 ): Category {
   const words: Word[] = buildWords(id, data);
   const category: Category = {
@@ -99,7 +76,8 @@ function buildCategory(
     pathParam,
     groups: buildGroups(id, words),
     nbWords: words.length,
-    color,
+    level,
+    color: COLORS[level],
   };
   category.groups.forEach((g) => (g.category = category));
   return category;

@@ -1,5 +1,5 @@
 <a
-  class="flex gap-6 border border-neutral-400 py-8 px-3 h-full rounded-md shadow-md"
+  class="group flex gap-6 border border-neutral-400 hover:border-neutral-800 transition-all py-8 px-3 h-full rounded-md shadow-md hover:shadow-xl"
   [routerLink]="[
     '/',
     group().category.pathParam,
@@ -28,7 +28,7 @@
     </div>
   </div>
   @if (displayNextIcon()) {
-  <div class="self-center">
+  <div class="self-center transition group-hover:translate-x-1">
     <app-arrow-right-circle-fill-icon className="w-8 h-8 fill-neutral-900" />
   </div>
   }

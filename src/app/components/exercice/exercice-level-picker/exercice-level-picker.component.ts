@@ -11,6 +11,8 @@ import { Level, LEVELS } from '@models/exercice.model';
 export class ExerciceLevelPickerComponent {
   readonly levels = LEVELS;
 
-  fillColor = input<string>('fill-gray-800');
+  btnClass = input<string>('px-2');
+  iconClass = input<string>('w-6 h-6');
+  fillColor = input<string>('fill-gray-950');
   level = model.required<Level>();
 }

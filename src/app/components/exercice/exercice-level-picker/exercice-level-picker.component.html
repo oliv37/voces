@@ -1,10 +1,10 @@
 <div class="flex">
   @for (_lvl of levels; track $index) {
-  <button type="button" class="px-2" (click)="level.set(_lvl)">
+  <button type="button" [class]="btnClass()" (click)="level.set(_lvl)">
     @if (_lvl <= level()) {
-    <app-star-fill-icon [className]="'w-6 h-6 ' + fillColor()" />
+    <app-star-fill-icon [className]="iconClass() + ' ' + fillColor()" />
     } @else {
-    <app-star-icon className="w-6 h-6" />
+    <app-star-icon [className]="iconClass()" />
     }
   </button>
   }

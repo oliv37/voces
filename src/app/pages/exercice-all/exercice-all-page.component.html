@@ -41,13 +41,13 @@
       (next)="answerWord()"
     ></app-exercice-level-3>
     } }
-
-    <app-exercice-button-bar
+    <!--
+    <app-exercice-bar
       showArrow="false"
       (patchQuestion)="help()"
       (arrowClockwise)="reset()"
     />
-  </div>
+  --></div>
   <div class="py-12"></div>
   <app-words-grid [words]="wordsAnsweredReversed()" />
 </app-client-side>

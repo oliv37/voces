@@ -3,7 +3,6 @@ import { RouterLink } from '@angular/router';
 import { Group } from '@models/group.model';
 import { GroupCompletionService } from '@services/group-completion.service';
 import { Category } from '@models/category.model';
-import { CompletionStatus } from '@models/group-completion.model';
 import { MetaDirective } from '../../directives/meta.directive';
 import { fadeIn } from '@animations/fade-in.animation';
 
@@ -21,25 +20,23 @@ export class CategoryPageComponent {
     () => `Vocabulaire Espagnol ${this.category().label}`
   );
 
-  groups = computed<GroupWithCompletionStatus[]>(() => {
+  groups = computed<GroupCompleted[]>(() => {
     return this.category().groups.map((group) => ({
       ...group,
-      completionStatus: this._groupCompletionService.getCompletionStatus(group),
+      completed: this._groupCompletionService.isCompleted(group),
     }));
   });
 
-  getHeaderClass(completionStatus: CompletionStatus) {
+  getHeaderClass(completed: boolean) {
+    if (!completed) {
+      return '';
+    }
+
     const bgColor = this.category().color.bgColor;
-    return HEADER_CLASS[completionStatus](bgColor);
+    return `${bgColor} text-white`;
   }
 }
 
-const HEADER_CLASS: Record<CompletionStatus, (bgColor: string) => string> = {
-  ['RECENT']: (bgColor) => `${bgColor} text-white`,
-  ['OLD']: (bgColor) => `${bgColor} text-white opacity-70`,
-  ['NEVER']: () => '',
-};
-
-type GroupWithCompletionStatus = Group & {
-  completionStatus: CompletionStatus;
+type GroupCompleted = Group & {
+  completed: boolean;
 };

@@ -32,13 +32,14 @@
       ></app-exercice-level-3>
       }
 
-      <app-exercice-button-bar
-        (arrowLeft)="previousLevel()"
-        (arrowLeftShort)="previousWord()"
+      <app-exercice-bar
+        [level]="level()"
+        (levelChange)="setLevel($event)"
+        [infoText]="wordIdx() + 1 + ' / ' + nbWords()"
+        (arrowLeft)="previousWord()"
         (patchQuestion)="help()"
         (arrowClockwise)="reset()"
-        (arrowRightShort)="nextWord()"
-        (arrowRight)="nextLevel()"
+        (arrowRight)="nextWord()"
       />
     </div>
 

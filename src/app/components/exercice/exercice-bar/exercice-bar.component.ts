@@ -1,31 +1,36 @@
-import { booleanAttribute, Component, input, output } from '@angular/core';
+import {
+  booleanAttribute,
+  Component,
+  input,
+  model,
+  output,
+} from '@angular/core';
 import { ArrowLeftIconComponent } from '../../icon/arrow-left-icon/arrow-left-icon.component';
-import { ArrowLeftShortIconComponent } from '../../icon/arrow-left-short-icon/arrow-left-short-icon.component';
 import { PatchQuestionIconComponent } from '../../icon/patch-question-icon/patch-question-icon.component';
 import { ArrowClockwiseIconComponent } from '../../icon/arrow-clockwise-icon/arrow-clockwise-icon.component';
-import { ArrowRightShortIconComponent } from '../../icon/arrow-right-short-icon/arrow-right-short-icon.component';
 import { ArrowRightIconComponent } from '../../icon/arrow-right-icon/arrow-right-icon.component';
 import { BtnDirective } from '@directives/btn.directive';
+import { ExerciceLevelPickerComponent } from '../exercice-level-picker/exercice-level-picker.component';
+import { Level } from '@models/exercice.model';
 
 @Component({
-  selector: 'app-exercice-button-bar',
-  templateUrl: './exercice-button-bar.component.html',
+  selector: 'app-exercice-bar',
+  templateUrl: './exercice-bar.component.html',
   imports: [
     BtnDirective,
     ArrowLeftIconComponent,
-    ArrowLeftShortIconComponent,
     PatchQuestionIconComponent,
     ArrowClockwiseIconComponent,
-    ArrowRightShortIconComponent,
     ArrowRightIconComponent,
+    ExerciceLevelPickerComponent,
   ],
 })
-export class ExerciceButtonBarComponent {
+export class ExerciceBarComponent {
   showArrow = input(true, { transform: booleanAttribute });
+  level = model.required<Level>();
+  infoText = input<string>();
   arrowLeft = output();
-  arrowLeftShort = output();
   patchQuestion = output();
   arrowClockwise = output();
-  arrowRightShort = output();
   arrowRight = output();
 }

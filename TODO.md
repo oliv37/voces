@@ -1,5 +1,3 @@
-- rework exercice page
-- add animation
-- remove old completed groups from local storage
+- rework progress bar (reset when level is updated, keep 100% when all words are answered)
 - define meta og tags
 - add service worker

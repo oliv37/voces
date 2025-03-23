@@ -9,15 +9,6 @@
   >
     <app-arrow-left-icon className="w-8 h-8 fill-neutral-900" />
   </button>
-  <button
-    type="button"
-    appBtn
-    appBtnTheme="secondary"
-    appBtnBorder="none"
-    (click)="arrowLeftShort.emit()"
-  >
-    <app-arrow-left-short-icon className="w-8 h-8 fill-neutral-900" />
-  </button>
   }
   <button
     type="button"
@@ -28,6 +19,17 @@
   >
     <app-patch-question-icon className="w-8 h-8 fill-neutral-900" />
   </button>
+
+  <div class="flex justify-center mx-5 relative">
+    @if (infoText()) {
+    <span class="absolute -top-12 text-lg font-bold">{{ infoText() }}</span>
+    }
+    <app-exercice-level-picker
+      [(level)]="level"
+      iconClass="w-9 h-9"
+    ></app-exercice-level-picker>
+  </div>
+
   <button
     type="button"
     appBtn
@@ -38,15 +40,6 @@
     <app-arrow-clockwise-icon className="w-8 h-8 fill-neutral-900" />
   </button>
   @if (showArrow()) {
-  <button
-    type="button"
-    appBtn
-    appBtnTheme="secondary"
-    appBtnBorder="none"
-    (click)="arrowRightShort.emit()"
-  >
-    <app-arrow-right-short-icon className="w-8 h-8 fill-neutral-900" />
-  </button>
   <button
     type="button"
     appBtn
