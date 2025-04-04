@@ -9,7 +9,7 @@ import { fadeIn } from '@animations/fade-in.animation';
 @Component({
   imports: [RouterLink, MetaDirective],
   templateUrl: './category-page.component.html',
-  animations: [fadeIn('a', '50ms', '0.4s')],
+  animations: [fadeIn('a', '100ms', '0.4s')],
 })
 export class CategoryPageComponent {
   private _groupCompletionService = inject(GroupCompletionService);

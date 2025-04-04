@@ -12,7 +12,10 @@
     appBtn
     appBtnTheme="secondary"
     appBtnPadding="lg"
-    class="transition-all border-3 hover:scale-105 uppercase tracking-wider"
+    [class]="
+      'transition-all border-3 uppercase tracking-wider shadow-md ' +
+      'hover:shadow-xl hover:bg-neutral-100'
+    "
     >Exercice</a
   >
 </div>

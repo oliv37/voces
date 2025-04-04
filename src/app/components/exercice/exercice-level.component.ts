@@ -53,7 +53,10 @@ export abstract class ExerciceLevelComponent {
   }
 
   onKeydown(e: KeyboardEvent) {
-    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) {
+    if (['ArrowLeft', 'ArrowRight'].includes(e.key) && !e.altKey) {
+      e.preventDefault();
+    }
+    if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
       e.preventDefault();
     }
   }
