@@ -1,4 +1,6 @@
-export const LEVELS = [1, 2, 3] as const;
+export const LEVELS = [1, 2] as const;
+
+export const MAX_LEVEL = LEVELS[LEVELS.length - 1];
 
 export type Level = (typeof LEVELS)[number];
 

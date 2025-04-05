@@ -1,15 +1,8 @@
+<div class="flex justify-center">
+  <span class="text-lg font-bold">{{ text() }}</span>
+</div>
+
 <div class="flex justify-center gap-6 py-4">
-  @if (showArrow()) {
-  <button
-    type="button"
-    appBtn
-    appBtnTheme="secondary"
-    appBtnBorder="none"
-    (click)="arrowLeft.emit()"
-  >
-    <app-arrow-left-icon className="w-8 h-8 fill-neutral-900" />
-  </button>
-  }
   <button
     type="button"
     appBtn
@@ -21,13 +14,20 @@
   </button>
 
   <div class="flex justify-center mx-5 relative">
-    @if (infoText()) {
-    <span class="absolute -top-12 text-lg font-bold">{{ infoText() }}</span>
+    @for (_lvl of levels; track $index) {
+    <button type="button" class="px-2" (click)="levelChange.emit(_lvl)">
+      @if (_lvl <= level()) {
+      <app-star-fill-icon className="w-9 h-9 fill-gray-950 stroke-gray-950" />
+      } @else {
+      <app-star-fill-icon
+        [className]="
+          'w-9 h-9 fill-white stroke-gray-950 ' +
+          'transition-all duration-300 hover:fill-gray-950'
+        "
+      />
+      }
+    </button>
     }
-    <app-exercice-level-picker
-      [(level)]="level"
-      iconClass="w-9 h-9"
-    ></app-exercice-level-picker>
   </div>
 
   <button
@@ -39,15 +39,4 @@
   >
     <app-arrow-clockwise-icon className="w-8 h-8 fill-neutral-900" />
   </button>
-  @if (showArrow()) {
-  <button
-    type="button"
-    appBtn
-    appBtnTheme="secondary"
-    appBtnBorder="none"
-    (click)="arrowRight.emit()"
-  >
-    <app-arrow-right-icon className="w-8 h-8 fill-neutral-900" />
-  </button>
-  }
 </div>

@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { GroupCompletionService } from '../../services/group-completion.service';
 import { Word } from '@models/word.model';
-import { Level } from '@models/exercice.model';
+import { Level, MAX_LEVEL } from '@models/exercice.model';
 import { shuffle } from '@utils/array.util';
 import { Group } from '@models/group.model';
 
@@ -78,50 +78,54 @@ export class ExerciceService {
       return;
     }
 
-    const newWordsAnswered = new Set([...wordsAnswered, word.es]);
+    const isMaxLevel = level === MAX_LEVEL;
+    const newWordsAnswered = new Set([...wordsAnswered, word]);
+    const wereAllWordsAnswered = this.areAllWordsAnswered(wordsAnswered);
     const areAllWordsAnswered = this.areAllWordsAnswered(newWordsAnswered);
+    const mustMarkAsCompleted =
+      isMaxLevel && !wereAllWordsAnswered && areAllWordsAnswered;
 
     this._state.update(({ words, wordIdx, level }) => ({
-      words: areAllWordsAnswered ? shuffle(words) : words,
+      words,
       wordIdx: (wordIdx + 1) % words.length,
       level,
-      wordsAnswered: areAllWordsAnswered ? new Set() : newWordsAnswered,
+      wordsAnswered: newWordsAnswered,
     }));
 
-    if (areAllWordsAnswered && level === 3) {
+    if (mustMarkAsCompleted) {
       this._groupCompletionService.markAsCompleted(group);
     }
   }
 
   previousLevel() {
-    this._state.update(({ words, level, wordsAnswered }) => ({
+    this._state.update(({ words, level }) => ({
       words: shuffle(words),
       wordIdx: 0,
-      level: level === 1 ? 3 : ((level - 1) as Level),
-      wordsAnswered,
+      level: level === 1 ? MAX_LEVEL : ((level - 1) as Level),
+      wordsAnswered: new Set(),
     }));
   }
 
   nextLevel() {
-    this._state.update(({ words, level, wordsAnswered }) => ({
+    this._state.update(({ words, level }) => ({
       words: shuffle(words),
       wordIdx: 0,
-      level: level === 3 ? 1 : ((level + 1) as Level),
-      wordsAnswered,
+      level: level === MAX_LEVEL ? 1 : ((level + 1) as Level),
+      wordsAnswered: new Set(),
     }));
   }
 
   setLevel(level: Level) {
-    this._state.update(({ words, wordsAnswered }) => ({
+    this._state.update(({ words }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level,
-      wordsAnswered,
+      wordsAnswered: new Set(),
     }));
   }
 
-  private areAllWordsAnswered(wordsAnswered: Set<string>): boolean {
-    return this.state().words.every((word) => wordsAnswered.has(word.es));
+  private areAllWordsAnswered(wordsAnswered: Set<Word>): boolean {
+    return this.state().words.every((word) => wordsAnswered.has(word));
   }
 }
 
@@ -129,5 +133,5 @@ interface State {
   words: Word[];
   wordIdx: number;
   level: Level;
-  wordsAnswered: Set<string>;
+  wordsAnswered: Set<Word>;
 }

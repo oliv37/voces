@@ -10,23 +10,21 @@ import {
 } from '@angular/core';
 import { ClientSideComponent } from '@components/client-side/client-side.component';
 import { Group } from '@models/group.model';
-import { ExerciceLevel1Component } from '../../components/exercice/exercice-level-1/exercice-level-1.component';
-import { ExerciceLevel2Component } from '../../components/exercice/exercice-level-2/exercice-level-2.component';
-import { ExerciceLevel3Component } from '../../components/exercice/exercice-level-3/exercice-level-3.component';
+import { ExerciceLevel1Component } from '@components/exercice/exercice-level-1/exercice-level-1.component';
+import { ExerciceLevel2Component } from '@components/exercice/exercice-level-2/exercice-level-2.component';
 import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
-import { Level, LEVELS } from '@models/exercice.model';
+import { Level } from '@models/exercice.model';
 import { findNextGroup } from '@utils/group.util';
-import { ExerciceGroupLinkComponent } from '../../components/exercice/exercice-group-link/exercice-group-link.component';
+import { ExerciceGroupLinkComponent } from '@components/exercice/exercice-group-link/exercice-group-link.component';
 import { ExerciceService } from './exercice.service';
-import { MetaDirective } from '../../directives/meta.directive';
-import { ExerciceBarComponent } from '../../components/exercice/exercice-bar/exercice-bar.component';
+import { MetaDirective } from '@directives/meta.directive';
+import { ExerciceBarComponent } from '@components/exercice/exercice-bar/exercice-bar.component';
 
 @Component({
   imports: [
     ClientSideComponent,
     ExerciceLevel1Component,
     ExerciceLevel2Component,
-    ExerciceLevel3Component,
     ExerciceGroupLinkComponent,
     MetaDirective,
     ExerciceBarComponent,
@@ -34,8 +32,6 @@ import { ExerciceBarComponent } from '../../components/exercice/exercice-bar/exe
   templateUrl: './exercice-page.component.html',
 })
 export class ExercicePageComponent implements OnDestroy {
-  readonly levels = LEVELS;
-
   private _exerciceService = inject(ExerciceService);
 
   exerciceLevelCmp = viewChild<ExerciceLevelComponent>('exerciceLevelCmp');
@@ -70,14 +66,6 @@ export class ExercicePageComponent implements OnDestroy {
 
   reset() {
     this._exerciceService.reset();
-  }
-
-  previousWord() {
-    this._exerciceService.previousWord();
-  }
-
-  nextWord() {
-    this._exerciceService.nextWord();
   }
 
   answerWord() {

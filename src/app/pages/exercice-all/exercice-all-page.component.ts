@@ -1,15 +1,13 @@
 import { Component, computed, effect, inject, viewChild } from '@angular/core';
-import { ClientSideComponent } from '../../components/client-side/client-side.component';
-import { Level, LEVELS } from '@models/exercice.model';
-import { ExerciceLevel1Component } from '../../components/exercice/exercice-level-1/exercice-level-1.component';
-import { ExerciceLevel2Component } from '../../components/exercice/exercice-level-2/exercice-level-2.component';
-import { ExerciceLevel3Component } from '../../components/exercice/exercice-level-3/exercice-level-3.component';
+import { ClientSideComponent } from '@components/client-side/client-side.component';
+import { Level } from '@models/exercice.model';
+import { ExerciceLevel1Component } from '@components/exercice/exercice-level-1/exercice-level-1.component';
+import { ExerciceLevel2Component } from '@components/exercice/exercice-level-2/exercice-level-2.component';
 import { ExerciceLevelComponent } from '@components/exercice/exercice-level.component';
-import { ExerciceLevelPickerComponent } from '../../components/exercice/exercice-level-picker/exercice-level-picker.component';
-import { WordsGridComponent } from '../../components/words-grid/words-grid.component';
+import { WordsGridComponent } from '@components/words-grid/words-grid.component';
 import { ExerciceAllService } from './exercice-all.service';
 import { Word } from '@models/word.model';
-import { MetaDirective } from '../../directives/meta.directive';
+import { MetaDirective } from '@directives/meta.directive';
 
 @Component({
   selector: 'app-exercice-page',
@@ -17,8 +15,6 @@ import { MetaDirective } from '../../directives/meta.directive';
     ClientSideComponent,
     ExerciceLevel1Component,
     ExerciceLevel2Component,
-    ExerciceLevel3Component,
-    ExerciceLevelPickerComponent,
     WordsGridComponent,
     MetaDirective,
   ],
@@ -26,8 +22,6 @@ import { MetaDirective } from '../../directives/meta.directive';
   templateUrl: './exercice-all-page.component.html',
 })
 export class ExerciceAllPageComponent {
-  readonly levels = LEVELS;
-
   private _exerciceAllService = inject(ExerciceAllService);
 
   nbWords = this._exerciceAllService.nbWords;
