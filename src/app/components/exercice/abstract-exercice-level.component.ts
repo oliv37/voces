@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 
 @Directive()
-export abstract class ExerciceLevelComponent {
+export abstract class AbstractExerciceLevelComponent {
   word = input.required<string>();
   next = output();
 

@@ -10,18 +10,12 @@ import { resolveGroup } from '@resolvers/group.resolver';
 import { resolveCategoryTitle } from '@resolvers/title/category-title.resolver';
 import { resolveGroupTitle } from '@resolvers/title/group-title.resolver';
 import { resolveExerciceTitle } from '@resolvers/title/exercice-title.resolver';
-import { ExerciceAllPageComponent } from '@pages/exercice-all/exercice-all-page.component';
 
 export const routes: Routes = [
   {
     path: '',
     title: 'Vocabulaire Espagnol - Voces',
     component: HomePageComponent,
-  },
-  {
-    path: 'exercice',
-    title: 'Exercice Vocabulaire Espagnol - Voces',
-    component: ExerciceAllPageComponent,
   },
   {
     path: '',

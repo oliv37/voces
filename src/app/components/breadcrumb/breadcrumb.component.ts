@@ -10,7 +10,7 @@ import { filter, map } from 'rxjs';
 import { Breadcrumb } from '@models/breadcrumb.model';
 import { buildBreadcrumb } from '@utils/breadcrumb.util';
 import { scaleUpDown } from '@animations/scale-up-down.animation';
-import { ChevronRightIconComponent } from '../icon/chevron-right/chevron-right-icon.component';
+import { ChevronRightIconComponent } from '@components/icon/chevron-right/chevron-right-icon.component';
 
 @Component({
   selector: 'app-breadcrumb',
