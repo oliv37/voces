@@ -1,5 +1,5 @@
-<div class="flex items-center gap-2">
-  <div class="w-7 h-7 text-right font-bold overflow-hidden">
+<div class="flex items-center gap-3">
+  <div class="w-7 h-8 text-right text-2xl font-bold overflow-hidden">
     <div [@slideDown]="wordIdx()">
       <div>{{ wordIdx() + 1 }}</div>
       <div>{{ wordIdx() }}</div>
@@ -15,10 +15,10 @@
     <div
       [class]="
         'absolute top-full -translate-x-1/2 transition-all duration-500 ' +
-        'border border-transparent border-x-6 border-b-10 border-b-gray-800'
+        'border border-transparent border-x-12 border-b-16 border-b-gray-800'
       "
       [style.left]="(wordIdx() / nbWords()) * 100 + '%'"
     ></div>
   </div>
-  <div class="w-7 h-7 text-left">{{ nbWords() }}</div>
+  <div class="w-7 h-8 text-left text-2xl">{{ nbWords() }}</div>
 </div>

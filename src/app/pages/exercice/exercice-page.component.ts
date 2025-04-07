@@ -14,7 +14,7 @@ import { Group } from '@models/group.model';
 import { ExerciceLevel1Component } from '@components/exercice/exercice-level-1/exercice-level-1.component';
 import { ExerciceLevel2Component } from '@components/exercice/exercice-level-2/exercice-level-2.component';
 import { AbstractExerciceLevelComponent } from '@components/exercice/abstract-exercice-level.component';
-import { Level } from '@models/exercice.model';
+import { Level, MAX_LEVEL } from '@models/exercice.model';
 import { findNextGroup } from '@utils/group.util';
 import { ExerciceGroupLinkComponent } from '@components/exercice/exercice-group-link/exercice-group-link.component';
 import { ExerciceService } from './exercice.service';
@@ -49,6 +49,10 @@ export class ExercicePageComponent implements OnDestroy {
   nbWords = this._exerciceService.nbWords;
   progressPercent = this._exerciceService.progressPercent;
 
+  isTopBarVisible = computed(() => {
+    return this.level() === MAX_LEVEL && this.progressPercent() === 100;
+  });
+
   nextGroup = computed<Group | undefined>(() => {
     const group = this.group();
     return group ? findNextGroup(group) : undefined;
@@ -74,8 +78,8 @@ export class ExercicePageComponent implements OnDestroy {
     this._exerciceService.group.set(undefined);
   }
 
-  reset() {
-    this._exerciceService.reset();
+  resetLevel() {
+    this._exerciceService.resetLevel();
   }
 
   answerWord() {

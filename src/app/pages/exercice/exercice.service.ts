@@ -50,6 +50,15 @@ export class ExerciceService {
     });
   }
 
+  resetLevel() {
+    this._state.update(({ level }) => ({
+      words: shuffle(this.group()?.words || []),
+      wordIdx: 0,
+      level,
+      wordsAnswered: new Set(),
+    }));
+  }
+
   previousWord() {
     this._state.update(({ words, wordIdx, level, wordsAnswered }) => ({
       words,

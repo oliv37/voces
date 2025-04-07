@@ -3,6 +3,13 @@
 <app-client-side>
   @if(word(); as word) {
   <div
+    class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
+    [class]="group()?.category?.color?.bgColor"
+    [class.opacity-0]="!isTopBarVisible()"
+    [class.opacity-100]="isTopBarVisible()"
+  ></div>
+
+  <div
     class="flex flex-col items-center justify-around gap-8 min-h-[calc(100lvh-4rem)] cursor-default"
   >
     <div class="text-6xl text-gray-800 tracking-wide">
@@ -23,7 +30,7 @@
     ></app-exercice-level-2>
     }
 
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-7">
       <app-exercice-progress-bar
         [wordIdx]="wordIdx()"
         [nbWords]="nbWords()"
@@ -34,7 +41,7 @@
         [level]="level()"
         (levelChange)="setLevel($event)"
         (patchQuestion)="help()"
-        (arrowClockwise)="reset()"
+        (arrowClockwise)="resetLevel()"
       />
     </div>
   </div>
