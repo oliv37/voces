@@ -3,6 +3,7 @@ import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb.model';
 import { Type } from '@angular/core';
 import { NotFoundPageComponent } from '../pages/not-found/not-found-page.component';
 import { Category } from '@models/category.model';
+import { Group } from '@models/group.model';
 
 const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = { url: '/', label: 'voces' };
 
@@ -30,23 +31,32 @@ function addBreadcrumbItem(
   route: ActivatedRouteSnapshot
 ): void {
   const category: Category | undefined = route.data['category'];
+  const group: Group | undefined = route.data['group'];
   const previousUrl: string =
     breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
 
   const label = route.url
     .map((segment) => segment.toString())
-    .map((segment) =>
-      segment === category?.pathParam ? category.label : segment
-    )
+    .map((segment) => {
+      if (segment === category?.pathParam) {
+        return category?.label;
+      }
+      if (segment === group?.pathParam) {
+        return group?.label;
+      }
+      return segment;
+    })
     .join(' ')
     .replaceAll('-', ' ');
   const url = [previousUrl, ...route.url].join('/');
   const bgColor =
     label === category?.label ? category?.color.bgColor : undefined;
+  const isBold = label === group?.label;
 
   breadcrumb.push({
     label,
     url,
     bgColor,
+    isBold,
   });
 }

@@ -16,6 +16,7 @@
   <a
     [routerLink]="breadcrumbItem.url"
     class="capitalize text-gray-700 hover:text-black"
+    [class.font-bold]="breadcrumbItem.isBold"
     >{{ breadcrumbItem.label }}</a
   >
   } @if (!$last) {
