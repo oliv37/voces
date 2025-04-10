@@ -6,16 +6,13 @@
   (breadcrumbItem.bgColor) {
   <a
     [routerLink]="breadcrumbItem.url"
-    [class]="
-      'px-2 rounded-md font-bold capitalize text-white ' +
-      breadcrumbItem.bgColor
-    "
+    [class]="'px-2 rounded-md font-bold text-white ' + breadcrumbItem.bgColor"
     >{{ breadcrumbItem.label }}</a
   >
   } @else {
   <a
     [routerLink]="breadcrumbItem.url"
-    class="capitalize text-gray-700 hover:text-black"
+    class="text-gray-700 hover:text-black"
     [class.font-bold]="breadcrumbItem.isBold"
     >{{ breadcrumbItem.label }}</a
   >

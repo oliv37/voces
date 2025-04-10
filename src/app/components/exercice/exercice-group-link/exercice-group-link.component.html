@@ -7,11 +7,6 @@
     'exercice'
   ]"
 >
-  @if (displayPreviousIcon()) {
-  <div class="self-center">
-    <app-arrow-left-circle-fill-icon className="w-8 h-8 fill-neutral-900" />
-  </div>
-  }
   <div class="flex-1 flex flex-col gap-4">
     <div class="text-2xl font-bold">
       <span
@@ -27,9 +22,7 @@
       @if (!$last) { {{ " - " }} } }
     </div>
   </div>
-  @if (displayNextIcon()) {
   <div class="self-center transition group-hover:translate-x-1.5">
     <app-arrow-right-circle-fill-icon className="w-8 h-8 fill-neutral-900" />
   </div>
-  }
 </a>

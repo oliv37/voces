@@ -5,7 +5,7 @@ import { NotFoundPageComponent } from '../pages/not-found/not-found-page.compone
 import { Category } from '@models/category.model';
 import { Group } from '@models/group.model';
 
-const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = { url: '/', label: 'voces' };
+const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = { url: '/', label: 'Voces' };
 
 export function buildBreadcrumb(
   route: ActivatedRouteSnapshot | null

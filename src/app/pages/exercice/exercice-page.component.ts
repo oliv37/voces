@@ -15,23 +15,22 @@ import { ExerciceLevel1Component } from '@components/exercice/exercice-level-1/e
 import { ExerciceLevel2Component } from '@components/exercice/exercice-level-2/exercice-level-2.component';
 import { AbstractExerciceLevelComponent } from '@components/exercice/abstract-exercice-level.component';
 import { Level, MAX_LEVEL } from '@models/exercice.model';
-import { findNextGroup } from '@utils/group.util';
-import { ExerciceGroupLinkComponent } from '@components/exercice/exercice-group-link/exercice-group-link.component';
 import { ExerciceService } from './exercice.service';
 import { MetaDirective } from '@directives/meta.directive';
 import { ExerciceButtonBarComponent } from '@components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceProgressBarComponent } from '@components/exercice/exercice-progress-bar/exercice-progress-bar.component';
 import { AnimationService } from '@services/animation.service';
+import { ExerciceNextGroupsComponent } from '../../components/exercice/exercice-next-groups/exercice-next-groups.component';
 
 @Component({
   imports: [
     ClientSideComponent,
     ExerciceLevel1Component,
     ExerciceLevel2Component,
-    ExerciceGroupLinkComponent,
     MetaDirective,
     ExerciceButtonBarComponent,
     ExerciceProgressBarComponent,
+    ExerciceNextGroupsComponent,
   ],
   templateUrl: './exercice-page.component.html',
 })
@@ -42,7 +41,8 @@ export class ExercicePageComponent implements OnDestroy {
   exerciceLevelCmp =
     viewChild<AbstractExerciceLevelComponent>('exerciceLevelCmp');
 
-  group = input<Group>();
+  group = input.required<Group>();
+
   level = this._exerciceService.level;
   wordIdx = this._exerciceService.wordIdx;
   word = this._exerciceService.word;
@@ -51,11 +51,6 @@ export class ExercicePageComponent implements OnDestroy {
 
   isTopBarVisible = computed(() => {
     return this.level() === MAX_LEVEL && this.progressPercent() === 100;
-  });
-
-  nextGroup = computed<Group | undefined>(() => {
-    const group = this.group();
-    return group ? findNextGroup(group) : undefined;
   });
 
   _focusEffect = effect(() => {
@@ -67,7 +62,10 @@ export class ExercicePageComponent implements OnDestroy {
   });
 
   _groupEffect = effect(() => {
-    this._exerciceService.group.set(this.group());
+    const group = this.group();
+
+    this._exerciceService.group.set(group);
+    this.scrollToTop();
   });
 
   constructor() {
@@ -95,7 +93,9 @@ export class ExercicePageComponent implements OnDestroy {
     this.exerciceLevelCmp()?.focus();
   }
 
-  scrollToTop() {
-    window.scrollTo(0, 0);
+  private scrollToTop() {
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }
 }

@@ -4,7 +4,7 @@
   @if(word(); as word) {
   <div
     class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
-    [class]="group()?.category?.color?.bgColor"
+    [class]="group().category.color.bgColor"
     [class.opacity-0]="!isTopBarVisible()"
     [class.opacity-100]="isTopBarVisible()"
   ></div>
@@ -35,7 +35,7 @@
         [wordIdx]="wordIdx()"
         [nbWords]="nbWords()"
         [progressPercent]="progressPercent()"
-        [bgColor]="group()?.category?.color?.bgColor || 'bg-gray-500'"
+        [bgColor]="group().category.color.bgColor"
       />
       <app-exercice-button-bar
         [level]="level()"
@@ -46,12 +46,6 @@
     </div>
   </div>
 
-  @if (nextGroup(); as nextGroup) {
-  <app-exercice-group-link
-    class="block pt-15 px-10"
-    [group]="nextGroup"
-    displayNextIcon="true"
-    (click)="scrollToTop()"
-  />
-  } }
+  <app-exercice-next-groups [group]="group()"></app-exercice-next-groups>
+  }
 </app-client-side>

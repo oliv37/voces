@@ -38,21 +38,19 @@ export function findPreviousGroup(group: Group): Group {
   return category.groups[groupIdx - 1];
 }
 
-export function findNextGroup(group: Group): Group {
-  const categories: Category[] = DATA.flat();
-  const category = group.category;
+export function findNextGroups(
+  fromGroup: Group | undefined,
+  nbGroups: number
+): Group[] {
+  const groups: Group[] = DATA.flat()
+    .map((c) => c.groups)
+    .flat();
+  const groupIdx = groups.findIndex((g) => g.id === fromGroup?.id);
 
-  const categoryIdx = categories.findIndex((c) => c.id === category.id);
-  const groupIdx = category.groups.findIndex((g) => g.id === group.id);
-  if (categoryIdx === -1 || groupIdx === -1) {
-    return categories[0].groups[0];
-  }
-
-  const isLastGroup = groupIdx === category.groups.length - 1;
-  if (isLastGroup) {
-    const nextCategory = categories[(categoryIdx + 1) % categories.length];
-    return nextCategory.groups[0];
-  }
-
-  return category.groups[groupIdx + 1];
+  return groupIdx >= 0
+    ? groups.slice(
+        groupIdx + 1,
+        Math.min(groupIdx + nbGroups + 1, groups.length)
+      )
+    : [];
 }

@@ -260,3 +260,4 @@ balacera : fusillade
 brecha : brèche, fissure
 aforo : capacité
 escarnio : humiliation, moquerie
+brevedad : brièveté
