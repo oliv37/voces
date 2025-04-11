@@ -23,7 +23,6 @@ aspirar : aspirer à, convoiter
 superar : surmonter, se remettre de
 ingreso : dépôt, versement, revenus
 sobrecoste : surcoût
-desarrollar : développer
 fuente : source
 protesta : manifestation
 trasladar : déplacer, déménager
@@ -366,7 +365,7 @@ deshacer : liquider, fermer boutique
 confundir : déconcerter, dérouter, confondre
 prospeccion : prospection, sondage
 hurgar : fouiller
-asesor : conseiller
+adoptar : adopter
 palabreria : baratin
 curro : boulot
 talonario : carnet de chèque, chéquier
@@ -398,3 +397,4 @@ difunto : décédé, défunt
 empate : match nul, égalité
 fuera de juego : hors-jeu
 exito : succès, gloire
+brevedad : brièveté

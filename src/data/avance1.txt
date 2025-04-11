@@ -84,3 +84,9 @@ ganzua : crochet
 ventarron : bourrasque
 tarambana : écervelé
 cantinela : rengaine
+viga : poutre
+descalzo : pieds nus
+parpadear : cligner de yeux
+abuhardillado : mansardé
+sobaquera : odeur des aisselles
+bogavante : homard

@@ -9,7 +9,6 @@ matadero : abattoir
 fuente : source
 declive : déclin
 hecho polvo : crevé, épuisé
-ladrillo : brique
 junta : assemblée, comité
 cupula : coupole
 complejo : complexe, compliqué
@@ -44,8 +43,6 @@ fingir : faire semblant
 cabron : connard
 joya : bijou
 gasolinera : station-service, pompe à essence
-ladron : voleur
-periodo de prueba : période d'essai
 en cuanto : dès que, aussitôt que
 referirse : faire référence, se référer
 en cuanto a : quant à
@@ -117,7 +114,6 @@ alargar : allonger, rallonger
 manga : manche
 asignatura : matière
 aula : salle de classe
-desarrollar : realiser, mener à bien
 borrasca : tempête
 verguenza : honte
 delgado : mince, maigre
@@ -155,11 +151,9 @@ plantearse : envisager, considérer
 criminologia : criminologie
 héroe : héros
 obra : travaux
-chulo : super, chouette
 fundacion : fondation
 mitad : milieu
 coleta : queue de cheval
-dueno : propriétaire, maitre
 tantear : sonder, tâter
 juerguista : fêtard
 revista : revue
@@ -322,7 +316,6 @@ plusmarca : nouveau record
 pantalla : écran
 disfraz : déguisement
 fiel : fidèle
-conjunto : ensemble
 contemplar : contempler
 racha : rafale
 colgante : pendentif
@@ -382,7 +375,6 @@ albergue : refuge, foyer
 timar : escroquer, arnaquer
 parado : être au chômage
 derogar : abolir, abroger
-aportar : contribuer, cotiser
 patan : rustre, malotru, goujat
 senado : sénat
 retomar : reprendre
@@ -443,13 +435,11 @@ toma electrica : prise électrique
 ternero : veau
 becero : veau
 pollo : poulet
-cepillo de dientes : brosse à dents
 cordon : lacet
 acelerar : accélérer
 aullar : hurler
 cala : crique, calanque
 cimientos : fondations
-sabana : drap
 bombilla : ampoule (éclairage)
 ampolla : ampoule (peau)
 yema : jaune d'oeuf
@@ -544,7 +534,6 @@ dantesco : dantesque
 torso : torse
 plato : assiette
 plata : argent
-fregadero : évier
 fregar : laver, récurer
 pulsera : bracelet
 grifo : robinet
@@ -577,7 +566,6 @@ jarabe : sirop
 farmacia : pharmacie
 cirujano : chirurgien
 lavaplatos : lave-vaisselle
-aprobar : approuver
 lavadora : lave-linge
 tarjeta postal : carte postal
 estatua : statue
@@ -598,14 +586,12 @@ certeza : certitude
 sospechoso : suspect, louche
 plagar : remplir de, couvrir de
 venganza : vengeance
-empresario : chef d'entreprise, entrepreneur
 atormentar : torturer
 deuda : dette
 plantear : poser, exposer, envisager
 esclarecer : élucider, clarifier
 cerradura : serrure
 apuntar : pointer, indiquer, montrer
-arrastrar : traîner, tirer
 paradero : être introuvable, être porté disparu
 sicario : tueur à gages
 culminar : achever
@@ -717,7 +703,6 @@ topetar : percuter
 incautar : saisir, confisquer
 chaleco antibalas : gilet pare-balles
 chaleco salvavidas : gilet de sauvetage
-aprobar : réussir, admettre à un examen
 atar : lier
 soplon : mouchard, indicateur
 caluroso : chaud
@@ -814,7 +799,6 @@ camiseta : t-shirt
 capricho : caprice
 caprichoso : capricieux
 basca : bande de potes
-vasco : basque
 regentar : diriger, tenir, être à la tête
 crecida : crue
 calderilla : petite monnaie
@@ -839,8 +823,6 @@ careto : visage, tronche, gueule
 desatascar : débloquer, déboucher
 traspaso : cession, transfert
 ajuste : réglage, ajustement
-costal : sac
-cochera : garage
 flujo : flux
 tesoro : trésor
 amargar : donner un goût amer, rendre amer
@@ -858,7 +840,6 @@ arena : sable
 periodo : règles
 aunar : joindre, rassembler
 aplastar : écraser, aplatir
-carajo : bordel, merde
 rodar : tourner (un film)
 destapado : découvert, révélé
 sagrado : sacré
@@ -993,7 +974,6 @@ destripar : étriper
 montaraz : rude, rustre
 glandula : glande
 impetu : fougue
-muneca : poignet
 agarrar : attraper, saisir, prendre
 desbravar : dompter, apprivoiser, adoucir
 rafaga : rafale
@@ -1149,7 +1129,6 @@ acopiar : accumuler
 cepo : piège
 pocilga : porcherie
 criado : domestique
-tremendo : énorme, gigantesque
 audaz : audacieux
 inversion : inversion, permutation
 chupete : tétine, tototte
@@ -1246,7 +1225,6 @@ pesimismo : pessimisme
 senal : indication
 firmemente : fermement
 socavar : saper
-estrategia : stratégie
 subalterno : subalterne
 dependiente : dépendant
 juzgado : tribunal
@@ -1416,7 +1394,6 @@ verdugo : bourreau
 lodazal : bourbier
 tropa : troupe
 revistar : passer en revue, inspecter
-novedad : nouveauté
 juramento : serment
 sobrevolar : survoler
 transcurrir : s'écouler, passer
@@ -1438,12 +1415,10 @@ temporal : tempête, orage
 azotar : battre, fouetter
 apoderar : déléguer, mandater, donner procuration
 odio : haine
-lidiar : combattre
 cruce : passage piétons
 cruzar : traverser
 presionar : faire pression sur
 discutir : discuter
-desafio : défi
 urgir : urger
 desavenencia : désaccord
 burgues : bourgeois
@@ -1477,7 +1452,6 @@ tapadera : couverture
 amparar : protéger
 infravalorar : sous-estimer
 apurar : finir, terminer
-desafio : défi
 bondad : bonté
 plantilla : personnel
 decalogo : règlement
@@ -1541,7 +1515,6 @@ atajar : contenir, stopper
 sumo : suprême
 rosario : chapelet
 saciar : satisfaire, assouvir
-arrastrar : entraîner
 grano : grain
 feretro : cercueil
 cortejar : courtiser
@@ -1558,7 +1531,6 @@ via ferrea : voie ferrée
 patrullaje : patrouille
 comparecer : comparaître
 compareciencia : comparution
-barrera : barrière
 ensayo : test, essai
 paracadista : parachutiste
 cruce : croisement
@@ -1575,7 +1547,6 @@ convalidacion : validation
 indultar : gracier
 pleno : séance plénière
 llamar al orden : rappeler à l'ordre
-augurar : prédire, prévoir
 ensordecedor : assourdissant
 armatoste : objet encombrant
 sudadera : sweat-shirt
@@ -1602,7 +1573,6 @@ atadura : liens, attache
 magnitud : ampleur, étendue, importance
 anillo : périphérique, rocade
 albergar : abriter, accueillir, héberger
-pasillo : couloir
 registro : registre
 colapsar : paralyser, bloquer
 entranas : entrailles
@@ -1661,7 +1631,6 @@ escrutinio : dépouillement du scrutin
 mayor : plus grand
 manejar : manipuler
 cebra : zèbre
-desafio : défi
 efectivo : efficace
 enfoque : approche
 alzarse : s'emparer
@@ -1705,7 +1674,6 @@ impedimento : empêchement, obstacle
 impune : impuni
 gasto publico : dépenses publiques
 recaudar : récolter, collecter
-recursos : ressources
 senda : sentier, chemin
 sexenio : sextennat
 tender puentes : bâtir un pont
@@ -1718,7 +1686,6 @@ conteo : dépouillement
 apuntarse : s'inscrire
 puntualizar : préciser, spécifier
 penultimo : avant-dernier
-recursos : recours, moyen
 comprometerse : s'engager, promettre
 atajar : contenir, stopper
 padrino : parrain
@@ -1738,12 +1705,10 @@ estacional : de saison
 registro : enregistrement, inscription
 precariedad : précarité
 valorar : estimer, expertiser
-barrera : barrière
 trabajador autonomo : travailleur indépendant
 cuenta propia : à leur compte
 colocar : placer, poser, mettre
 por encima de : au-dessus de
-conjunto : ensemble, groupe
 contratacion : embauche
 asimismo : de même, de la même manière
 afiliacion : adhésion
@@ -1904,7 +1869,6 @@ mendigar : mendier, quémander
 recalcar : insister sur, souligner
 ingresar : admettre, intégrer
 arropar : soutenir, supporter
-cepillo : brosse
 apartar : pousser, écarter, déplacer
 arrullar : bercer
 hembra : femelle
@@ -2015,7 +1979,6 @@ intrascendente : insignifiant
 benemerita : guarde civile, gendarmerie
 lancha : canot à moteur
 cabo : brigadier, caporal
-resoplar : souffler
 espantoso : horrible, terrifiant
 desprenderse : se débarraser
 fingido : feint
@@ -2083,7 +2046,6 @@ rebatir : réfuter, rejeter
 bodorrio : mariage de débauche
 prendar : plaire, charmer
 panfilo : idiot, niais
-antojarse : imaginer, avoir l'impression
 salvaguardar : protéger
 entero : digne
 enloquecer : exaspérer, rendre fou
@@ -2573,7 +2535,6 @@ tambalear : vaciller, tituber
 trastabillar : trébucher
 arrear : déclencher, flanquer (gifle, coup de poing)
 amago : esquisse, feinte
-encarar : faire face à, affronter
 quebrar : briser, casser
 nato : inné, né
 estirpe : descendance, lignée
@@ -2672,7 +2633,6 @@ afeitar : raser
 tirita : pansement
 apilar : empiler
 delatar : dénoncer
-cepillo : brosse
 progreso : progrès
 mofarse : se moquer
 cavernicola : homme des cavernes
@@ -2739,7 +2699,6 @@ apiadarse : avoir pitié
 dudar : hésiter, douter
 interponer : interposer
 levantar la liebre : rendre public
-descalzo : pieds nus
 fama : célébrité, renommée
 costo : haschich
 pillar : attraper, coincer, surprendre
@@ -3020,7 +2979,6 @@ agazaparse : se tapir
 zarza : ronce
 matojo : buisson
 pincho : pointe, pique
-lidiar con : faire face à, lutter contre
 embarrar : couvrir de boue
 impotencia : impuissance
 cojo : boiteux
@@ -3060,8 +3018,6 @@ resorte : ressort
 violentar : gêner, contrarier
 taxista : chauffeur de taxi
 empenar : mettre en gage
-resoplar : souffler
-calar a alguien : démasquer, percer à jour
 desbocarse : se déchaîner
 profugo : fugitif
 remate : tir, frappe
@@ -3093,7 +3049,7 @@ increpar : réprimander
 surtir efecto : faire effet
 cuajar : prendre forme, se concrétiser
 malherido : blessé grave
-contundente : contondant
+
 pergenar : ébaucher
 alumbrado : éclairage public
 suplir : remplacer

@@ -1,24 +1,17 @@
 <div class="flex items-center gap-3">
-  <div class="w-7 h-8 text-right text-2xl font-bold overflow-hidden">
+  <div class="w-8 h-8 text-right text-2xl font-bold overflow-hidden">
     <div [@slideDown]="wordIdx()">
       <div>{{ wordIdx() + 1 }}</div>
       <div>{{ wordIdx() }}</div>
     </div>
   </div>
-  <div class="relative flex-1 h-4 border border-gray-400 rounded">
+  <div class="relative flex-1 h-6 border border-gray-800 rounded">
     <div
       class="absolute top-0 left-0 h-full transition-all duration-500 rounded-l"
       [class]="bgColor()"
-      [class.rounded-r]="progressPercent() === 100"
-      [style.width]="progressPercent() + '%'"
-    ></div>
-    <div
-      [class]="
-        'absolute top-full -translate-x-1/2 transition-all duration-500 ' +
-        'border border-transparent border-x-10 border-b-16 border-b-gray-800'
-      "
-      [style.left]="(wordIdx() / nbWords()) * 100 + '%'"
+      [class.rounded-r]="wordIdx() + 1 === nbWords()"
+      [style.width]="((wordIdx() + 1) / nbWords()) * 100 + '%'"
     ></div>
   </div>
-  <div class="w-7 h-8 text-left text-2xl">{{ nbWords() }}</div>
+  <div class="w-8 h-8 text-left text-2xl">{{ nbWords() }}</div>
 </div>

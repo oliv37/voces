@@ -1,63 +1,61 @@
-- display all next groups
+- afficher top bar color et star color uniquement si tout trouvé sans aide
+- shuffle words after all answered
 - Logo
 - define meta og tags
 - add service worker
 
-telediario : journal télévisé
-conjunto : ensemble
-terremoto : tremblement de terre
-empresario : chef d'entreprise
-encarar : faire face à
-lidiar : combattre, faire face à
-desarrollar : développer
-estrategia : stratégie
-prueba : preuve
-respuesta : réponse
-previsto : prévu
-esquematico : schématique
-novedad : nouveauté
-suficiente : suffisant
-aprobar : adopter, réussir
-adoptar : adopter
-preventivo : préventif
-pedido : commande
-a corto plazo : à court terme
-liquidez : liquidité
-recomponer : recomposer
-fluir : couler
-paraguas : parapluie
-aludir : faire allusion à
-escalar : escalader
-desafio : défi
-chocar : percuter
-competencia : concurrence
-desleal : déloyal
-contraccion : contraction
-contundente : ferme, catégorique
-recursos : ressources
-aportar : cotiser, contribuer
-aportar : aporter, fournir
-hundir : faire couler
-aluvion : crue
-desaceleracion : ralentissement, décélération
-desplome : effondrement, écroulement
-crudo : brut
-imponer : imposer
-retrasar : retarder, reporter
-petroleo : pétrole
-influir : influencer, influer sur
-augurar : prédire, présager
-mala racha : mauvaise passe
-arrastrar : traîner, tirer
-cochera : garage
-costal : sac
-rebote : rebond
-temor : crainte, peur
-asesor : conseiller
-barrera : barrière
-avalar : se porter garant
-avalar : cautionner, soutenir
-ingente : immense, énorme
-adjudicaion : attribution
-gremio : syndicat
-mono : singe
+tertulia : réunion entre amis
+digerir : digérer
+sendo : important
+palmada : tape, gifle
+aflojarse : se desserrer, se détendre
+patear : piétiner
+vena : veine
+inflar a algo : rouer de coups
+hostia : beigne, torgnole, coup
+tramites : démarches
+cardenal : bleu, hématome
+costilla : côte
+jaco : héro (drogue)
+rascar : gratter
+mesar : arracher (cheveux, barbe)
+desviado : dépravé
+guarnicion : garniture
+retocar : retoucher
+manga : manche
+estandar : standard
+chuparse : maigrir
+puno : poing
+alojar : loger
+tartera : récipient, gamelle
+a bulto : à première vue
+susto : peur, frayeur
+geranio : géranium
+lagarto : lézard
+bifido : fourchu
+irredento : invétéré
+tonelada : tonne
+inmerso : immergé, submergé
+arrugar : froisser, chiffonner
+extranar : surprendre
+maletin : mallette, porte-documents
+ojear : jeter un coup d'oeil
+varita : baguette
+atajo : tricherie
+encogerse : se recroqueviller, se replier
+sabio : sage
+al grano : venez-en aux faits, accouche
+hazana : exploit
+carcajada : éclat de rire
+pizca : une pincée de
+agrio : aigre, âpre, rude
+vengador : vengeur
+hiena : hyène
+descascarillar : poncer, décaper
+recibidor : entrée, vestibule
+amanecer : le jour se lève
+jabon : savon
+empotrar : encastrer
+atisbar : observer
+percha : cintre
+pila : évier

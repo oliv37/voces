@@ -1,11 +1,13 @@
 manazas : empoté, avoir deux mains gauches
 arrastrar : entraîner, emporter
+aportar : cotiser, contribuer
 inservible : inutilisable
 bufido : rugissement, soufflement
 dadiva : don, présent
 vajilla : vaisselle
 derroche : profusion, explosion
 aplacar : calmer, apaiser
+avalar : cautionner, soutenir
 bocanada : bouffée, bol d'air
 otorgar : octroyer
 obsequiar : offrir, faire un cadeau
@@ -79,6 +81,7 @@ apodar : surnommer
 comadrona : sage-femme
 quisquilloso : susceptible
 grato : agréable, plaisant
+recursos : recours, moyen
 pleitesia : rendre hommage à
 indulto : grâce (pardon)
 saque de esquina : corner
@@ -260,4 +263,56 @@ balacera : fusillade
 brecha : brèche, fissure
 aforo : capacité
 escarnio : humiliation, moquerie
-brevedad : brièveté
+encarar : faire face à
+lidiar : combattre, faire face à
+periodo de prueba : période d'essai
+esquematico : schématique
+pedido : commande
+a corto plazo : à court terme
+liquidez : liquidité
+recomponer : recomposer
+sabana : drap
+fluir : couler
+escalar : escalader
+desafio : défi
+chocar : percuter
+desleal : déloyal
+contundente : contondant
+recursos : ressources
+aportar : aporter, fournir
+aluvion : crue
+desplome : effondrement, écroulement
+influir : influencer, influer sur
+augurar : prédire, présager
+mala racha : mauvaise passe
+arrastrar : traîner, tirer
+cochera : garage
+costal : sac
+rebote : rebond
+barrera : barrière
+avalar : se porter garant
+ingente : immense, énorme
+adjudicaion : attribution
+gremio : syndicat
+pulso : fermeté
+vasco : basque
+bulto : bosse, forme
+dieta : régime
+desapercibido : inaperçu
+claraboya : lucarne
+ajado : usé
+resoplar : souffler
+a pesar de : malgré
+sastre : couturier
+encimera : plan de travail
+despejar : dégager
+chillido : cri
+garrafa : carafe
+rollo : baratin
+cepillo : brosse
+caballo : héroïne, came, chnouf
+acera : trottoir
+cemento : ciment
+soga : corde
+chulo : mac
+carajo : bordel, merde

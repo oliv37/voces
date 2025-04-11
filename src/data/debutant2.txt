@@ -120,7 +120,6 @@ potencia : puissance
 competencia : concurrence
 arbitro : arbitre
 excluir : exclure
-competencia : compétence
 arrodillar : s'agenouiller
 juguete : jouet
 habilitar : aménager, habiliter
@@ -131,3 +130,28 @@ ajo : ail
 defecto : défaut
 panuelo : mouchoir
 mezquino : mesquin
+telediario : journal télévisé
+conjunto : ensemble
+empresario : chef d'entreprise
+estrategia : stratégie
+ladron : voleur
+respuesta : réponse
+previsto : prévu
+novedad : nouveauté
+suficiente : suffisant
+aprobar : adopter, réussir
+preventivo : préventif
+paraguas : parapluie
+contraccion : contraction
+desaceleracion : ralentissement, décélération
+petroleo : pétrole
+temor : crainte, peur
+mono : singe
+dueno : propriétaire
+fregadero : évier
+madrugar : se lever tôt
+encabronarse : s'énerver
+pasillo : couloir
+ladrillo : brique
+corbata : cravate
+chulo : super, chouette

@@ -9,7 +9,7 @@
     <app-patch-question-icon className="w-8 h-8 fill-neutral-900" />
   </button>
 
-  <div class="flex justify-center mx-5 relative">
+  <div class="flex justify-center mx-8 relative">
     @for (_lvl of levels; track $index) {
     <button type="button" class="px-2" (click)="levelChange.emit(_lvl)">
       @if (_lvl <= level()) {
