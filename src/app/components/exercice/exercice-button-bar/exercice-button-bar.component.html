@@ -6,21 +6,22 @@
     appBtnBorder="none"
     (click)="patchQuestion.emit()"
   >
-    <app-patch-question-icon className="w-8 h-8 fill-neutral-900" />
+    <app-patch-question-icon [className]="'w-8 h-8 ' + questionFillColor()" />
   </button>
 
   <div class="flex justify-center mx-8 relative">
     @for (_lvl of levels; track $index) {
-    <button type="button" class="px-2" (click)="levelChange.emit(_lvl)">
+    <button
+      type="button"
+      class="px-2 hover:bg-gray-300/40"
+      (click)="levelChange.emit(_lvl)"
+    >
       @if (_lvl <= level()) {
-      <app-star-fill-icon className="w-9 h-9 fill-gray-950 stroke-gray-950" />
-      } @else {
       <app-star-fill-icon
-        [className]="
-          'w-9 h-9 fill-white stroke-gray-950 ' +
-          'transition-all duration-300 hover:fill-gray-950'
-        "
+        [className]="'w-9 h-9 stroke-gray-800 ' + starFillColor()"
       />
+      } @else {
+      <app-star-fill-icon className="w-9 h-9 stroke-gray-800 fill-white" />
       }
     </button>
     }

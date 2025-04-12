@@ -4,9 +4,12 @@ import { Word } from '@models/word.model';
 
 import dataDebutant1 from '@data/debutant1.txt';
 import dataDebutant2 from '@data/debutant2.txt';
+import dataDebutant3 from '@data/debutant3.txt';
 import dataIntermediaire1 from '@data/intermediaire1.txt';
 import dataIntermediaire2 from '@data/intermediaire2.txt';
 import dataIntermediaire3 from '@data/intermediaire3.txt';
+import dataIntermediaire4 from '@data/intermediaire4.txt';
+import dataIntermediaire5 from '@data/intermediaire5.txt';
 import dataAvance1 from '@data/avance1.txt';
 import {
   Level,
@@ -16,7 +19,7 @@ import {
 } from '@models/level.model';
 import { COLORS } from '@models/color.model';
 
-const GROUP_SIZE = 20;
+const GROUP_SIZE = 12;
 
 export const DATA: Category[][] = [
   [
@@ -32,6 +35,13 @@ export const DATA: Category[][] = [
       'Débutant 2',
       'debutant-2',
       dataDebutant2,
+      LEVEL_DEBUTANT
+    ),
+    buildCategory(
+      'DEBUTANT3',
+      'Débutant 3',
+      'debutant-3',
+      dataDebutant3,
       LEVEL_DEBUTANT
     ),
   ],
@@ -50,12 +60,25 @@ export const DATA: Category[][] = [
       dataIntermediaire2,
       LEVEL_INTERMEDIAIRE
     ),
-
     buildCategory(
       'INTERMEDIAIRE3',
       'Intermédiaire 3',
       'intermediaire-3',
       dataIntermediaire3,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE4',
+      'Intermédiaire 4',
+      'intermediaire-4',
+      dataIntermediaire4,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE5',
+      'Intermédiaire 5',
+      'intermediaire-5',
+      dataIntermediaire5,
       LEVEL_INTERMEDIAIRE
     ),
   ],

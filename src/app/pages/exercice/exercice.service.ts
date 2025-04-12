@@ -24,7 +24,8 @@ export class ExerciceService {
       words: shuffle(words),
       wordIdx: 0,
       level: 1,
-      wordsAnswered: new Set(),
+      isCompleted: false,
+      hasUsedHelp: false,
     };
   });
 
@@ -35,10 +36,17 @@ export class ExerciceService {
   level = computed<Level>(() => this.state().level);
   wordIdx = computed<number>(() => this.state().wordIdx);
   nbWords = computed<number>(() => this.state().words.length);
-  nbWordsAnswered = computed<number>(() => this.state().wordsAnswered.size);
+  isCompleted = computed<boolean>(() => this.state().isCompleted);
+  hasUsedHelp = computed<boolean>(() => this.state().hasUsedHelp);
+  isLastWord = computed<boolean>(() => {
+    return this.nbWords() > 0 && this.wordIdx() + 1 === this.nbWords();
+  });
+  isMaxLevel = computed<boolean>(() => {
+    return this.level() === MAX_LEVEL;
+  });
 
   progressPercent = computed<number>(
-    () => (this.nbWordsAnswered() * 100) / this.nbWords()
+    () => ((this.wordIdx() + 1) * 100) / this.nbWords()
   );
 
   reset() {
@@ -46,7 +54,8 @@ export class ExerciceService {
       words: shuffle(this.group()?.words || []),
       wordIdx: 0,
       level: 1,
-      wordsAnswered: new Set(),
+      isCompleted: false,
+      hasUsedHelp: false,
     });
   }
 
@@ -55,86 +64,75 @@ export class ExerciceService {
       words: shuffle(this.group()?.words || []),
       wordIdx: 0,
       level,
-      wordsAnswered: new Set(),
-    }));
-  }
-
-  previousWord() {
-    this._state.update(({ words, wordIdx, level, wordsAnswered }) => ({
-      words,
-      wordIdx: (wordIdx - 1 + words.length) % words.length,
-      level,
-      wordsAnswered,
-    }));
-  }
-
-  nextWord() {
-    this._state.update(({ words, wordIdx, level, wordsAnswered }) => ({
-      words,
-      wordIdx: (wordIdx + 1) % words.length,
-      level,
-      wordsAnswered,
+      isCompleted: false,
+      hasUsedHelp: false,
     }));
   }
 
   answerWord() {
     const group = this.group();
     const word = this.word();
-    const level = this.level();
-    const wordsAnswered = this.state().wordsAnswered;
+    const isMaxLevel = this.isMaxLevel();
+    const isLastWord = this.isLastWord();
+    const hasNotUsedHelp = !this.hasUsedHelp();
 
     if (!group || !word) {
       return;
     }
 
-    const isMaxLevel = level === MAX_LEVEL;
-    const newWordsAnswered = new Set([...wordsAnswered, word]);
-    const wereAllWordsAnswered = this.areAllWordsAnswered(wordsAnswered);
-    const areAllWordsAnswered = this.areAllWordsAnswered(newWordsAnswered);
-    const mustMarkAsCompleted =
-      isMaxLevel && !wereAllWordsAnswered && areAllWordsAnswered;
+    const hasAnsweredAllWordsOfMaxLevelWithoutHelp =
+      hasNotUsedHelp && isMaxLevel && isLastWord;
 
-    this._state.update(({ words, wordIdx, level }) => ({
-      words,
-      wordIdx: (wordIdx + 1) % words.length,
-      level,
-      wordsAnswered: newWordsAnswered,
-    }));
+    this._state.update(
+      ({ words, wordIdx, level, hasUsedHelp, isCompleted }) => ({
+        words: isLastWord ? shuffle(words) : words,
+        wordIdx: isLastWord ? 0 : wordIdx + 1,
+        level,
+        isCompleted: isCompleted || hasAnsweredAllWordsOfMaxLevelWithoutHelp,
+        hasUsedHelp: isLastWord ? false : hasUsedHelp,
+      })
+    );
 
-    if (mustMarkAsCompleted) {
+    if (hasAnsweredAllWordsOfMaxLevelWithoutHelp) {
       this._groupCompletionService.markAsCompleted(group);
     }
   }
 
   previousLevel() {
-    this._state.update(({ words, level }) => ({
+    this._state.update(({ words, level, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level: level === 1 ? MAX_LEVEL : ((level - 1) as Level),
-      wordsAnswered: new Set(),
+      isCompleted,
+      hasUsedHelp: false,
     }));
   }
 
   nextLevel() {
-    this._state.update(({ words, level }) => ({
+    this._state.update(({ words, level, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level: level === MAX_LEVEL ? 1 : ((level + 1) as Level),
-      wordsAnswered: new Set(),
+      isCompleted,
+      hasUsedHelp: false,
     }));
   }
 
   setLevel(level: Level) {
-    this._state.update(({ words }) => ({
+    this._state.update(({ words, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level,
-      wordsAnswered: new Set(),
+      isCompleted,
+      hasUsedHelp: false,
     }));
   }
 
-  private areAllWordsAnswered(wordsAnswered: Set<Word>): boolean {
-    return this.state().words.every((word) => wordsAnswered.has(word));
+  setHasUsedHelp(hasUsedHelp: boolean) {
+    this._state.update((state) => ({
+      ...state,
+      hasUsedHelp,
+    }));
   }
 }
 
@@ -142,5 +140,6 @@ interface State {
   words: Word[];
   wordIdx: number;
   level: Level;
-  wordsAnswered: Set<Word>;
+  isCompleted: boolean;
+  hasUsedHelp: boolean;
 }

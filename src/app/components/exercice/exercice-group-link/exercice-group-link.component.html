@@ -16,11 +16,11 @@
       >
       <span class="mx-4">{{ group().label }}</span>
     </div>
-    <div class="flex-1 leading-relaxed">
+    <ul class="flex-1 flex flex-wrap gap-x-4 gap-y-2 leading-relaxed">
       @for (w of group().words; track $index) {
-      {{ w.es }}
-      @if (!$last) { {{ " - " }} } }
-    </div>
+      <li>{{ w.es }}</li>
+      }
+    </ul>
   </div>
   <div class="self-center transition group-hover:translate-x-1.5">
     <app-arrow-right-circle-fill-icon className="w-8 h-8 fill-neutral-900" />

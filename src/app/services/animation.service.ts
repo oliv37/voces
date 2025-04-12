@@ -17,4 +17,12 @@ export class AnimationService {
       )
       .subscribe(() => this.isAnimationEnabled.set(true));
   }
+
+  enableAnimation() {
+    this.isAnimationEnabled.set(true);
+  }
+
+  disableAnimation() {
+    this.isAnimationEnabled.set(false);
+  }
 }

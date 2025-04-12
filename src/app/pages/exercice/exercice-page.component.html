@@ -5,8 +5,8 @@
   <div
     class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
     [class]="group().category.color.bgColor"
-    [class.opacity-0]="!isTopBarVisible()"
-    [class.opacity-100]="isTopBarVisible()"
+    [class.opacity-0]="!isCompleted()"
+    [class.opacity-100]="isCompleted()"
   ></div>
 
   <div
@@ -39,6 +39,12 @@
       />
       <app-exercice-button-bar
         [level]="level()"
+        [questionFillColor]="
+          hasUsedHelp() ? 'fill-red-600' : 'fill-neutral-900'
+        "
+        [starFillColor]="
+          isCompleted() ? group().category.color.fillColor : 'fill-gray-800'
+        "
         (levelChange)="setLevel($event)"
         (patchQuestion)="help()"
         (arrowClockwise)="resetLevel()"

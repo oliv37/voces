@@ -1,5 +1,3 @@
-- afficher top bar color et star color uniquement si tout trouvé sans aide
-- shuffle words after all answered
 - Logo
 - define meta og tags
 - add service worker
@@ -8,14 +6,12 @@ tertulia : réunion entre amis
 digerir : digérer
 sendo : important
 palmada : tape, gifle
-aflojarse : se desserrer, se détendre
 patear : piétiner
 vena : veine
 inflar a algo : rouer de coups
 hostia : beigne, torgnole, coup
 tramites : démarches
 cardenal : bleu, hématome
-costilla : côte
 jaco : héro (drogue)
 rascar : gratter
 mesar : arracher (cheveux, barbe)
@@ -54,7 +50,6 @@ hiena : hyène
 descascarillar : poncer, décaper
 recibidor : entrée, vestibule
 amanecer : le jour se lève
-jabon : savon
 empotrar : encastrer
 atisbar : observer
 percha : cintre

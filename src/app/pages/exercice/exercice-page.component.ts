@@ -1,7 +1,6 @@
 import {
   afterRender,
   Component,
-  computed,
   effect,
   inject,
   input,
@@ -14,7 +13,7 @@ import { Group } from '@models/group.model';
 import { ExerciceLevel1Component } from '@components/exercice/exercice-level-1/exercice-level-1.component';
 import { ExerciceLevel2Component } from '@components/exercice/exercice-level-2/exercice-level-2.component';
 import { AbstractExerciceLevelComponent } from '@components/exercice/abstract-exercice-level.component';
-import { Level, MAX_LEVEL } from '@models/exercice.model';
+import { Level } from '@models/exercice.model';
 import { ExerciceService } from './exercice.service';
 import { MetaDirective } from '@directives/meta.directive';
 import { ExerciceButtonBarComponent } from '@components/exercice/exercice-button-bar/exercice-button-bar.component';
@@ -48,10 +47,8 @@ export class ExercicePageComponent implements OnDestroy {
   word = this._exerciceService.word;
   nbWords = this._exerciceService.nbWords;
   progressPercent = this._exerciceService.progressPercent;
-
-  isTopBarVisible = computed(() => {
-    return this.level() === MAX_LEVEL && this.progressPercent() === 100;
-  });
+  isCompleted = this._exerciceService.isCompleted;
+  hasUsedHelp = this._exerciceService.hasUsedHelp;
 
   _focusEffect = effect(() => {
     this._exerciceService.state();
@@ -69,7 +66,7 @@ export class ExercicePageComponent implements OnDestroy {
   });
 
   constructor() {
-    afterRender(() => this._animationService.isAnimationEnabled.set(true));
+    afterRender(() => this._animationService.enableAnimation());
   }
 
   ngOnDestroy() {
@@ -91,6 +88,7 @@ export class ExercicePageComponent implements OnDestroy {
   help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();
+    this._exerciceService.setHasUsedHelp(true);
   }
 
   private scrollToTop() {

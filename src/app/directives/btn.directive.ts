@@ -21,7 +21,7 @@ export class BtnDirective {
   class = computed<string>(() => {
     return [
       'flex justify-center items-center gap-1',
-      'hover:opacity-80 disabled:opacity-40',
+      'hover:bg-gray-300/40 disabled:opacity-40',
       CLASS_THEME[this.appBtnTheme()],
       CLASS_TEXT_SIZE[this.appBtnTextSize()],
       CLASS_FONT_WEIGHT[this.appBtnFontWeight()],
