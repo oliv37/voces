@@ -1,4 +1,10 @@
-import { Component, inject, input, linkedSignal } from '@angular/core';
+import {
+  Component,
+  computed,
+  inject,
+  input,
+  linkedSignal,
+} from '@angular/core';
 import { Group } from '@models/group.model';
 import { findNextGroups } from '@utils/group.util';
 import { ScrollInfoService } from '@services/scroll-info.service';
@@ -29,6 +35,7 @@ export class ExerciceNextLinksComponent {
       hasNext: nextGroups.length === NB_GROUPS_TO_LOAD,
     };
   });
+  nextGroups = computed(() => this.state().nextGroups);
 
   onScroll() {
     const { nextGroups, hasNext } = this.state();
