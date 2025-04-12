@@ -20,7 +20,7 @@ export class ExerciceButtonBarComponent {
 
   level = input.required<Level>();
   questionFillColor = input<string>('fill-neutral-900');
-  starFillColor = input<string>('fill-gray-800');
+  starFillColor = input<string>('fill-gray-900');
   levelChange = output<Level>();
   patchQuestion = output<void>();
   arrowClockwise = output<void>();

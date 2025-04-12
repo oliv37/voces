@@ -43,7 +43,7 @@
           hasUsedHelp() ? 'fill-red-600' : 'fill-neutral-900'
         "
         [starFillColor]="
-          isCompleted() ? group().category.color.fillColor : 'fill-gray-800'
+          isCompleted() ? group().category.color.fillColor : 'fill-gray-900'
         "
         (levelChange)="setLevel($event)"
         (patchQuestion)="help()"
