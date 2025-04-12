@@ -19,7 +19,7 @@ import { MetaDirective } from '@directives/meta.directive';
 import { ExerciceButtonBarComponent } from '@components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceProgressBarComponent } from '@components/exercice/exercice-progress-bar/exercice-progress-bar.component';
 import { AnimationService } from '@services/animation.service';
-import { ExerciceNextGroupsComponent } from '../../components/exercice/exercice-next-groups/exercice-next-groups.component';
+import { ExerciceNextLinksComponent } from '@components/exercice/exercice-next-links/exercice-next-links.component';
 
 @Component({
   imports: [
@@ -29,7 +29,7 @@ import { ExerciceNextGroupsComponent } from '../../components/exercice/exercice-
     MetaDirective,
     ExerciceButtonBarComponent,
     ExerciceProgressBarComponent,
-    ExerciceNextGroupsComponent,
+    ExerciceNextLinksComponent,
   ],
   templateUrl: './exercice-page.component.html',
 })

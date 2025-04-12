@@ -1,0 +1,27 @@
+@for (nextGroup of state().nextGroups; track $index) {
+<div class="block pt-14 px-10">
+  <a
+    [class]="
+      'group block border pt-6 pb-8 px-3 rounded-md transition-all ' +
+      'border-neutral-400 shadow-md hover:border-neutral-800 hover:shadow-xl'
+    "
+    [routerLink]="['/', nextGroup.category.pathParam, nextGroup.pathParam]"
+  >
+    <div class="flex flex-col gap-7">
+      <div class="text-2xl font-bold">
+        <span
+          class="px-1 rounded text-white"
+          [class]="nextGroup.category.color.bgColor"
+          >{{ nextGroup.category.label }}</span
+        >
+        <span class="mx-4">{{ nextGroup.label }}</span>
+      </div>
+      <ul class="flex-1 flex flex-wrap gap-x-6 gap-y-2 leading-relaxed">
+        @for (word of nextGroup.words; track $index) {
+        <li>{{ word.es }}</li>
+        }
+      </ul>
+    </div>
+  </a>
+</div>
+}
