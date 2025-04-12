@@ -134,7 +134,7 @@ pezon : téton
 sabiduria : savoir
 liebre : lièvre
 tijeras : ciseaux
-palmada : tape
+palmada : tape, gifle
 trajin : agitation
 pudoroso : pudique
 curiosear : fouiner

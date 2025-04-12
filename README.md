@@ -6,7 +6,7 @@
 
 Data are stored in text files in [src/data](./src/data) folder
 
-Each text file contains at most 400 translations
+Each text file contains at most 240 translations
 
 Each translation is represented by a single line with the following format :
 

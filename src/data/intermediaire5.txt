@@ -25,6 +25,7 @@ brecha : brèche, fissure
 aforo : capacité
 escarnio : humiliation, moquerie
 encarar : faire face à
+atajo : raccourci
 lidiar : combattre, faire face à
 periodo de prueba : période d'essai
 esquematico : schématique
@@ -158,3 +159,40 @@ arcon : coffre
 trigo : blé
 tapa : couvercle, capuchon
 criada : domestique, servant
+sendo : important
+tertulia : réunion entre amis
+digerir : digérer
+patear : piétiner
+vena : veine
+inflar a algo : rouer de coups
+hostia : beigne, torgnole, coup
+cardenal : bleu, hématome
+embajada : ambassade
+teja : tuile
+mesar : arracher (cheveux, barbe)
+desviado : dépravé
+guarnicion : garniture
+manga : manche
+chuparse : maigrir
+desalojar : expulser, déloger
+tartera : récipient, gamelle
+a bulto : à première vue
+estallar : éclater, exploser
+geranio : géranium
+tonelada : tonne
+inmerso : immergé, submergé
+arrugar : froisser, chiffonner
+ojear : jeter un coup d'oeil
+varita : baguette
+atajo : tricherie
+encogerse : se recroqueviller, se replier
+sabio : sage
+carcajada : éclat de rire
+agrio : aigre, âpre, rude
+vengador : vengeur
+hiena : hyène
+descascarillar : poncer, décaper
+empotrar : encastrer
+atisbar : observer
+percha : cintre
+pila : évier

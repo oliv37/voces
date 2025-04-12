@@ -33,7 +33,6 @@ foco : projecteur, spot
 chispa : étincelle
 pujar : se battre, lutter
 subastar : mettre aux enchères
-alargar : allonger, étendre
 novato : novice, néophyte
 fallo : jugement, verdict
 rehen : otage
@@ -52,6 +51,7 @@ entidad : établissement
 enriquecer : enrichir
 pedazo : bout, morceau, tranche
 trozo : bout, morceau
+alargar : allonger, étendre
 rodear : contourner, faire un détour
 machacar : écraser
 currar : bosser, taffer

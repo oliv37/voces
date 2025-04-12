@@ -4,6 +4,7 @@ huevo : oeuf
 pecho : poitrine
 danar : abîmer, endommager
 nube : nuage
+extranar : manquer à
 sondeo : sondage
 quiebra : effondrement, faillite
 fastidiar : ennuyer, énerver, embêter
@@ -75,3 +76,11 @@ gallo : coq
 aldea : village, hameau
 lentitud : lenteur
 medroso : peureux, effrayant
+nuera : belle-fille
+retocar : retoucher
+estandar : standard
+puno : poing
+alojar : loger
+susto : peur, frayeur
+extranar : surprendre
+recibidor : entrée, vestibule

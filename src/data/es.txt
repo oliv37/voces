@@ -110,8 +110,6 @@ solicitar : demander, solliciter
 alquilar : louer
 reto : défi
 ocurrir : arriver, avoir lieu, survenir
-alargar : allonger, rallonger
-manga : manche
 asignatura : matière
 aula : salle de classe
 borrasca : tempête
@@ -206,7 +204,6 @@ colocar : placer, poser, mettre
 doubler : adelantar
 aparcar : suspendre
 sonar : sonner
-extranar : manquer à
 collar : collier
 pedalear : pédaler
 aumentar la distencia : creuser l'écart
@@ -360,14 +357,12 @@ emprendimiento : entreprise, entrepreneuriat
 rebote : ricochet, rebond
 morbo : curiosité malsaine, curiosité morbide
 lacra : fléau
-extranar : surprendre
 lujo : luxe
 paradero : lieu, endroit
 aduenarse de : s'emparer de
 cabecilla : leader, meneur
 borde : rustre, malpoli
 acoger : accueillir, recevoir
-alojar : héberger, loger
 rebano : troupeau
 realeza : royauté, trône
 chocho : gâteux, gaga
@@ -473,7 +468,6 @@ homenaje : hommage
 coro : choeur
 rayo : rayon
 campamento : campement
-extranar : manquer à
 tarea : tâche, travail
 temor : crainte, peur
 estupefaciente : stupéfiant
@@ -675,7 +669,6 @@ panuelo : mouchoir
 noticia : annonce, avis
 apanarse : se débrouiller
 sudadera : sweat
-extranarse : s'étonner, être surpris
 rematar : couronner, achever
 peleon : bagarreur
 orgullo : fierté, orgueil
@@ -751,7 +744,6 @@ equivocarse : se tromper
 trastorno : trouble
 bula : bulle
 crujir : craquer, crisser, grincer
-arrugar : froisser, chiffonner
 pachucho : patraque, malade
 polvora : colérique, avoir le sang chaud
 oficio : métier
@@ -873,8 +865,6 @@ tregua : trêve
 excarcelacion : libération
 preso : prisonnier, détenu
 cloro : chlore
-desalojar : expulser, déloger
-estallar : éclater, exploser
 comprometerse : s'engager à, promettre
 refineria : raffinerie
 negar : nier
@@ -1407,7 +1397,6 @@ pisar : marcher sur
 recursos : ressources
 ensayar : tester
 aviso : notification
-atajo : raccourci
 vincular : lier, unir
 costumbre : coutume, habitude
 titular : gros titres
@@ -1541,7 +1530,6 @@ arropar : couvrir, envelopper, emmitoufler
 perjurio : parjure
 visto bueno : accord, approbation
 aprobacion : approbation, autorisation, accord
-tramite : procédure, démarche, formalité
 aplauso : applaudissement
 convalidacion : validation
 indultar : gracier
@@ -1551,7 +1539,6 @@ ensordecedor : assourdissant
 armatoste : objet encombrant
 sudadera : sweat-shirt
 soleado : ensoleillé
-amanecer : lever du soleil
 hervidero : fourmillement, fourmilière
 lentejuela : paillette
 guino : clin d'oeil
@@ -2072,7 +2059,6 @@ mediado : à moitié
 exhaustivo : exhaustif
 dar de lleno : taper dans le mille
 atento : attentif
-sabio : sage
 ampararse : se servir, invoquer
 ahogamiento : noyaude
 paga : paie, paye
@@ -2170,7 +2156,6 @@ bombilla : ampoule
 paso de cebra : passage piétons
 embestir : charger, attaquer
 atropellar : renverser, faucher, écraser
-susto : peur, frayeur
 ojera : cerne
 acuoso : mouillé, humide
 enrojecer : rougir
@@ -2224,7 +2209,6 @@ lingotazo : gorgée
 melena : chevelure
 bachillerato : lycée
 cotizado : courtisé
-al grano : viens-en aux faits, va à l'essentiel
 enrollarse : trop parlé, s'éterniser
 claustro : corps enseignant
 de reojo : du coin de l'oeil
@@ -2259,7 +2243,6 @@ casilla : case, casier
 deje : accent
 birria : daube, merde
 asentir : consentir, acquiescer
-hojear : feuilleter
 candorose : candide
 enternecer : attendrir, émouvoir
 suelta : lâche, détendu
@@ -2291,7 +2274,6 @@ chupinazo : tir
 demoledor : destructeur, dévastateur
 negar en redondo : nier en bloc
 bandolera : bandoulière
-maletin : malette, serviette, porte-documents
 cuervo : corbeau
 revolotear : voleter
 cola : queue (animal)
@@ -2335,7 +2317,6 @@ razon : raison, cause, motif
 consulta : cabinet médical
 pista : piste, trace
 prodigarse : se montrer
-madrugar : se lever tôt
 efusivo : démonstratif, expansif
 mimar : cojoler, choyer
 chantajear : faire du chantage à
@@ -2810,7 +2791,6 @@ hacer el gamba : faire le pitre, faire l'andouille
 noquear : mettre KO
 espetar : lancer, balancer (oral)
 hiriente : blessant, offensant, vexant
-empotrar : encastrer
 arrear : décocher, flanquer
 valentia : courage, bravoure
 acorralar : piéger, coincer
@@ -2940,7 +2920,6 @@ farol : bluff
  azuzar : exciter
  enzarzarse : se disputer
  cohibir : intimider
- tertulia : réunion entre amis
  escandalo : bruit, tapage, boucan
  alameda : allée, promenade
  cerrojo : verrou
@@ -2956,7 +2935,6 @@ mazazo : coup de massue
 fisgon : fouineur
 acoso : harcèlement
 agarrarse a un clavo ardiendo : se faire des illusions
-digerir : digérer
 repuntar : émerger
 chubasquero : imperméable, k-way
 oscurecer : la nuit tombe, s'obscurcir
@@ -3090,12 +3068,9 @@ trinitaria : pensée (fleur)
 gamuza : daim
 tibieza : tiédeur
 hiedra : lierre
-teja : tuile
+
 rocio : rosée
 sequito : conséquence
 delantal : tablier
 postizo : faux
-nuera : belle-fille
-rascar : gratter
-pinga : bite, zizi
-embajada : ambassade
+
