@@ -1,6 +1,7 @@
 import {
   afterRender,
   Component,
+  computed,
   effect,
   inject,
   input,
@@ -20,6 +21,7 @@ import { ExerciceButtonBarComponent } from '@components/exercice/exercice-button
 import { ExerciceProgressBarComponent } from '@components/exercice/exercice-progress-bar/exercice-progress-bar.component';
 import { AnimationService } from '@services/animation.service';
 import { NextExerciceLinksComponent } from '@components/exercice/next-exercice-links/next-exercice-links.component';
+import { GroupCompletionService } from '@services/group-completion.service';
 
 @Component({
   imports: [
@@ -36,6 +38,7 @@ import { NextExerciceLinksComponent } from '@components/exercice/next-exercice-l
 export class ExercicePageComponent implements OnDestroy {
   private _exerciceService = inject(ExerciceService);
   private _animationService = inject(AnimationService);
+  private _groupCompletionService = inject(GroupCompletionService);
 
   exerciceLevelCmp =
     viewChild<AbstractExerciceLevelComponent>('exerciceLevelCmp');
@@ -49,6 +52,11 @@ export class ExercicePageComponent implements OnDestroy {
   progressPercent = this._exerciceService.progressPercent;
   isCompleted = this._exerciceService.isCompleted;
   hasUsedHelp = this._exerciceService.hasUsedHelp;
+
+  isGroupCompleted = computed(() => {
+    const group = this.group();
+    return this._groupCompletionService.isCompleted(group);
+  });
 
   _focusEffect = effect(() => {
     this._exerciceService.state();

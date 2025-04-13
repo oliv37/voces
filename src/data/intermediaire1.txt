@@ -112,9 +112,9 @@ portavoz : porte-parole
 congeniar : s'entendre avec, sympathiser
 no obstante : néanmoins, cependant
 arrancar : arracher, enlever
-sede : siège
-acudir : se rendre à
+acudir a : faire appel, avoir recours à
 presenciar : assister à
 inmediaciones : abords, environs, alentours
 lazo afectivo : lien affectif
 hincha : supporter, fan
+pila : évier

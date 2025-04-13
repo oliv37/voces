@@ -1,5 +1,5 @@
 <a
-  [routerLink]="[group().pathParam]"
+  [routerLink]="['/', group().category.pathParam, group().pathParam]"
   class="block border border-gray-400 hover:border-gray-800 rounded-t-md shadow-md hover:shadow-xl transition-all duration-500"
 >
   <div

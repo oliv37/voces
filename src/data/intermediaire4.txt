@@ -11,7 +11,6 @@ agredir : agresser
 almacen : entrepôt, magasin
 escupir : cracher
 conllevar : impliquer, comporter
-sede : siège
 rayado : fou, cinglé
 necio : bête, idiot, imbécile
 sello : cachet
@@ -118,3 +117,4 @@ tropelia : abus
 asentir : consentir, acquiescer
 canalla : voyou
 golfa : pute, salope
+percha : cintre

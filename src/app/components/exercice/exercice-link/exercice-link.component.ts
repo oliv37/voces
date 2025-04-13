@@ -21,11 +21,12 @@ export class ExerciceLinkComponent {
   showCategoryLabel = input(false, {
     transform: booleanAttribute,
   });
-  isCompleted = computed<boolean>(() =>
+
+  isGroupCompleted = computed<boolean>(() =>
     this._groupCompletionService.isCompleted(this.group())
   );
   headerClass = computed<string>(() =>
-    this.isCompleted()
+    this.isGroupCompleted()
       ? `${this.group().category.color.bgColor} text-white`
       : ''
   );

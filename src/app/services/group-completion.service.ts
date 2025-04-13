@@ -30,7 +30,7 @@ export class GroupCompletionService {
   isCompleted(group: Group): boolean {
     const completionTimestamp: number | undefined =
       this._groupCompletion()[group.id];
-    return this.isCompletionTimestampWithinMaxDistance(completionTimestamp);
+    return isRecentCompletionTimestamp(completionTimestamp);
   }
 
   private readGroupCompletion(): GroupCompletion {
@@ -44,7 +44,8 @@ export class GroupCompletionService {
       const groupCompletion = JSON.parse(value);
       return Object.keys(groupCompletion).reduce((acc, groupId) => {
         const completionTimestamp = groupCompletion[groupId];
-        if (this.isCompletionTimestampWithinMaxDistance(completionTimestamp)) {
+        console.log(groupId);
+        if (isRecentCompletionTimestamp(completionTimestamp)) {
           acc[groupId] = completionTimestamp;
         }
         return acc;
@@ -54,20 +55,21 @@ export class GroupCompletionService {
       return {};
     }
   }
-
-  private isCompletionTimestampWithinMaxDistance(
-    completionTimestamp: number | undefined
-  ): boolean {
-    if (!completionTimestamp) {
-      return false;
-    }
-    const distanceInMs = now() - completionTimestamp;
-    return distanceInMs <= MAX_DISTANCE_MS;
-  }
 }
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;
+
+function isRecentCompletionTimestamp(
+  completionTimestamp: number | undefined
+): boolean {
+  if (!completionTimestamp) {
+    return false;
+  }
+  const distanceInMs = now() - completionTimestamp;
+  console.log(distanceInMs);
+  return distanceInMs <= MAX_DISTANCE_MS;
+}
 
 function now() {
   return new Date().getTime();

@@ -74,5 +74,3 @@ hiena : hyène
 descascarillar : poncer, décaper
 empotrar : encastrer
 atisbar : observer
-percha : cintre
-pila : évier
