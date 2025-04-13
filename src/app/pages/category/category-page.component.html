@@ -1,31 +1,7 @@
 <app-meta [description]="metaDescription()" />
 
-<div class="py-1"></div>
-
-<div @fadeIn class="flex flex-col gap-12">
-  @for (group of groups(); track $index) {
-  <a
-    [routerLink]="[group.pathParam]"
-    class="border border-gray-400 hover:border-gray-800 rounded-t-md shadow-md hover:shadow-xl transition-all duration-500"
-  >
-    <div
-      class="flex justify-between items-center px-3 py-1 rounded-t-md"
-      [class]="getHeaderClass(group.completed)"
-    >
-      <span class="text-xl font-bold">{{ $index + 1 }}</span>
-    </div>
-    <div class="p-3 pb-5 text-gray-950">
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-5"
-      >
-        @for (word of group.words; track word.id) {
-        <div class="word">
-          <div class="font-bold">{{ word.es }}</div>
-          <div>{{ word.fr }}</div>
-        </div>
-        }
-      </div>
-    </div>
-  </a>
+<div @fadeIn class="pt-2 flex flex-col gap-12">
+  @for (group of category().groups; track $index) {
+  <app-exercice-link [group]="group" />
   }
 </div>

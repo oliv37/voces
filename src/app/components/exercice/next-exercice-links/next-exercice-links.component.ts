@@ -8,20 +8,20 @@ import {
 import { Group } from '@models/group.model';
 import { findNextGroups } from '@utils/group.util';
 import { ScrollInfoService } from '@services/scroll-info.service';
-import { RouterLink } from '@angular/router';
+import { ExerciceLinkComponent } from '../exercice-link/exercice-link.component';
 
 const NB_GROUPS_TO_LOAD = 10;
 
 @Component({
-  selector: 'app-exercice-next-links',
-  imports: [RouterLink],
-  templateUrl: './exercice-next-links.component.html',
+  selector: 'app-next-exercice-links',
+  imports: [ExerciceLinkComponent],
+  templateUrl: './next-exercice-links.component.html',
   providers: [ScrollInfoService],
   host: {
     '(window:scroll)': 'onScroll()',
   },
 })
-export class ExerciceNextLinksComponent {
+export class NextExerciceLinksComponent {
   private _scrollInfoService = inject(ScrollInfoService);
 
   group = input.required<Group>();
