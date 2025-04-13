@@ -5,11 +5,19 @@ import { Word } from '@models/word.model';
 import dataDebutant1 from '@data/debutant1.txt';
 import dataDebutant2 from '@data/debutant2.txt';
 import dataDebutant3 from '@data/debutant3.txt';
+import dataDebutant4 from '@data/debutant4.txt';
+import dataDebutant5 from '@data/debutant5.txt';
 import dataIntermediaire1 from '@data/intermediaire1.txt';
 import dataIntermediaire2 from '@data/intermediaire2.txt';
 import dataIntermediaire3 from '@data/intermediaire3.txt';
 import dataIntermediaire4 from '@data/intermediaire4.txt';
 import dataIntermediaire5 from '@data/intermediaire5.txt';
+import dataIntermediaire6 from '@data/intermediaire6.txt';
+import dataIntermediaire7 from '@data/intermediaire7.txt';
+import dataIntermediaire8 from '@data/intermediaire8.txt';
+import dataIntermediaire9 from '@data/intermediaire9.txt';
+import dataIntermediaire10 from '@data/intermediaire10.txt';
+
 import dataAvance1 from '@data/avance1.txt';
 import {
   Level,
@@ -42,6 +50,20 @@ export const DATA: Category[][] = [
       'Débutant 3',
       'debutant-3',
       dataDebutant3,
+      LEVEL_DEBUTANT
+    ),
+    buildCategory(
+      'DEBUTANT4',
+      'Débutant 4',
+      'debutant-4',
+      dataDebutant4,
+      LEVEL_DEBUTANT
+    ),
+    buildCategory(
+      'DEBUTANT5',
+      'Débutant 5',
+      'debutant-5',
+      dataDebutant5,
       LEVEL_DEBUTANT
     ),
   ],
@@ -79,6 +101,41 @@ export const DATA: Category[][] = [
       'Intermédiaire 5',
       'intermediaire-5',
       dataIntermediaire5,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE6',
+      'Intermédiaire 6',
+      'intermediaire-6',
+      dataIntermediaire6,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE7',
+      'Intermédiaire 7',
+      'intermediaire-7',
+      dataIntermediaire7,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE8',
+      'Intermédiaire 8',
+      'intermediaire-8',
+      dataIntermediaire8,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE9',
+      'Intermédiaire 9',
+      'intermediaire-9',
+      dataIntermediaire9,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE10',
+      'Intermédiaire 10',
+      'intermediaire-10',
+      dataIntermediaire10,
       LEVEL_INTERMEDIAIRE
     ),
   ],

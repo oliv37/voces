@@ -84,3 +84,37 @@ alojar : loger
 susto : peur, frayeur
 extranar : surprendre
 recibidor : entrée, vestibule
+saltar : sauter
+rendir : vaincre
+trampa : piège
+imponer : imposer
+abajo : dessous, en bas
+alguna vez : quelque fois
+trauma : traumatisme
+burbuja : bulle
+valiente : courageux
+obviar : omettre, oublier
+acuerdo : compromis
+consentimiento : consentement, accord
+teclado : clavier
+estudiar : étudier
+cargar : charger
+cruzar : croiser
+lograr : réussir à, parvenir à
+cuidado : soin, attention
+bolsillo : poche
+injusto : injuste
+fijo : fixe
+cangrejo : crabe
+centenar : centaine
+secuela : séquelle
+envidia : envie, jalousie
+pitar : siffler
+esperar : attendre
+pelirrojo : roux
+averiguar : découvrir, chercher à savoir
+estancia : séjour, pièce
+desvelar : dévoiler, révéler
+barrer : balayer
+esbelto : svelte
+honradez : honnêteté
