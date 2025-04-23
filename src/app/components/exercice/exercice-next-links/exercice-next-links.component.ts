@@ -13,15 +13,15 @@ import { ExerciceLinkComponent } from '../exercice-link/exercice-link.component'
 const NB_GROUPS_TO_LOAD = 10;
 
 @Component({
-  selector: 'app-next-exercice-links',
+  selector: 'app-exercice-next-links',
   imports: [ExerciceLinkComponent],
-  templateUrl: './next-exercice-links.component.html',
+  templateUrl: './exercice-next-links.component.html',
   providers: [ScrollInfoService],
   host: {
     '(window:scroll)': 'onScroll()',
   },
 })
-export class NextExerciceLinksComponent {
+export class ExerciceNextLinksComponent {
   private _scrollInfoService = inject(ScrollInfoService);
 
   group = input.required<Group>();

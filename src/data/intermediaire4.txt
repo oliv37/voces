@@ -13,7 +13,7 @@ escupir : cracher
 conllevar : impliquer, comporter
 rayado : fou, cinglé
 necio : bête, idiot, imbécile
-sello : cachet
+sello : tampon, sceau, cachet
 arrepentirse : regretter
 encontronazo : collision, altercation
 emprender : entreprendre

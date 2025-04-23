@@ -37,7 +37,7 @@ recalcar : insister sur, souligner
 suponer : signifier
 poza : mare
 descenso : descente
-ruta : randonnée, parcours
+ruta : randonnée, parcours, itinéraire
 racha : rafale
 atrasar : retarder, ralentir
 ocioso : oisif
@@ -60,7 +60,7 @@ chapotear : patauger
 contravenir : enfreindre
 crudo : cru
 antojar : avoir envie de
-tambalear : vaciller, chanceler
+tambalear : vaciller, tituber
 balbucear : bafouiller
 procurar : veiller à, tâcher de
 acertar : mettre dans le mille, viser juste

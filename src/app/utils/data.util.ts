@@ -17,6 +17,7 @@ import dataIntermediaire7 from '@data/intermediaire7.txt';
 import dataIntermediaire8 from '@data/intermediaire8.txt';
 import dataIntermediaire9 from '@data/intermediaire9.txt';
 import dataIntermediaire10 from '@data/intermediaire10.txt';
+import dataIntermediaire11 from '@data/intermediaire11.txt';
 
 import dataAvance1 from '@data/avance1.txt';
 import {
@@ -136,6 +137,13 @@ export const DATA: Category[][] = [
       'Intermédiaire 10',
       'intermediaire-10',
       dataIntermediaire10,
+      LEVEL_INTERMEDIAIRE
+    ),
+    buildCategory(
+      'INTERMEDIAIRE11',
+      'Intermédiaire 11',
+      'intermediaire-11',
+      dataIntermediaire11,
       LEVEL_INTERMEDIAIRE
     ),
   ],

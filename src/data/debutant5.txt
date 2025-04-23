@@ -1,4 +1,5 @@
 arbitro : arbitre
+estacion : gare
 excluir : exclure
 arrodillar : s'agenouiller
 juguete : jouet
@@ -84,3 +85,17 @@ barbacoa : barbecue, grillade
 cantante : chanteur
 revolver : mélanger
 bandera : drapeau
+estacion : saison
+despegar : décoller
+ahorro : économie
+cara : visage, tête
+contratiempo : imprévu, contretemps
+escala : échelle
+serpiente : serpent
+ausente : absent
+calendario : calendrier
+lobo : loup
+suave : doux
+garganta : gorge
+parrafo : paragraphe
+tesoro : trésor

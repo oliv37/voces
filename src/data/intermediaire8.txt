@@ -15,7 +15,7 @@ sabiduria : savoir
 liebre : lièvre
 tijeras : ciseaux
 palmada : tape, gifle
-trajin : agitation
+trajin : agitation, remue-ménage
 pudoroso : pudique
 curiosear : fouiner
 acartonar : durcir
@@ -44,7 +44,7 @@ zurcir : raccommoder
 parche : rustine
 tejer : tisser
 absortar : étonner
-nitido : net
+nitido : net, clair
 manta : couverture
 parchar : réparer
 botar : jeter

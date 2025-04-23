@@ -116,7 +116,6 @@ borrasca : tempête
 verguenza : honte
 delgado : mince, maigre
 hipoteca : crédit immobilier
-ahorro : économie
 chiflado : cinglé, taré
 desvelar : empêcher de dormir, maintenir éveillé
 efusivo : démonstratif, expansif
@@ -232,7 +231,6 @@ aislamiento : isolement
 camaleon : caméléon
 fallecido : défunt, décédé
 fallecer : décéder, mourrir
-luna llena : pleine lune
 tramitar : faire les démarches
 debilitar : affaiblir
 parado : debout
@@ -357,7 +355,6 @@ emprendimiento : entreprise, entrepreneuriat
 rebote : ricochet, rebond
 morbo : curiosité malsaine, curiosité morbide
 lacra : fléau
-lujo : luxe
 paradero : lieu, endroit
 aduenarse de : s'emparer de
 cabecilla : leader, meneur
@@ -487,8 +484,6 @@ nomina : paie, salaire
 estafar : arnaquer, escroquer
 cobrar : toucher, encaisser
 despegue : lancement, commencement, démarrage
-despegar : décoller
-impulsar : propulser
 fabada : cassoulet asturien
 resena : compte rendu, critique
 aflorar : émerger
@@ -530,7 +525,6 @@ plato : assiette
 plata : argent
 fregar : laver, récurer
 pulsera : bracelet
-grifo : robinet
 tireja : ciseau
 escoplo : burin
 esponja : éponge
@@ -595,7 +589,6 @@ maleta : valise
 guante : gant
 ensanar : rendre furieux
 colgante : pendentif
-lujo : luxe
 enseguida : tout de suite
 coartada : alibi, excuse
 rastrear : suivre à la trace, pister
@@ -607,7 +600,6 @@ averiguacion : enquête, recherche
 ubicarse : se trouver, se situer
 sentir : sentir, ressentir
 ojala : espéron
-recorrido : parcours, itinéraire
 volcar : renverser
 renuncia : démission
 fango : boue
@@ -616,7 +608,6 @@ ahondar : creuser, approfondir
 resquebrajar : fissurer, craqueler
 murmullo : murmure
 trascender : se propager, s'ébruiter
-fallo : jugement, verdict
 acallar : faire taire 
 asesoramiento : conseil, assistance
 desfasado : dépassé, vieux jeu
@@ -728,10 +719,8 @@ uva : raisin
 elegir : choisir
 atender : être attentif, prêter attention
 machacar : radoter, répéter, rabâcher
-acudir a : faire appel, avoir recours à
 estrafalario : saugrenu
 bofetada : gifle, claque
-estrellarse : s'écraser, percuter
 encajar : encaisser, imbriquer
 amortiguar : amortir, atténuer
 tajada : cuite
@@ -816,7 +805,6 @@ desatascar : débloquer, déboucher
 traspaso : cession, transfert
 ajuste : réglage, ajustement
 flujo : flux
-tesoro : trésor
 amargar : donner un goût amer, rendre amer
 deudo : débiteur
 arrasar : cartonner, faire un tabac
@@ -871,7 +859,6 @@ negar : nier
 mandar a la porra : envoyer se faire voir
 aducir : invoquer, prétexter
 suavizar : adoucir
-suave : doux
 pelele : pantin
 derrota : défaite
 suponer : supposer
@@ -887,7 +874,6 @@ apartado : éloigné, à l'écart
 ceder : céder
 costumbre : habitude
 desbaratar : abîmer, esquinter
-atravesar : transpercer
 la pared : le mur
 estruendo : vacarme
 yeso : plâtre
@@ -902,7 +888,6 @@ costado : côté
 sien : tempe
 alfareria : poterie
 astilla : éclat
-incorporarse : se redresser
 bautisterio : récipient en pierre
 parpado : paupière
 instinto : instinct
@@ -944,8 +929,6 @@ tantear : sonder, tâter
 sarten : poêle
 la medicina : le médicament
 verguenza : honte
-lobo : loup
-ave : oiseau
 presa : proie
 amaestrar : éduquer, dresser
 descuartizar : dépecer, démembrer
@@ -1002,7 +985,6 @@ detergente : lessive
 ajedrez : échec
 madera : bois
 peon : pion
-resbalar : glisser
 fastidiar : faire capoter, gâcher
 machacar : blesser, faire mal
 coronar : couronner
@@ -1076,7 +1058,6 @@ deslumbrante : éblouissant
 contrapuesto : opposé
 marea : marée
 exitoso : avoir du succès, prospère, florissant
-finca : propriété, domaine
 apuro : problème, ennui
 pecador : pécheur, pécheresse
 pescador : pêcheur
@@ -1092,7 +1073,6 @@ higiene : hygiène
 reluciente : reluisant, brillant
 bendecir : bénir
 alejar : éloigner
-serpiente : serpent
 reincidente : récidiviste
 chivato : mouchard, délateur
 celda : cellule
@@ -1105,7 +1085,6 @@ desague : tuyau d'écoulement, évacuation
 lamer : lécher
 achicar : rétrécir
 promedio : moyenne
-decantarse : opter pour, choisir
 jefe : chef, patron
 regir : régir, gouverner, diriger
 retraer : dissuader de faire quelque chose, se rétracter
@@ -1262,7 +1241,6 @@ pestana : cil
 parpado : paupière
 lenteja : lentille (aliment)
 rimel : mascara
-gorra : casquette
 fortaleza : forteresse
 oreja : oreille
 diente : dent
@@ -1286,7 +1264,6 @@ dibujar : dessiner
 disenar : concevoir
 maniobra : manoeuvre
 machinaria : mécanisme
-platear : couvrir d'argent
 dimitir : démissionner
 al reves de : contrairement à
 comparecencia : comparution
@@ -1342,7 +1319,6 @@ enfrentado : opposé, adverse
 enfrentar : affronter
 accarear : provoquer, amener, entraîner
 abrumador : accablant
-maldecir : maudire
 arruinar : ruiner
 flotar : flotter
 suministrador : fournisseur
@@ -1392,8 +1368,6 @@ exito : réussite
 roca : roche
 alunizar : alunir (atterir sur la Lune)
 resentirse : s'offenser, en vouloir à
-estrellar : lancer
-pisar : marcher sur
 recursos : ressources
 ensayar : tester
 aviso : notification
@@ -1440,9 +1414,7 @@ palo : bâton
 tapadera : couverture
 amparar : protéger
 infravalorar : sous-estimer
-apurar : finir, terminer
 bondad : bonté
-plantilla : personnel
 decalogo : règlement
 brecha : fossé, distance
 desmenuzar : examiner, disséquer
@@ -1492,7 +1464,6 @@ desencuentro : désaccord, discorde
 torno : tour
 amenazar : menacer
 superar : surpasser, dépasser
-atravesar : traverser, passer
 barullo : désordre, bazar
 extremar : renforcer
 tachar de : taxer de, accuser de
@@ -1518,8 +1489,6 @@ peldano : marche (escalier)
 escalera : escale
 via ferrea : voie ferrée
 patrullaje : patrouille
-comparecer : comparaître
-compareciencia : comparution
 ensayo : test, essai
 paracadista : parachutiste
 cruce : croisement
@@ -1563,7 +1532,6 @@ albergar : abriter, accueillir, héberger
 registro : registre
 colapsar : paralyser, bloquer
 entranas : entrailles
-convenir : falloir
 senal : indication
 extraviar : perdre, égarer
 escalinata : perron
@@ -1577,7 +1545,6 @@ aquejar : affliger
 tanda : série, séance
 cuajar : prendre forme, se concrétiser
 guinda del pastel : cerise sur le gâteau
-alza : hausse
 intuir : pressentir
 jejatera : direction
 nombre de pila : nom de baptême
@@ -1585,7 +1552,6 @@ peyorativo : péjoratif
 liderazgo : leadership
 respaldar : épauler, soutenir
 espalda : dos
-alzar : lever, soulever
 hombro : épaule
 agrupacion : regroupement
 destierro : exil
@@ -1643,7 +1609,6 @@ estelar : magnifique, splendide, prestigieux
 tender lazos : tisser des liens
 achacar : attribuer à, imputer à
 contienda : dispute, conflit
-pisar : marcher sur
 abogar : plaider, défendre, soutenir
 granjear : attirer
 melocoton : pêche
@@ -1680,7 +1645,6 @@ diario : journal intime
 mediante : grâce à, moyennant, à l'aide de
 vaticinar : prédire
 marcado : fort, prononcé, accuentué
-atravesar : traverser
 galo : français, gaulois
 desvincular : rompre, mettre un terme, arrêter
 prorroga : prolongation
@@ -1699,7 +1663,6 @@ por encima de : au-dessus de
 contratacion : embauche
 asimismo : de même, de la même manière
 afiliacion : adhésion
-hallar : trouver, retrouver
 suceso : évènement, fait
 invernadero : serre
 ansioso : nerveux, anxieux
@@ -1733,7 +1696,6 @@ leve : léger
 tropezar : trébucher
 comicios : élections
 vincular : lier, unir
-fallo : jugement, verdict
 vigente : en vigueur
 cautelar : préventif
 tramitar : faire les démarches
@@ -1838,7 +1800,6 @@ bollera : gouine, lesbienne
 coloquio : discussion, débat
 forense : médecin légiste
 lidia : combat, lutte
-alivio : soulagement, apaisement
 senalar : montrer du doigt, désigner
 dolido : blessé
 concejal : conseiller municipal
@@ -1865,7 +1826,6 @@ disfrazar : déguiser
 cauto : prudent
 incauto : imprudent
 ingeniudad : innocence, naïveté, ingénuité
-arder : embraser, brûler
 burbujear : faire des bulles, pétiller
 morado : violet
 enmendar : corriger, réparer, amender
@@ -2137,7 +2097,6 @@ empeno : tenacité, persévérance
 engano : aveuglement, illusion
 ocurrencia : idée soudaine, fulgurance
 pasado manana : après-demain
-calar : s'infiltrer, pénétrer
 rendija : fente
 colar : glisser, s'introduire
 collar : collier, laisse
@@ -2159,10 +2118,8 @@ atropellar : renverser, faucher, écraser
 ojera : cerne
 acuoso : mouillé, humide
 enrojecer : rougir
-nitido : clair
 hechizar : ensorceler, envoûter
 mandil : tablier
-apurar : finir, terminer
 paisano : compatriote
 colmar : combler, satisfaire
 acodarse : s'accouder
@@ -2219,7 +2176,6 @@ rastro : trace
 osadia : audace, témérité
 convento : couvent
 clausura : clôture
-calada : bouffée, taffe
 rabiar : enrager
 indole : caractère
 currar : bosser, taffer
@@ -2242,7 +2198,6 @@ temario : programme
 casilla : case, casier
 deje : accent
 birria : daube, merde
-asentir : consentir, acquiescer
 candorose : candide
 enternecer : attendrir, émouvoir
 suelta : lâche, détendu
@@ -2251,12 +2206,10 @@ molar : être super, être génial
 rehuir : fuir, éviter
 mediar : intervenir, servir de médiateur
 empantanado : marécageux
-apresurar : précipiter
 dotar : faire
 tragar : avaler, dévorer
 abismo : précipice, abîme
 acechar : guetter, traquer, être à l'affut de
-baldosa : carreau, dalle
 aferrarse a : s'accrocher à
 curandero : guérisseur
 avispa : guêpe
@@ -2264,10 +2217,8 @@ bocajarro : à bout portant
 cenido : cintré, moulant
 retar : défier
 torpe : bête, niais, nul
-gorra : casquette
 pizarra : ardoise, tableau
 surtir : jaillir
-bufido : rugissement, soufflement
 tapujo : cachotterie, secret
 germen : germe
 chupinazo : tir
@@ -2302,9 +2253,7 @@ gilipollez : connerie
 gamberro : voyou, vandale
 rejuvenecer : rajeunir, rafraîchir
 delantal : tablier
-vislumbrar : entrevoir, deviner
 tremebundo : épouvantable
-tenir : teindre, teinter
 pregonar : proclamer, rendre public
 enclaustrat : cloîtrer, enfermer
 halago : compliment, éloge
@@ -2447,7 +2396,6 @@ desvanecer : effacer, dissiper
 butaca : fauteuil
 picara : rusé, futé
 aliviar : soulager, calmer
-destello : scintillement, éclat
 flaquear : faiblir, flancher
 remolon : paresseux, fainéant
 borrachera : cuite, ivresse
@@ -2475,7 +2423,6 @@ bodega : cale (bateau)
 perito : expert
 beligerancia : opposition, affrontement
 telefonillo : interphone
-adosado : maison mitoyenne
 tacho : récipient
 salero : entepôt de sel
 empantanado : barricadé
@@ -2500,7 +2447,6 @@ descojonarse : se bidonner
 llevar la voz cantante : mener la danse
 escaquearse : se défiler, se débiner
 pelmazo : débile
-pisar : marcher sur
 capilla : chapelle
 encapotar : couvrir
 agobiante : oppressant, étouffant
@@ -2512,7 +2458,6 @@ sollozo : sanglot
 contraproducente : contre-productif
 operario : ouvrier
 sellar : sceller
-tambalear : vaciller, tituber
 trastabillar : trébucher
 arrear : déclencher, flanquer (gifle, coup de poing)
 amago : esquisse, feinte
@@ -2527,7 +2472,6 @@ habladuria : commérage
 cotilleo : ragot, potin
 no reparar en gastos : ne pas faire d'économies, ne pas lésiner
 vajilla : vaisselle
-pandilla : bande, bande d'amis
 lucir : porter fièrement, arborer
 desembarcar : débarquer
 presumir : se vanter
@@ -2644,7 +2588,6 @@ ameno : agréable, divertissant
 marica : tapette, pédale
 cuclillas : accroupi
 desencajar : dérégler
-incorporarse : se redresser
 mareo : mal au coeur
 carcomer : ronger
 ligero : léger
@@ -2718,9 +2661,7 @@ sacudirse : se débarrasser
 caldear : chauffer
 poblado : village
 fardar : frimer
-flojo : tranquille, calme
 en pelota : à poil
-marisco : fruits de mer
 atiborrarse : se gaver, se goinfrer
 parienta : femme, bourgeoise
 chapotear : patauger, barboter
@@ -2828,7 +2769,6 @@ atufar : sentir mauvais, puer
 bochorno : chaleur étouffante
 arenal : banc de sable
 abrazar : prendre dans ses bras, étreindre, enlacer
-haz : faisceau
 prendarse : se laisser charmer
 diminuto : minuscule
 extirpar : retirer, extraire
@@ -2867,7 +2807,6 @@ cuchitril : taudis
 grasiento : gras
 jalar : tirer
 fisgonear : fouiller
-cariz : tournure
 demudarse : changer, se transformer
 mocoso : morveux
 cerciorarse : s'assurer, vérifier
@@ -2972,7 +2911,6 @@ consuelo : consolation, réconfort
 hocico : museau
 aguacero : averse, pluie
 callejuela : ruelle
-pulir : polir
 perdido : crade
 respingo : sursaut
 a palo seco : d'un coup
@@ -2987,7 +2925,6 @@ adefesio : mocheté, laidron
 toalla : serviette
 refunfunar : grommeler, bougonner, râler
 quirofano : bloc opératoire
-nitido : clair, net
 desenlace : dénouement
 alcance : effet, importance
 escudrinar : scruter, examiner

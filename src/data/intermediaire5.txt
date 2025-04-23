@@ -53,7 +53,7 @@ reparo : objection
 leve : léger
 ademan : geste
 comprometedor : compromettant
-pandilla : bande
+pandilla : bande, gang
 inepto : inapte
 muela : molaire
 hediondo : puant, nauséabond, répugnant

@@ -97,3 +97,10 @@ bifido : fourchu
 irredento : invétéré
 al grano : venez-en aux faits, accouche
 pizca : une pincée de
+viacrucis : chemin de croix
+telarana : toile d'araignée
+ceniciento : cendré
+sonajero : hochet
+garita : mirador
+bilis : bile
+godo : gothique

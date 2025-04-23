@@ -25,6 +25,7 @@ estribo : étrier
 castano : châtaigner
 vidriera : vitrail, vitrine
 vidrio : vitre
+compareciencia : comparution
 desasirse : se libérer de
 alzar : lever
 nuevamente : de nouveau
@@ -57,6 +58,7 @@ chuparse : maigrir
 desalojar : expulser, déloger
 tartera : récipient, gamelle
 a bulto : à première vue
+agudo : aigu, pointu
 estallar : éclater, exploser
 geranio : géranium
 tonelada : tonne
@@ -74,3 +76,45 @@ hiena : hyène
 descascarillar : poncer, décaper
 empotrar : encastrer
 atisbar : observer
+comparecer : comparaître
+ajetreo : agitation, effervescence
+impulsar : propulser
+avecinarse : s'approcher
+aterrizar : atterrir
+alza : hausse, augmentation
+reforzar : renforcer
+plantilla : personnel
+flojo : tranquille, calme
+dispararse : monter en flèche, exploser
+decantarse : opter pour, choisir
+bono : bon, obligation
+asumir el control : prendre le pouvoir
+armamento : armement
+disponer de : disposer de
+triplicar : tripler
+pugna : lutte, bataille
+fuselaje : fuselage
+amerizar : amerrir
+con antelacion : à l'avance, en avance
+apurar : finir, terminer
+surco : ride
+chorro : cavalier
+escanciar : verser à boire
+desperdicar : gaspiller
+atravesarse : s'interposer
+a un tiro de pierda : à deux pas
+piernas : guignol
+estrellar : lancer
+marisco : fruits de mer
+esbozar : esquisser
+aprovechar el tiron : profiter du succès
+resuello : souffle, respiration
+palanca : levier
+apanar : rafistoler, arranger
+tragaperras : machine à sous
+arraigado : enraciné
+renuente : réticent
+apremiar : presser, bousculer
+adentros : for intérieur, soi-même
+raspon : eraflure
+boquiabierto : bouche bée

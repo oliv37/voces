@@ -3,21 +3,18 @@
   class="block border border-gray-400 hover:border-gray-800 rounded-t-md shadow-md hover:shadow-xl transition-all duration-500"
 >
   <div
-    class="flex items-center gap-2 px-3 py-1 rounded-t-md"
+    class="flex items-center gap-3 px-3 py-3 rounded-t-md"
     [class]="headerClass()"
   >
-    @if (showCategoryLabel()) {
     <span
       class="px-1 rounded font-bold text-white"
       [class]="group().category.color.bgColor"
       >{{ group().category.label }}</span
     >
-    <span class="text-xl font-bold rounded-xl px-2 bg-white text-black">{{
-      group().label
-    }}</span>
-    } @else {
-    <span class="text-xl font-bold rounded-xl">{{ group().label }}</span>
-    }
+    <span
+      class="font-bold rounded-lg px-2 bg-white text-black border border-gray-800/80"
+      >{{ group().label }}</span
+    >
   </div>
   <div class="p-3 pb-5 text-gray-950">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-5">

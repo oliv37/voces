@@ -20,7 +20,7 @@ import { MetaDirective } from '@directives/meta.directive';
 import { ExerciceButtonBarComponent } from '@components/exercice/exercice-button-bar/exercice-button-bar.component';
 import { ExerciceProgressBarComponent } from '@components/exercice/exercice-progress-bar/exercice-progress-bar.component';
 import { AnimationService } from '@services/animation.service';
-import { NextExerciceLinksComponent } from '@components/exercice/next-exercice-links/next-exercice-links.component';
+import { ExerciceNextLinksComponent } from '@components/exercice/exercice-next-links/exercice-next-links.component';
 import { GroupCompletionService } from '@services/group-completion.service';
 
 @Component({
@@ -31,7 +31,7 @@ import { GroupCompletionService } from '@services/group-completion.service';
     MetaDirective,
     ExerciceButtonBarComponent,
     ExerciceProgressBarComponent,
-    NextExerciceLinksComponent,
+    ExerciceNextLinksComponent,
   ],
   templateUrl: './exercice-page.component.html',
 })

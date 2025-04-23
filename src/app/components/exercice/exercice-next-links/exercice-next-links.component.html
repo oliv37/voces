@@ -1,7 +1,7 @@
 @if(nextGroups().length > 0) {
 <div class="pt-16 px-2 flex flex-col gap-16">
   @for (group of nextGroups(); track $index) {
-  <app-exercice-link [group]="group" showCategoryLabel="true" />
+  <app-exercice-link [group]="group" />
   }
 </div>
 }
