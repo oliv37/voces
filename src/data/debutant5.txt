@@ -99,3 +99,7 @@ suave : doux
 garganta : gorge
 parrafo : paragraphe
 tesoro : trésor
+merendar : goûter
+ligero : léger
+colgar : raccrocher
+apagar : éteindre

@@ -86,7 +86,6 @@ jovenzuelo : gamin
 acarrear : entraîner, amener, provoquer
 aseveracion : affirmation
 reja : grille, barreaux
-apretar : serrer
 grueso : épaisseur
 desmadrarse : sortir de ses gonds
 ventanal : baie vitrée
@@ -118,3 +117,4 @@ musitar : chuchoter
 rezo : prière
 en torno a : autour de
 alforja : saccoche
+bombear : pomper

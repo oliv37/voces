@@ -104,3 +104,4 @@ sonajero : hochet
 garita : mirador
 bilis : bile
 godo : gothique
+redios : oh là là

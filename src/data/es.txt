@@ -236,7 +236,6 @@ debilitar : affaiblir
 parado : debout
 bajo cuerda : sous le manteau
 cachear : fouiller
-colgar : raccrocher
 cojonudo : super, dingue, terrible
 acojonar : ficher la trouille
 enganchar : accrocher, captiver
@@ -272,7 +271,6 @@ sudar : suer, transpirer
 nevar : neiger
 palabrota : gros mot
 actuacion : intervention, agissement
-calcetin : chaussette
 comodo : confortable
 pillarse por alguien : flasher sur quelqu'un
 bicho raro : drôle d'oiseau
@@ -537,7 +535,6 @@ manzana : pomme
 albaricoque : abricot
 abrigo : manteau
 chaqueta : veste
-calcetin : chaussette
 zapatilla : chausson
 pantufla : pantoufle
 zapato : chaussure
@@ -762,7 +759,6 @@ falda : jupe
 despegue : décollage
 engreirse : s'enorgueillir, prendre la grosse tête
 camisa : chemise
-calcetin : chaussette
 zapato : chaussure
 cordon : lacet
 pintalabios : rouge à lèvres
@@ -914,7 +910,6 @@ roncar : ronfler
 seso : cervelle, cerveau
 cerebro : cerveau
 lastre : obstacle, handicap
-rinon : rein
 aplastamiento : écrasement
 pellejo : peau
 superar : oubier, passer à autre chose
@@ -1153,7 +1148,6 @@ corredor : courtier
 tapado : caché
 escote : décolleté
 meramente : simplement, seulement
-apretar : serrer, presser
 encajar : coïncider, concorder
 padrino : parrain
 cortar con : rompre avec, casser avec
@@ -1183,7 +1177,6 @@ risueno : souriant, avenant
 proveedor : fournisseur
 bendecir : souhaiter bonne chance
 rajarse : se casser
-rajar : couper, fissurer, déchirer
 sobremanera : terriblement, extrêmement, excessivement
 auriculares : écouteur
 taburete : tabouret
@@ -1396,7 +1389,6 @@ regodearse : se complaire
 cazador : chasseur
 lienzo : toile
 oleo : huile
-cuchillada : coup de couteau
 comprometerse : compromettre, impliquer
 acontecimiento : évènement, fait
 desolador : désolant, navrant
@@ -1912,7 +1904,6 @@ pantomima : farce
 torcer : tourner, tordre
 maleza : broussaille
 balsa : radeau
-ceruleo : bleu ciel
 amoratar : violacer
 espuma : écume, mousse
 rasgos : traits, physionomie
@@ -1921,7 +1912,6 @@ enmaranar : emmêler
 tragar : avaler, dévorer
 subyugar : subjuguer
 sujetar : tenir, attacher, fixer
-arcada : nausée
 intrascendente : insignifiant
 benemerita : guarde civile, gendarmerie
 lancha : canot à moteur
@@ -2224,7 +2214,6 @@ germen : germe
 chupinazo : tir
 demoledor : destructeur, dévastateur
 negar en redondo : nier en bloc
-bandolera : bandoulière
 cuervo : corbeau
 revolotear : voleter
 cola : queue (animal)
@@ -2586,11 +2575,9 @@ conato : tentative
 bronca : engueulade
 ameno : agréable, divertissant
 marica : tapette, pédale
-cuclillas : accroupi
 desencajar : dérégler
 mareo : mal au coeur
 carcomer : ronger
-ligero : léger
 taller : atelier
 nene : gamin, gosse
 muermo : ennuyeux, rasoir
@@ -2613,7 +2600,6 @@ darle bola a : donner de l'importance à
 lamer : lécher
 amargo : amer
 manosear : tripoter
-rajar : couper, fissurer, découper
 galosina : friandises
 zafar : libérer, retirer, extraire
 inusitado ; inhabituel
@@ -2854,14 +2840,14 @@ obsequiar : offrir
 mordisco : morsure
 escondite : cachette
 farol : bluff
- retratar : dessiner, peindre
- aquiescencia : accord, permission
- azuzar : exciter
- enzarzarse : se disputer
- cohibir : intimider
- escandalo : bruit, tapage, boucan
- alameda : allée, promenade
- cerrojo : verrou
+retratar : dessiner, peindre
+aquiescencia : accord, permission
+azuzar : exciter
+enzarzarse : se disputer
+cohibir : intimider
+escandalo : bruit, tapage, boucan
+alameda : allée, promenade
+cerrojo : verrou
 desenmascarar : démasquer
 calibrar : évaluer
 temeroso : craintif, peureux
@@ -2940,7 +2926,6 @@ aguantar : soutenir, porter
 sopesar : soupeser
 tejado : toit
 estampa : image, illustration
-escaso : rare
 inasequible : exorbitant, inabordable (prix)
 reembolsar : rembourser
 eximir : exempter
@@ -2964,7 +2949,6 @@ increpar : réprimander
 surtir efecto : faire effet
 cuajar : prendre forme, se concrétiser
 malherido : blessé grave
-
 pergenar : ébaucher
 alumbrado : éclairage public
 suplir : remplacer
@@ -3005,9 +2989,7 @@ trinitaria : pensée (fleur)
 gamuza : daim
 tibieza : tiédeur
 hiedra : lierre
-
 rocio : rosée
 sequito : conséquence
 delantal : tablier
 postizo : faux
-
