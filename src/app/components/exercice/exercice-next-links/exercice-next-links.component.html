@@ -1,7 +1,13 @@
 @if(nextGroups().length > 0) {
 <div class="pt-16 px-2 flex flex-col gap-16">
-  @for (group of nextGroups(); track $index) {
+  @for (nextGroup of nextGroups(); track $index) { @if (!$first) {
+  <div class="py-10 flex justify-center gap-3">
+    <hr
+      class="w-1/4 h-4 bg-neutral-300/70 border border-gray-900/50 rounded-xl"
+    />
+  </div>
+  } @for (group of nextGroup; track $index) {
   <app-exercice-link [group]="group" />
-  }
+  } }
 </div>
 }

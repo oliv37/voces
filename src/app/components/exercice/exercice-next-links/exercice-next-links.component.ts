@@ -35,7 +35,18 @@ export class ExerciceNextLinksComponent {
       hasNext: nextGroups.length === NB_GROUPS_TO_LOAD,
     };
   });
-  nextGroups = computed(() => this.state().nextGroups);
+  nextGroups = computed<Group[][]>(() =>
+    this.state().nextGroups.reduce((acc, group) => {
+      const lastGroup = acc[acc.length - 1];
+      if (lastGroup?.length && lastGroup[0].category.id === group.category.id) {
+        lastGroup.push(group);
+      } else {
+        acc.push([group]);
+      }
+
+      return acc;
+    }, [] as Group[][])
+  );
 
   onScroll() {
     const { nextGroups, hasNext } = this.state();

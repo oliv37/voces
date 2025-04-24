@@ -1,5 +1,3 @@
 - Logo
-- add progress completion [home page]
-- add group separator [exercice next links]
 - define meta og tags
 - add service worker
