@@ -105,3 +105,4 @@ garita : mirador
 bilis : bile
 godo : gothique
 redios : oh là là
+bicho raro : drôle d'oiseau

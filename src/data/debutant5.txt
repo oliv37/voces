@@ -103,3 +103,14 @@ merendar : goûter
 ligero : léger
 colgar : raccrocher
 apagar : éteindre
+enfadar : agacer, énerver, fâcher
+palabrota : gros mot
+nevar : neiger
+luna de miel : lune de miel
+opuesto : opposé
+tumbarse : s'allonger
+celos : jalousie
+comodo : confortable
+sudar : suer, transpirer
+divertido : amusant, drôle
+aburrir : ennuyer

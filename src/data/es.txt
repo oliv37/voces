@@ -261,35 +261,8 @@ remoto : lointain, reculé
 moneda : pièces de monnaie
 desencadenar : déclencher, provoquer
 detapar : révéler
-aniquilar : anéantir
 desvelar : dévoiler, revéler
 sudadera : sweat-shirt
-bufanda : écharpe
-luna de miel : lune de miel
-cholar : mépriser
-sudar : suer, transpirer
-nevar : neiger
-palabrota : gros mot
-actuacion : intervention, agissement
-comodo : confortable
-pillarse por alguien : flasher sur quelqu'un
-bicho raro : drôle d'oiseau
-enfadar : agacer, énerver, fâcher
-aburrir : ennuyer
-divertido : amusant, drôle
-vistazo : coup d'oeil
-opuesto : opposé
-aborrecer : détester, haïr
-celos : jalousie
-apartarse : s'éloigner, s'écarter
-obvio : évident
-trastorno : dérangement, désagrément
-nineria : enfantillage
-impulsar : encourager, stimuler
-practicar : s'entraîner
-reventar : éclater, crever
-yema : bout du doigt
-tumbarse : s'allonger
 tumbar : mettre par terre, renverser
 nublado : nuageux
 pedo : beuverie, cuite
@@ -302,7 +275,6 @@ lograr : réussir à, parvenir à
 hacienda : fortune
 pederasta : pédophile
 renir : gronder, se disputer
-cruz roja : croix-rouge
 falsedad : fausseté, mensonge
 rebasar : dépasser
 plusmarca : nouveau record
@@ -356,7 +328,6 @@ lacra : fléau
 paradero : lieu, endroit
 aduenarse de : s'emparer de
 cabecilla : leader, meneur
-borde : rustre, malpoli
 acoger : accueillir, recevoir
 rebano : troupeau
 realeza : royauté, trône
@@ -1921,7 +1892,6 @@ desprenderse : se débarraser
 fingido : feint
 torpe : maladroit
 tararear : fredonner, chantonner
-hortera : ringard, de mauvais goût
 surtir efector : faire effet
 seriedad : sérieux
 braga : culotte, slip

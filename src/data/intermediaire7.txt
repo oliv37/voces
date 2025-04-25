@@ -90,7 +90,7 @@ eldredon : couette
 peldano : marche, barreau (échelle)
 tramite : procédure, démarche
 desvelar : empêcher de dormir, maintenir éveillé
-reventar : éclater
+reventar : éclater, crever
 susurro : chuchotement, murmure
 macarra : voyou
 acertado : judicieux, adéquat

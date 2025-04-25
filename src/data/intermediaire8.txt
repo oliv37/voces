@@ -89,7 +89,6 @@ desparramar : étaler, répandre
 maldecir : maudire
 plateado : argenté
 andanada : engueulade
-aborrecer : détester
 tregua : trêve
 dictaminar : décréter
 soberbia : orgueil
@@ -118,3 +117,4 @@ desparpajo : aisance
 barniz : apparence
 linaje : lignée
 descabellado : fou, insensé
+bufanda : écharpe

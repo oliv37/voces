@@ -16,9 +16,4 @@ export class ExerciceLinkComponent {
   isGroupCompleted = computed<boolean>(() =>
     this._groupCompletionService.isCompleted(this.group())
   );
-  headerClass = computed<string>(() =>
-    this.isGroupCompleted()
-      ? `${this.group().category.color.bgColor} text-white`
-      : ''
-  );
 }
