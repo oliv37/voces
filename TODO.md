@@ -1,6 +1,5 @@
-- Logo
+- Logo + Icons
 - define meta og tags
-- add service worker
 
 albergue : hôtel, auberge
 rematar : achever, finir

@@ -1,0 +1,12 @@
+<header class="h-[3rem] py-2 flex justify-between items-center">
+  <app-breadcrumb></app-breadcrumb>
+  @if (hasNewVersionAvailable()) {
+  <button
+    type="button"
+    title="Une nouvelle version de l'application est disponible"
+    (click)="reloadPage()"
+  >
+    <app-arrow-clockwise-icon className="w-9 h-9 fill-pink-800 animate-pulse" />
+  </button>
+  }
+</header>
