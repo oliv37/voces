@@ -41,7 +41,6 @@ esencia : essence
 rehabilitacion : rééducation
 investigar : enquêter
 pijo : bourgeois
-investigar : rechercher, étudier
 saldo : solde
 portazo : claquement de porte
 presupuesto : devis, budget
@@ -71,6 +70,7 @@ destacar : souligner, mettre l'accent sur
 polvo : baiser, tirer un coup
 proceder : venir de, provenir de
 franja : bande (Gaza)
+investigar : rechercher, étudier
 cohete : fusée, roquette
 cobrar : toucher, encaisser
 sobrante : restant, en plus, trop

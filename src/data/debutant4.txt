@@ -78,7 +78,7 @@ diferencia : différence
 socio : associé
 caro : cher, coûteux
 discurso : discours
-ministra : ministre
+ministro : ministre
 por lo tanto : donc, par conséquent
 reproche : reproche
 apoyar : soutenir

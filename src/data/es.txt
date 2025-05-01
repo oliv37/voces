@@ -11,13 +11,11 @@ declive : déclin
 hecho polvo : crevé, épuisé
 junta : assemblée, comité
 cupula : coupole
-complejo : complexe, compliqué
 aliviar : soulager, calmer
 aliento : souffle, haleine
 abuchear : huer, siffler
 ausencia : absence
 quedarse sin blanca : se retrouver sans le sous
-rematar : achever, couronner
 meter la pata : faire une gaffe
 bote : cagnotte, lot, prix
 avispero : nid de guêpes
@@ -429,7 +427,6 @@ lujo : abondance, excès
 funda : taie d'oreiller, housse de couette
 escritor : écrivain
 pluma : stylo
-dibujar : dessiner
 homenaje : hommage
 coro : choeur
 rayo : rayon
@@ -882,7 +879,6 @@ seso : cervelle, cerveau
 cerebro : cerveau
 lastre : obstacle, handicap
 aplastamiento : écrasement
-pellejo : peau
 superar : oubier, passer à autre chose
 coser : coudre
 ternera : veau
@@ -984,7 +980,6 @@ periodístico : journalistique
 veraz : véridique, fidèle
 senador : sénateur
 parroquia : paroisse
-albergue : hôtel, auberge
 escalinata : perron
 pila : pile
 recargar : recharger
@@ -1224,7 +1219,6 @@ desagradar : déplaire, contrarier
 granja : ferme
 rana : grenouille
 aclarar : éclaircir, lever un doute
-dibujar : dessiner
 disenar : concevoir
 maniobra : manoeuvre
 machinaria : mécanisme
@@ -1474,7 +1468,6 @@ soleado : ensoleillé
 hervidero : fourmillement, fourmilière
 lentejuela : paillette
 guino : clin d'oeil
-pantomima : farce
 liderar : diriger, mener
 tapadera : couverture
 tramitacion : gestion, conduite, démarche, procédure
@@ -1871,7 +1864,6 @@ relucir : briller, étinceler
 verde : jeune, inexpérimenté, immature
 enésimo : énième
 velero : voilier
-pantomima : farce
 torcer : tourner, tordre
 maleza : broussaille
 balsa : radeau
@@ -2878,7 +2870,6 @@ apacible : paisible, calme
 sigilo : discrétion
 potingue : crème cosmétique
 adefesio : mocheté, laidron
-toalla : serviette
 refunfunar : grommeler, bougonner, râler
 quirofano : bloc opératoire
 desenlace : dénouement
@@ -2891,7 +2882,6 @@ taxista : chauffeur de taxi
 empenar : mettre en gage
 desbocarse : se déchaîner
 profugo : fugitif
-remate : tir, frappe
 aguantar : soutenir, porter
 sopesar : soupeser
 tejado : toit

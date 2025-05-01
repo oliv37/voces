@@ -80,7 +80,7 @@ presagio : présage
 ropa : vêtements
 devolver : rendre, redonner
 contradecir : contredire, démentir
-tardar : être en retard, mettre du temps
+toalla : serviette
 pajaro : oiseau
 hogar : foyer, intérieur
 vivienda : logement

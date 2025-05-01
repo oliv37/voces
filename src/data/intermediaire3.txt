@@ -114,7 +114,7 @@ expectacion : attente
 quiniela : grille de loto
 portada : couverture, première page
 saldar : solder
-pellejo : peau
+pellejo (animal) : peau
 ruborizar : rougir
 caricia : caresse
 forastero : étranger
