@@ -74,7 +74,7 @@ sentenciar : condamner
 presupuesto : supposition, présomption
 encogerse : rétrécir, replier
 cromo : image, vignette
-cajaro : border, merde
+carajo : bordel, merde
 aplomo : aplomb, assurance, confiance
 hojear : feuilleter
 agradar : plaire, apprécier
@@ -113,7 +113,7 @@ rebote : rebond
 barrera : barrière
 avalar : se porter garant
 ingente : immense, énorme
-adjudicaion : attribution
+adjudicacion : attribution
 gremio : syndicat
 pulso : fermeté
 vasco : basque

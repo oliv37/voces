@@ -5,7 +5,11 @@ import { NotFoundPageComponent } from '../pages/not-found/not-found-page.compone
 import { Category } from '@models/category.model';
 import { Group } from '@models/group.model';
 
-const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = { url: '/', label: 'Voces' };
+const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = {
+  url: '/',
+  label: 'VOCES',
+  isTrackingWidest: true,
+};
 
 export function buildBreadcrumb(
   route: ActivatedRouteSnapshot | null
@@ -51,7 +55,7 @@ function addBreadcrumbItem(
   const url = [previousUrl, ...route.url].join('/');
   const bgColor =
     label === category?.label ? category?.color.bgColor : undefined;
-  const isBold = label === group?.label;
+  const isBold = label === category?.label || label === group?.label;
 
   breadcrumb.push({
     label,

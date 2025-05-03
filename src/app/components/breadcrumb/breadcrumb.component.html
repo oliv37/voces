@@ -2,21 +2,19 @@
   [@scaleUpDown]="breadcrumb().length"
   class="flex flex-wrap items-center gap-2 text-lg h-full"
 >
-  @for (breadcrumbItem of breadcrumb(); track $index) { @if
-  (breadcrumbItem.bgColor) {
+  @for (breadcrumbItem of breadcrumb(); track $index) {
   <a
     [routerLink]="breadcrumbItem.url"
-    [class]="'px-2 rounded-md font-bold text-white ' + breadcrumbItem.bgColor"
-    >{{ breadcrumbItem.label }}</a
-  >
-  } @else {
-  <a
-    [routerLink]="breadcrumbItem.url"
-    class="text-gray-700 hover:text-black"
+    [class]="
+      breadcrumbItem.bgColor
+        ? breadcrumbItem.bgColor + ' px-2 rounded-md text-white'
+        : 'text-black'
+    "
     [class.font-bold]="breadcrumbItem.isBold"
+    [class.tracking-widest]="breadcrumbItem.isTrackingWidest"
     >{{ breadcrumbItem.label }}</a
   >
-  } @if (!$last) {
+  @if (!$last) {
   <app-chevron-right-icon className="w-4 h-4 mx-1"></app-chevron-right-icon>
   } }
 </div>

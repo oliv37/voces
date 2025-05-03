@@ -3,6 +3,7 @@ export interface BreadcrumbItem {
   label: string;
   bgColor?: string;
   isBold?: boolean;
+  isTrackingWidest?: boolean;
 }
 
 export type Breadcrumb = BreadcrumbItem[];

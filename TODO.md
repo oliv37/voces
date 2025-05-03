@@ -1,4 +1,3 @@
-- Logo + Icons
 - define meta og tags
 
 albergue : hôtel, auberge

@@ -1,8 +1,8 @@
 {
   "name": "voces",
   "short_name": "voces",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#4a5565",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

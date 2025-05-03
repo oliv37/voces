@@ -25,7 +25,7 @@ estribo : étrier
 castano : châtaigner
 vidriera : vitrail, vitrine
 vidrio : vitre
-compareciencia : comparution
+comparecencia : comparution
 desasirse : se libérer de
 alzar : lever
 nuevamente : de nouveau
@@ -102,7 +102,7 @@ chorro : cavalier
 escanciar : verser à boire
 desperdicar : gaspiller
 atravesarse : s'interposer
-a un tiro de pierda : à deux pas
+a un tiro de piedra : à deux pas
 piernas : guignol
 estrellar : lancer
 marisco : fruits de mer

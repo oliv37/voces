@@ -44,7 +44,6 @@ export class GroupCompletionService {
       const groupCompletion = JSON.parse(value);
       return Object.keys(groupCompletion).reduce((acc, groupId) => {
         const completionTimestamp = groupCompletion[groupId];
-        console.log(groupId);
         if (isRecentCompletionTimestamp(completionTimestamp)) {
           acc[groupId] = completionTimestamp;
         }
@@ -67,7 +66,6 @@ function isRecentCompletionTimestamp(
     return false;
   }
   const distanceInMs = now() - completionTimestamp;
-  console.log(distanceInMs);
   return distanceInMs <= MAX_DISTANCE_MS;
 }
 
