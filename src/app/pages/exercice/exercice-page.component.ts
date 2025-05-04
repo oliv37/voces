@@ -22,6 +22,7 @@ import { ExerciceProgressBarComponent } from '@components/exercice/exercice-prog
 import { AnimationService } from '@services/animation.service';
 import { ExerciceNextLinksComponent } from '@components/exercice/exercice-next-links/exercice-next-links.component';
 import { GroupCompletionService } from '@services/group-completion.service';
+import { OpenGraph } from '@models/open-graph.model';
 
 @Component({
   imports: [
@@ -56,6 +57,38 @@ export class ExercicePageComponent implements OnDestroy {
   isGroupCompleted = computed(() => {
     const group = this.group();
     return this._groupCompletionService.isCompleted(group);
+  });
+
+  metaDescription = computed<string>(() => {
+    const categoryLabel = this.group().category.label;
+    const groupLabel = this.group().label;
+    const words = this.group().words;
+
+    return (
+      'Exercez-vous sur les mots de Vocabulaire Espagnol ' +
+      categoryLabel +
+      ' Groupe ' +
+      groupLabel +
+      ' : ' +
+      words.map((w) => w.es).join(' - ')
+    );
+  });
+
+  metaOg = computed<OpenGraph>(() => {
+    const categoryLabel = this.group().category.label;
+    const groupLabel = this.group().label;
+    const words = this.group().words;
+
+    return {
+      title: `Vocabulaire Espagnol ${categoryLabel} Groupe ${groupLabel}`,
+      description:
+        'Excercice sur les mots de Vocabulaire Espagnol ' +
+        categoryLabel +
+        ' Groupe ' +
+        groupLabel +
+        ' : ' +
+        words.map((w) => w.es).join(' - '),
+    };
   });
 
   _focusEffect = effect(() => {

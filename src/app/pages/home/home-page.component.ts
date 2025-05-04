@@ -5,6 +5,7 @@ import { DATA } from '@utils/data.util';
 import { MetaDirective } from '@directives/meta.directive';
 import { fadeIn } from '@animations/fade-in.animation';
 import { GroupCompletionService } from '@services/group-completion.service';
+import { OpenGraph } from '@models/open-graph.model';
 
 @Component({
   imports: [RouterLink, MetaDirective],
@@ -24,6 +25,19 @@ export class HomePageComponent {
   nbWords: number = DATA.flat()
     .map((category) => category.nbWords)
     .reduce((res, nbWords) => res + nbWords, 0);
+
+  metaDescription =
+    'Visualisez les ' +
+    this.nbWords +
+    ' mots de Vocabulaire en Espagnol regroupés par niveaux.';
+
+  metaOg: OpenGraph = {
+    title: 'Voces - Vocabulaire Espagnol',
+    description:
+      'Voces | ' +
+      this.nbWords +
+      ' mots de Vocabulaire Espagnol regroupés par niveaux',
+  };
 
   private computeProgressPercent(category: Category): number {
     const nbGroupsCompleted = category.groups.filter((group) =>

@@ -1,5 +1,3 @@
-- define meta og tags
-
 albergue : hôtel, auberge
 rematar : achever, finir
 tendido de camas : faire les lits
@@ -164,3 +162,5 @@ timpano : tympan
 taner : sonner
 oido : oreille
 alterarse : devenir nerveux
+escalofrio : frisson, chair de poule
+desencadenar : détacher, déchaîner

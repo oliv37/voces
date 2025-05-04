@@ -1,4 +1,8 @@
-<app-meta [description]="metaDescription()" />
+<app-meta
+  robots="index, follow"
+  [description]="metaDescription()"
+  [og]="metaOg()"
+/>
 
 <div @fadeIn class="pt-2 flex flex-col gap-12">
   @for (group of category().groups; track $index) {

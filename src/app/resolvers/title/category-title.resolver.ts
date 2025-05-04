@@ -5,5 +5,5 @@ export function resolveCategoryTitle(
   route: ActivatedRouteSnapshot | null
 ): string {
   const wordsCategoryLabel = getCategoryLabel(route);
-  return `Vocabulaire Espagnol | ${wordsCategoryLabel} - Voces`;
+  return `Vocabulaire Espagnol ${wordsCategoryLabel} - Voces`;
 }

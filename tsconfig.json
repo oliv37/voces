@@ -33,6 +33,7 @@
       "@services/*": ["./src/app/services/*"],
       "@utils/*": ["./src/app/utils/*"],
       "@data/*": ["./src/data/*"],
+      "@environments/*": ["./src/environments/*"],
     }
   },
   "angularCompilerOptions": {

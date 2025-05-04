@@ -1,4 +1,8 @@
-<app-meta robots="noIndex" />
+<app-meta
+  robots="noindex, nofollow"
+  [description]="metaDescription()"
+  [og]="metaOg()"
+/>
 
 <app-client-side>
   @if(word(); as word) {
