@@ -41,15 +41,7 @@ export abstract class AbstractExerciceLevelComponent {
 
   onInput(e: Event) {
     const target = e.target as HTMLInputElement;
-    const targetValue = target.value;
-    const maxLength = this.word().length;
-
-    if (targetValue.length > maxLength) {
-      target.value = this.text();
-      return;
-    }
-
-    this.text.set(targetValue);
+    this.text.set(target.value);
   }
 
   onKeydown(e: KeyboardEvent) {

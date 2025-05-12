@@ -36,7 +36,7 @@ coro : choeur
 desechar : dissiper, chasser
 maletin : mallette, porte-documents
 calzoncillos : caleçon, slip
-transcurrir : s'écouler, passer
+transcurrir : s'écouler, passer (temps)
 presupuesto : budget
 verja : grille
 tan solo : seulement, à peine

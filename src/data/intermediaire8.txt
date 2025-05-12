@@ -50,7 +50,7 @@ parchar : réparer
 botar : jeter
 abrumar : accabler
 tela : tissu
-remiendo : pièce
+remiendo : pièce (tissu)
 desprender : détacher
 costra : croûte
 chaleco : gilet

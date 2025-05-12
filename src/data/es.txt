@@ -204,14 +204,9 @@ sonar : sonner
 collar : collier
 pedalear : pédaler
 aumentar la distencia : creuser l'écart
-muslo : cuisse
 pantorrilla : mollet
 bajon : coup de mou, cafard
 sombrero : chapeau
-sena : indice, trace
-cisne : cygne
-sordo : sourd
-ciego : aveugle
 amuleto : amulette
 cabecear : tanguer
 rebaja : remise, réduction
@@ -458,13 +453,6 @@ matrimonio : mariage
 relanzar : relancer
 noticia : nouvelle
 alarde : étalage, ostentation, exhibition
-traspaso : prix de vente
-guardaespaldas : garde du corps
-escolta : garde du corps
-franquisia : franchise
-deslumbrar : éblouir
-belleza : beauté
-compromiso : accord
 cortejar : courtiser, faire la cour
 alardear : se vanter, fanfaronner
 esposar : mettre les menottes
@@ -477,9 +465,7 @@ alquiler : location
 ira : colère, fureur, rage
 gestacion : grossesse
 altercado : altercation, dispute
-destrozar : détruire
 alboroto : tapage, vacarme, chahut
-amanar : truquer
 desmoronar : s'écrouler, s'effondrer
 ahogar : étouffer, noyer
 galpon : maison de plain-pied
@@ -1320,7 +1306,6 @@ tropa : troupe
 revistar : passer en revue, inspecter
 juramento : serment
 sobrevolar : survoler
-transcurrir : s'écouler, passer
 campamento : camping
 exito : réussite
 roca : roche
@@ -2629,7 +2614,6 @@ codazo : coup de coude
 cachete : claque, gifle
 bribon : filou
 previsor : prévoyant
-transcurrir : s'écouler, passer
 enfrascarse : s'absorber dans, se plonger dans
 pinche : commis de cuisine
 rulo : bigoudi
@@ -2932,21 +2916,6 @@ festejar : célébrer
 lata : boîte de conserve
 bisabuelo : arrière-grand-père
 infante : enfant
-charol : cuir vernis
-gallinazo : vautour
-alambre : fil de fer
-proveer de : approvisionner de
-solapar : couvrir, recouvrir
-nalgada : fessée
-silla de ruedas : chaise roulante
-horquilla : épingle à cheveux
-bellaco : scélérat, voyou
-truhan : truand, voyou, escroc
-mascullar : marmonner
-muslo : cuisse
-arropar : couvrir, emmitoufler
-trinitaria : pensée (fleur)
-gamuza : daim
 tibieza : tiédeur
 hiedra : lierre
 rocio : rosée

@@ -9,7 +9,7 @@ incorporarse : se redresser
 haz : faisceau
 gorra : casquette
 calar : pénétrer, s'infiltrer
-dedo indice : index
+dedo indice : index (doigt)
 librar : être libre, ne pas travailler
 recelar : se méfier
 letrero : panneau, pancarte

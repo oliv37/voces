@@ -5,7 +5,7 @@ dichoso : heureux, chanceux
 falda : flanc
 dichoso : foutu, satané, maudit
 resguardarse : se protéger, s'abriter
-manojo : bouquet (de fleurs), trousseau (de clés)
+manojo : bouquet (de fleurs)
 arrebujarse : s'emmitoufler
 almohada : oreiller
 sanar : guérir
@@ -45,7 +45,7 @@ tertulia : réunion entre amis
 digerir : digérer
 patear : piétiner
 vena : veine
-inflar a algo : rouer de coups
+inflar a alguien : rouer de coups
 hostia : beigne, torgnole, coup
 cardenal : bleu, hématome
 embajada : ambassade

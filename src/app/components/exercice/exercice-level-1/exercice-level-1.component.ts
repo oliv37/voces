@@ -28,4 +28,16 @@ export class ExerciceLevel1Component extends AbstractExerciceLevelComponent {
         };
       });
   });
+
+  override onInput(e: Event) {
+    const target = e.target as HTMLInputElement;
+    const maxLength = this.word().length;
+
+    if (target.value.length > maxLength) {
+      target.value = this.text();
+      return;
+    }
+
+    this.text.set(target.value);
+  }
 }

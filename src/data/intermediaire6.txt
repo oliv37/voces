@@ -106,7 +106,7 @@ velada : voilée
 loma : colline
 yermo : terre en friche, désert
 rebano : troupeau
-mujeriego : coureur de jupons, homme à femmes, don juan
+mujeriego : coureur de jupons, homme à femmes
 rocin : canasson, cheval de travail
 feudo : fief
 hilar : relier, établir un lien
