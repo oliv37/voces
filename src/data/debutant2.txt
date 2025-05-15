@@ -11,7 +11,7 @@ estante : étagère
 vomitar : vomir
 probar : tester
 improviso : imprévu
-atreverse : oser
+medianoche : minuit
 cabron : enfoiré, salaud
 molestar : déranger
 intentar : tenter

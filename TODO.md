@@ -275,9 +275,9 @@ carcajada : éclat de rire
 incentivar : encourager, motiver
 meta : but, objectif
 trasnochar : faire une nuit blanche
-medianoche : minuit
 ensanarse : s'acharner
 danar : abîmer
+trastero : débarras, cagibi
 ronquido : ronflement
 oposicion : concours
 arrojar : aboutir à
@@ -292,3 +292,7 @@ cerrajero : serrurier
 estamparse : percuter
 pestillo : verrou
 paja : paille
+escalera : échelle
+anochecer : coucher de soleil
+testero : face avant
+presura : hâte

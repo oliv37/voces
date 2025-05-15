@@ -53,7 +53,7 @@ baldosa : dalle, carreau
 caliza : calcaire
 tenir : teindre, teinter
 destello : scintillement, éclat
-doblar : tourner
+doblar : tourner (direction)
 mono : bleu de travail
 calada : bouffée, taffe
 correa : laisse, sangle
@@ -73,7 +73,7 @@ colgar : accrocher, pendre
 fugaz : fugace
 de sobra : en trop
 cuchillada : coup de couteau
-latido : battement
+latido : battement (coeur)
 rajar : découper, couper
 mortecino : éteint, mourant
 rebosar : déborder
