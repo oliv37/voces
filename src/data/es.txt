@@ -2105,7 +2105,6 @@ bachillerato : lycée
 cotizado : courtisé
 enrollarse : trop parlé, s'éterniser
 claustro : corps enseignant
-de reojo : du coin de l'oeil
 premura : urgence
 hondo : profond
 procesar : traiter, transformer
@@ -2251,7 +2250,6 @@ capa : couche (plusieurs couche)
 quejica : pleurnicheur, râleur
 hacerse cuesta arriba : avoir du mal à faire qch
 deslomar : esquinter
-desperdiciar : gaspiller
 en sus trece : sur ses positions
 atender a razones : entendre raison
 brindar : offrir

@@ -1,7 +1,9 @@
 albergue : hôtel, auberge
 empate : match nul
+medida : dimension
 rematar : achever, finir
 tendido de camas : faire les lits
+estampar : imprimer
 remate : tir, frappe
 disenar : concevoir
 chivar : cafter
@@ -18,6 +20,7 @@ ingente : immense, énorme
 lima : lime
 maquinaria : mécanisme
 quitaesmalte : dissolvant
+desperdiciar : gaspiller
 menear : remuer, bouger
 quitar de encima : débarrasser de qqn ou qch
 instituto : école, collège, lycée
@@ -167,6 +170,7 @@ timpano : tympan
 taner : sonner
 oido : oreille
 machote : macho, dur, gros bras
+desenganchar : décrocher
 alterarse : devenir nerveux
 escalofrio : frisson, chair de poule
 desencadenar : détacher, déchaîner
@@ -246,9 +250,11 @@ arrancar : arracher, enlever
 atento : attentif
 quebrado : accidenté
 hermanastro : demi-frère
+claroscuro : clair-obscur
 rematar : achever, finir
 dadivoso : généreux
 teclear : taper (clavier)
+perjurio : parjure
 arder : brûler
 ceniza : cendre
 agarrotarse : se paralyser
@@ -260,6 +266,7 @@ rizo : boucle
 resplandor : lumière
 acechar : traquer, guetter
 afilado : aiguisé
+patear : donner un coup de pied
 clavar : planter, enfoncer
 roce : frôlement
 gatear : marcher à quatre pattes
@@ -278,6 +285,8 @@ trasnochar : faire une nuit blanche
 ensanarse : s'acharner
 danar : abîmer
 trastero : débarras, cagibi
+botar : lancer
+autovia : autoroute, voie rapide
 ronquido : ronflement
 oposicion : concours
 arrojar : aboutir à
@@ -296,3 +305,115 @@ escalera : échelle
 anochecer : coucher de soleil
 testero : face avant
 presura : hâte
+de reojo : du coin de l'oeil
+agarrar : attraper
+piedra : pierre
+despacio : lentement
+encender : allumer
+cenido : cintré, moulant
+atropellar : renverser, faucher
+estropear : abîmer
+asomar : pointer le bout de son nez
+brena : maquis
+maniobrar : manoeuvrer
+maleza : broussaille
+resplandor : rayonnement
+silbido : sifflement
+chuleton : côte de boeuf
+trocha : sentier
+viraje : virage
+bache : nid-de-poule
+ensanchar : s'élargir
+perjuicio : préjudice
+claro : clairière
+pedregroso : caillouteux
+punado : poignée
+carril : rail
+charco : flaque
+rastro : trace
+alumbrar : éclairer
+manzana : pâté de maisons
+letrado : avocat
+desperdicio : gaspillage
+enganchar : accrocher
+rogar : implorer, demander
+mona : mannequin
+abollar : cabosser
+testero : face avant
+asfaltar : goudronner
+ahogo : étouffement
+habitacion : chambre
+mandibula : mâchoire
+cesta : panier
+descampado : terrain vague
+retrasar : retarder
+persecucion : poursuite
+arrojar : jeter, lancer
+canica : bille
+lagartija : lézard
+encima : dessus
+tonelada : tonne
+desgarrar : déchirer
+ciervo : cerf
+despredador : prédateur
+conejo : lapin
+aspero : rugueux
+ronroneo : ronronnement
+hediondo : puant
+autopista : autoroute
+prejuicio : préjugé
+posponer : reporter, repousser
+gayumbos : caleçon
+remar : ramer
+gozar : profiter
+malvado : méchant
+millar : miller
+farsante : charlatan
+comedor : salle à manger
+yerno : gendre, beau-fils
+remitir : expédier, envoyer
+rezagado : à la traine
+medida : mesure
+cuero cabelludo : cuir chevelu
+perezoso : paresseux
+peregrino : voyageur
+tremulo : tremblotant
+albaricoque : abricot
+treta : ruse, fourberie
+cordero : agneau
+verter : verser
+varilla : tige, baguette
+desgracia : malheur
+pedregroso : caillouteux
+extender : déplier, étendre
+recto : droit
+agarrar : attraper
+abroncar : gronder
+trecho : tronçon, portion (route)
+descarrilar : dérailler
+palanca : levier
+pisar : appuyer sur
+manija : poignée
+volcar : renverser
+nudillo : articulation du doigt
+soldar : souder
+adelantar : doubler
+repletar : remplir
+desvio : déviation
+carril : voie (route)
+maldicion : insulte, injure
+mascullar : marmonner
+despejar : dégager
+rebufo : appel d'air
+zapatear : taper du pied
+bofeton : gifle, baffe
+pasamontanas : cagoule
+refulgir : resplendir
+triza : morceau
+quitamedios : rampe
+estampar : percuter
+yermo : désert
+aleacion : alliage
+cortina : rideau
+atontar : étourdir
+anudarse : nouer, lacer
