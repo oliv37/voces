@@ -1,5 +1,5 @@
 import {
-  afterRender,
+  afterEveryRender,
   Component,
   computed,
   effect,
@@ -107,7 +107,7 @@ export class ExercicePageComponent implements OnDestroy {
   });
 
   constructor() {
-    afterRender(() => this._animationService.enableAnimation());
+    afterEveryRender(() => this._animationService.enableAnimation());
   }
 
   ngOnDestroy() {
