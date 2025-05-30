@@ -96,6 +96,7 @@ monicaco : faible
 agallas : cran, courage
 torneo : tournoi
 aliento : halaine
+ahorcar : pendre
 punzada : élancement
 chillar : crier, hurler
 desgarrador : déchirant, poignant
@@ -353,6 +354,7 @@ canica : bille
 lagartija : lézard
 encima : dessus
 tonelada : tonne
+apuntar : noter
 desgarrar : déchirer
 ciervo : cerf
 despredador : prédateur
@@ -393,6 +395,7 @@ trecho : tronçon, portion (route)
 descarrilar : dérailler
 palanca : levier
 pisar : appuyer sur
+arrugar : froisser, chiffonner
 manija : poignée
 volcar : renverser
 nudillo : articulation du doigt
@@ -409,6 +412,7 @@ zapatear : taper du pied
 bofeton : gifle, baffe
 pasamontanas : cagoule
 refulgir : resplendir
+oreja : cerne
 triza : morceau
 quitamedios : rampe
 estampar : percuter
@@ -417,3 +421,85 @@ aleacion : alliage
 cortina : rideau
 atontar : étourdir
 anudarse : nouer, lacer
+muelle : quai
+cayuco : pirogue
+volcar : renverser
+aferrarse : s'accrocher
+arrojar : jeter, lancer
+pertrechar : fournir, apporter
+desembarcar : débarquer
+balanceo : équilibrage
+desencadenar : déclencher, provoquer
+maniobra : manoeuvre
+derrocar : destituer
+expediente : dossier
+trincar : découper
+cupula : dirigeants
+despilfarro : gaspillage
+suministro : approvisionnement
+fronterizo : frontalier
+espejo : miroir
+codo : coude
+gentileza : gentillesse
+salpicadero : tableau de bord
+pelota : ballon
+hilo : fil
+hora punta : heure de pointe
+confundir : déconcerter, dérouter
+salmo : psaume
+catequismo : catéchisme
+firme : décidé, déterminé
+camello : chameau
+engrasar : graisser
+rastrear : suivre à la trace
+disparate : bêtise, ineptie
+asombrar : émerveiller, étonner
+ojera : cerne
+aderezo : assaisonnement
+barniz : vernis
+revolotear : voltiger
+pesadez : lourdeur
+parpado : paupière
+envenenar : empoisonner
+trampilla : trappe
+sumidero : canalisation
+amargo : amer
+merced : merci, grâce
+bocado : bouchée
+detenimiento : attention, soin
+baldosa : carreau, dalle
+tiron : coup sec, mouvement brusque
+fomentar : promouvoir, encourager
+zeta : voiture de police
+desmentir : démentir
+garita : mirador, guérite
+atender : recevoir, accueillir
+bofetada : gifle
+echar el cierre : mettre le verrou, fermer
+alargar : passer
+ceno : sourcils
+arrugar : froncer
+taquilla : guichet
+contundencia : fermeté
+deslumbrar : éblouir
+banquillo : banc des accusés
+procesamiento : poursuites judiciaires
+amortiguamiento : atténuation, amortissement
+estrenar : débuter, donner la première
+pisar : piétiner
+a sabiendas : en connaissance de cause
+sabiduria : savoir, connaissance
+volcar : verser, renverser
+arrullar : bercer
+ahorcarse : s'étrangler, se pendre
+fajo : liasse
+agachar : baisser
+agarrar : attraper, prendre
+suavemente : doucement, délicatement
+ni por asomo : en aucun cas
+matricula : inscription
+impoluto : intact, pur
+suministrar : fournir
+apuntar : viser, pointer
+enderezar : redresser
+tarifa : tarif, prix

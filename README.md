@@ -14,5 +14,5 @@ Each translation is represented by a single line with the following format :
 
 ## Upgrade
 
-- `npm install -g @angular/cli@latest`
+- `pnpm install -g @angular/cli@latest`
 - `ng update @angular/cli @angular/core`
