@@ -16,6 +16,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-eslint/eslint-plugin": "20.0.0-alpha.0",
     "@angular/animations": "^20.0.0",
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
@@ -35,6 +36,7 @@
     "@angular/build": "^20.0.0",
     "@angular/cli": "^20.0.0",
     "@angular/compiler-cli": "^20.0.0",
+    "@eslint/js": "^9.28.0",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/express": "^4.17.22",
     "@types/jasmine": "~5.1.8",
