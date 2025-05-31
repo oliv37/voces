@@ -1,6 +1,6 @@
 import { CanMatchFn } from '@angular/router';
-import { findCategory } from '@utils/category.util';
-import { findGroup } from '@utils/group.util';
+import { findCategory } from '@utils/category';
+import { findGroup } from '@utils/group';
 
 export const canMatchCategory: CanMatchFn = (route, segments) => {
   if (segments.length === 0) {

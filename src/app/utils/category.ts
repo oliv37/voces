@@ -1,7 +1,7 @@
-import { Category } from '@models/category.model';
+import { Category } from '@models/category';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { getData } from './route.util';
-import { DATA } from './data.util';
+import { getData } from './route';
+import { DATA } from './data';
 
 export function findCategory(
   categoryPathParam: string | null

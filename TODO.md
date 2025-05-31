@@ -503,3 +503,9 @@ suministrar : fournir
 apuntar : viser, pointer
 enderezar : redresser
 tarifa : tarif, prix
+patente : brevet
+desaconsejable : peu recommandable
+plegaria : prière
+perjuicio : préjudice, tort
+escurrir : sécher, égoutter, essuyer
+grada : gradin, tribune

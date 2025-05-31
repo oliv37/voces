@@ -6,15 +6,15 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import { GroupCompletionService } from '../../services/group-completion.service';
-import { Word } from '@models/word.model';
-import { Level, MAX_LEVEL } from '@models/exercice.model';
-import { shuffle } from '@utils/array.util';
-import { Group } from '@models/group.model';
+import { GroupCompletion } from '@services/group-completion';
+import { Word } from '@models/word';
+import { Level, MAX_LEVEL } from '@models/exercice';
+import { shuffle } from '@utils/array';
+import { Group } from '@models/group';
 
 @Injectable({ providedIn: 'root' })
-export class ExerciceService {
-  private _groupCompletionService = inject(GroupCompletionService);
+export class Exercice {
+  private _groupCompletion = inject(GroupCompletion);
 
   group = signal<Group | undefined>(undefined);
 
@@ -94,7 +94,7 @@ export class ExerciceService {
     );
 
     if (hasAnsweredAllWordsOfMaxLevelWithoutHelp) {
-      this._groupCompletionService.markAsCompleted(group);
+      this._groupCompletion.markAsCompleted(group);
     }
   }
 

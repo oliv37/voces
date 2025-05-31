@@ -5,8 +5,8 @@ import {
   input,
   linkedSignal,
 } from '@angular/core';
-import { Group } from '@models/group.model';
-import { findNextGroups } from '@utils/group.util';
+import { Group } from '@models/group';
+import { findNextGroups } from '@utils/group';
 import { ScrollInfoService } from '@services/scroll-info.service';
 import { ExerciceLinkComponent } from '../exercice-link/exercice-link.component';
 

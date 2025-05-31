@@ -1,7 +1,7 @@
 import { effect, inject, Injectable, signal, Signal } from '@angular/core';
+import type { Setting } from '@models/setting';
+import { fromString } from '@utils/json';
 import { StorageService } from './storage.service';
-import { Setting } from '@models/setting.model';
-import { fromString } from '@utils/json.util';
 
 const DEFAULT_SETTING: Setting = {
   isExerciceReversed: false,

@@ -1,12 +1,12 @@
 import { Component, computed, input } from '@angular/core';
-import { Category } from '@models/category.model';
-import { MetaDirective } from '@directives/meta.directive';
-import { fadeIn } from '@animations/fade-in.animation';
+import { Category } from '@models/category';
+import { Meta } from '@directives/meta';
+import { fadeIn } from '@animations/fade-in';
 import { ExerciceLinkComponent } from '../../components/exercice/exercice-link/exercice-link.component';
-import { OpenGraph } from '@models/open-graph.model';
+import { OpenGraph } from '@models/open-graph';
 
 @Component({
-  imports: [MetaDirective, ExerciceLinkComponent],
+  imports: [Meta, ExerciceLinkComponent],
   templateUrl: './category-page.component.html',
   animations: [fadeIn('app-exercice-link', '100ms', '700ms')],
 })

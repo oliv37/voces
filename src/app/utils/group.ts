@@ -1,9 +1,9 @@
-import { Group } from '@models/group.model';
-import { findCategory } from './category.util';
+import { Group } from '@models/group';
+import { findCategory } from './category';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { getData } from './route.util';
-import { DATA } from './data.util';
-import { Category } from '@models/category.model';
+import { getData } from './route';
+import { DATA } from './data';
+import { Category } from '@models/category';
 
 export function findGroup(
   categoryPathParam: string | null,

@@ -1,7 +1,7 @@
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { getCategoryLabel } from '@utils/category.util';
+import { getCategoryLabel } from '@utils/category';
 
-export function resolveCategoryTitle(
+export function categoryTitleResolver(
   route: ActivatedRouteSnapshot | null
 ): string {
   const wordsCategoryLabel = getCategoryLabel(route);

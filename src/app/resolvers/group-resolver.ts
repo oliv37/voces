@@ -1,8 +1,8 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
-import { Group } from '@models/group.model';
-import { findGroup } from '@utils/group.util';
+import type { Group } from '@models/group';
+import { findGroup } from '@utils/group';
 
-export const resolveGroup: ResolveFn<Group> = (route) => {
+export const groupResolver: ResolveFn<Group> = (route) => {
   const categoryPathParam = getCategoryPathParam(route);
   const groupPathParam = getGroupPathParam(route);
   return findGroup(categoryPathParam, groupPathParam)!;

@@ -11,7 +11,7 @@ type Border = 'none' | 'normal' | 'large';
     '[class]': 'class()',
   },
 })
-export class BtnDirective {
+export class Btn {
   appBtnTheme = input<Type>('primary');
   appBtnTextSize = input<Size>('xl');
   appBtnFontWeight = input<Weight>('normal');

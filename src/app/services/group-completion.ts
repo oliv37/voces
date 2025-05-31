@@ -1,13 +1,13 @@
 import { effect, inject, Injectable, signal } from '@angular/core';
+import type { Group } from '@models/group';
+import type { GroupCompletion as GroupCompletionModel } from '@models/group-completion';
 import { StorageService } from '@services/storage.service';
-import { Group } from '@models/group.model';
-import { GroupCompletion } from '@models/group-completion.model';
 
 @Injectable({ providedIn: 'root' })
-export class GroupCompletionService {
+export class GroupCompletion {
   private _storageService = inject(StorageService);
 
-  private _groupCompletion = signal<GroupCompletion>(
+  private _groupCompletion = signal<GroupCompletionModel>(
     this.readGroupCompletion()
   );
 
@@ -33,7 +33,7 @@ export class GroupCompletionService {
     return isRecentCompletionTimestamp(completionTimestamp);
   }
 
-  private readGroupCompletion(): GroupCompletion {
+  private readGroupCompletion(): GroupCompletionModel {
     const value = this._storageService.read('GROUP_COMPLETION');
 
     if (!value) {
@@ -48,7 +48,7 @@ export class GroupCompletionService {
           acc[groupId] = completionTimestamp;
         }
         return acc;
-      }, {} as GroupCompletion);
+      }, {} as GroupCompletionModel);
     } catch (e) {
       console.error('Error reading group completion', e);
       return {};

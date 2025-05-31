@@ -1,19 +1,19 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Category } from '@models/category.model';
-import { DATA } from '@utils/data.util';
-import { MetaDirective } from '@directives/meta.directive';
-import { fadeIn } from '@animations/fade-in.animation';
-import { GroupCompletionService } from '@services/group-completion.service';
-import { OpenGraph } from '@models/open-graph.model';
+import type { Category } from '@models/category';
+import type { OpenGraph } from '@models/open-graph';
+import { DATA } from '@utils/data';
+import { Meta } from '@directives/meta';
+import { fadeIn } from '@animations/fade-in';
+import { GroupCompletion } from '@services/group-completion';
 
 @Component({
-  imports: [RouterLink, MetaDirective],
+  imports: [RouterLink, Meta],
   templateUrl: './home-page.component.html',
   animations: [fadeIn('a', '100ms', '0.4s')],
 })
 export class HomePageComponent {
-  private _groupCompletionService = inject(GroupCompletionService);
+  private _groupCompletion = inject(GroupCompletion);
 
   data: (Category & { progressPercent: number })[][] = DATA.map((categories) =>
     categories.map((category) => ({
@@ -41,7 +41,7 @@ export class HomePageComponent {
 
   private computeProgressPercent(category: Category): number {
     const nbGroupsCompleted = category.groups.filter((group) =>
-      this._groupCompletionService.isCompleted(group)
+      this._groupCompletion.isCompleted(group)
     ).length;
     const nbGroups = category.groups.length;
     return (nbGroupsCompleted / nbGroups) * 100;

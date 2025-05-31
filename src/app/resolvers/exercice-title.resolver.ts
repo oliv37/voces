@@ -1,8 +1,8 @@
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { getCategoryLabel } from '@utils/category.util';
-import { getGroupLabel } from '@utils/group.util';
+import { getCategoryLabel } from '@utils/category';
+import { getGroupLabel } from '@utils/group';
 
-export function resolveExerciceTitle(
+export function exerciceTitleResolver(
   route: ActivatedRouteSnapshot | null
 ): string {
   const categoryLabel = getCategoryLabel(route);

@@ -3,7 +3,7 @@ import { NavigationStart, Router } from '@angular/router';
 import { filter, first, skip } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class AnimationService {
+export class Animation {
   private router = inject(Router);
 
   isAnimationEnabled = signal(false);

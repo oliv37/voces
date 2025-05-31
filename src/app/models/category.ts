@@ -1,6 +1,6 @@
-import { Color } from './color.model';
-import { Group } from './group.model';
-import { Level } from './level.model';
+import type { Color } from './color';
+import type { Group } from './group';
+import type { Level } from './level';
 
 export interface Category {
   id: string;

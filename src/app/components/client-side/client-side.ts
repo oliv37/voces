@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-client-side',
-  templateUrl: './client-side.component.html',
+  templateUrl: './client-side.html',
 })
-export class ClientSideComponent {
+export class ClientSide {
   isWindowDefined = typeof window !== 'undefined';
 }

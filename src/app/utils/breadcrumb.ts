@@ -1,9 +1,9 @@
 import { ActivatedRouteSnapshot } from '@angular/router';
-import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb.model';
+import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb';
 import { Type } from '@angular/core';
 import { NotFoundPageComponent } from '../pages/not-found/not-found-page.component';
-import { Category } from '@models/category.model';
-import { Group } from '@models/group.model';
+import { Category } from '@models/category';
+import { Group } from '@models/group';
 
 const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = {
   url: '/',

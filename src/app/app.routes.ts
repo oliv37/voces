@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 import { NotFoundPageComponent } from './pages/not-found/not-found-page.component';
 import { CategoryPageComponent } from './pages/category/category-page.component';
-import { canMatchCategory } from './guards/category.guard';
+import { canMatchCategory } from './guards/category-guard';
 import { HomePageComponent } from './pages/home/home-page.component';
 import { ExercicePageComponent } from '@pages/exercice/exercice-page.component';
-import { resolveCategory } from '@resolvers/category.resolver';
-import { resolveGroup } from '@resolvers/group.resolver';
-import { resolveCategoryTitle } from '@resolvers/title/category-title.resolver';
-import { resolveExerciceTitle } from '@resolvers/title/exercice-title.resolver';
+import { categoryResolver } from '@resolvers/category-resolver';
+import { groupResolver } from '@resolvers/group-resolver';
+import { categoryTitleResolver } from '@resolvers/category-title-resolver';
+import { exerciceTitleResolver } from '@resolvers/exercice-title.resolver';
 
 export const routes: Routes = [
   {
@@ -22,23 +22,23 @@ export const routes: Routes = [
       {
         path: ':category',
         resolve: {
-          category: resolveCategory,
+          category: categoryResolver,
         },
         children: [
           {
             path: '',
-            title: resolveCategoryTitle,
+            title: categoryTitleResolver,
             component: CategoryPageComponent,
           },
           {
             path: ':group',
             resolve: {
-              group: resolveGroup,
+              group: groupResolver,
             },
             children: [
               {
                 path: '',
-                title: resolveExerciceTitle,
+                title: exerciceTitleResolver,
                 component: ExercicePageComponent,
               },
             ],

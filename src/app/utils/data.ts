@@ -1,6 +1,6 @@
-import { Category } from '@models/category.model';
-import { Group } from '@models/group.model';
-import { Word } from '@models/word.model';
+import { Category } from '@models/category';
+import { Group } from '@models/group';
+import { Word } from '@models/word';
 
 import dataDebutant1 from '@data/debutant1.txt';
 import dataDebutant2 from '@data/debutant2.txt';
@@ -25,8 +25,8 @@ import {
   LEVEL_AVANCE,
   LEVEL_DEBUTANT,
   LEVEL_INTERMEDIAIRE,
-} from '@models/level.model';
-import { COLORS } from '@models/color.model';
+} from '@models/level';
+import { COLORS } from '@models/color';
 
 const GROUP_SIZE = 12;
 

@@ -1,16 +1,15 @@
 import { Location } from '@angular/common';
 import { Directive, inject, input, OnDestroy, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
-import { OpenGraph } from '@models/open-graph.model';
+import { Meta as MetaService } from '@angular/platform-browser';
 import { environment } from '@environments/environment';
-
-/* eslint-disable @angular-eslint/directive-selector */
+import type { OpenGraph } from '@models/open-graph';
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'app-meta',
 })
-export class MetaDirective implements OnInit, OnDestroy {
-  private _meta = inject(Meta);
+export class Meta implements OnInit, OnDestroy {
+  private _meta = inject(MetaService);
   private _location = inject(Location);
 
   robots = input<string>();

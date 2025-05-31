@@ -1,5 +1,5 @@
-import { Category } from './category.model';
-import { Word } from './word.model';
+import type { Category } from './category';
+import type { Word } from './word';
 
 export interface Group {
   id: string;

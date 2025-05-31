@@ -1,7 +1,7 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Group } from '@models/group.model';
-import { GroupCompletionService } from '@services/group-completion.service';
+import type { Group } from '@models/group';
+import { GroupCompletion } from '@services/group-completion';
 
 @Component({
   selector: 'app-exercice-link',
@@ -9,11 +9,11 @@ import { GroupCompletionService } from '@services/group-completion.service';
   imports: [RouterLink],
 })
 export class ExerciceLinkComponent {
-  private _groupCompletionService = inject(GroupCompletionService);
+  private _groupCompletion = inject(GroupCompletion);
 
   group = input.required<Group>();
 
   isGroupCompleted = computed<boolean>(() =>
-    this._groupCompletionService.isCompleted(this.group())
+    this._groupCompletion.isCompleted(this.group())
   );
 }

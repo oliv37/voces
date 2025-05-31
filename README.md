@@ -4,15 +4,10 @@
 
 ## Translations
 
-Data are stored in text files in [src/data](./src/data) folder
+[Data](./src/data) are stored into text files
 
 Each text file contains at most 120 translations
 
-Each translation is represented by a single line with the following format :
+Each translation is written on a single single line with the following format :
 
 `<spanish_word> : <french_translation>`
-
-## Upgrade
-
-- `pnpm install -g @angular/cli@latest`
-- `ng update @angular/cli @angular/core`

@@ -1,9 +1,9 @@
 import {
-  Level,
+  type Level,
   LEVEL_AVANCE,
   LEVEL_DEBUTANT,
   LEVEL_INTERMEDIAIRE,
-} from './level.model';
+} from './level';
 
 export interface Color {
   bgColor: string;

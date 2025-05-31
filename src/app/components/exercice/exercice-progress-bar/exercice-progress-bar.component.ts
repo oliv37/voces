@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { slideDown } from '@animations/slide-down.animation';
+import { slideDown } from '@animations/slide-down';
 
 @Component({
   selector: 'app-exercice-progress-bar',

@@ -1,7 +1,7 @@
 import { Component, computed } from '@angular/core';
 import { ExerciceCaretComponent } from '../exercice-caret/exercice-caret.component';
 import { AbstractExerciceLevelComponent } from '../abstract-exercice-level.component';
-import { Letter } from '@models/exercice.model';
+import { Letter } from '@models/exercice';
 
 @Component({
   selector: 'app-exercice-level-1',

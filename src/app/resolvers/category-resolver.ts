@@ -1,8 +1,8 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
-import { Category } from '@models/category.model';
-import { findCategory } from '@utils/category.util';
+import type { Category } from '@models/category';
+import { findCategory } from '@utils/category';
 
-export const resolveCategory: ResolveFn<Category> = (route) => {
+export const categoryResolver: ResolveFn<Category> = (route) => {
   const categoryPathParam = getCategoryPathParam(route);
   return findCategory(categoryPathParam)!;
 };
