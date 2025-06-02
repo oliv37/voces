@@ -1,5 +1,5 @@
 import { PrerenderFallback, RenderMode, ServerRoute } from '@angular/ssr';
-import { DATA } from '@utils/data.util';
+import { DATA } from '@utils/data';
 
 export const serverRoutes: ServerRoute[] = [
   {

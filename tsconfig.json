@@ -44,6 +44,9 @@
       "@resolvers/*": [
         "./src/app/resolvers/*"
       ],
+      "@guards/*": [
+        "./src/app/guards/*"
+      ],
       "@services/*": [
         "./src/app/services/*"
       ],

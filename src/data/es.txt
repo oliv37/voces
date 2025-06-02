@@ -1555,7 +1555,6 @@ granjear : attirer
 melocoton : pêche
 selva : jungle, forêt tropicale
 instar : prier, implorer
-escurrir : sécher, égoutter, essuyer
 acoger : accepter, recevoir
 carrera : carrière
 gabinete : gouvernement
@@ -1817,7 +1816,6 @@ consejeria : ministère
 maltrecho : mal en point
 embustero : menteur
 ansiar : souhaiter profondément, avoir très envie de
-escurrir : couler
 chuleta : antisèche
 cenir : marquer, mouler, être cintré
 escolta : garde du corps

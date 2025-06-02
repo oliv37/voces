@@ -99,13 +99,13 @@ incertidumbre : incertitude
 ombligo : nombril
 embuste : mensonge
 defuncion : décès
-escurrir : couler
+escurrir : couler, glisser
 hacerse humo : partir en fumée
 pasarela : passerelle
 adecuar : adapter
 grada : marche
 resarcirse : obtenir réparation
-affliccion : peine, chagrin
+afliccion : peine, chagrin
 felonia : crime
 escabullirse : s'échapper
 fiera : bête féroce
