@@ -1,6 +1,7 @@
 albergue : hôtel, auberge
 empate : match nul
 medida : dimension
+extinguir : éradiquer
 rematar : achever, finir
 tendido de camas : faire les lits
 estampar : imprimer
@@ -509,3 +510,20 @@ plegaria : prière
 perjuicio : préjudice, tort
 escurrir : sécher, égoutter, essuyer
 grada : gradin, tribune
+extinguir : éteindre
+desempenar : effectuer, mener à bien
+disturbio : trouble, agitation
+asalto : assault, attaque
+una : ongle
+chorrada : connerie
+repunte : hausse
+remitir : envoyer, expédier
+enganchar : accrocher
+sabio : sage
+entristecer : attrister
+bollera : gouine
+desmoronarse : s'écrouler
+portero : concierge
+recibo : reçu
+directo al grano : droit au but
+patada : coup de pied
