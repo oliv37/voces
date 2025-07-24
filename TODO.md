@@ -468,6 +468,7 @@ amargo : amer
 merced : merci, grâce
 bocado : bouchée
 detenimiento : attention, soin
+mandanga : beuh, herbe
 baldosa : carreau, dalle
 tiron : coup sec, mouvement brusque
 fomentar : promouvoir, encourager
@@ -527,3 +528,28 @@ portero : concierge
 recibo : reçu
 directo al grano : droit au but
 patada : coup de pied
+golondrina : hirondelle
+ceja : sourcil
+mandanga : histoire
+capilla : chapelle
+alcantarilla : égoût
+cascote : débris
+socavon : trou
+chatarra : ferraille
+buitre : vautour
+sapo : crapaud
+desquiciado : perturbé, fou
+a reganadientes : à contre-coeur
+llavero : porte-clés
+carcajada : éclat de rire
+lejia : eau de javel
+rociar : asperger, pulvériser
+zapato : chaussure
+taza : tasse
+labia : bagou, éloquence
+macarra : voyou, racaille
+lameculos : lèche-cul
+chicle : chewing-gum
+rabiar : enrager
+manzana : pâté de maisons
+susurrar : chuchoter
