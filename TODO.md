@@ -511,6 +511,7 @@ plegaria : prière
 perjuicio : préjudice, tort
 escurrir : sécher, égoutter, essuyer
 grada : gradin, tribune
+papelera : papeterie
 extinguir : éteindre
 desempenar : effectuer, mener à bien
 disturbio : trouble, agitation
@@ -553,3 +554,25 @@ chicle : chewing-gum
 rabiar : enrager
 manzana : pâté de maisons
 susurrar : chuchoter
+patear : donner un coup de pied
+despejar : dégager, débarrasser
+andar : marcher
+a la zaga : juste derrière
+esposado : menotté
+cazador : chasseur
+merienda : goûter
+temprano : tôt, de bonne heure
+avispado : futé, malin, vif
+bandeja : plateau
+critalera : armoire à glace
+desgastar : se fatiguer
+funda : étui, coque
+escaso : à peine
+arrojar : jeter
+papelera : poubelle
+recadero : coursier
+traquetear : se déplacer bruyamment
+reptar : ramper
+gusano : ver, asticot
+incumbir : incomber
+infeccioso : infectieux
