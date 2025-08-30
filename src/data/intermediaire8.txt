@@ -92,8 +92,8 @@ andanada : engueulade
 tregua : trêve
 dictaminar : décréter
 soberbia : orgueil
-arrebatar : arracher
 apaciguar : apaiser
+abultado : volumineux
 sobresalto : sursaut
 incertidumbre : incertitude
 ombligo : nombril

@@ -83,7 +83,6 @@ hogar : intérieur, foyer
 traidor : traître
 traicionero : traître
 cabana : cabane, hutte
-alejar : éloigner
 largarse : se tirer, se barrer
 mantequilla : beurre
 transitorio : transitoire
@@ -118,7 +117,6 @@ chiflado : cinglé, taré
 desvelar : empêcher de dormir, maintenir éveillé
 efusivo : démonstratif, expansif
 morder : mordre
-tampoco : non plus
 conseguir : obtenir
 respetar : respecter
 inauguracion : inauguration
@@ -261,7 +259,6 @@ nublado : nuageux
 pedo : beuverie, cuite
 bobada : bêtise, sottise
 coquetear : flirter, draguer
-rebelde : rebelle
 ilusionado : enthousiaste
 alto al fuega : cessez-le-feu
 lograr : réussir à, parvenir à
@@ -408,7 +405,6 @@ cincel : burin
 indice : sommaire, index
 somera : sommaire, superficiel
 barco : bateau
-farol : lampadaire
 banco : banc
 sofa : canapé
 tecla : touche (clavier)
@@ -559,7 +555,6 @@ ahondar : creuser, approfondir
 resquebrajar : fissurer, craqueler
 murmullo : murmure
 trascender : se propager, s'ébruiter
-acallar : faire taire 
 asesoramiento : conseil, assistance
 desfasado : dépassé, vieux jeu
 estigmatizar : stigmatiser
@@ -614,7 +609,6 @@ sudadera : sweat
 rematar : couronner, achever
 peleon : bagarreur
 orgullo : fierté, orgueil
-calvo : chauve
 explotador : exploiteur, profiteur
 precintar : fermer, sceller
 redil : enclos
@@ -870,7 +864,6 @@ coser : coudre
 ternera : veau
 manitas : bricoleur, bricoleuse
 traidor : traitre
-tarado : taré, dingue
 portatil : portable, oridinateur portable
 agacharse : se baisser, s'accroupir
 tantear : sonder, tâter
@@ -1019,7 +1012,6 @@ algodon : coton
 higiene : hygiène
 reluciente : reluisant, brillant
 bendecir : bénir
-alejar : éloigner
 reincidente : récidiviste
 chivato : mouchard, délateur
 celda : cellule
@@ -1169,7 +1161,6 @@ madero : tronc, bois
 cantaro : cruche, carafe
 cestero : vannier, fabricant de panniers
 informal : informel, décontracté
-flequillo : frange
 agur : au revoir
 flechazo : coup de foudre
 fase : phase, étape
@@ -1437,7 +1428,6 @@ cruce : croisement
 soborno : pot-de-vin
 comicios : élections
 rembolsar : rembourser
-arropar : couvrir, envelopper, emmitoufler
 perjurio : parjure
 visto bueno : accord, approbation
 aprobacion : approbation, autorisation, accord
@@ -1658,7 +1648,6 @@ listillo : petit malin
 tasa : taxe, impôt
 en jaque : en échec
 deslizarse : se glisser, se faufiler, s'introduire
-turbio : trouble, louche
 genio : génie
 echizo : charme, envoûtement
 sacerdote : prêtre, curé
@@ -2058,7 +2047,6 @@ mandil : tablier
 paisano : compatriote
 colmar : combler, satisfaire
 acodarse : s'accouder
-barra : bar, comptoir
 desperdigado : dispersé, éparpillé
 puesta de sol : coucher du soleil
 dardo : fléchette
@@ -2089,7 +2077,6 @@ preso : prisonnier
 azufre : souffre
 bullicio : brouhaha, bruit
 hastiar : fatiguer, lasser
-clavar : planter, enfoncer
 desdenable : négligeable
 amarillento : jaunâtre
 sereno : tranquille, calme
@@ -2124,7 +2111,6 @@ comecome : démangeaison
 arrepentirse : se rétracter
 destino : destination
 descolocar : déplacer
-escueto : simple, succinct
 firme : décidé, sûr, déterminé
 pito : sifflet, klaxon
 dilatar : dilater
@@ -2133,7 +2119,6 @@ casilla : case, casier
 deje : accent
 birria : daube, merde
 candorose : candide
-enternecer : attendrir, émouvoir
 suelta : lâche, détendu
 alabar : louer, vanter, faire l'éloge de
 molar : être super, être génial
@@ -2274,7 +2259,6 @@ a un tiro de piedra : à deux pas
 germinar : germer
 adentro : à l'intérieur
 negrero : tyrannique
-clavar : planter
 perdiz : perdrix
 calceta : tricoter
 ausadia : audace
@@ -2610,7 +2594,6 @@ codazo : coup de coude
 cachete : claque, gifle
 bribon : filou
 previsor : prévoyant
-enfrascarse : s'absorber dans, se plonger dans
 pinche : commis de cuisine
 rulo : bigoudi
 bata : robe de chambre
@@ -2621,7 +2604,6 @@ pellizco : pactole, coquette somme
 garrafal : monumental, colossal
 astillero : chantier naval
 altibajo : mauvaise passe
-menear : remuer
 la pregunta del millon : la question à un million d'euros
 elucubrar : imaginer, élaborer
 amargura : amertume
@@ -2715,7 +2697,6 @@ aullar : hurler
 gaviota : mouette
 demacrado : amaigri
 candado : cadenas
-aliento : souffle
 empapar : tremper
 sobaco : aisselle
 embadurnar : enduire, badigeonner
@@ -2732,7 +2713,6 @@ alborotado : agité
 despejarse : se changer les idées
 trancazo : crève (grippe)
 cuchitril : taudis
-grasiento : gras
 jalar : tirer
 fisgonear : fouiller
 demudarse : changer, se transformer
@@ -2758,7 +2738,6 @@ blando : faible, chétif
 calana : de la pire espèce
 citarse : se donner rendez-vous
 conveniente : opportun, judicieux
-testimonio : témoignage
 conyuge : conjoint
 sonoro : sonore
 volcar : faire part de, partager, confier
@@ -2872,7 +2851,6 @@ eximir : exempter
 portada : première page
 repunta : cap
 derrotar : vaincre
-arrebatarse : s'emporter, se fâcher
 jarro : pichet, cruche
 tipejo : type, sale type
 aval : garantie
@@ -2905,11 +2883,9 @@ tira y afloja : lutte acharnée
 desinflar : dégonfler
 aprieto : problème économique
 trizar : fêler, fissurer
-macizo : massif
 abejorro : bourdon
 corral : enclos
 festejar : célébrer
-lata : boîte de conserve
 bisabuelo : arrière-grand-père
 infante : enfant
 tibieza : tiédeur

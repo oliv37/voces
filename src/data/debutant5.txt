@@ -114,3 +114,7 @@ comodo : confortable
 sudar : suer, transpirer
 divertido : amusant, drôle
 aburrir : ennuyer
+complejo : complexe, compliqué
+instituto : école, collège, lycée
+hombre : homme
+temprano : tôt, de bonne heure

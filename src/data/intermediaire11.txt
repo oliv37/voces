@@ -1,4 +1,5 @@
 zurra : raclée, tannée
+remate : tir, frappe
 agudo : vif
 terso : lisse
 llanta : jante
@@ -27,6 +28,7 @@ farola : lampadaire
 vislumbrar : entrevoir, deviner
 portalon : portail
 atravesar : transpercer
+chivato : cafteur, délateur
 bordillo : bordure
 la vispera : la veille
 ceniciento : abattu, démoralisé
@@ -96,3 +98,23 @@ yema : bout du doigt
 actuacion : intervention, agissement
 pillarse por alguien : flasher sur quelqu'un
 cruz roja : croix-rouge
+albergue : hôtel, auberge
+medida : dimension
+desvanecerse : se dissiper, disparaître
+extinguir : éradiquer
+rematar : achever, finir
+estampar : imprimer
+chivar : cafter
+acosador : harceleur
+plomizo : gris
+superdotado : surdoué
+raciocinio : raisonnement
+raiz cuadrada : racine carrée
+disgusto : contrariété
+digito : chiffre
+lima : lime
+maquinaria : mécanisme
+quitaesmalte : dissolvant
+desperdiciar : gaspiller
+menear : remuer, bouger
+disyuntiva : dilemme

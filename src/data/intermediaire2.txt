@@ -2,8 +2,8 @@ prisa : hâte, empressement
 crio : gamin, enfant
 batallita : anecdote
 fritar : frire
+vagabundeo : vagabondage
 hundir : provoquer l'effondrement
-alejar : éloigner
 desfogar : décharger, relâcher, défouler
 pijo : bourgeois
 pesado : lourd, pénible

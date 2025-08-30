@@ -1,151 +1,3 @@
-albergue : hôtel, auberge
-empate : match nul
-medida : dimension
-extinguir : éradiquer
-rematar : achever, finir
-tendido de camas : faire les lits
-estampar : imprimer
-remate : tir, frappe
-disenar : concevoir
-chivar : cafter
-acosador : harceleur
-complejo : complexe, compliqué
-chivato : cafteur, délateur
-plomizo : gris
-superdotado : surdoué
-raciocinio : raisonnement
-raiz cuadrada : racine carrée
-disgusto : contrariété
-digito : chiffre
-ingente : immense, énorme
-lima : lime
-maquinaria : mécanisme
-quitaesmalte : dissolvant
-desperdiciar : gaspiller
-menear : remuer, bouger
-quitar de encima : débarrasser de qqn ou qch
-instituto : école, collège, lycée
-disyuntiva : dilemme
-inane : vain, inutile
-anochecer : faire nuit, la tombée de la nuit
-tendido : allongé
-rasgos : traits, physionomie
-hombre : homme
-afilado : taillé, aiguisé
-cera : cire
-mascara : masque
-soplo : souffle
-agrietar : gercer
-mero : simple
-testimonio : témoignage
-cincel : cieau
-flequillo : frange
-rebelde : rebelle
-ahuecar : creuser
-destapar : se révéler, se découvrir
-arropar : couvrir, border
-palma : paume
-cuadrado : carré
-latir : battre
-cortesia : courtoisie, politesse
-cuota : cotisation
-coronilla : crâne
-bote : pot
-clavar : clouer
-embolo : piston
-barra : bar, comptoir
-lata : boîte de conserve, canette
-deslavazaso : insipide, fade
-turbio : trouble
-anosmia : anosmie
-acatarrado : enrhumé
-apreton : serrement, poignée de mains
-enternecer : attendrir
-pepino : concombre
-estrepito : vacarme
-macizo : massif
-allanar : forcer, entrer par effraction
-grasiento : gras
-apego : attachement, affection
-acallar : faire taire
-escueto : simple, sobre, modeste
-vagabundeo : vagabonda
-enfrascarse : s'absorber dans, se plonger dans
-parpadear : cligner des yeux
-alejar : éloigner
-yegua : jument
-temprano : tôt, de bonne heure
-maquinaria : machines, engins
-menear : remuer, bouger
-perra suerte : poisse
-envilecer : avilir
-inconveniente : problème
-seto : haie
-olisquear : renifler
-caja : boîte, caisse
-farol : lanterne
-guinar : faire un clin d'oeil
-tarado : taré
-pulgada : pouce
-zancada : foulée
-rechoncho : rond, dodu
-calvo : chauve
-traslucir : laisser entrevoir
-exhausto : exténué
-de medio pelo : de second ordre
-monicaco : faible
-agallas : cran, courage
-torneo : tournoi
-aliento : halaine
-ahorcar : pendre
-punzada : élancement
-chillar : crier, hurler
-desgarrador : déchirant, poignant
-desmadejar : affaiblir
-chasquido : claquement
-rasposo : râpeux
-punzante : pointu, aigu
-martilleo : martèlement
-a proposito : exprès
-tambor : tambour
-mandibula : mâchoire
-sollozar : sangloter
-repentino : soudain
-raton : souris
-roedor : rongeur
-amargar : donner un goût amer
-paladar : palais
-rodapié : plinthe
-carrillo : joue
-a reganadientes : à contre-coeur
-pugna : lutte, bataille
-retortijon : crampe
-desvio : détour
-atronador : étourdissant
-metalico : métallique
-ciego : aveugle
-auxilio : aide
-roncar : ronfler
-jadeo : respiration difficile
-pulmon : poumon
-desfallecer : s'évanouir
-retumbar : retentir, résonner
-enmudecer : rester muet
-garganta : gorge
-fuelle : soufflet
-recorrido : parcours, itinéraire
-contrasena : mot de passe
-marear : faire tourner la tête
-gatear : marcher à quatre pattes
-negrura : noirceur, obscurité
-resquebrajarse : se fendiller, se fissurer
-susurro : chuchotement
-conejo : lapin
-sollozo : sanglot
-zumbar : bourdonner
-sobresalto : sursaut, frayeur
-encogerse : se recroqueviller, se replier
-remate : tir, frappe (foot)
 farol : bluff
 transferencia : virement
 chirrido : grincement
@@ -156,8 +8,6 @@ arrojarse : se jeter, sauter
 crujir : craquer
 ansioso : impatient
 retortijon : crampe
-palmo : empan
-alto : haut
 ancho : largeur
 arrodillar : s'agenouiller
 lagartija : lézard
@@ -166,11 +16,9 @@ herir : blesser
 repiqueteo : carillonnement
 chasquido : claquement
 pestillo : verrou
-confuso : confus
 atronar : assourdir
 timpano : tympan
 taner : sonner
-oido : oreille
 machote : macho, dur, gros bras
 desenganchar : décrocher
 alterarse : devenir nerveux
@@ -215,12 +63,10 @@ proposito : intention, projet
 llave : clé, clef
 rastrear : pister, suivre à la trace
 enmascarar : masquer
-yegua : jument
 relincho : hennissement
 medula espinal : moelle épinière
 desenganchar : décrocher
 remolque : remorque
-zancada : foulée, enjambée
 pisar : piétiner
 craneo : crâne
 sujetar : tenir
@@ -253,7 +99,6 @@ atento : attentif
 quebrado : accidenté
 hermanastro : demi-frère
 claroscuro : clair-obscur
-rematar : achever, finir
 dadivoso : généreux
 teclear : taper (clavier)
 perjurio : parjure
@@ -269,7 +114,6 @@ resplandor : lumière
 acechar : traquer, guetter
 afilado : aiguisé
 patear : donner un coup de pied
-clavar : planter, enfoncer
 roce : frôlement
 gatear : marcher à quatre pattes
 pierna : jambe
@@ -304,7 +148,6 @@ estamparse : percuter
 pestillo : verrou
 paja : paille
 escalera : échelle
-anochecer : coucher de soleil
 testero : face avant
 presura : hâte
 de reojo : du coin de l'oeil
@@ -440,6 +283,7 @@ despilfarro : gaspillage
 suministro : approvisionnement
 fronterizo : frontalier
 espejo : miroir
+consejo : conseil
 codo : coude
 gentileza : gentillesse
 salpicadero : tableau de bord
@@ -545,7 +389,6 @@ llavero : porte-clés
 carcajada : éclat de rire
 lejia : eau de javel
 rociar : asperger, pulvériser
-zapato : chaussure
 taza : tasse
 labia : bagou, éloquence
 macarra : voyou, racaille
@@ -561,11 +404,11 @@ a la zaga : juste derrière
 esposado : menotté
 cazador : chasseur
 merienda : goûter
-temprano : tôt, de bonne heure
 avispado : futé, malin, vif
 bandeja : plateau
 critalera : armoire à glace
 desgastar : se fatiguer
+asombrar : émerveiller, étonner, stupéfier
 funda : étui, coque
 escaso : à peine
 arrojar : jeter
@@ -576,3 +419,224 @@ reptar : ramper
 gusano : ver, asticot
 incumbir : incomber
 infeccioso : infectieux
+atorar : obstruer, boucher
+hirviendo : bouillant
+jarra : carafe
+verter : verser
+agarrar : attraper, prendre
+nexo : lien
+hondo : profond
+por lo tanto : par conséquent
+dar vueltas : faire les cent pas, tourner en rond
+regazo : genoux
+vertedero : décharge, dépôt d'ordures
+agachar : baisser
+baja por enfermedad : congé maladie
+derrumbe : glissement de terrain
+desquiciado : perturbé, fou
+esbozo : esquisse
+baldosa : carreau, dalle
+desprender : dégager
+hurgar : fouiller
+desprender : détacher, décoller
+llanto : pleurs
+fogonazo : décharge, éclair
+rareza : rareté
+mosquear : agacer
+punzada : élancement
+insufrible : insupportable
+timbrazo : coup de sonnette
+recostar : appuyer
+hoyuelo : fossette
+rendija : fente
+achaque : souci de santé
+escocer : blesser, faire mal
+dolencia : maladie
+inquebrantable : inébranlable
+emedrentar : effrayer
+palidecer : pâlir
+entrecejo : entre-sourcils
+arrugar : froisser, chiffonner
+chorrear : dégouliner
+empapar : tremper
+almacenar : accumuler
+desgarrar : déchirer
+encorvar : courber
+resbalar : glisser
+descalzo : pieds nus
+premiar : récompenser
+arrancar : arracher, enlever
+viciado : vicié, corrompu
+discurrir : s'écouler
+desuso : non utilisation, abandon
+excavar : creuser
+abastecimiento : approvisionnement
+horadar : percer, trouer
+incolume : indemne
+derrumbar : démolir
+despejar : dégager, débarrasser
+tapon : bouchon
+arrastrarse : ramper
+aplastar : écraser
+tonelada : tonne
+hacinar : entasser
+reseco : desséché
+asomar : apparaître
+camilla : brancard
+menguante : décroissant
+restregar : narguer
+palanca : levier
+sujetar : tenir
+destrabar : débloquer
+crujir : craquer, crisser
+agarrotarse : se paralyser
+agotamiento : épuisement
+acechar : guetter, traquer
+atascar : boucher
+desgarrar : déchirer
+andén : quai
+madriguera : tanière
+volcar : renverser, verser
+senuelo : leurre
+azulejo : carreau
+despistar : tromper, induire en erreur
+delatar : accuser, dénoncer
+escudrinar : scruter, examiner
+atraer : attirer
+grunido : grognement
+milagrosamente : miraculeusement
+pisar : marcher sur
+a horcajadas : à califourchon
+asombro : étonnement
+derribar : démolir
+apartarse : s'éloigner
+gatear : marcher à quatre pattes
+cinta : ruban
+trapo : chiffon
+desvanecerse : s'évanouir
+agazapar : se tapir
+irse al garete : se casser la figure
+emboscar : embusquer
+empenarse : s'obstiner
+pestanear : cligner des yeux
+grieta : fissure
+patalear : donner des coups de pied
+internarse : pénétrer
+charco : flaque
+empapar : tremper
+salton : globuleux
+villano : vilain, mauvais
+alimana : animal nuisible
+babosa : limace
+suela : semelle
+latir : battre
+escudo : bouclier
+resecar : dessécher
+partirse : se briser
+silbido : sifflement
+herir : blesser
+acallar : faire taire
+revolverse : se rebeller
+desgarrar : déchirer, arracher
+mordisco : morsure
+cegar : aveugler
+seso : cervelle
+madeja : pelotte
+devanar : enrouler
+pato : canard
+tinieblas : ténèbres
+agarrar : attraper, saisir
+chamuscarse : brûler, cramer
+cascote : débris
+de mala gana : à contrecoeur
+amoratar : violacer
+carpeta : classeur, chemise
+predicamento : popularité
+declamar : déclamer, invectiver
+solapar : dissimuler, cacher
+nalgada : fessée
+bellaco : scélérat, voyou
+lastimoso : pitoyable
+parpado : paupière
+estrafalaria : saugrenu
+zanahoria : carotte
+grabadora : magnétohpone
+manicomio : asile
+rogar : implorer, demander
+rezagado : retardataire
+pellejo : peau
+arrebatarse : s'emporter, se fâcher
+semejanza : ressemblance
+atiborrado : plein
+remiendo : pièce
+rascar : gratter
+gotera : fuite
+caudillo : chef, commandant
+acarrear : provoquer
+predecible : prévisible
+calcetin : chaussette
+sinsabor : ennui, tracas
+gozar : profiter, bien s'amuser
+hidalgo : noble
+prescindir : se passer de, faire sans
+a expensas de : aux dépens de
+inapelable : sans appel
+imprenta : imprimerie
+moro : maghrébin
+transar : transiger
+rectitud : droiture
+chiquillo : enfant
+mondogo : boyau
+atisbar : observer
+encallecido : calleux
+remecer : secouer
+estribo : étrier
+vaquero : jean
+higado : foie
+arrebato : emportement
+guisado : ragoût
+tejido : tissage
+hospedar : loger
+estrepito : vacarme
+regazo : genoux
+desplomarse : s'effondrer
+aplastar : écraser, aplatir
+yacer : gésir
+pesadumbre : chagrin
+cojear : boiter
+culatazo : coup de crosse
+recinto : enceinte
+llanto : pleurs, larmes
+manta : couverture
+afanarse : se démener
+otear : surveiller
+aguardar : attendre
+hallar : trouver
+consuelo : consolation, réconfort
+brindar : offrir
+lastre : obstacle, handicap
+pariente : parent
+rezagado : retardataire
+rumbo : direction
+muelle : quai
+escudrinar : examiner, scruter
+destierro : exil
+despejar : dégager, débarrasser
+apostar : parier
+embobar : ébahir
+arrebatina : bataille, bagarre
+perorar : prononcer un discours
+flamigero : flamboyant
+pisar : marcher sur
+chiflado : cinglé
+imprenta : imprimerie
+vejestorio : fossile
+cucharon : louche
+derrocar : destituer, renverser
+plegaria : prière
+secuaz : acolyte
+errado : avoir tort, se tromper
+ramplon : vulgaire
+bromear : plaisanter
+retorcido : sournois, pervers
+apaciguar : apaiser
