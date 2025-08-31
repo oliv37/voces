@@ -1,30 +1,14 @@
 import { PrerenderFallback, RenderMode, ServerRoute } from '@angular/ssr';
-import { DATA } from '@utils/data';
+import { WORD_GROUPS } from '@utils/data';
 
 export const serverRoutes: ServerRoute[] = [
   {
-    path: ':category',
+    path: 'exercice/:id',
     renderMode: RenderMode.Prerender,
     fallback: PrerenderFallback.None,
     async getPrerenderParams() {
-      return DATA.flat().map((category) => ({
-        category: category.pathParam,
-      }));
-    },
-  },
-  {
-    path: ':category/:group',
-    renderMode: RenderMode.Prerender,
-    fallback: PrerenderFallback.None,
-    async getPrerenderParams() {
-      return DATA.flat()
-        .map((category) =>
-          category.groups.map((group) => ({
-            category: category.pathParam,
-            group: group.pathParam,
-          }))
-        )
-        .flat();
+      const wordGroups = await WORD_GROUPS;
+      return wordGroups.map((g) => ({ id: g.id.toString() }));
     },
   },
   {

@@ -1,45 +1,16 @@
 <app-meta
-  robots="index, follow"
-  [description]="metaDescription"
-  [og]="metaOg"
+  robots="index, nofollow"
+  [description]="metaDescription()"
+  [og]="metaOg()"
 />
 
 <h1 class="text-center cursor-default pt-2 pb-14">
-  <span class="text-4xl font-bold">{{ nbWords }}</span>
+  <span class="text-4xl font-bold">{{ nbWords() }}</span>
   <span class="text-gray-500 text-2xl"> mots</span>
 </h1>
 
-<div @fadeIn class="flex flex-col gap-16 items-stretch">
-  @for (categories of data; track $index) {
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    @for (category of categories; track $index) {
-    <a
-      [routerLink]="category.pathParam"
-      class="p-4 relative border border-gray-300 hover:border-gray-500 transition-all duration-300 rounded-t-md shadow-md hover:shadow-xl"
-    >
-      <div
-        class="absolute top-0 left-0 h-1 rounded-t-md"
-        [style.width]="category.progressPercent + '%'"
-        [class]="category.color.bgColor"
-      ></div>
-      <h2 class="flex justify-between items-center">
-        <span
-          class="font-bold rounded text-white px-2 py-1"
-          [class]="category.color.bgColor"
-          >{{ category.label }}</span
-        >
-        <span class="text-lg text-gray-500">{{ category.nbWords }} mots</span>
-      </h2>
-      <div class="py-3"></div>
-      <div class="text-gray-800 leading-9 text-lg">
-        @for (word of category.groups[0].words; track $index) {
-        <span class="pr-3">{{ word.es }} </span>
-        } @if (category.groups.length > 1) {
-        <span class="font-bold text-xl">...</span>
-        }
-      </div>
-    </a>
-    }
-  </div>
+<div class="pt-2 flex flex-col gap-12">
+  @for (wordGroup of wordGroupsToShow(); track $index) {
+  <app-exercice-link [wordGroup]="wordGroup" />
   }
 </div>

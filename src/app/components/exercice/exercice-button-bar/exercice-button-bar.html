@@ -1,19 +1,24 @@
-<div class="flex justify-center gap-6">
+<div class="flex justify-center items-center gap-5">
+  <a
+    [routerLink]="['/exercice', prevWordGroupId()]"
+    class="relative p-2 hover:bg-gray-300/40"
+  >
+    <app-arrow-left-icon className="w-8 h-8" />
+    <span class="absolute left-3 -bottom-1 text-xs">{{prevWordGroupId()}}</span>
+  </a>
   <button
     type="button"
-    appBtn
-    appBtnTheme="secondary"
-    appBtnBorder="none"
+    class="p-2 hover:bg-gray-300/40"
     (click)="patchQuestion.emit()"
   >
     <app-patch-question-icon [className]="'w-8 h-8 ' + questionFillColor()" />
   </button>
 
-  <div class="flex justify-center mx-8 relative">
+  <div class="flex justify-center px-8 relative">
     @for (_lvl of levels; track $index) {
     <button
       type="button"
-      class="px-2 hover:bg-gray-300/40"
+      class="p-2 hover:bg-gray-300/40"
       (click)="levelChange.emit(_lvl)"
     >
       @if (_lvl <= level()) {
@@ -29,11 +34,18 @@
 
   <button
     type="button"
-    appBtn
-    appBtnTheme="secondary"
-    appBtnBorder="none"
+    class="p-2 hover:bg-gray-300/40"
     (click)="arrowClockwise.emit()"
   >
     <app-arrow-clockwise-icon className="w-8 h-8 fill-neutral-900" />
   </button>
+  <a
+    [routerLink]="['/exercice', nextWordGroupId()]"
+    class="relative p-2 hover:bg-gray-300/40"
+  >
+    <app-arrow-right-icon className="w-8 h-8" />
+    <span class="absolute right-3 -bottom-1 text-xs"
+      >{{nextWordGroupId()}}</span
+    >
+  </a>
 </div>

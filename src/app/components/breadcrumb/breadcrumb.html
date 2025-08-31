@@ -1,17 +1,9 @@
-<div
-  [@scaleUpDown]="breadcrumb().length"
-  class="flex flex-wrap items-center gap-2 text-lg h-full"
->
+<div class="flex flex-wrap items-center gap-2 text-lg h-full">
   @for (breadcrumbItem of breadcrumb(); track $index) {
   <a
     [routerLink]="breadcrumbItem.url"
-    [class]="
-      breadcrumbItem.bgColor
-        ? breadcrumbItem.bgColor + ' px-2 rounded-md text-white'
-        : 'text-black'
-    "
-    [class.font-bold]="breadcrumbItem.isBold"
-    [class.tracking-widest]="breadcrumbItem.isTrackingWidest"
+    class="capitalize tracking-widest"
+    [class.font-bold]="$last && $index > 0"
     >{{ breadcrumbItem.label }}</a
   >
   @if (!$last) {

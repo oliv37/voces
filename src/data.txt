@@ -630,7 +630,7 @@ flamigero : flamboyant
 pisar : marcher sur
 chiflado : cinglé
 imprenta : imprimerie
-vejestorio : fossile
+vejestorio : vieux fossile
 cucharon : louche
 derrocar : destituer, renverser
 plegaria : prière

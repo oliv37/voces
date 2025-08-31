@@ -9,14 +9,12 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
 import { type Breadcrumb as BreadcrumbModel } from '@models/breadcrumb';
 import { buildBreadcrumb } from '@utils/breadcrumb';
-import { scaleUpDown } from '@animations/scale-up-down';
 import { ChevronRightIcon } from '@components/icon/chevron-right/chevron-right-icon';
 
 @Component({
   selector: 'app-breadcrumb',
   imports: [RouterLink, ChevronRightIcon],
   templateUrl: './breadcrumb.html',
-  animations: [scaleUpDown(100, '0.5s')],
 })
 export class Breadcrumb {
   router = inject(Router);

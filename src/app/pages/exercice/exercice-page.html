@@ -8,17 +8,14 @@
   @if(word(); as word) {
   <div
     class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
-    [class]="group().category.color.bgColor"
-    [class.opacity-0]="!isCompleted()"
-    [class.opacity-100]="isCompleted()"
+    [class.bg-white]="!isCompleted()"
+    [class.bg-blue-600]="isCompleted()"
   ></div>
 
   <div
-    class="flex flex-col items-center justify-around gap-8 min-h-[calc(100lvh-5rem)] cursor-default"
+    class="flex flex-col items-center justify-around gap-8 min-h-[calc(100lvh-6rem)] cursor-default"
   >
-    <div class="text-6xl text-gray-800 tracking-wide">
-      {{ word.fr }}
-    </div>
+    <div class="text-6xl text-gray-700 tracking-wide">{{ word.fr }}</div>
 
     @if (level() === 1) {
     <app-exercice-level-1
@@ -34,21 +31,24 @@
     ></app-exercice-level-2>
     }
 
-    <div class="flex flex-col gap-7">
+    <div class="flex flex-col items-center gap-9">
       <app-exercice-progress-bar
         [wordIdx]="wordIdx()"
         [nbWords]="nbWords()"
         [progressPercent]="progressPercent()"
-        [bgColor]="group().category.color.bgColor"
+        [bgColor]="isGroupCompleted() ? 'bg-blue-600' : 'bg-gray-900'"
       />
       <app-exercice-button-bar
         [level]="level()"
+        [currentWordGroupId]="wordGroup().id"
+        [prevWordGroupId]="prevWordGroupId()"
+        [nextWordGroupId]="nextWordGroupId()"
         [questionFillColor]="
           hasUsedHelp() ? 'fill-red-600' : 'fill-neutral-900'
         "
         [starFillColor]="
           isGroupCompleted()
-            ? group().category.color.fillColor
+            ? 'fill-blue-600'
             : 'fill-gray-900'
         "
         (levelChange)="setLevel($event)"
@@ -57,7 +57,5 @@
       />
     </div>
   </div>
-
-  <app-exercice-next-links [group]="group()"></app-exercice-next-links>
   }
 </app-client-side>

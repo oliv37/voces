@@ -1,13 +1,13 @@
 import { effect, inject, Injectable, signal } from '@angular/core';
-import type { Group } from '@models/group';
-import type { GroupCompletion as GroupCompletionModel } from '@models/group-completion';
+import type { WordGroupCompletion as WordGroupCompletionModel } from '@models/word';
+import { WordGroup } from '@models/word';
 import { Storage } from '@services/storage';
 
 @Injectable({ providedIn: 'root' })
-export class GroupCompletion {
+export class WordGroupCompletion {
   private _storage = inject(Storage);
 
-  private _groupCompletion = signal<GroupCompletionModel>(
+  private _wordGroupCompletion = signal<WordGroupCompletionModel>(
     this.readGroupCompletion()
   );
 
@@ -15,25 +15,25 @@ export class GroupCompletion {
     effect(() => {
       this._storage.write(
         'GROUP_COMPLETION',
-        JSON.stringify(this._groupCompletion())
+        JSON.stringify(this._wordGroupCompletion())
       );
     });
   }
 
-  markAsCompleted(group: Group): void {
-    this._groupCompletion.update((_groupCompletion) => ({
-      ..._groupCompletion,
+  markAsCompleted(group: WordGroup): void {
+    this._wordGroupCompletion.update((_wordGroupCompletion) => ({
+      ..._wordGroupCompletion,
       [group.id]: now(),
     }));
   }
 
-  isCompleted(group: Group): boolean {
+  isCompleted(group: WordGroup): boolean {
     const completionTimestamp: number | undefined =
-      this._groupCompletion()[group.id];
+      this._wordGroupCompletion()[group.id];
     return isRecentCompletionTimestamp(completionTimestamp);
   }
 
-  private readGroupCompletion(): GroupCompletionModel {
+  private readGroupCompletion(): WordGroupCompletionModel {
     const value = this._storage.read('GROUP_COMPLETION');
 
     if (!value) {
@@ -48,7 +48,7 @@ export class GroupCompletion {
           acc[groupId] = completionTimestamp;
         }
         return acc;
-      }, {} as GroupCompletionModel);
+      }, {} as WordGroupCompletionModel);
     } catch (e) {
       console.error('Error reading group completion', e);
       return {};

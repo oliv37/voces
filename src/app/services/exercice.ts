@@ -6,17 +6,16 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import type { Word } from '@models/word';
+import type { Word, WordGroup } from '@models/word';
 import { type Level, MAX_LEVEL } from '@models/exercice';
-import type { Group } from '@models/group';
-import { GroupCompletion } from '@services/group-completion';
+import { WordGroupCompletion } from '@services/word-group-completion';
 import { shuffle } from '@utils/array';
 
 @Injectable({ providedIn: 'root' })
 export class Exercice {
-  private _groupCompletion = inject(GroupCompletion);
+  private _wordGroupCompletion = inject(WordGroupCompletion);
 
-  group = signal<Group | undefined>(undefined);
+  group = signal<WordGroup | undefined>(undefined);
 
   private _state: WritableSignal<State> = linkedSignal<State>(() => {
     const words: Word[] = this.group()?.words || [];
@@ -94,7 +93,7 @@ export class Exercice {
     );
 
     if (hasAnsweredAllWordsOfMaxLevelWithoutHelp) {
-      this._groupCompletion.markAsCompleted(group);
+      this._wordGroupCompletion.markAsCompleted(group);
     }
   }
 

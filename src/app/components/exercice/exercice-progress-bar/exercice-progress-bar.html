@@ -1,11 +1,11 @@
 <div class="flex items-center gap-3">
   <div class="w-8 h-8 text-right text-2xl font-bold overflow-hidden">
-    <div [@slideDown]="wordIdx()">
+    <div #wordIndex>
       <div>{{ wordIdx() + 1 }}</div>
       <div>{{ wordIdx() }}</div>
     </div>
   </div>
-  <div class="relative flex-1 h-6 border border-gray-800 rounded">
+  <div class="relative w-60 flex-1 h-6 border border-gray-800 rounded">
     <div
       class="absolute top-0 left-0 h-full transition-all duration-500 rounded-l"
       [class]="bgColor()"

@@ -1,49 +1,65 @@
-import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import type { Category } from '@models/category';
+import {
+  Component,
+  computed,
+  inject,
+  input,
+  linkedSignal,
+} from '@angular/core';
 import type { OpenGraph } from '@models/open-graph';
-import { DATA } from '@utils/data';
+import type { WordGroup } from '@models/word';
 import { Meta } from '@directives/meta';
-import { fadeIn } from '@animations/fade-in';
-import { GroupCompletion } from '@services/group-completion';
+import { ExerciceLink } from '@components/exercice/exercice-link/exercice-link';
+import { ScrollInfo } from '@services/scroll-info';
+
+const NB_WORD_GROUPS_TO_LOAD = 15;
 
 @Component({
-  imports: [RouterLink, Meta],
+  imports: [Meta, ExerciceLink],
   templateUrl: './home-page.html',
-  animations: [fadeIn('a', '100ms', '0.4s')],
+  providers: [ScrollInfo],
+  host: {
+    '(window:scroll)': 'onScroll()',
+  },
 })
 export class HomePage {
-  private _groupCompletion = inject(GroupCompletion);
+  private scrollInfo = inject(ScrollInfo);
 
-  data: (Category & { progressPercent: number })[][] = DATA.map((categories) =>
-    categories.map((category) => ({
-      ...category,
-      progressPercent: this.computeProgressPercent(category),
-    }))
+  nbWordGroupsToLoad = NB_WORD_GROUPS_TO_LOAD;
+
+  wordGroups = input.required<WordGroup[]>();
+
+  private wordGroupsReversed = computed(() =>
+    this.wordGroups().slice().reverse()
   );
 
-  nbWords: number = DATA.flat()
-    .map((category) => category.nbWords)
-    .reduce((res, nbWords) => res + nbWords, 0);
+  nbWords = computed(() => this.wordGroups().flatMap((g) => g.words).length);
 
-  metaDescription =
-    'Visualisez les ' +
-    this.nbWords +
-    ' mots de Vocabulaire en Espagnol regroupés par niveaux.';
+  wordGroupsToShow = linkedSignal<WordGroup[]>(() =>
+    this.wordGroupsReversed().slice(0, NB_WORD_GROUPS_TO_LOAD)
+  );
 
-  metaOg: OpenGraph = {
+  metaDescription = computed<string>(
+    () => `Visualisez les ${this.nbWords()} mots de Vocabulaire en Espagnol.`
+  );
+
+  metaOg = computed<OpenGraph>(() => ({
     title: 'Voces - Vocabulaire Espagnol',
-    description:
-      'Voces | ' +
-      this.nbWords +
-      ' mots de Vocabulaire Espagnol regroupés par niveaux',
-  };
+    description: `Voces | ${this.nbWords()} mots de Vocabulaire Espagnol`,
+  }));
 
-  private computeProgressPercent(category: Category): number {
-    const nbGroupsCompleted = category.groups.filter((group) =>
-      this._groupCompletion.isCompleted(group)
-    ).length;
-    const nbGroups = category.groups.length;
-    return (nbGroupsCompleted / nbGroups) * 100;
+  onScroll() {
+    const wordGroupsToShow = this.wordGroupsToShow();
+    const { isScrollingDown, isNearBottom } = this.scrollInfo.compute();
+    const hasNext = wordGroupsToShow.length < this.wordGroupsReversed().length;
+
+    const shouldLoadMoreNextGroups = hasNext && isScrollingDown && isNearBottom;
+
+    if (shouldLoadMoreNextGroups) {
+      const nextWordGroups = this.wordGroupsReversed().slice(
+        0,
+        wordGroupsToShow.length + NB_WORD_GROUPS_TO_LOAD
+      );
+      this.wordGroupsToShow.set(nextWordGroups);
+    }
   }
 }
