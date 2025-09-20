@@ -1,5 +1,5 @@
 import { PrerenderFallback, RenderMode, ServerRoute } from '@angular/ssr';
-import { WORD_GROUPS } from '@utils/data';
+import { WORD_GROUPS } from './shared/utils/data';
 
 export const serverRoutes: ServerRoute[] = [
   {

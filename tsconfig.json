@@ -18,47 +18,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "paths": {
-      "@components/*": [
-        "./src/app/components/*"
-      ],
-      "@decorators/*": [
-        "./src/app/decorators/*"
-      ],
-      "@directives/*": [
-        "./src/app/directives/*"
-      ],
-      "@animations/*": [
-        "./src/app/animations/*"
-      ],
-      "@models/*": [
-        "./src/app/models/*"
-      ],
-      "@pages/*": [
-        "./src/app/pages/*"
-      ],
-      "@resolvers/*": [
-        "./src/app/resolvers/*"
-      ],
-      "@guards/*": [
-        "./src/app/guards/*"
-      ],
-      "@services/*": [
-        "./src/app/services/*"
-      ],
-      "@utils/*": [
-        "./src/app/utils/*"
-      ],
-      "@data/*": [
-        "./src/data/*"
-      ],
-      "@environments/*": [
-        "./src/environments/*"
-      ]
+      "@shared/*": ["./src/app/shared/*"],
+      "@data/*": ["./src/data/*"],
+      "@environments/*": ["./src/environments/*"]
     }
   },
   "angularCompilerOptions": {
