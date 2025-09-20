@@ -4,6 +4,7 @@ import {
   inject,
   input,
   linkedSignal,
+  effect,
 } from '@angular/core';
 import type { OpenGraph } from '@shared/models/open-graph';
 import type { WordGroup } from '@shared/models/word';
@@ -12,6 +13,8 @@ import { ScrollInfo } from '@shared/services/scroll-info';
 import { ExerciceLink } from './components/exercice-link/exercice-link';
 
 const NB_WORD_GROUPS_TO_LOAD = 15;
+
+let nbWordGroupsLoaded = 0;
 
 @Component({
   imports: [Meta, ExerciceLink],
@@ -24,8 +27,6 @@ const NB_WORD_GROUPS_TO_LOAD = 15;
 export class HomePage {
   private scrollInfo = inject(ScrollInfo);
 
-  nbWordGroupsToLoad = NB_WORD_GROUPS_TO_LOAD;
-
   wordGroups = input.required<WordGroup[]>();
 
   private wordGroupsReversed = computed(() =>
@@ -35,7 +36,10 @@ export class HomePage {
   nbWords = computed(() => this.wordGroups().flatMap((g) => g.words).length);
 
   wordGroupsToShow = linkedSignal<WordGroup[]>(() =>
-    this.wordGroupsReversed().slice(0, NB_WORD_GROUPS_TO_LOAD)
+    this.wordGroupsReversed().slice(
+      0,
+      Math.max(nbWordGroupsLoaded, NB_WORD_GROUPS_TO_LOAD)
+    )
   );
 
   metaDescription = computed<string>(
@@ -46,6 +50,12 @@ export class HomePage {
     title: 'Voces - Vocabulaire Espagnol',
     description: `Voces | ${this.nbWords()} mots de Vocabulaire Espagnol`,
   }));
+
+  constructor() {
+    effect(() => {
+      nbWordGroupsLoaded = this.wordGroupsToShow().length;
+    });
+  }
 
   onScroll() {
     const wordGroupsToShow = this.wordGroupsToShow();
