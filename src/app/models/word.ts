@@ -2,6 +2,7 @@ export interface Word {
   id: number;
   es: string;
   fr: string;
+  example?: string;
 }
 
 export interface WordGroup {

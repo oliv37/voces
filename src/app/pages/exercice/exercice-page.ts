@@ -57,14 +57,14 @@ export class ExercicePage implements OnDestroy {
   prevWordGroupId = computed<number>(() => {
     const wordGroups = this.wordGroups();
     const idx = wordGroups.findIndex((g) => g.id === this.wordGroup().id);
-    const prevIdx = (idx + 1) % wordGroups.length;
+    const prevIdx = (idx - 1 + wordGroups.length) % wordGroups.length;
     return wordGroups[prevIdx].id;
   });
 
   nextWordGroupId = computed<number>(() => {
     const wordGroups = this.wordGroups();
     const idx = wordGroups.findIndex((g) => g.id === this.wordGroup().id);
-    const nextIdx = (idx - 1 + wordGroups.length) % wordGroups.length;
+    const nextIdx = (idx + 1) % wordGroups.length;
     return wordGroups[nextIdx].id;
   });
 

@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import type { Letter } from '@models/exercice';
 import { ExerciceCaret } from '@components/exercice//exercice-caret/exercice-caret';
 import { AbstractExerciceLevel } from '@components/exercice/abstract-exercice-level';
@@ -9,6 +9,8 @@ import { AbstractExerciceLevel } from '@components/exercice/abstract-exercice-le
   imports: [ExerciceCaret],
 })
 export class ExerciceLevel1 extends AbstractExerciceLevel {
+  example = input<string>();
+
   letters = computed<Letter[]>(() => {
     const text = this.text();
 

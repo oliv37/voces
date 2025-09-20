@@ -1,13 +1,13 @@
-farol : bluff
+farol : bluff : Deja de lloriquear, seguro que va de farol
 transferencia : virement
-chirrido : grincement
-brillo : éclat
-desprender : dégager
+chirrido : grincement : El chirrido de los frenos me sobresaltó
+brillo : éclat : 	El brillo de sus ojos mostraba lo feliz que se sentía
+desprender : dégager : Después de hacer ejercicio, tu cuerpo puede desprender sudor que te refresca
 recordatorio : pense-bête, rappel
-arrojarse : se jeter, sauter
-crujir : craquer
-ansioso : impatient
-retortijon : crampe
+arrojarse : se jeter, sauter : Alice trató de arrojarse por la terraza
+crujir : craquer : 	Las hojas crujen bajo mis zapatos
+ansioso : impatient : Estaba ansioso por encontrarme con mi novia
+retortijon : crampe : Me siento muy mal, tengo retortijones en el estómago
 ancho : largeur
 arrodillar : s'agenouiller
 lagartija : lézard
@@ -32,7 +32,6 @@ paloma : pigeon
 anillo : bague
 esconder : cacher
 almena : créneau
-escolta : garde du corps
 franquisia : franchise
 compromiso : accord
 traspaso : prix de vente
@@ -65,12 +64,12 @@ rastrear : pister, suivre à la trace
 enmascarar : masquer
 relincho : hennissement
 medula espinal : moelle épinière
-desenganchar : décrocher
 remolque : remorque
 pisar : piétiner
 craneo : crâne
 sujetar : tenir
 sobrar : être de trop
+escolta : garde du corps
 macho : mâle, viril
 achicar : intimider, effrayer
 recadero : coursier (message)
@@ -174,7 +173,7 @@ claro : clairière
 pedregroso : caillouteux
 punado : poignée
 carril : rail
-charco : flaque
+charco : flaque : Charco de sangre
 rastro : trace
 alumbrar : éclairer
 manzana : pâté de maisons
@@ -198,6 +197,7 @@ canica : bille
 lagartija : lézard
 encima : dessus
 tonelada : tonne
+estrellarse : s'écraser, percuter
 apuntar : noter
 desgarrar : déchirer
 ciervo : cerf
@@ -262,6 +262,7 @@ quitamedios : rampe
 estampar : percuter
 yermo : désert
 aleacion : alliage
+cochino : porc
 cortina : rideau
 atontar : étourdir
 anudarse : nouer, lacer
@@ -273,6 +274,7 @@ arrojar : jeter, lancer
 pertrechar : fournir, apporter
 desembarcar : débarquer
 balanceo : équilibrage
+allanar : niveler, aplanir
 desencadenar : déclencher, provoquer
 maniobra : manoeuvre
 derrocar : destituer
@@ -488,7 +490,6 @@ restregar : narguer
 palanca : levier
 sujetar : tenir
 destrabar : débloquer
-crujir : craquer, crisser
 agarrotarse : se paralyser
 agotamiento : épuisement
 acechar : guetter, traquer
@@ -562,7 +563,6 @@ estrafalaria : saugrenu
 zanahoria : carotte
 grabadora : magnétohpone
 manicomio : asile
-rogar : implorer, demander
 rezagado : retardataire
 pellejo : peau
 arrebatarse : s'emporter, se fâcher
@@ -640,3 +640,422 @@ ramplon : vulgaire
 bromear : plaisanter
 retorcido : sournois, pervers
 apaciguar : apaiser
+suavizar : adoucir
+cesante : au chômage
+atosigar : harceler
+hazana : exploit, prouesse
+desquiciar : destabiliser, bouleverser
+matanza : massacre
+altanero : arrogant
+estampa : image
+cornudo : cocu
+acarrear : entraîner, engendrer
+convivencia : cohabitation
+pulir : peaufiner, affiner
+aspereza : aspérité, âpreté, rugosité
+cautivar : captiver, séduire, envoûter
+castidad : chasteté, abstinence
+deslumbrar : éblouir, impressionner
+almacenar : stocker, conserver
+soberbia : orgueil
+perjudiciar : nuire
+seda : soie
+tela : tissu, toile
+resarcir : réparer, dédommager
+anhelo : désir
+semejar : ressembler à
+hornilla : cuisinière
+jaqueca : migraine
+cerco : clôture
+zozobra : anxiété
+puerco : porc
+estrepito : vacarme
+paraje : site, endroit
+faena : tâche, travail
+fogata : feu de camp
+rastra : camion
+sombra : ombre, obscurité
+desahuciar : condamner
+pavor : panique, effroi
+meson : auberge
+berrido : rugissement
+estremecerse : frémir
+verdugo : bourreau
+pericia : dextérité
+charco : flaque
+carcajada : éclat de rire
+desaire : affront
+tocino : gras, lard
+cabecear : piquer du nez, somnoler
+ahito : repus, plein
+velar : abîmer
+cadera : hanche
+acunar : bercer
+amamantar : allaiter
+asombro : surprise, étonnement
+asomar : pointer le bout de son nez
+sobrellevar : supporter
+derrotero : chemin, voie
+despojo : dépouille
+hurgar : fouiller
+manicomio : asile
+alumbrar : éclairer
+bombillo : ampoule
+estropajo : éponge
+retorcido : tordu
+mascar : mâcher
+neblina : brume
+espanto : frayeur, effroi
+transeunte : passant
+postrarse : se prosterner
+escupir : cracher
+abalanzarse : se balancer
+zumbar : bourdonner
+cesta : panier
+arroyo : ruisseau
+niebla : brouillard
+turbio : trouble
+brizna : brin
+pasto : herbe
+atraer : attirer
+anhelar : aspirer à
+sollozo : sanglot
+aflojar : se relâcher
+cuspide : apogée, sommet
+mecer : bercer
+acurrucarse : se blottir
+pero faldero : petit chien, toutou
+manosear : tripoter
+mata : buisson, arbuste
+acequia : buisson
+sigilo : discrétion
+recato : modestie
+inducir : provoquer
+espada : épée
+pierna : jambe
+lejia : eau de javel
+aullar : hurler
+en celo : en chaleur
+ahogar : étouffer
+nudillo : articulation du doigt
+manchar : salir, tacher
+mitigar : atténuer, calmer
+carajo : bordel, merde
+asaltar : attaquer, agresser
+cuartel : caserne
+caballeriza : écurie
+eludir : éviter, esquiver
+apartar : écarter, mettre de côté
+cordura : raison, sagesse
+incomunicado : isolé
+estropajo : loque, légume
+gusano : ver, asticot
+recluta : recrue
+allanar : entrer par effraction
+revolcar : renverser, faire tomber
+tartamudear : bégayer
+buey : boeuf
+cobijo : refuge, abri
+chistar : broncher, parler
+abultado : volumineux
+murmullo : murmure
+tedio : ennui
+piojo : pou
+enloquecer : devenir fou
+cautivar : capturer
+estallar : éclater, exploser
+corral : enclos
+festejar : célébrer
+bisabuelo : arrière-grand-père
+infante : enfant
+tibieza : tiédeur
+hiedra : lierre
+rocio : rosée
+sequito : conséquence
+delantal : tablier
+postizo : faux
+abejorro : bourdon
+lloriquear : pleurnicher : Deja de lloriquear, seguro que va de farol
+estrellar : lancer : Estrelló la caja contra la pared para intentar que se abriese
+deslizar : glisser
+pariente : famille
+cundir : se propager
+agazaparse : se tapir
+cerro : colline
+espantar : effrayer
+horrendo : horrible
+vislumbrar : apercevoir
+abismo : précipice
+estremecido : ébranlé, secoué
+esmerado : soigneux
+altivez : arrogance
+parpado : paupière
+surco : ride
+deleite : plaisir, délice
+abstemio : abstinent
+estrecharse : se rétrécir
+adorno : décoration
+despojar : dépouiller
+sortija : bague
+pulsera : bracelet
+desgaste : usure
+firmeza : fermeté
+alborozo : joie
+muchedumbre : foule
+ansioso : nerveux, anxieux
+sosayo : incliné
+azotea : terrasse
+sonrojarse : rougir
+deleitar : régaler, enchanter
+guino : clin d'oeil
+seda : soie
+embargar : être submerger
+indomito : indomptable
+recorrer : parcourir, traverser
+torcer : tordre
+rumbo : direction
+mascullar : marmonner
+campina : campagne
+agrandar : agrandir
+aguila : aigle
+arrastrar : traîner
+custodiar : protéger
+corazonada : pressentiment, intuition
+aferrarse : s'accrocher
+hoyo : trou
+matorral : fourré, brousse
+paraje : site, endroit
+techumbre : toiture
+yacer : être étendu, être allongé
+pico : pioche
+arropar : couvrir, envelopper
+acechar : guetter, traquer
+agarrotar : immobiliser
+escama : écaille : escama de cocodrilo
+boquete : brèche
+boveda : voûte, coupole
+escombros : gravas, décombres
+carcomer : ronger
+cocodrilo : crocodile : escama de cocodrilo
+lomo : dos
+sellar : sceller
+albanileria : maçonnerie
+penasco : rocher
+andamiaje : échafaudage
+roedor : rongeur
+viga : poutre
+soltar : lâcher, jeter
+cuspide : sommet
+desenlace : dénouement
+descalzo : pieds nus
+gusano : ver, asticot
+portentoso : prodigieux, stupéfiant
+sordidez : sordide
+gacho : bas, basse, baissé
+adherir : coller
+pecho : poitrine
+clausurar : clôturer
+choza : hutte
+apacible : paisible
+estrellado : étoilé
+congoja : angoisse
+canturrear : fredonner, chantonner
+sigiloso : discret
+pastizal : pré, pâturage
+roce : frôlement
+huracan : ouragan
+rodar : rouler
+destello : éclat, scintillement
+vendaval : tempête
+axila : aisselle
+mechon de pelo : mèche de cheveux
+fealdad : laideur
+gozo : plaisir
+imperecedero : impérissable, intemporel
+acoger : accueillir, héberger, recevoir
+fantasia : imagination
+apuro : problème, ennui
+guijarro : caillou
+gorrion : moineau
+aranar : égratigner
+desaforado : démesuré
+restregar : frotter
+balde : seau
+trapo : chiffon
+enjuagar : rincer
+abeja : abeille
+atajar : contenir
+estragos : ravages, dégâts
+hervir : bouillir
+ladera : flanc, versant
+fijar : fixer, accrocher
+sortear : esquiver, éviter
+cenirse a : s'en tenir à
+solapado : sournois, fourbe
+chispazo : étincelle
+amparo : protection
+barrer : balayer
+hojear : feuilleter
+arcilla : argile
+gruta : grotte
+ninera : nounou
+reconcomio : impatience
+mugriento : sale
+mendigar : mendier
+esbozo : esquisse
+melenudo : chevelu
+avispa : guêpe
+burgués : bourgeois
+en cuclillas : accroupi
+vozarron : grosse voix
+endilgar : fourguer, refourguer
+zampar : bouffer
+atraso : retard
+crisol : mélange
+vivencia : expérience
+embajada : ambassade
+dichoso : heureux
+sutileza : subtilité
+arrebatar : arracher
+sublevar : soulever
+auge : apogée
+jerarquia : hiérarchie
+recortar : couper
+adorno : ornement, décoration
+cedula : carte d'identité
+cegar : aveugler
+encaminar : diriger, montrer le chemin
+desaliento : découragement
+dicha : bonheur, chance
+brotar : surgir
+a tientas : à tâtons
+anticuado : démodé
+estufa : poêle
+quehacer : travail, boulot
+fritanga : friture
+cebolla : oignon
+ajo : ail
+cucharada : cuillerée
+despiadado : impitoyable
+tararear : fredonner, chantonner
+persignarse : faire un signe de la croix
+tragaluz : lucarne
+desenterrar : déterrer
+cavar : creuser
+trastornar : bouleverser, tourmenter
+corredizo : coulissant
+descabellado : tiré par les cheveux
+destapar : révéler
+toque de queda : couvre-feu
+cobija : couverture
+plomero : plombier
+soplete : chalumeau
+alamo : peuplier
+hilera : rangée
+polvo : poussière
+allegado : proche
+meson : auberge
+merodear : rôder
+botadero : décharge
+cerciorarse : s'assurer, vérifier
+amparar : protéger
+tosco : grossier
+esmerarse : se donner du mal
+halago : compliment, éloge
+proposito : intention, projet
+destacarse : sortir du lot, se démarquer
+verosimil : vraisemblable, plausible
+escaramuza : escarmouche
+expediente : dossier
+asediar : harceler
+estremecimiento : frémissement
+comitiva : cortège
+remover : remuer
+escarbar : gratter
+afliccion : peine, chagrin
+pendejo : débile, bête
+apretarse : s'entasser
+teletipo : communiqué
+indolente : impassible, indifférent
+roncha : bouton, piqûre
+anejo : vieux
+escozor : brûlure
+indole : caractère
+resquicio : fente
+hacer trizas : réduire en miettes
+tieso : raide, droit
+palo : bâton
+escoba : balai
+almorzar : déjeuner
+ineludible : incontournable
+tupido : épais, dense
+mirar con el rabillo del ojo : regarder du coin de l'oeil
+papa : pomme de terre
+bigote : moustache
+acorralar : piéger, coincer
+retén : réserve
+aterrar : terrifier, effrayer
+cabo : brigadier, caporal
+desbaratar : faire échouer
+barranco : ravin, précipice
+depuesto : abandonner
+silbar : siffler
+embarrar : couvrir de boue
+socarron : narquois
+halar : tirer
+pala : pelle
+casquillo : douille
+plegar : plier
+peritaje : expertise
+libreta : cahier, carnet
+azar : hasard
+escasear : manquer, se raréfier
+hortaliza : légume
+regateo : marchandage
+desdicha : misère, malheur
+atestar : remplir
+peregrinacion : pélerinage
+orfandad : orphelinage
+engorroso : pénible
+vacilar : hésiter
+dotacion : équipage
+balear : cribler de balles
+remendar : racommoder
+propiciar : favoriser, contribuer à
+descorchar : déboucher
+adornar : décorer
+lastima : peine, tristesse
+esquema : schéma
+complacer : satisfaire, rendre heureux
+ataner : concerner
+goce : plaisir, jouissance
+peca : tache de rousseur
+desbocarse : s'emballer
+estragar : ravager
+estribillo : refrain
+allanamiento : effraction, violation de domicile
+obedecer : obéir à
+pureza : pureté
+receso : pause
+esfumarse : disparaître
+esmero : soin, application
+huidizo : fuyant
+inconfundible : caractérisque, reconnaissable
+porfiar : se disputer
+suceso : évènement, fait
+atormentar : torturer, tourmenter
+mamar : têter
+aranazo : égratignure
+pajaro : oiseau
+permanencia : durée
+cinta : film
+achacoso : diminué
+custodiar : protéger
+vendaje : bandage
+sujetar : attacher, fixer
+vidrio : verre
+anfitrion : hôte
+conmover : émouvoir, attendrir
+refinar : raffiner
+ametralladora : mitrailleuse
+convulsionar : secouer

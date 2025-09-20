@@ -29,11 +29,12 @@ function buildWords(data: string): Word[] {
     .split('\n')
     .filter((line) => !!line)
     .map((line, i) => {
-      const [es, fr] = line.split(' : ');
+      const [es, fr, example] = line.split(' : ');
       return {
         id: i + 1,
         es,
         fr,
+        example,
       };
     });
 }
