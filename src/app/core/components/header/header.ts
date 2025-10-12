@@ -3,7 +3,7 @@ import { SwUpdate } from '@angular/service-worker';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
 import { Breadcrumb } from '../breadcrumb/breadcrumb';
-import { ArrowClockwiseIcon } from '../icon/arrow-clockwise-icon/arrow-clockwise-icon';
+import { ArrowClockwiseIcon } from '@shared/components/icon/arrow-clockwise-icon/arrow-clockwise-icon';
 
 @Component({
   selector: 'app-header',

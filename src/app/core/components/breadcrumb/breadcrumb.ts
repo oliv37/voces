@@ -7,9 +7,9 @@ import {
 } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
-import { type Breadcrumb as BreadcrumbModel } from '../../models/breadcrumb';
-import { buildBreadcrumb } from '../../utils/breadcrumb';
-import { ChevronRightIcon } from '../icon/chevron-right/chevron-right-icon';
+import { type Breadcrumb as BreadcrumbModel } from '@core/models/breadcrumb';
+import { buildBreadcrumb } from '@core/utils/breadcrumb';
+import { ChevronRightIcon } from '@shared/components/icon/chevron-right/chevron-right-icon';
 
 @Component({
   selector: 'app-breadcrumb',
