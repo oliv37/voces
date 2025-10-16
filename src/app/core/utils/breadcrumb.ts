@@ -1,17 +1,23 @@
-import { ActivatedRouteSnapshot, UrlSegment } from '@angular/router';
+import {
+  ActivatedRoute,
+  ActivatedRouteSnapshot,
+  UrlSegment,
+} from '@angular/router';
 import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb';
 import { NotFoundPage } from '../../not-found/not-found-page';
 
-const ROOT_BREADCRUMB_ITEM: BreadcrumbItem = {
-  url: '/',
-  label: 'VOCES',
-};
+const ROOT_BREADCRUMB: Breadcrumb = [
+  {
+    url: '/',
+    label: 'VOCES',
+  },
+];
 
-export function buildBreadcrumb(root: ActivatedRouteSnapshot): Breadcrumb {
-  return _buildBreadcrumb(root, [ROOT_BREADCRUMB_ITEM]);
+export function buildBreadcrumb(route: ActivatedRoute): Breadcrumb {
+  return buildBreadcrumbRecursively(route.root.snapshot, ROOT_BREADCRUMB);
 }
 
-function _buildBreadcrumb(
+function buildBreadcrumbRecursively(
   route: ActivatedRouteSnapshot | null,
   breadcrumb: Breadcrumb
 ): Breadcrumb {
@@ -20,22 +26,21 @@ function _buildBreadcrumb(
   }
 
   if (route.component === NotFoundPage) {
-    return [ROOT_BREADCRUMB_ITEM];
+    return ROOT_BREADCRUMB;
   }
 
   if (route.url.length <= 0) {
-    return _buildBreadcrumb(route.firstChild, breadcrumb);
+    return buildBreadcrumbRecursively(route.firstChild, breadcrumb);
   }
 
-  const previousUrl: string = getPreviousUrl(breadcrumb);
+  const previousUrl: string = getLastUrl(breadcrumb);
   const currentUrl: UrlSegment[] = route.url;
   const breadcrumbItem = createBreadcrumItem(previousUrl, currentUrl);
 
-  return _buildBreadcrumb(route.firstChild, [...breadcrumb, breadcrumbItem]);
-}
-
-function getPreviousUrl(breadcrumb: Breadcrumb): string {
-  return breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
+  return buildBreadcrumbRecursively(route.firstChild, [
+    ...breadcrumb,
+    breadcrumbItem,
+  ]);
 }
 
 function createBreadcrumItem(
@@ -46,4 +51,8 @@ function createBreadcrumItem(
   const url = [previousUrl, ...currentUrl].join('/');
 
   return { label, url };
+}
+
+function getLastUrl(breadcrumb: Breadcrumb): string {
+  return breadcrumb.length > 0 ? breadcrumb[breadcrumb.length - 1].url : '';
 }

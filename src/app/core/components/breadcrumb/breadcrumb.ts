@@ -23,8 +23,8 @@ export class Breadcrumb {
   breadcrumb = toSignal<BreadcrumbModel, BreadcrumbModel>(
     this.router.events.pipe(
       filter((e) => e instanceof NavigationEnd),
-      map(() => buildBreadcrumb(this.route.root.snapshot))
+      map(() => buildBreadcrumb(this.route))
     ),
-    { initialValue: buildBreadcrumb(this.route.root.snapshot) }
+    { initialValue: buildBreadcrumb(this.route) }
   );
 }

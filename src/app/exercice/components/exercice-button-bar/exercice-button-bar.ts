@@ -4,8 +4,8 @@ import { RouterLink } from '@angular/router';
 import { PatchQuestionIcon } from '@shared/components/icon/patch-question-icon/patch-question-icon';
 import { ArrowClockwiseIcon } from '@shared/components/icon/arrow-clockwise-icon/arrow-clockwise-icon';
 import { StarFillIcon } from '@shared/components/icon/star-fill-icon/star-fill-icon';
-import { ArrowLeftIcon } from '@shared/components/icon/arrow-left-icon/arrow-right-icon';
-import { ArrowRightIcon } from '@shared/components/icon/arrow-right-icon/arrow-right-icon';
+import { ArrowUpShortIcon } from '@shared/components/icon/arrow-up-short-icon/arrow-up-short-icon';
+import { ArrowDownShortIcon } from '@shared/components/icon/arrow-down-short-icon/arrow-down-short-icon';
 
 @Component({
   selector: 'app-exercice-button-bar',
@@ -15,8 +15,8 @@ import { ArrowRightIcon } from '@shared/components/icon/arrow-right-icon/arrow-r
     ArrowClockwiseIcon,
     StarFillIcon,
     RouterLink,
-    ArrowLeftIcon,
-    ArrowRightIcon,
+    ArrowUpShortIcon,
+    ArrowDownShortIcon,
   ],
 })
 export class ExerciceButtonBar {
