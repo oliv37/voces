@@ -998,7 +998,7 @@ aterrar : terrifier, effrayer
 cabo : brigadier, caporal
 desbaratar : faire échouer
 barranco : ravin, précipice
-depuesto : abandonner
+depuesto : abandonné
 silbar : siffler
 embarrar : couvrir de boue
 socarron : narquois
