@@ -4,10 +4,16 @@
 
 ## Translations
 
-[Data](./src/data) are stored into text files
+Translations are stored into the text file [data.txt](./src/data.txt)
 
-Each text file contains at most 120 translations
+Each translation is written on a single line with the following format :
 
-Each translation is written on a single single line with the following format :
+`<spanish_word> : <french_translation> : <optional_example_in_spanish>`
 
-`<spanish_word> : <french_translation>`
+Here are some examples :
+
+```txt
+chirrido : grincement : El chirrido de los frenos me sobresaltó
+herir : blesser
+taner : sonner
+```
