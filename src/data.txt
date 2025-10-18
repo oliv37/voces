@@ -992,70 +992,72 @@ tupido : épais, dense
 mirar con el rabillo del ojo : regarder du coin de l'oeil
 papa : pomme de terre
 bigote : moustache
-acorralar : piéger, coincer
-retén : réserve
-aterrar : terrifier, effrayer
-cabo : brigadier, caporal
-desbaratar : faire échouer
-barranco : ravin, précipice
+acorralar : piéger, coincer : La policía acorraló al fugitivo
+retén : réserve : En la tienda siempre había retén de lo más demandado
+aterrar : terrifier, effrayer : Los truenos aterran a mi perra
+cabo : brigadier, caporal : El cabo ordenó al pelotón romper filas
+desbaratar : faire échouer : Las maniobras del enemigo desbarataron nuestros planes
+barranco : ravin, précipice : El coche se cayó por el barranco
 depuesto : abandonné
 silbar : siffler
-embarrar : couvrir de boue
-socarron : narquois
-halar : tirer
+embarrar : couvrir de boue : Entraron con los zapatos llenos de lodo y embarraron la alfombra
+socarron : narquois : Jorge es muy socarrón
+halar : tirer : ¿No sabes leer? La puerta dice "hale", no "empuje"
 pala : pelle
-casquillo : douille
+casquillo : douille : La policía analizaba los casquillos de bala
 plegar : plier
-peritaje : expertise
+peritaje : expertise : El juez solicitó un peritaje de los daños
 libreta : cahier, carnet
 azar : hasard
 escasear : manquer, se raréfier
-hortaliza : légume
-regateo : marchandage
-desdicha : misère, malheur
-atestar : remplir
+hortaliza : légume : La lechuga es una hortaliza
+regateo : marchandage : El regateo es una estrategia alternativa al establecimiento del precio fijo
+desdicha : misère, malheur : Sufrió una gran desdicha
+atestar : remplir : Atestaron el salón de gente y hacía mucho calor
 peregrinacion : pélerinage
 orfandad : orphelinage
-engorroso : pénible
+engorroso : pénible : El trabajo no es difícil pero sí muy engorroso
 vacilar : hésiter
 dotacion : équipage
 balear : cribler de balles
-remendar : racommoder
-propiciar : favoriser, contribuer à
-descorchar : déboucher
-adornar : décorer
-lastima : peine, tristesse
+remendar : racommoder : Ya he remendado tres veces las rodilleras del pantalón
+propiciar : favoriser, contribuer à : Su actitud irresponsable propició el accidente
+descorchar : déboucher : Descorchó la botella y nos sirvió una copa de vino a cada uno
+adornar : décorer : Los abuelos y sus nietos adornaban el árbol de navidad
+lastima : peine, tristesse : Siento lástima por los perros abandonados
 esquema : schéma
 complacer : satisfaire, rendre heureux
-ataner : concerner
+ataner : concerner, regarder : La relación que llevo con mi pareja no te atañe
 goce : plaisir, jouissance
 peca : tache de rousseur
-desbocarse : s'emballer
+desbocarse : s'emballer : El caballo se desbocó cuando se asustó
 estragar : ravager
-estribillo : refrain
+estribillo : refrain : Los miembros del coro cantaban el estribillo al unísono
 allanamiento : effraction, violation de domicile
 obedecer : obéir à
 pureza : pureté
 receso : pause
 esfumarse : disparaître
 esmero : soin, application
-huidizo : fuyant
-inconfundible : caractérisque, reconnaissable
+huidizo : fuyant : Se muestra huidizo ante mis preguntas
+inconfundible : caractérisque, reconnaissable : Te reconocí de inmediato, tu voz es inconfundible
 porfiar : se disputer
 suceso : évènement, fait
 atormentar : torturer, tourmenter
 mamar : têter
-aranazo : égratignure
+aranazo : égratignure : Hoy ha venido mi hijo del colegio con un arañazo en la cara
 pajaro : oiseau
 permanencia : durée
 cinta : film
-achacoso : diminué
+achacoso : diminué : Mi suegro está ya muy achacoso a causa de la edad
 custodiar : protéger
-vendaje : bandage
+vendaje : bandage : Le colocaron un vendaje en el tobillo para inmovilizarlo
 sujetar : attacher, fixer
-vidrio : verre
+vidrio : verre : 	El vidrio tiene propiedades muy apreciadas en la industria
 anfitrion : hôte
 conmover : émouvoir, attendrir
-refinar : raffiner
+refinar : raffiner : 	Juan se ha refinado con los viajes
 ametralladora : mitrailleuse
-convulsionar : secouer
+convulsionar : secouer : El anuncio del rescate a Grecia convulsionó a los mercados
+lodo : boue : Las llantas del camión quedaron llenas de lodo
+trueno : coup de tonnerre : Se escuchó un trueno a los pocos segundos de hacerse visible el rayo
