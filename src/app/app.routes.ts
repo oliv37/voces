@@ -3,7 +3,7 @@ import { wordGroupsResolver } from '@shared/resolvers/word-groups-resolver';
 import { wordGroupResolver } from '@shared/resolvers/word-group-resolver';
 import { HomePage } from './home/home-page';
 import { ExercicePage } from './exercice/exercice-page';
-import { exerciceTitleResolver } from './exercice/resolvers/exercice-title.resolver';
+import { exerciceTitleResolver } from './exercice/resolvers/exercice-title-resolver';
 import { canMatchExercice } from './exercice/guards/exercice-guard';
 import { NotFoundPage } from './not-found/not-found-page';
 
