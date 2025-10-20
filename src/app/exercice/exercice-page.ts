@@ -13,7 +13,7 @@ import type { OpenGraph } from '@shared/models/open-graph';
 import { type WordGroup } from '@shared/models/word';
 import type { Level } from './models/exercice';
 import { Meta } from '@shared/directives/meta';
-import { Exercice } from './services/exercice';
+import { ExerciceState } from './services/exercice-state';
 import { WordGroupCompletion } from '@shared/services/word-group-completion';
 import { ExerciceLevel1 } from './components/exercice-level-1/exercice-level-1';
 import { ExerciceLevel2 } from './components/exercice-level-2/exercice-level-2';
@@ -33,7 +33,7 @@ import { ExerciceProgressBar } from './components/exercice-progress-bar/exercice
   templateUrl: './exercice-page.html',
 })
 export class ExercicePage implements OnDestroy {
-  private _exercice = inject(Exercice);
+  private _exerciceState = inject(ExerciceState);
   private _wordGroupCompletion = inject(WordGroupCompletion);
 
   exerciceLevelCmp = viewChild<AbstractExerciceLevel>('exerciceLevelCmp');
@@ -41,13 +41,13 @@ export class ExercicePage implements OnDestroy {
   wordGroups = input.required<WordGroup[]>();
   wordGroup = input.required<WordGroup>();
 
-  level = this._exercice.level;
-  wordIdx = this._exercice.wordIdx;
-  word = this._exercice.word;
-  nbWords = this._exercice.nbWords;
-  progressPercent = this._exercice.progressPercent;
-  isCompleted = this._exercice.isCompleted;
-  hasUsedHelp = this._exercice.hasUsedHelp;
+  level = this._exerciceState.level;
+  wordIdx = this._exerciceState.wordIdx;
+  word = this._exerciceState.word;
+  nbWords = this._exerciceState.nbWords;
+  progressPercent = this._exerciceState.progressPercent;
+  isCompleted = this._exerciceState.isCompleted;
+  hasUsedHelp = this._exerciceState.hasUsedHelp;
 
   isGroupCompleted = computed(() => {
     const group = this.wordGroup();
@@ -90,7 +90,7 @@ export class ExercicePage implements OnDestroy {
   });
 
   _focusEffect = effect(() => {
-    this._exercice.state();
+    this._exerciceState.state();
 
     untracked(() => {
       this.exerciceLevelCmp()?.focus();
@@ -100,30 +100,30 @@ export class ExercicePage implements OnDestroy {
   _groupEffect = effect(() => {
     const group = this.wordGroup();
 
-    this._exercice.group.set(group);
+    this._exerciceState.group.set(group);
     this.scrollToTop();
   });
 
   ngOnDestroy() {
-    this._exercice.group.set(undefined);
+    this._exerciceState.group.set(undefined);
   }
 
   resetLevel() {
-    this._exercice.resetLevel();
+    this._exerciceState.resetLevel();
   }
 
-  answerWord() {
-    this._exercice.answerWord();
+  nextWord() {
+    this._exerciceState.nextWord();
   }
 
   setLevel(level: Level) {
-    this._exercice.setLevel(level);
+    this._exerciceState.setLevel(level);
   }
 
   help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();
-    this._exercice.setHasUsedHelp(true);
+    this._exerciceState.setHasUsedHelp(true);
   }
 
   private scrollToTop() {

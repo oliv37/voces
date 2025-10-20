@@ -4,27 +4,26 @@ import {
   Injectable,
   linkedSignal,
   signal,
-  WritableSignal,
 } from '@angular/core';
 import type { Word, WordGroup } from '@shared/models/word';
-import { type Level, MAX_LEVEL } from '../models/exercice';
+import { State, type Level, FINAL_LEVEL } from '../models/exercice';
 import { WordGroupCompletion } from '@shared/services/word-group-completion';
 import { shuffle } from '@shared/utils/array';
 
 @Injectable({ providedIn: 'root' })
-export class Exercice {
+export class ExerciceState {
   private _wordGroupCompletion = inject(WordGroupCompletion);
 
   group = signal<WordGroup | undefined>(undefined);
 
-  private _state: WritableSignal<State> = linkedSignal<State>(() => {
+  private _state = linkedSignal<State>(() => {
     const words: Word[] = this.group()?.words || [];
     return {
       words: shuffle(words),
       wordIdx: 0,
       level: 1,
-      isCompleted: false,
       hasUsedHelp: false,
+      isCompleted: false,
     };
   });
 
@@ -40,70 +39,60 @@ export class Exercice {
   isLastWord = computed<boolean>(() => {
     return this.nbWords() > 0 && this.wordIdx() + 1 === this.nbWords();
   });
-  isMaxLevel = computed<boolean>(() => {
-    return this.level() === MAX_LEVEL;
+  isFinalLevel = computed<boolean>(() => {
+    return this.level() === FINAL_LEVEL;
   });
 
   progressPercent = computed<number>(
     () => ((this.wordIdx() + 1) * 100) / this.nbWords()
   );
 
-  reset() {
-    this._state.set({
-      words: shuffle(this.group()?.words || []),
-      wordIdx: 0,
-      level: 1,
-      isCompleted: false,
-      hasUsedHelp: false,
-    });
-  }
-
-  resetLevel() {
+  resetLevel({ isCompleted = false } = {}) {
     this._state.update(({ level }) => ({
       words: shuffle(this.group()?.words || []),
       wordIdx: 0,
       level,
-      isCompleted: false,
       hasUsedHelp: false,
+      isCompleted,
     }));
   }
 
-  answerWord() {
+  nextWord() {
     const group = this.group();
     const word = this.word();
-    const isMaxLevel = this.isMaxLevel();
-    const isLastWord = this.isLastWord();
     const hasNotUsedHelp = !this.hasUsedHelp();
+    const isLastWord = this.isLastWord();
+    const isFinalLevel = this.isFinalLevel();
+    const isCompleted = this.isCompleted();
 
     if (!group || !word) {
       return;
     }
 
-    const hasAnsweredAllWordsOfMaxLevelWithoutHelp =
-      hasNotUsedHelp && isMaxLevel && isLastWord;
-
-    this._state.update(
-      ({ words, wordIdx, level, hasUsedHelp, isCompleted }) => ({
-        words: isLastWord ? shuffle(words) : words,
-        wordIdx: isLastWord ? 0 : wordIdx + 1,
-        level,
-        isCompleted: isCompleted || hasAnsweredAllWordsOfMaxLevelWithoutHelp,
-        hasUsedHelp: isLastWord ? false : hasUsedHelp,
-      })
-    );
-
-    if (hasAnsweredAllWordsOfMaxLevelWithoutHelp) {
+    if (isLastWord && isFinalLevel && hasNotUsedHelp) {
       this._wordGroupCompletion.markAsCompleted(group);
+      this.resetLevel({ isCompleted: true });
+      return;
     }
+
+    if (isLastWord) {
+      this.resetLevel({ isCompleted });
+      return;
+    }
+
+    this._state.update((prevState) => ({
+      ...prevState,
+      wordIdx: prevState.wordIdx + 1,
+    }));
   }
 
   previousLevel() {
     this._state.update(({ words, level, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
-      level: level === 1 ? MAX_LEVEL : ((level - 1) as Level),
-      isCompleted,
+      level: level === 1 ? FINAL_LEVEL : ((level - 1) as Level),
       hasUsedHelp: false,
+      isCompleted,
     }));
   }
 
@@ -111,9 +100,9 @@ export class Exercice {
     this._state.update(({ words, level, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
-      level: level === MAX_LEVEL ? 1 : ((level + 1) as Level),
-      isCompleted,
+      level: level === FINAL_LEVEL ? 1 : ((level + 1) as Level),
       hasUsedHelp: false,
+      isCompleted,
     }));
   }
 
@@ -122,8 +111,8 @@ export class Exercice {
       words: shuffle(words),
       wordIdx: 0,
       level,
-      isCompleted,
       hasUsedHelp: false,
+      isCompleted,
     }));
   }
 
@@ -133,12 +122,4 @@ export class Exercice {
       hasUsedHelp,
     }));
   }
-}
-
-interface State {
-  words: Word[];
-  wordIdx: number;
-  level: Level;
-  isCompleted: boolean;
-  hasUsedHelp: boolean;
 }

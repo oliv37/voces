@@ -938,56 +938,56 @@ ajo : ail
 cucharada : cuillerée
 despiadado : impitoyable
 tararear : fredonner, chantonner
-persignarse : faire un signe de la croix
-tragaluz : lucarne
-desenterrar : déterrer
-cavar : creuser
-trastornar : bouleverser, tourmenter
-corredizo : coulissant
+persignarse : faire un signe de la croix : El sacerdote se persignó antes de dar la misa
+tragaluz : lucarne : Abrimos un tragaluz en el techo para dar luz a las escaleras
+desenterrar : déterrer : Desenterraron el cadáver para obtener el ADN
+cavar : creuser : El jardinero cavó un hoyo profundo para plantar el árbol
+trastornar : bouleverser, tourmenter : La muerte de sus padres lo trastornó
+corredizo : coulissant : Él fabricó un lazo corredizo con la cuerda 
 descabellado : tiré par les cheveux
-destapar : révéler
-toque de queda : couvre-feu
-cobija : couverture
+destapar : révéler : El periódico destapó el caso de corrupción
+toque de queda : couvre-feu : A las 10 de la noche dan el toque de queda
+cobija : couverture : Pon una cobija más en la cama
 plomero : plombier
-soplete : chalumeau
-alamo : peuplier
-hilera : rangée
+soplete : chalumeau : El soldador debe proteger su vista de la luz que emana del soplete
+alamo : peuplier : El álamo es un árbol que se eleva a considerable altura
+hilera : rangée : Volteó la hilera de fichas de dominó
 polvo : poussière
-allegado : proche
-meson : auberge
+allegado : proche : El poeta escribió un soneto el día que murió su amigo más allegado
+meson : auberge : Nos hospedamos en el mesón que hay en la plaza del pueblo
 merodear : rôder
-botadero : décharge
+botadero : décharge : Los botaderos emiten gases tóxicos
 cerciorarse : s'assurer, vérifier
 amparar : protéger
 tosco : grossier
-esmerarse : se donner du mal
-halago : compliment, éloge
-proposito : intention, projet
+esmerarse : se donner du mal : Me he esmerado mucho en que la presentación quede perfecta
+halago : compliment, éloge : Su buena actuación provocó los halagos de la prensa
+proposito : intention, projet : Juan nos anunció su propósito de casarse
 destacarse : sortir du lot, se démarquer
-verosimil : vraisemblable, plausible
-escaramuza : escarmouche
-expediente : dossier
-asediar : harceler
-estremecimiento : frémissement
-comitiva : cortège
+verosimil : vraisemblable, plausible : Según apuntó el juez, hizo una exposición verosímil de los hechos
+escaramuza : escarmouche : Ha habido dos heridos en otra escaramuza fronteriza
+expediente : dossier : Tráigame el expediente de la compañía naval
+asediar : harceler : El pobre individuo se ve asediado por los acreedores
+estremecimiento : frémissement : El grupo tuvo un estremecimiento de miedo
+comitiva : cortège : La comitiva nupcial fue andando desde la casa de la novia hasta la iglesia
 remover : remuer
-escarbar : gratter
-afliccion : peine, chagrin
-pendejo : débile, bête
-apretarse : s'entasser
+escarbar : gratter : El perro escarbaba en el jardín buscando el juguete
+afliccion : peine, chagrin : Quisiera expresarle mi aflicción por la pérdida de su padre
+pendejo : débile, bête : Hay que ser pendejo para saltar de un avión sin paracaídas
+apretarse : s'entasser : La gente se apretaba en el centro comercial
 teletipo : communiqué
 indolente : impassible, indifférent
-roncha : bouton, piqûre
-anejo : vieux
-escozor : brûlure
-indole : caractère
-resquicio : fente
+roncha : bouton, piqûre : Me salió una roncha donde me había picado el mosquito
+anejo : vieux : No me gustan los vinos jóvenes; prefiero los añejos
+escozor : brûlure : Sentía escozor en la espalda por haber tomado el sol demasiado rato
+indole : caractère : Es de índole reservado
+resquicio : fente : Escaló la pared de piedra apoyándose hábilmente en cada resquicio
 hacer trizas : réduire en miettes
 tieso : raide, droit
-palo : bâton
+palo : bâton : Llevaba un palo para hacer salir a cualquier serpiente
 escoba : balai
-almorzar : déjeuner
-ineludible : incontournable
+almorzar : déjeuner : Quedamos para almorzar
+ineludible : incontournable : Era una cita ineludible a la que no podía faltar
 tupido : épais, dense
 mirar con el rabillo del ojo : regarder du coin de l'oeil
 papa : pomme de terre
