@@ -819,7 +819,6 @@ campina : campagne
 agrandar : agrandir
 aguila : aigle
 arrastrar : traîner
-custodiar : protéger
 corazonada : pressentiment, intuition
 aferrarse : s'accrocher
 hoyo : trou
