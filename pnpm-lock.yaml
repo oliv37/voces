@@ -53,7 +53,7 @@ importers:
         version: 20.4.0(chokidar@4.0.3)(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
       '@angular/build':
         specifier: ^20.3.6
-        version: 20.3.6(b1e50c662b48c6a48f8f6894915ecb3b)
+        version: 20.3.6(7a301e47ffd24a1532f8a5fa357588f8)
       '@angular/cli':
         specifier: ^20.3.6
         version: 20.3.6(@types/node@24.8.1)(chokidar@4.0.3)
@@ -109,8 +109,8 @@ importers:
         specifier: ^8.5.6
         version: 8.5.6
       tailwindcss:
-        specifier: ^4.1.14
-        version: 4.1.14
+        specifier: ^4.1.16
+        version: 4.1.16
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -3445,6 +3445,9 @@ packages:
   tailwindcss@4.1.14:
     resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
 
+  tailwindcss@4.1.16:
+    resolution: {integrity: sha512-pONL5awpaQX4LN5eiv7moSiSPd/DLDzKVRJz8Q9PgzmAdd1R4307GQS2ZpfiN7ZmekdQrfhZZiSE5jkLR4WNaA==}
+
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
@@ -3915,7 +3918,7 @@ snapshots:
       eslint: 9.38.0(jiti@2.6.1)
       typescript: 5.9.3
 
-  '@angular/build@20.3.6(b1e50c662b48c6a48f8f6894915ecb3b)':
+  '@angular/build@20.3.6(7a301e47ffd24a1532f8a5fa357588f8)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2003.6(chokidar@4.0.3)
@@ -3957,7 +3960,7 @@ snapshots:
       less: 4.3.0
       lmdb: 3.4.2
       postcss: 8.5.6
-      tailwindcss: 4.1.14
+      tailwindcss: 4.1.16
     transitivePeerDependencies:
       - '@types/node'
       - chokidar
@@ -7263,6 +7266,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwindcss@4.1.14: {}
+
+  tailwindcss@4.1.16: {}
 
   tapable@2.3.0: {}
 
