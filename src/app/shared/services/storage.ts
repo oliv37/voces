@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
 
-type StorageKey =
-  | 'GROUP_COMPLETION'
-  | 'SETTING'
-  | 'EXERCICE_STATE_LEVEL_1'
-  | 'EXERCICE_STATE_LEVEL_2'
-  | 'EXERCICE_STATE_LEVEL_3';
+type StorageKey = 'WORD_GROUP_COMPLETIONS' | 'TEXT_COMPLETIONS';
 
 @Injectable({ providedIn: 'root' })
 export class Storage {

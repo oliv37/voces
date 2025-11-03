@@ -1,0 +1,20 @@
+@let _pages = pages();
+<div class="flex justify-center items-end gap-5">
+  @for(page of _pages; track page) { @if ($last && _pages[$index] -_pages[$index
+  - 1] > 1) {
+  <div class="px-1">...</div>
+  }
+  <button
+    type="button"
+    class="border-4 rounded-md px-4 py-1"
+    [class.border-gray-400]="page !== currentPage()"
+    [class.border-black]="page === currentPage()"
+    [class.font-bold]="page === currentPage()"
+    (click)="selectPage.emit(page)"
+  >
+    {{page}}
+  </button>
+  @if ($first && _pages[$index + 1] -_pages[$index] > 1) {
+  <div class="px-1">...</div>
+  } }
+</div>

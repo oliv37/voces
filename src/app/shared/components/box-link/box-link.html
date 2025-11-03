@@ -1,0 +1,11 @@
+<a
+  [routerLink]="link()"
+  [class]="' flex flex-col gap-6 h-full p-6 ' +
+  'border border-gray-300 hover:border-gray-400 ' + 
+  'rounded-t-md shadow-md hover:shadow-xl transition-shadow duration-500'"
+>
+  <h1 class="font-bold text-2xl">{{ title() }}</h1>
+  @if (description()) {
+  <div class="text-lg text-gray-800">{{ description() }}</div>
+  }
+</a>

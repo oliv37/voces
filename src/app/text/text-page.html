@@ -1,0 +1,54 @@
+@let _text = text(); @let _inputTextValue = inputTextValue(); @let _wordIdx =
+wordIdx(); @let _words = words(); @let _wordLetters =
+wordValidatorResult().wordLetters; @let _hasInputFocus = hasInputFocus(); @let
+_wordLetterIdx = wordLetterIdx(); @let _textContentIdx = textContentIdx();
+
+<div class="min-h-[calc(100lvh-6rem)] flex flex-col gap-12 pt-6">
+  <div class="flex-1 relative">
+    <input
+      #inputEl
+      type="text"
+      class="absolute top-0 left-0 bottom-0 right-0 opacity-0 z-10 cursor-default"
+      [value]="_inputTextValue"
+      (keydown)="onKeydown($event)"
+      (input)="onInput($event)"
+      (focus)="hasInputFocus.set(true)"
+      (blur)="hasInputFocus.set(false)"
+    />
+    <div
+      class="text-3xl font-mono leading-normal cursor-default whitespace-break-spaces"
+    >
+      @for (word of _words; track $index) { @if ($index === _wordIdx) { @for
+      (letter of _wordLetters; track $index) { @let _isInvalidLetter =
+      letter.isValid === false; @let _isCurrentLetter = $index ===
+      _wordLetterIdx;
+      <span
+        class="border-b-4"
+        [class.text-neutral-500]="letter.isValid === undefined"
+        [class.text-red-600]="letter.isValid === false"
+        [class.text-black]="letter.isValid === true"
+        [class.border-b-transparent]="!_hasInputFocus || !_isCurrentLetter"
+        [class.border-b-black]="_hasInputFocus && _isCurrentLetter && !_isInvalidLetter"
+        [class.border-b-red-600]="_hasInputFocus && _isCurrentLetter && _isInvalidLetter"
+        >{{letter.value}}</span
+      >
+      } } @else {
+      <span
+        [class.text-neutral-500]="$index >= _wordIdx"
+        [class.text-neutral-800]="$index < _wordIdx"
+        >{{word}}</span
+      >
+      } }
+    </div>
+  </div>
+
+  <app-pagination-bar
+    [totalPage]="_text.contents.length"
+    [currentPage]="_textContentIdx + 1"
+    (selectPage)="setTextContentIdx($event - 1)"
+  />
+</div>
+
+<div class="py-8"></div>
+
+<app-text-links [texts]="otherTexts()" />

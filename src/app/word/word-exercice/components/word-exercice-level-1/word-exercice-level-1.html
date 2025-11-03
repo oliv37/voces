@@ -1,0 +1,44 @@
+@if (example()) {
+<div class="pb-4 flex justify-center">
+  <span
+    class="text-2xl font-bold bg-zinc-800/80 text-white rounded-2xl inline-block py-1 px-4"
+  >
+    {{ example() }}
+  </span>
+</div>
+}
+
+<div
+  [class]="
+    'font-mono relative text-8xl text-center ' +
+    'leading-normal border-b-4 border-b-transparent'
+  "
+>
+  <input
+    type="text"
+    class="absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-default"
+    [value]="text()"
+    (keydown)="onKeydown($event)"
+    (input)="onInput($event)"
+    (focus)="hasFocus.set(true)"
+    (blur)="hasFocus.set(false)"
+    #inputEl
+  />
+  @for(letter of letters(); track $index) {
+  <app-word-exercice-caret
+    [active]="hasFocus() && text().length === $index"
+  ></app-word-exercice-caret>
+  <span
+    [class.text-neutral-400]="letter.status === 'UNKNOWN'"
+    [class.text-neutral-950]="letter.status === 'VALID'"
+    [class.text-red-700]="letter.status === 'INVALID'"
+    [class.!text-transparent]="letter.value === ' '"
+    [class.bg-red-700]="letter.value === ' ' && letter.status === 'INVALID'"
+    >{{ letter.value.replace(" ", "-") }}</span
+  >
+  @if ($last) {
+  <app-word-exercice-caret
+    [active]="hasFocus() && text().length > $index"
+  ></app-word-exercice-caret>
+  } }
+</div>
