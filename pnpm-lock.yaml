@@ -36,8 +36,8 @@ importers:
         specifier: ^20.3.5
         version: 20.3.5(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
       '@angular/ssr':
-        specifier: ^20.3.6
-        version: 20.3.6(73f5d055cb9ab9d4f78480cbfeff6742)
+        specifier: ^20.3.10
+        version: 20.3.10(73f5d055cb9ab9d4f78480cbfeff6742)
       express:
         specifier: ^5.1.0
         version: 5.1.0
@@ -53,7 +53,7 @@ importers:
         version: 20.4.0(chokidar@4.0.3)(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
       '@angular/build':
         specifier: ^20.3.6
-        version: 20.3.6(4788cb496040706295cb56a324b1da66)
+        version: 20.3.6(74044e8de15e06fbf7fcdf271d46185a)
       '@angular/cli':
         specifier: ^20.3.10
         version: 20.3.10(@types/node@24.8.1)(chokidar@4.0.3)
@@ -401,8 +401,8 @@ packages:
       '@angular/core': 20.3.5
       rxjs: ^6.5.3 || ^7.4.0
 
-  '@angular/ssr@20.3.6':
-    resolution: {integrity: sha512-YABzCGfjwQ+WSUuInwBGS35pNO2zUHJeCzyj6CZ0sqRVR0qt3KvEzk1RVvR33X1bKePFHurn8NYPkcvLSpBvhQ==}
+  '@angular/ssr@20.3.10':
+    resolution: {integrity: sha512-Zg2pAFw24itwIWBwZ2Avbu+UvP9ALnLZrZq/ABJP5dM6xrc0EYcWt72519+eDUEvzqz7ySYx1Qhn2AMsNv3dkg==}
     peerDependencies:
       '@angular/common': ^20.0.0
       '@angular/core': ^20.0.0
@@ -3999,7 +3999,7 @@ snapshots:
       eslint: 9.38.0(jiti@2.6.1)
       typescript: 5.9.3
 
-  '@angular/build@20.3.6(4788cb496040706295cb56a324b1da66)':
+  '@angular/build@20.3.6(74044e8de15e06fbf7fcdf271d46185a)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2003.6(chokidar@4.0.3)
@@ -4036,7 +4036,7 @@ snapshots:
       '@angular/platform-browser': 20.3.5(@angular/common@20.3.5(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))
       '@angular/platform-server': 20.3.5(@angular/common@20.3.5(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/compiler@20.3.5)(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@20.3.5(@angular/common@20.3.5(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2)
       '@angular/service-worker': 20.3.5(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
-      '@angular/ssr': 20.3.6(73f5d055cb9ab9d4f78480cbfeff6742)
+      '@angular/ssr': 20.3.10(73f5d055cb9ab9d4f78480cbfeff6742)
       karma: 6.4.4
       less: 4.3.0
       lmdb: 3.4.2
@@ -4160,7 +4160,7 @@ snapshots:
       rxjs: 7.8.2
       tslib: 2.8.1
 
-  '@angular/ssr@20.3.6(73f5d055cb9ab9d4f78480cbfeff6742)':
+  '@angular/ssr@20.3.10(73f5d055cb9ab9d4f78480cbfeff6742)':
     dependencies:
       '@angular/common': 20.3.5(@angular/core@20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
       '@angular/core': 20.3.5(@angular/compiler@20.3.5)(rxjs@7.8.2)(zone.js@0.15.0)
