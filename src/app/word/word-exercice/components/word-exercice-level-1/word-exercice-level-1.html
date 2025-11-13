@@ -17,28 +17,28 @@
   <input
     type="text"
     class="absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-default"
-    [value]="text()"
+    [value]="inputTextValue()"
     (keydown)="onKeydown($event)"
     (input)="onInput($event)"
     (focus)="hasFocus.set(true)"
     (blur)="hasFocus.set(false)"
     #inputEl
   />
-  @for(letter of letters(); track $index) {
+  @for(letter of wordValidationResult().wordLetters; track $index) {
   <app-word-exercice-caret
-    [active]="hasFocus() && text().length === $index"
+    [active]="hasFocus() && inputTextValue().length === $index"
   ></app-word-exercice-caret>
   <span
-    [class.text-neutral-400]="letter.status === 'UNKNOWN'"
-    [class.text-neutral-950]="letter.status === 'VALID'"
-    [class.text-red-700]="letter.status === 'INVALID'"
+    [class.text-neutral-400]="letter.isValid === undefined"
+    [class.text-neutral-950]="letter.isValid === true"
+    [class.text-red-700]="letter.isValid === false"
     [class.!text-transparent]="letter.value === ' '"
-    [class.bg-red-700]="letter.value === ' ' && letter.status === 'INVALID'"
+    [class.bg-red-700]="letter.value === ' ' && letter.isValid === false"
     >{{ letter.value.replace(" ", "-") }}</span
   >
   @if ($last) {
   <app-word-exercice-caret
-    [active]="hasFocus() && text().length > $index"
+    [active]="hasFocus() && inputTextValue().length > $index"
   ></app-word-exercice-caret>
   } }
 </div>

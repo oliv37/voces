@@ -15,11 +15,11 @@ export interface WordGroup {
 // { wordGroupId: completionTimeInMs }
 export type WordGroupCompletions = Record<string, number>;
 
-export interface WordValidatorResult {
+export interface WordValidationResult {
   isValid: boolean;
   wordLetters: Letter[];
 }
 
 export interface WordValidator {
-  validate(value: string): WordValidatorResult;
+  validate(value: string): WordValidationResult;
 }

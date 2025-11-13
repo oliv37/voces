@@ -7,7 +7,7 @@ import {
   untracked,
 } from '@angular/core';
 import { Text } from '../models/text';
-import { WordValidator, WordValidatorResult } from '../../word/models/word';
+import { WordValidator, WordValidationResult } from '../../word/models/word';
 import { DefaultWordValidator } from '../../word/services/default-word-validator';
 import { TextCompletion } from './text-completion';
 
@@ -88,17 +88,17 @@ export class TextState {
     return words[wordIdx] || '';
   });
 
-  wordValidatorResult = computed<WordValidatorResult>(() => {
+  wordValidationResult = computed<WordValidationResult>(() => {
     const inputTextValue = this.inputTextValue();
     const wordValidator = this.#wordValidator();
 
     return wordValidator.validate(inputTextValue);
   });
 
-  validateInputTextValueEffect = effect(() => {
-    const wordValidatorResult = this.wordValidatorResult();
+  validateWordEffect = effect(() => {
+    const wordValidationResult = this.wordValidationResult();
 
-    if (wordValidatorResult.isValid) {
+    if (wordValidationResult.isValid) {
       untracked(() => this.#next());
     }
   });

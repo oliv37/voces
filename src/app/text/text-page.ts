@@ -34,7 +34,7 @@ export class TextPage {
   inputTextValue = this.#textState.inputTextValue;
   words = this.#textState.words;
   word = this.#textState.word;
-  wordValidatorResult = this.#textState.wordValidatorResult;
+  wordValidationResult = this.#textState.wordValidationResult;
 
   setText = this.#textState.setText;
   setTextPage = this.#textState.setTextPage;

@@ -1,5 +1,5 @@
 import { Letter } from '../models/letter';
-import { WordValidator, WordValidatorResult } from '../models/word';
+import { WordValidator, WordValidationResult } from '../models/word';
 
 const lettersToClean: Record<string, string> = {
   ñ: 'n',
@@ -21,7 +21,7 @@ export class DefaultWordValidator implements WordValidator {
     this.wordCleaned = this.cleanWord();
   }
 
-  validate(value: string): WordValidatorResult {
+  validate(value: string): WordValidationResult {
     const wordLetters: Letter[] = this.computeWordLetters(value);
     const isValid =
       this.word.length > 0 &&
