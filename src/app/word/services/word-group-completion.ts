@@ -23,14 +23,14 @@ export class WordGroupCompletion {
   markAsCompleted(wordGroup: WordGroup): void {
     this.#wordGroupCompletions.update((wordGroupCompletions) => ({
       ...wordGroupCompletions,
-      [wordGroup.id]: now(),
+      [wordGroup.id]: getCurrentTimeInMs(),
     }));
   }
 
   isCompleted(wordGroup: WordGroup): boolean {
     const completionTimestamp: number | undefined =
       this.#wordGroupCompletions()[wordGroup.id];
-    return isRecentCompletionTimestamp(completionTimestamp);
+    return completionTimestamp !== undefined;
   }
 
   #readGroupCompletions(): WordGroupCompletions {
@@ -44,9 +44,9 @@ export class WordGroupCompletion {
       const wordGroupCompletions = JSON.parse(value);
       // TODO : validate schema
       return Object.keys(wordGroupCompletions).reduce((acc, groupId) => {
-        const completionTimestamp = wordGroupCompletions[groupId];
-        if (isRecentCompletionTimestamp(completionTimestamp)) {
-          acc[groupId] = completionTimestamp;
+        const completionTimeInMs = wordGroupCompletions[groupId];
+        if (isRecentCompletionTime(completionTimeInMs)) {
+          acc[groupId] = completionTimeInMs;
         }
         return acc;
       }, {} as WordGroupCompletions);
@@ -60,16 +60,16 @@ export class WordGroupCompletion {
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;
 
-function isRecentCompletionTimestamp(
-  completionTimestamp: number | undefined
+function isRecentCompletionTime(
+  completionTimeInMs: number | undefined
 ): boolean {
-  if (!completionTimestamp) {
+  if (!completionTimeInMs) {
     return false;
   }
-  const distanceInMs = now() - completionTimestamp;
+  const distanceInMs = getCurrentTimeInMs() - completionTimeInMs;
   return distanceInMs <= MAX_DISTANCE_MS;
 }
 
-function now() {
+function getCurrentTimeInMs() {
   return new Date().getTime();
 }

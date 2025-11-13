@@ -1,15 +1,21 @@
-@let _pages = pages();
+@let _pages = pages(); @let _currenPage = currentPage();
 <div class="flex justify-center items-end gap-5">
-  @for(page of _pages; track page) { @if ($last && _pages[$index] -_pages[$index
-  - 1] > 1) {
+  @for(page of _pages; track page) { @let _isHighlighted =
+  highlightedPages().includes(page); @let _isCurrentPage = page === _currenPage;
+  @if ($last && _pages[$index] -_pages[$index - 1] > 1) {
   <div class="px-1">...</div>
   }
   <button
     type="button"
-    class="border-4 rounded-md px-4 py-1"
-    [class.border-gray-400]="page !== currentPage()"
-    [class.border-black]="page === currentPage()"
-    [class.font-bold]="page === currentPage()"
+    class="border-5 rounded-md px-4 py-1 w-16 text-center"
+    [ngClass]="{
+      'font-bold text-white': _isCurrentPage,
+      'bg-blue-700': _isCurrentPage && _isHighlighted,
+      'bg-black': _isCurrentPage && !_isHighlighted,
+      'border-blue-700': _isHighlighted,
+      'border-black': _isCurrentPage && !_isHighlighted, 
+      'border-gray-400': !_isCurrentPage && !_isHighlighted,
+    }"
     (click)="selectPage.emit(page)"
   >
     {{page}}

@@ -12,7 +12,7 @@ export interface WordGroup {
   words: Word[];
 }
 
-// { wordGroupId: completionTimestampInMs }
+// { wordGroupId: completionTimeInMs }
 export type WordGroupCompletions = Record<string, number>;
 
 export interface WordValidatorResult {

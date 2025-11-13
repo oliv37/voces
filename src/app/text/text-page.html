@@ -1,7 +1,8 @@
 @let _text = text(); @let _inputTextValue = inputTextValue(); @let _wordIdx =
 wordIdx(); @let _words = words(); @let _wordLetters =
 wordValidatorResult().wordLetters; @let _hasInputFocus = hasInputFocus(); @let
-_wordLetterIdx = wordLetterIdx(); @let _textContentIdx = textContentIdx();
+_wordLetterIdx = wordLetterIdx(); @let _currentPage = currentPage(); @let
+_completedPages = completedPages();
 
 <div class="min-h-[calc(100lvh-6rem)] flex flex-col gap-12 pt-6">
   <div class="flex-1 relative">
@@ -16,7 +17,7 @@ _wordLetterIdx = wordLetterIdx(); @let _textContentIdx = textContentIdx();
       (blur)="hasInputFocus.set(false)"
     />
     <div
-      class="text-3xl font-mono leading-normal cursor-default whitespace-break-spaces"
+      class="text-4xl font-mono leading-normal cursor-default whitespace-break-spaces"
     >
       @for (word of _words; track $index) { @if ($index === _wordIdx) { @for
       (letter of _wordLetters; track $index) { @let _isInvalidLetter =
@@ -44,8 +45,9 @@ _wordLetterIdx = wordLetterIdx(); @let _textContentIdx = textContentIdx();
 
   <app-pagination-bar
     [totalPage]="_text.contents.length"
-    [currentPage]="_textContentIdx + 1"
-    (selectPage)="setTextContentIdx($event - 1)"
+    [currentPage]="_currentPage"
+    [highlightedPages]="_completedPages"
+    (selectPage)="setTextPage($event)"
   />
 </div>
 

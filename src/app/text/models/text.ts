@@ -5,8 +5,9 @@ export interface Text {
 }
 
 interface TextCompletion {
-  currentPage: number;
-  completedPages: number[];
+  currentPage?: number;
+  completedPages?: number[];
+  lastPageCompletionTimeInMs?: number;
 }
 
 // { textId: TextCompletion }

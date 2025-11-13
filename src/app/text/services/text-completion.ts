@@ -1,12 +1,14 @@
-import { effect, inject, Injectable, signal } from '@angular/core';
+import { effect, inject, Injectable, Signal, signal } from '@angular/core';
 import { Storage } from '@shared/services/storage';
 import type { Text, TextCompletions } from '../models/text';
+import { addIfNotPresent } from '@shared/utils/array';
 
 @Injectable({ providedIn: 'root' })
 export class TextCompletion {
   #storage = inject(Storage);
 
   #textCompletions = signal<TextCompletions>(this.#readTextCompletions());
+  textCompletions: Signal<TextCompletions> = this.#textCompletions.asReadonly();
 
   constructor() {
     effect(() => {
@@ -36,12 +38,11 @@ export class TextCompletion {
       ...textCompletions,
       [text.id]: {
         ...textCompletions[text.id],
-        completedPages: [
-          ...new Set([
-            ...(textCompletions[text.id]?.completedPages || []),
-            page,
-          ]),
-        ],
+        completedPages: addIfNotPresent(
+          textCompletions[text.id]?.completedPages || [],
+          page
+        ),
+        lastCompletionTimeInMs: getCurrentTimeInMs(),
       },
     }));
   }
@@ -55,10 +56,34 @@ export class TextCompletion {
 
     try {
       // TODO : validate schema
-      return JSON.parse(value);
+      const textCompletions = JSON.parse(value) as TextCompletions;
+
+      for (const textCompletion of Object.values(textCompletions)) {
+        if (hasOldLastPageCompletionTime(textCompletion)) {
+          textCompletion.completedPages = [];
+        }
+      }
+
+      return textCompletions;
     } catch (e) {
       console.error('Error reading group completion', e);
       return {};
     }
   }
+}
+
+const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;
+
+function hasOldLastPageCompletionTime(
+  textCompletion: TextCompletions[string]
+): boolean {
+  return (
+    textCompletion?.lastPageCompletionTimeInMs !== undefined &&
+    textCompletion?.lastPageCompletionTimeInMs > MAX_DISTANCE_MS
+  );
+}
+
+function getCurrentTimeInMs() {
+  return new Date().getTime();
 }

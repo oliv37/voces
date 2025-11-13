@@ -6,3 +6,7 @@ export function shuffle<T>(arr: T[]): T[] {
   }
   return res;
 }
+
+export function addIfNotPresent<T>(arr: T[], item: T): T[] {
+  return arr.includes(item) ? arr : [...arr, item];
+}

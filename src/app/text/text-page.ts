@@ -28,16 +28,16 @@ export class TextPage {
 
   inputEl = viewChild<ElementRef<HTMLInputElement>>('inputEl');
 
-  textContentIdx = this.#textState.textContentIdx;
+  currentPage = this.#textState.currentPage;
+  completedPages = this.#textState.completedPages;
   wordIdx = this.#textState.wordIdx;
   inputTextValue = this.#textState.inputTextValue;
-  textContent = this.#textState.textContent;
   words = this.#textState.words;
   word = this.#textState.word;
   wordValidatorResult = this.#textState.wordValidatorResult;
 
   setText = this.#textState.setText;
-  setTextContentIdx = this.#textState.setTextContentIdx;
+  setTextPage = this.#textState.setTextPage;
   setInputTextValue = this.#textState.setInputTextValue;
 
   wordLetterIdx = computed<number>(() => {
@@ -62,10 +62,10 @@ export class TextPage {
   });
 
   focusInputEffect = effect(() => {
-    const textContent = this.textContent();
+    const words = this.words();
     const inputEl = this.inputEl();
 
-    if (textContent && inputEl) {
+    if (words && inputEl) {
       inputEl.nativeElement.focus();
     }
   });

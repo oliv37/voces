@@ -36,18 +36,43 @@ export class TextState {
   #state = signal<State>(EMPTY_STATE);
 
   #text = computed<Text>(() => this.#state().text);
-  inputTextValue = computed<string>(() => this.#state().inputTextValue);
-  textContentIdx = computed<number>(() => this.#state().textContentIdx);
-  wordIdx = computed<number>(() => this.#state().wordIdx);
+  #textContentIdx = computed<number>(() => this.#state().textContentIdx);
 
-  textContent = computed<string>(() => {
+  #textContent = computed<string>(() => {
     const { text, textContentIdx } = this.#state();
 
     return text.contents[textContentIdx] || '';
   });
 
+  #wordValidator = computed<WordValidator>(() => {
+    const word = this.word();
+
+    return new DefaultWordValidator(word);
+  });
+
+  #isLastWord = computed<boolean>(() => {
+    const words = this.words();
+    const wordIdx = this.wordIdx();
+
+    return wordIdx >= words.length - 1;
+  });
+
+  inputTextValue = computed<string>(() => this.#state().inputTextValue);
+  wordIdx = computed<number>(() => this.#state().wordIdx);
+
+  currentPage = computed<number>(() => {
+    return this.#textContentIdx() + 1;
+  });
+
+  completedPages = computed<number[]>(() => {
+    const text = this.#text();
+    const textCompletions = this.#textCompletion.textCompletions();
+
+    return textCompletions[text.id]?.completedPages || [];
+  });
+
   words = computed<string[]>(() => {
-    const textContent = this.textContent();
+    const textContent = this.#textContent();
     const words = textContent.split(' ');
 
     return words.flatMap((word, idx) => {
@@ -63,30 +88,11 @@ export class TextState {
     return words[wordIdx] || '';
   });
 
-  #wordValidator = computed<WordValidator>(() => {
-    const word = this.word();
-
-    return new DefaultWordValidator(word);
-  });
-
   wordValidatorResult = computed<WordValidatorResult>(() => {
     const inputTextValue = this.inputTextValue();
     const wordValidator = this.#wordValidator();
 
     return wordValidator.validate(inputTextValue);
-  });
-
-  #isLastWord = computed<boolean>(() => {
-    const words = this.words();
-    const wordIdx = this.wordIdx();
-
-    return wordIdx >= words.length - 1;
-  });
-
-  #currentPage = computed<number>(() => {
-    const textContentIdx = this.textContentIdx();
-
-    return textContentIdx + 1;
   });
 
   validateInputTextValueEffect = effect(() => {
@@ -99,7 +105,7 @@ export class TextState {
 
   changeCurrentPageEffect = effect(() => {
     const text = this.#text();
-    const currentPage = this.#currentPage();
+    const currentPage = this.currentPage();
 
     untracked(() => this.#textCompletion.saveCurrentPage(text, currentPage));
   });
@@ -113,6 +119,15 @@ export class TextState {
       wordIdx: 0,
       inputTextValue: '',
     });
+  };
+
+  setTextPage = (page: number) => {
+    this.#state.update((prevState) => ({
+      ...prevState,
+      textContentIdx: page - 1,
+      wordIdx: 0,
+      inputTextValue: '',
+    }));
   };
 
   setTextContentIdx = (textContentIdx: number) => {
@@ -134,7 +149,7 @@ export class TextState {
   #next() {
     if (this.#isLastWord()) {
       const text = this.#text();
-      const currentPage = this.#currentPage();
+      const currentPage = this.currentPage();
 
       this.#textCompletion.saveCompletedPage(text, currentPage);
       this.#nextTextContent();
