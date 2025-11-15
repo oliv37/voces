@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-6">
+  @if (title()) {
+  <div class="uppercase tracking-widest text-lg">{{ title() }}</div>
+  } @for (text of textsWithDescription(); track text.id) {
+  <app-box-link
+    [title]="text.title"
+    [description]="text.description"
+    [link]="['/text', text.id]"
+  ></app-box-link>
+  }
+</div>

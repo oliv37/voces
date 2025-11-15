@@ -1,8 +1,4 @@
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot,
-  UrlSegment,
-} from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb';
 import { NotFoundPage } from '../../not-found/not-found-page';
 
@@ -34,23 +30,22 @@ function buildBreadcrumbRecursively(
   }
 
   const previousUrl: string = getLastUrl(breadcrumb);
-  const currentUrl: UrlSegment[] = route.url;
-  const breadcrumbItem = createBreadcrumItem(previousUrl, currentUrl);
+  const label = route.url
+    .join(' ')
+    .replace('text ', '')
+    .replaceAll('-', ' ')
+    .replaceAll('_', ' ')
+    .trim();
+
+  const breadcrumbItem: BreadcrumbItem = {
+    label,
+    url: [previousUrl, ...route.url].join('/'),
+  };
 
   return buildBreadcrumbRecursively(route.firstChild, [
     ...breadcrumb,
     breadcrumbItem,
   ]);
-}
-
-function createBreadcrumItem(
-  previousUrl: string,
-  currentUrl: UrlSegment[]
-): BreadcrumbItem {
-  const label = currentUrl.join(' ');
-  const url = [previousUrl, ...currentUrl].join('/');
-
-  return { label, url };
 }
 
 function getLastUrl(breadcrumb: Breadcrumb): string {

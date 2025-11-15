@@ -1,0 +1,11 @@
+<app-meta
+  robots="index, nofollow"
+  [description]="metaDescription()"
+  [og]="metaOg()"
+/>
+
+<div class="pt-2 flex flex-col gap-12">
+  @for (wordGroup of wordGroupsToShow(); track $index) {
+  <app-exercice-link [wordGroup]="wordGroup" />
+  }
+</div>
