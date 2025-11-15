@@ -15,11 +15,11 @@ export class TextLinks {
   textsWithDescription = computed<({ description: string } & Text)[]>(() =>
     this.texts().map((text) => ({
       ...text,
-      description: this.buildDescription(text),
+      description: this.#buildDescription(text),
     }))
   );
 
-  private buildDescription(text: Text): string {
+  #buildDescription(text: Text): string {
     const firstContentWords = text.contents[0].split(' ');
     const nbDescriptionWords = Math.min(
       this.nbDescriptionWords(),

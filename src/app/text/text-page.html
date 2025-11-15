@@ -1,8 +1,14 @@
-@let _text = text(); @let _inputTextValue = inputTextValue(); @let _wordIdx =
-wordIdx(); @let _words = words(); @let _wordLetters =
-wordValidationResult().wordLetters; @let _hasInputFocus = hasInputFocus(); @let
-_wordLetterIdx = wordLetterIdx(); @let _currentPage = currentPage(); @let
-_completedPages = completedPages();
+@let _metaDescription = metaDescription(); @let _metaOg = metaOg(); @let _text =
+text(); @let _inputTextValue = inputTextValue(); @let _wordIdx = wordIdx(); @let
+_words = words(); @let _wordLetters = wordValidationResult().wordLetters; @let
+_hasInputFocus = hasInputFocus(); @let _wordLetterIdx = wordLetterIdx(); @let
+_currentPage = currentPage(); @let _completedPages = completedPages();
+
+<app-meta
+  robots="index, nofollow"
+  [description]="_metaDescription"
+  [og]="_metaOg"
+/>
 
 <div class="min-h-[calc(100lvh-6rem)] flex flex-col gap-12 pt-6">
   <div class="flex-1 relative">

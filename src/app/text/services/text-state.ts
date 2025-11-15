@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { Text } from '../models/text';
 import { WordValidator, WordValidationResult } from '../../word/models/word';
-import { DefaultWordValidator } from '../../word/services/default-word-validator';
+import { CleanWordValidator } from '../../word/services/clean-word-validator';
 import { TextCompletion } from './text-completion';
 
 interface State {
@@ -47,7 +47,7 @@ export class TextState {
   #wordValidator = computed<WordValidator>(() => {
     const word = this.word();
 
-    return new DefaultWordValidator(word);
+    return new CleanWordValidator(word);
   });
 
   #isLastWord = computed<boolean>(() => {
@@ -73,7 +73,7 @@ export class TextState {
 
   words = computed<string[]>(() => {
     const textContent = this.#textContent();
-    const words = textContent.split(' ');
+    const words = textContent.split(' ').filter((word) => !!word);
 
     return words.flatMap((word, idx) => {
       const isLastWord = idx === words.length - 1;

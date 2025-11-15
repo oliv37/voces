@@ -11,7 +11,7 @@ import { ArrowClockwiseIcon } from '@shared/components/icon/arrow-clockwise-icon
   imports: [Breadcrumb, ArrowClockwiseIcon],
 })
 export class Header {
-  hasNewVersionAvailable = toSignal(
+  hasNewVersionAvailable = toSignal<boolean, false>(
     inject(SwUpdate).versionUpdates.pipe(
       filter((evt) => evt.type === 'VERSION_READY'),
       map(() => true)

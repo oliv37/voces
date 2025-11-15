@@ -33,25 +33,25 @@ import { WordExerciceProgressBar } from './components/word-exercice-progress-bar
   templateUrl: './word-exercice-page.html',
 })
 export class WordExercicePage implements OnDestroy {
-  private _wordExerciceState = inject(WordExerciceState);
-  private _wordGroupCompletion = inject(WordGroupCompletion);
+  #wordExerciceState = inject(WordExerciceState);
+  #wordGroupCompletion = inject(WordGroupCompletion);
 
   exerciceLevelCmp = viewChild<AbstractWordExerciceLevel>('exerciceLevelCmp');
 
-  wordGroups = input.required<WordGroup[]>();
   wordGroup = input.required<WordGroup>();
+  wordGroups = input.required<WordGroup[]>();
 
-  level = this._wordExerciceState.level;
-  wordIdx = this._wordExerciceState.wordIdx;
-  word = this._wordExerciceState.word;
-  nbWords = this._wordExerciceState.nbWords;
-  progressPercent = this._wordExerciceState.progressPercent;
-  isCompleted = this._wordExerciceState.isCompleted;
-  hasUsedHelp = this._wordExerciceState.hasUsedHelp;
+  level = this.#wordExerciceState.level;
+  wordIdx = this.#wordExerciceState.wordIdx;
+  word = this.#wordExerciceState.word;
+  nbWords = this.#wordExerciceState.nbWords;
+  progressPercent = this.#wordExerciceState.progressPercent;
+  isCompleted = this.#wordExerciceState.isCompleted;
+  hasUsedHelp = this.#wordExerciceState.hasUsedHelp;
 
   isWordGroupCompleted = computed(() => {
     const wordGroup = this.wordGroup();
-    return this._wordGroupCompletion.isCompleted(wordGroup);
+    return this.#wordGroupCompletion.isCompleted(wordGroup);
   });
 
   prevWordGroupId = computed<number>(() => {
@@ -89,44 +89,44 @@ export class WordExercicePage implements OnDestroy {
     };
   });
 
-  _focusEffect = effect(() => {
-    this._wordExerciceState.state();
+  focusEffect = effect(() => {
+    this.#wordExerciceState.state();
 
     untracked(() => {
       this.exerciceLevelCmp()?.focus();
     });
   });
 
-  _groupEffect = effect(() => {
-    const group = this.wordGroup();
+  wordGroupEffect = effect(() => {
+    const wordGroup = this.wordGroup();
 
-    this._wordExerciceState.group.set(group);
-    this.scrollToTop();
+    this.#wordExerciceState.group.set(wordGroup);
+    this.#scrollToTop();
   });
 
   ngOnDestroy() {
-    this._wordExerciceState.group.set(undefined);
+    this.#wordExerciceState.group.set(undefined);
   }
 
   resetLevel() {
-    this._wordExerciceState.resetLevel();
+    this.#wordExerciceState.resetLevel();
   }
 
   nextWord() {
-    this._wordExerciceState.nextWord();
+    this.#wordExerciceState.nextWord();
   }
 
   setLevel(level: Level) {
-    this._wordExerciceState.setLevel(level);
+    this.#wordExerciceState.setLevel(level);
   }
 
   help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();
-    this._wordExerciceState.setHasUsedHelp(true);
+    this.#wordExerciceState.setHasUsedHelp(true);
   }
 
-  private scrollToTop() {
+  #scrollToTop() {
     if (typeof window !== 'undefined') {
       window.scrollTo(0, 0);
     }

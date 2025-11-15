@@ -10,7 +10,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { WordValidator, WordValidationResult } from '../../models/word';
-import { DefaultWordValidator } from '../../services/default-word-validator';
+import { CleanWordValidator } from '../../services/clean-word-validator';
 
 @Directive()
 export abstract class AbstractWordExerciceLevel {
@@ -23,7 +23,7 @@ export abstract class AbstractWordExerciceLevel {
   #wordValidator = computed<WordValidator>(() => {
     const word = this.word();
 
-    return new DefaultWordValidator(word);
+    return new CleanWordValidator(word);
   });
 
   wordValidationResult = computed<WordValidationResult>(() => {

@@ -12,10 +12,12 @@ import { Text } from './models/text';
 import { TextLinks } from './components/text-links/text-links';
 import { TextState } from './services/text-state';
 import { PaginationBar } from '@shared/components/pagination-bar/pagination-bar';
+import { Meta } from '@shared/directives/meta';
+import { OpenGraph } from '@shared/models/open-graph';
 
 @Component({
   templateUrl: './text-page.html',
-  imports: [TextLinks, PaginationBar],
+  imports: [TextLinks, PaginationBar, Meta],
   providers: [TextState],
 })
 export class TextPage {
@@ -46,6 +48,15 @@ export class TextPage {
 
     return Math.min(inputTextValue.length, word.length - 1);
   });
+
+  metaDescription = computed<string>(
+    () => `Recopiez le texte en Espagnol "${this.text().title}".`
+  );
+
+  metaOg = computed<OpenGraph>(() => ({
+    title: `Voces - ${this.text().title}`,
+    description: `Voces | Texte en Espagnol "${this.text().title}"`,
+  }));
 
   updateTextEffect = effect(() => {
     const text = this.text();

@@ -25,18 +25,16 @@ let nbWordGroupsLoaded = 0;
   },
 })
 export class WordPage {
-  private scrollInfo = inject(ScrollInfo);
+  #scrollInfo = inject(ScrollInfo);
 
   wordGroups = input.required<WordGroup[]>();
 
-  private wordGroupsReversed = computed(() =>
-    this.wordGroups().slice().reverse()
-  );
+  #wordGroupsReversed = computed(() => this.wordGroups().slice().reverse());
 
   nbWords = computed(() => this.wordGroups().flatMap((g) => g.words).length);
 
   wordGroupsToShow = linkedSignal<WordGroup[]>(() =>
-    this.wordGroupsReversed().slice(
+    this.#wordGroupsReversed().slice(
       0,
       Math.max(nbWordGroupsLoaded, NB_WORD_GROUPS_TO_LOAD)
     )
@@ -59,13 +57,13 @@ export class WordPage {
 
   onScroll() {
     const wordGroupsToShow = this.wordGroupsToShow();
-    const { isScrollingDown, isNearBottom } = this.scrollInfo.compute();
-    const hasNext = wordGroupsToShow.length < this.wordGroupsReversed().length;
+    const { isScrollingDown, isNearBottom } = this.#scrollInfo.compute();
+    const hasNext = wordGroupsToShow.length < this.#wordGroupsReversed().length;
 
     const shouldLoadMoreNextGroups = hasNext && isScrollingDown && isNearBottom;
 
     if (shouldLoadMoreNextGroups) {
-      const nextWordGroups = this.wordGroupsReversed().slice(
+      const nextWordGroups = this.#wordGroupsReversed().slice(
         0,
         wordGroupsToShow.length + NB_WORD_GROUPS_TO_LOAD
       );

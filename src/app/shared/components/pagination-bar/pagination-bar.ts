@@ -17,17 +17,36 @@ export class PaginationBar {
     const totalPage = this.totalPage();
     const currentPage = this.currentPage();
 
-    const size = 5;
-    const startPage = Math.max(
-      1,
-      Math.min(currentPage - Math.floor(size / 2), totalPage - (size - 1))
+    const rangeSize = 5;
+    const rangePage = computeRangePage(currentPage, totalPage, rangeSize);
+    const startPage = rangePage.startPage;
+    const endPage = rangePage.endPage;
+    const pages = Array.from(
+      { length: endPage - startPage + 1 },
+      (_, i) => startPage + i
     );
-    const endPage = Math.min(totalPage, startPage + (size - 1));
 
     return [
-      startPage > 1 ? [1] : [],
-      [...Array(endPage + 1 - startPage).keys()].map((i) => startPage + i),
-      endPage < totalPage ? [totalPage] : [],
-    ].flat();
+      ...(startPage > 1 ? [1] : []),
+      ...pages,
+      ...(endPage < totalPage ? [totalPage] : []),
+    ];
   });
+}
+
+function computeRangePage(
+  currentPage: number,
+  totalPage: number,
+  rangeSize: number
+): { startPage: number; endPage: number } {
+  const startPage = Math.max(
+    1,
+    Math.min(
+      currentPage - Math.floor(rangeSize / 2),
+      totalPage - (rangeSize - 1)
+    )
+  );
+  const endPage = Math.min(totalPage, startPage + (rangeSize - 1));
+
+  return { startPage, endPage };
 }

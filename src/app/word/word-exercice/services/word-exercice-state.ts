@@ -12,11 +12,11 @@ import { shuffle } from '@shared/utils/array';
 
 @Injectable({ providedIn: 'root' })
 export class WordExerciceState {
-  private _wordGroupCompletion = inject(WordGroupCompletion);
+  #wordGroupCompletion = inject(WordGroupCompletion);
 
   group = signal<WordGroup | undefined>(undefined);
 
-  private _state = linkedSignal<State>(() => {
+  #state = linkedSignal<State>(() => {
     const words: Word[] = this.group()?.words || [];
     return {
       words: shuffle(words),
@@ -27,7 +27,7 @@ export class WordExerciceState {
     };
   });
 
-  state = this._state.asReadonly();
+  state = this.#state.asReadonly();
   word = computed<Word | undefined>(
     () => this.state().words[this.state().wordIdx]
   );
@@ -48,7 +48,7 @@ export class WordExerciceState {
   );
 
   resetLevel({ isCompleted = false } = {}) {
-    this._state.update(({ level }) => ({
+    this.#state.update(({ level }) => ({
       words: shuffle(this.group()?.words || []),
       wordIdx: 0,
       level,
@@ -70,7 +70,7 @@ export class WordExerciceState {
     }
 
     if (isLastWord && isFinalLevel && hasNotUsedHelp) {
-      this._wordGroupCompletion.markAsCompleted(group);
+      this.#wordGroupCompletion.markAsCompleted(group);
       this.resetLevel({ isCompleted: true });
       return;
     }
@@ -80,14 +80,14 @@ export class WordExerciceState {
       return;
     }
 
-    this._state.update((prevState) => ({
+    this.#state.update((prevState) => ({
       ...prevState,
       wordIdx: prevState.wordIdx + 1,
     }));
   }
 
   previousLevel() {
-    this._state.update(({ words, level, isCompleted }) => ({
+    this.#state.update(({ words, level, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level: level === 1 ? FINAL_LEVEL : ((level - 1) as Level),
@@ -97,7 +97,7 @@ export class WordExerciceState {
   }
 
   nextLevel() {
-    this._state.update(({ words, level, isCompleted }) => ({
+    this.#state.update(({ words, level, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level: level === FINAL_LEVEL ? 1 : ((level + 1) as Level),
@@ -107,7 +107,7 @@ export class WordExerciceState {
   }
 
   setLevel(level: Level) {
-    this._state.update(({ words, isCompleted }) => ({
+    this.#state.update(({ words, isCompleted }) => ({
       words: shuffle(words),
       wordIdx: 0,
       level,
@@ -117,7 +117,7 @@ export class WordExerciceState {
   }
 
   setHasUsedHelp(hasUsedHelp: boolean) {
-    this._state.update((state) => ({
+    this.#state.update((state) => ({
       ...state,
       hasUsedHelp,
     }));
