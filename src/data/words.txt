@@ -1070,3 +1070,4 @@ vendar : bander
 arrimar : approcher, rapprocher
 lomo : dos
 recobrar : récupérer, retrouver
+pantano : marécage
