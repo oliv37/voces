@@ -61,7 +61,12 @@ const lettersToClean: Record<string, string> = {
   ú: 'u',
   á: 'a',
   é: 'e',
+  ë: 'e',
+  è: 'e',
   í: 'i',
   '¿': '?',
   '¡': '!',
+  '“': '"',
+  '”': '"',
+  '–': '-',
 };

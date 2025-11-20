@@ -1,9 +1,10 @@
 import { Text } from '../models/text';
 
 export const TEXT_IDS = [
-  'la_tortuga_gigante',
-  'robo_al_museo_del_louvre',
-  'elecciones_legislativas_argentina',
+  'alto_fuego_israel_gaza',
+  'lluvias_bolivia_damnificados',
+  'francia_sanciones_crimen_organizado',
+  'juguetes_ia_riesgos_ninos',
 ];
 
 export const TEXTS_PROMISE: Record<string, Promise<Text>> = TEXT_IDS.reduce(

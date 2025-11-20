@@ -1071,3 +1071,22 @@ arrimar : approcher, rapprocher
 lomo : dos
 recobrar : récupérer, retrouver
 pantano : marécage
+abarcar : inclure, contenir
+equiparar : assimiler
+enfoque : point de vue, perspective
+remarcar : souligner
+escudo : bouclier, protection
+franja etaria : tranche d'âge
+armamento : armement
+rehen : otage
+esbozar : esquisser
+agujero : trou
+pabellon : pavillon
+cumbre : sommet
+hoja de ruta : feuille de route
+recinto : enceinte (lieu)
+cortocircuito : court-circuit
+alcance : portée, importance
+irrumpir : faire irruption
+revertir : revenir à
+cumplir : atteindre, mener à bien
