@@ -1090,3 +1090,7 @@ alcance : portée, importance
 irrumpir : faire irruption
 revertir : revenir à
 cumplir : atteindre, mener à bien
+aéreo : aérien
+despeje : dégagement
+labor : travail, tâche
+bélico : de guerre, armé 
