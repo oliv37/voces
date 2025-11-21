@@ -6,9 +6,9 @@ import {
   signal,
   untracked,
 } from '@angular/core';
-import { Text } from '../models/text';
-import { WordValidator, WordValidationResult } from '../../word/models/word';
-import { CleanWordValidator } from '../../word/services/clean-word-validator';
+import { Text } from './text';
+import { WordValidator, WordValidationResult } from '../word/models/word';
+import { CleanWordValidator } from '../word/services/clean-word-validator';
 import { TextCompletion } from './text-completion';
 
 interface State {
@@ -69,6 +69,16 @@ export class TextState {
     const textCompletions = this.#textCompletion.textCompletions();
 
     return textCompletions[text.id]?.completedPages || [];
+  });
+
+  isCompleted = computed<boolean>(() => {
+    const text = this.#text();
+    const completedPages = this.completedPages();
+
+    return (
+      text.contents.length > 0 &&
+      text.contents.every((_, idx) => completedPages.includes(idx + 1))
+    );
   });
 
   words = computed<string[]>(() => {

@@ -1,4 +1,4 @@
-import { Text } from '../models/text';
+import { Text } from './text';
 
 export const TEXT_IDS = [
   'alto_fuego_israel_gaza',
@@ -9,7 +9,7 @@ export const TEXT_IDS = [
 
 export const TEXTS_PROMISE: Record<string, Promise<Text>> = TEXT_IDS.reduce(
   (acc, id) => {
-    acc[id] = import(`../../../data/texts/${id}.txt`).then((m) =>
+    acc[id] = import(`../../data/texts/${id}.txt`).then((m) =>
       buildText(id, m.default)
     );
     return acc;

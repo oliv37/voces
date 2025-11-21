@@ -8,9 +8,9 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { Text } from './models/text';
-import { TextLinks } from './components/text-links/text-links';
-import { TextState } from './services/text-state';
+import { Text } from '../text';
+import { TextLinks } from '../text-links/text-links';
+import { TextState } from '../text-state';
 import { PaginationBar } from '@shared/components/pagination-bar/pagination-bar';
 import { Meta } from '@shared/directives/meta';
 import { OpenGraph } from '@shared/models/open-graph';
@@ -32,6 +32,7 @@ export class TextPage {
 
   currentPage = this.#textState.currentPage;
   completedPages = this.#textState.completedPages;
+  isCompleted = this.#textState.isCompleted;
   wordIdx = this.#textState.wordIdx;
   inputTextValue = this.#textState.inputTextValue;
   words = this.#textState.words;

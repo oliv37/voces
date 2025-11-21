@@ -2,13 +2,20 @@
 text(); @let _inputTextValue = inputTextValue(); @let _wordIdx = wordIdx(); @let
 _words = words(); @let _wordLetters = wordValidationResult().wordLetters; @let
 _hasInputFocus = hasInputFocus(); @let _wordLetterIdx = wordLetterIdx(); @let
-_currentPage = currentPage(); @let _completedPages = completedPages();
+_currentPage = currentPage(); @let _completedPages = completedPages(); @let
+_isCompleted = isCompleted();
 
 <app-meta
   robots="index, nofollow"
   [description]="_metaDescription"
   [og]="_metaOg"
 />
+
+<div
+  class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
+  [class.bg-white]="!_isCompleted"
+  [class.bg-blue-600]="_isCompleted"
+></div>
 
 <div class="min-h-[calc(100lvh-6rem)] flex flex-col gap-12 pt-6">
   <div class="flex-1 relative">

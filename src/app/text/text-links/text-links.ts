@@ -1,5 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-import { Text } from '../../models/text';
+import { Text } from '../text';
 import { BoxLink } from '@shared/components/box-link/box-link';
 
 @Component({

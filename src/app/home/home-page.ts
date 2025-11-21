@@ -1,9 +1,9 @@
 import { Component, input } from '@angular/core';
 import type { OpenGraph } from '@shared/models/open-graph';
 import { Meta } from '@shared/directives/meta';
-import { Text } from '../text/models/text';
+import { Text } from '../text/text';
 import { BoxLink } from '@shared/components/box-link/box-link';
-import { TextLinks } from '../text/components/text-links/text-links';
+import { TextLinks } from '../text/text-links/text-links';
 
 @Component({
   imports: [Meta, BoxLink, TextLinks],

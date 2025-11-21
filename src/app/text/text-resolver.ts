@@ -1,6 +1,6 @@
 import { ResolveFn } from '@angular/router';
-import { Text } from '../../text/models/text';
-import { TEXTS_PROMISE } from '../datas/text-data';
+import { Text } from './text';
+import { TEXTS_PROMISE } from './text-data';
 
 export const textsResolver: ResolveFn<Text[]> = async () => {
   return Promise.all(Object.values(TEXTS_PROMISE));

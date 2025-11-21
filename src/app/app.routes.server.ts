@@ -1,6 +1,6 @@
 import { PrerenderFallback, RenderMode, ServerRoute } from '@angular/ssr';
 import { WORD_GROUPS_PROMISE } from './word/datas/word-data';
-import { TEXT_IDS } from './text/datas/text-data';
+import { TEXT_IDS } from './text/text-data';
 
 export const serverRoutes: ServerRoute[] = [
   {

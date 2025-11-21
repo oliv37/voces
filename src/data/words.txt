@@ -1093,4 +1093,13 @@ cumplir : atteindre, mener à bien
 aéreo : aérien
 despeje : dégagement
 labor : travail, tâche
-bélico : de guerre, armé 
+bélico : de guerre, armé
+danado : endommagé, abîmé
+auxilio : aide
+tramo : portion, tronçon
+desborde : débordement
+mientras tanto : pendant ce temps
+riada : crue
+citricos : agrumes
+flagelo : fléau
+ vocero : porte-parole

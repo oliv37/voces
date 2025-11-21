@@ -1,6 +1,6 @@
 import { effect, inject, Injectable, Signal, signal } from '@angular/core';
 import { Storage } from '@shared/services/storage';
-import type { Text, TextCompletions } from '../models/text';
+import type { Text, TextCompletions } from './text';
 import { addIfNotPresent } from '@shared/utils/array';
 
 @Injectable({ providedIn: 'root' })

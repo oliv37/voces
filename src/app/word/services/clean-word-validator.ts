@@ -69,4 +69,5 @@ const lettersToClean: Record<string, string> = {
   '“': '"',
   '”': '"',
   '–': '-',
+  '—': '-',
 };

@@ -8,13 +8,13 @@ import { canMatchWordExercice } from './word/word-exercice/guards/word-exercice-
 import { NotFoundPage } from './not-found/not-found-page';
 import { WordPage } from './word/word-page';
 import { nbWordsResolver } from './word/resolvers/words-resolver';
-import { TextPage } from './text/text-page';
+import { TextPage } from './text/text-page/text-page';
 import {
   otherTextsResolver,
   textResolver,
   textsResolver,
-} from './text/resolvers/text-resolver';
-import { canMatchText } from './text/guards/text-guard';
+} from './text/text-resolver';
+import { canMatchText } from './text/text-guard';
 
 export const routes: Routes = [
   {
