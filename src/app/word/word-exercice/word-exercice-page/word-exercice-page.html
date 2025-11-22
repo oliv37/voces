@@ -6,11 +6,7 @@
 
 <app-client-side>
   @if(word(); as word) {
-  <div
-    class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
-    [class.bg-white]="!isCompleted()"
-    [class.bg-blue-600]="isCompleted()"
-  ></div>
+  <app-top-bar [isHighlighted]="isCompleted()" />
 
   <div
     class="flex flex-col items-center justify-around gap-8 min-h-[calc(100lvh-6rem)] cursor-default"

@@ -11,13 +11,14 @@ import {
 import { Text } from '../text.model';
 import { TextLinks } from '../text-links/text-links';
 import { TextState } from '../text-state';
-import { PaginationBar } from '@shared/pagination/pagination-bar/pagination-bar';
+import { PaginationBar } from '@shared/bar/pagination-bar/pagination-bar';
 import { Meta } from '@shared/seo/meta';
 import { OpenGraph } from '@shared/seo/open-graph.model';
+import { TopBar } from '@shared/bar/top-bar/top-bar';
 
 @Component({
   templateUrl: './text-page.html',
-  imports: [TextLinks, PaginationBar, Meta],
+  imports: [TextLinks, PaginationBar, Meta, TopBar],
   providers: [TextState],
 })
 export class TextPage {

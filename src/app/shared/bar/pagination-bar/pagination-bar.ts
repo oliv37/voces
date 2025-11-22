@@ -1,10 +1,8 @@
-import { NgClass } from '@angular/common';
 import { Component, computed, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-pagination-bar',
   templateUrl: './pagination-bar.html',
-  imports: [NgClass],
 })
 export class PaginationBar {
   totalPage = input.required<number>();

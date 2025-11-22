@@ -20,6 +20,7 @@ import { WordExerciceLevel2 } from '../word-exercice-level-2/word-exercice-level
 import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
 import { WordExerciceButtonBar } from '../word-exercice-button-bar/word-exercice-button-bar';
 import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exercice-progress-bar';
+import { TopBar } from '@shared/bar/top-bar/top-bar';
 
 @Component({
   imports: [
@@ -29,6 +30,7 @@ import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exer
     WordExerciceLevel2,
     WordExerciceButtonBar,
     WordExerciceProgressBar,
+    TopBar,
   ],
   templateUrl: './word-exercice-page.html',
 })

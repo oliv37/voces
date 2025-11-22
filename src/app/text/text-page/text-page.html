@@ -1,21 +1,10 @@
-@let _metaDescription = metaDescription(); @let _metaOg = metaOg(); @let _text =
-text(); @let _inputTextValue = inputTextValue(); @let _wordIdx = wordIdx(); @let
-_words = words(); @let _wordLetters = wordValidationResult().wordLetters; @let
-_hasInputFocus = hasInputFocus(); @let _wordLetterIdx = wordLetterIdx(); @let
-_currentPage = currentPage(); @let _completedPages = completedPages(); @let
-_isCompleted = isCompleted();
-
 <app-meta
   robots="index, nofollow"
-  [description]="_metaDescription"
-  [og]="_metaOg"
+  [description]="metaDescription()"
+  [og]="metaOg()"
 />
 
-<div
-  class="fixed top-0 left-0 h-1 w-full transition-all duration-700"
-  [class.bg-white]="!_isCompleted"
-  [class.bg-blue-600]="_isCompleted"
-></div>
+<app-top-bar [isHighlighted]="isCompleted()" />
 
 <div class="min-h-[calc(100lvh-6rem)] flex flex-col gap-12 pt-6">
   <div class="flex-1 relative">
@@ -23,7 +12,7 @@ _isCompleted = isCompleted();
       #inputEl
       type="text"
       class="absolute top-0 left-0 bottom-0 right-0 opacity-0 z-10 cursor-default"
-      [value]="_inputTextValue"
+      [value]="inputTextValue()"
       (keydown)="onKeydown($event)"
       (input)="onInput($event)"
       (focus)="hasInputFocus.set(true)"
@@ -32,10 +21,12 @@ _isCompleted = isCompleted();
     <div
       class="text-4xl font-mono leading-normal cursor-default whitespace-break-spaces"
     >
-      @for (word of _words; track $index) { @if ($index === _wordIdx) { @for
-      (letter of _wordLetters; track $index) { @let _isInvalidLetter =
-      letter.isValid === false; @let _isCurrentLetter = $index ===
-      _wordLetterIdx;
+      @let _wordIdx = wordIdx(); @let _wordLetters =
+      wordValidationResult().wordLetters; @let _wordLetterIdx = wordLetterIdx();
+      @let _hasInputFocus = hasInputFocus(); @for (word of words(); track
+      $index) { @if ($index === _wordIdx) { @for (letter of _wordLetters; track
+      $index) { @let _isInvalidLetter = letter.isValid === false; @let
+      _isCurrentLetter = $index === _wordLetterIdx;
       <span
         class="border-b-4"
         [class.text-neutral-500]="letter.isValid === undefined"
@@ -57,9 +48,9 @@ _isCompleted = isCompleted();
   </div>
 
   <app-pagination-bar
-    [totalPage]="_text.contents.length"
-    [currentPage]="_currentPage"
-    [highlightedPages]="_completedPages"
+    [totalPage]="text().contents.length"
+    [currentPage]="currentPage()"
+    [highlightedPages]="completedPages()"
     (selectPage)="setTextPage($event)"
   />
 </div>
