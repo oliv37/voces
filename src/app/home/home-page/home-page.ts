@@ -1,8 +1,8 @@
 import { Component, input } from '@angular/core';
-import type { OpenGraph } from '@shared/models/open-graph';
-import { Meta } from '@shared/directives/meta';
-import { Text } from '@text/text';
-import { BoxLink } from '@shared/components/box-link/box-link';
+import type { OpenGraph } from '@shared/seo/open-graph.model';
+import { Meta } from '@shared/seo/meta';
+import { Text } from '@text/text.model';
+import { BoxLink } from '@shared/link/box-link/box-link';
 import { TextLinks } from '@text/text-links/text-links';
 
 @Component({

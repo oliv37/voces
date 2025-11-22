@@ -1,11 +1,11 @@
 import { Component, input, output } from '@angular/core';
-import { type Level, LEVELS } from '../word-exercice';
+import { type Level, LEVELS } from '../word-exercice.model';
 import { RouterLink } from '@angular/router';
-import { PatchQuestionIcon } from '@shared/components/icon/patch-question-icon/patch-question-icon';
-import { ArrowClockwiseIcon } from '@shared/components/icon/arrow-clockwise-icon/arrow-clockwise-icon';
-import { StarFillIcon } from '@shared/components/icon/star-fill-icon/star-fill-icon';
-import { ArrowUpShortIcon } from '@shared/components/icon/arrow-up-short-icon/arrow-up-short-icon';
-import { ArrowDownShortIcon } from '@shared/components/icon/arrow-down-short-icon/arrow-down-short-icon';
+import { PatchQuestionIcon } from '@shared/icon/patch-question-icon/patch-question-icon';
+import { ArrowClockwiseIcon } from '@shared/icon/arrow-clockwise-icon/arrow-clockwise-icon';
+import { StarFillIcon } from '@shared/icon/star-fill-icon/star-fill-icon';
+import { ArrowUpShortIcon } from '@shared/icon/arrow-up-short-icon/arrow-up-short-icon';
+import { ArrowDownShortIcon } from '@shared/icon/arrow-down-short-icon/arrow-down-short-icon';
 
 @Component({
   selector: 'app-word-exercice-button-bar',

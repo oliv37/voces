@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import type { ScrollInfo as ScrollInfoModel } from '../models/scroll-info';
+import type { ScrollInfo as ScrollInfoModel } from './scroll-info.model';
 
 @Injectable()
 export class ScrollInfo {

@@ -1,5 +1,5 @@
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
-import type { Breadcrumb, BreadcrumbItem } from '../models/breadcrumb';
+import type { Breadcrumb, BreadcrumbItem } from './breadcrumb.model';
 import { NotFoundPage } from '../../not-found/not-found-page/not-found-page';
 
 const ROOT_BREADCRUMB: Breadcrumb = [

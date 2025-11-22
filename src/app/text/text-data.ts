@@ -1,4 +1,4 @@
-import { Text } from './text';
+import { Text } from './text.model';
 
 export const TEXT_IDS = [
   'alto_fuego_israel_gaza',

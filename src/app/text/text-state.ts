@@ -6,8 +6,8 @@ import {
   signal,
   untracked,
 } from '@angular/core';
-import { Text } from './text';
-import { WordValidator, WordValidationResult } from '../word/word';
+import { Text } from './text.model';
+import { WordValidator, WordValidationResult } from '../word/word.model';
 import { CleanWordValidator } from '../word/clean-word-validator';
 import { TextCompletion } from './text-completion';
 import {

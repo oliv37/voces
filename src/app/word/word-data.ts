@@ -1,4 +1,4 @@
-import type { Word, WordGroup } from './word';
+import type { Word, WordGroup } from './word.model';
 
 const WORD_GROUP_SIZE = 10;
 

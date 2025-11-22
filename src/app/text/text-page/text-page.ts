@@ -8,12 +8,12 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { Text } from '../text';
+import { Text } from '../text.model';
 import { TextLinks } from '../text-links/text-links';
 import { TextState } from '../text-state';
-import { PaginationBar } from '@shared/components/pagination-bar/pagination-bar';
-import { Meta } from '@shared/directives/meta';
-import { OpenGraph } from '@shared/models/open-graph';
+import { PaginationBar } from '@shared/pagination/pagination-bar/pagination-bar';
+import { Meta } from '@shared/seo/meta';
+import { OpenGraph } from '@shared/seo/open-graph.model';
 
 @Component({
   templateUrl: './text-page.html',

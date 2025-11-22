@@ -5,10 +5,10 @@ import {
   linkedSignal,
   signal,
 } from '@angular/core';
-import type { Word, WordGroup } from '../word';
-import { State, type Level, FINAL_LEVEL } from './word-exercice';
+import type { Word, WordGroup } from '../word.model';
+import { State, type Level, FINAL_LEVEL } from './word-exercice.model';
 import { WordGroupCompletion } from '../word-group-completion';
-import { shuffle } from '@shared/utils/array';
+import { shuffle } from '@shared/misc/array';
 
 @Injectable({ providedIn: 'root' })
 export class WordExerciceState {

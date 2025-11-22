@@ -1,4 +1,4 @@
-import { Letter } from './letter';
+import { Letter } from './letter.model';
 
 export interface Word {
   id: number;

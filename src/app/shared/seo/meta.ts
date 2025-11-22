@@ -2,7 +2,7 @@ import { Location } from '@angular/common';
 import { Directive, inject, input, OnDestroy, OnInit } from '@angular/core';
 import { Meta as MetaService } from '@angular/platform-browser';
 import { environment } from '@environments/environment';
-import type { OpenGraph } from '@shared/models/open-graph';
+import type { OpenGraph } from '@shared/seo/open-graph.model';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector

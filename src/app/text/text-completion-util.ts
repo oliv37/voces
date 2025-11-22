@@ -1,4 +1,4 @@
-import type { Text, TextCompletions } from './text';
+import type { Text, TextCompletions } from './text.model';
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;

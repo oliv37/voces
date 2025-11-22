@@ -1,6 +1,6 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WordGroup } from '../../word';
+import { WordGroup } from '../../word.model';
 import { WordGroupCompletion } from '../../word-group-completion';
 
 @Component({

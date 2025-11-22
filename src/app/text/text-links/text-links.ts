@@ -1,6 +1,6 @@
 import { Component, computed, inject, input } from '@angular/core';
-import { Text } from '../text';
-import { BoxLink } from '@shared/components/box-link/box-link';
+import { Text } from '../text.model';
+import { BoxLink } from '@shared/link/box-link/box-link';
 import { TextCompletion } from '@text/text-completion';
 import { isCompleted } from '@text/text-completion-util';
 

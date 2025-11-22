@@ -9,7 +9,7 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { WordValidator, WordValidationResult } from '../word';
+import { WordValidator, WordValidationResult } from '../word.model';
 import { CleanWordValidator } from '../clean-word-validator';
 
 @Directive()

@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
-import { Breadcrumb } from '../breadcrumb/breadcrumb';
-import { ArrowClockwiseIcon } from '@shared/components/icon/arrow-clockwise-icon/arrow-clockwise-icon';
+import { Breadcrumb } from '@core/breadcrumb/breadcrumb/breadcrumb';
+import { ArrowClockwiseIcon } from '@shared/icon/arrow-clockwise-icon/arrow-clockwise-icon';
 
 @Component({
   selector: 'app-header',

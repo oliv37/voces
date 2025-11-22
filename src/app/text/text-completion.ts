@@ -1,7 +1,7 @@
 import { effect, inject, Injectable, Signal, signal } from '@angular/core';
-import { Storage } from '@shared/services/storage';
-import type { Text, TextCompletions } from './text';
-import { addIfNotPresent } from '@shared/utils/array';
+import { Storage } from '@shared/storage/storage';
+import type { Text, TextCompletions } from './text.model';
+import { addIfNotPresent } from '@shared/misc/array';
 import { hasOldLastPageCompletionTime } from './text-completion-util';
 
 @Injectable({ providedIn: 'root' })

@@ -6,10 +6,10 @@ import {
   linkedSignal,
   effect,
 } from '@angular/core';
-import type { OpenGraph } from '@shared/models/open-graph';
-import { Meta } from '@shared/directives/meta';
-import { ScrollInfo } from '@shared/services/scroll-info';
-import type { WordGroup } from '../word';
+import type { OpenGraph } from '@shared/seo/open-graph.model';
+import { Meta } from '@shared/seo/meta';
+import { ScrollInfo } from '@shared/scroll/scroll-info';
+import type { WordGroup } from '../word.model';
 import { WordExerciceLink } from '../word-exercice/word-exercice-link/word-exercice-link';
 
 const NB_WORD_GROUPS_TO_LOAD = 15;

@@ -8,11 +8,11 @@ import {
   untracked,
   viewChild,
 } from '@angular/core';
-import { ClientSide } from '@shared/components/client-side/client-side';
-import type { OpenGraph } from '@shared/models/open-graph';
-import { type WordGroup } from '../../word';
-import type { Level } from '../word-exercice';
-import { Meta } from '@shared/directives/meta';
+import { ClientSide } from '@shared/client/client-side/client-side';
+import type { OpenGraph } from '@shared/seo/open-graph.model';
+import { type WordGroup } from '../../word.model';
+import type { Level } from '../word-exercice.model';
+import { Meta } from '@shared/seo/meta';
 import { WordExerciceState } from '../word-exercice-state';
 import { WordGroupCompletion } from '../../word-group-completion';
 import { WordExerciceLevel1 } from '../word-exercice-level-1/word-exercice-level-1';
