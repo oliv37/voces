@@ -2,6 +2,7 @@ import { effect, inject, Injectable, Signal, signal } from '@angular/core';
 import { Storage } from '@shared/services/storage';
 import type { Text, TextCompletions } from './text';
 import { addIfNotPresent } from '@shared/utils/array';
+import { hasOldLastPageCompletionTime } from './text-completion-util';
 
 @Injectable({ providedIn: 'root' })
 export class TextCompletion {
@@ -17,10 +18,6 @@ export class TextCompletion {
         JSON.stringify(this.#textCompletions())
       );
     });
-  }
-
-  getCurrentPage(text: Text): number {
-    return this.#textCompletions()[text.id]?.currentPage || 1;
   }
 
   saveCurrentPage(text: Text, page: number) {
@@ -42,7 +39,7 @@ export class TextCompletion {
           textCompletions[text.id]?.completedPages || [],
           page
         ),
-        lastCompletionTimeInMs: getCurrentTimeInMs(),
+        lastCompletionTimeInMs: new Date().getTime(),
       },
     }));
   }
@@ -70,20 +67,4 @@ export class TextCompletion {
       return {};
     }
   }
-}
-
-const ONE_DAY_MS = 24 * 60 * 60 * 1000;
-const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;
-
-function hasOldLastPageCompletionTime(
-  textCompletion: TextCompletions[string]
-): boolean {
-  return (
-    textCompletion?.lastPageCompletionTimeInMs !== undefined &&
-    textCompletion?.lastPageCompletionTimeInMs > MAX_DISTANCE_MS
-  );
-}
-
-function getCurrentTimeInMs() {
-  return new Date().getTime();
 }

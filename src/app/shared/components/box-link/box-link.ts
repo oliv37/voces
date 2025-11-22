@@ -10,4 +10,5 @@ export class BoxLink {
   title = input.required<string>();
   link = input.required<string | string[]>();
   description = input<string>();
+  isHighlighted = input<boolean>(false);
 }

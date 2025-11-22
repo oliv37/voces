@@ -1,6 +1,13 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { Text } from '../text';
 import { BoxLink } from '@shared/components/box-link/box-link';
+import { TextCompletion } from '@text/text-completion';
+import { isCompleted } from '@text/text-completion-util';
+
+type TextInfo = Text & {
+  description: string;
+  isCompleted: boolean;
+};
 
 @Component({
   selector: 'app-text-links',
@@ -8,23 +15,30 @@ import { BoxLink } from '@shared/components/box-link/box-link';
   imports: [BoxLink],
 })
 export class TextLinks {
+  #textCompletion = inject(TextCompletion);
+
   title = input<string>();
   texts = input.required<Text[]>();
-  nbDescriptionWords = input<number>(20);
+  maxNbDescriptionWords = input<number>(40);
 
-  textsWithDescription = computed<({ description: string } & Text)[]>(() =>
-    this.texts().map((text) => ({
+  textInfos = computed<TextInfo[]>(() => {
+    const texts = this.texts();
+    const textCompletions = this.#textCompletion.textCompletions();
+    const nbDescriptionWords = this.maxNbDescriptionWords();
+
+    return texts.map((text) => ({
       ...text,
-      description: this.#buildDescription(text),
-    }))
-  );
+      description: buildDescription(text, nbDescriptionWords),
+      isCompleted: isCompleted(textCompletions, text),
+    }));
+  });
+}
 
-  #buildDescription(text: Text): string {
-    const firstContentWords = text.contents[0].split(' ');
-    const nbDescriptionWords = Math.min(
-      this.nbDescriptionWords(),
-      firstContentWords.length
-    );
-    return firstContentWords.slice(0, nbDescriptionWords).join(' ') + ' ... ';
-  }
+function buildDescription(text: Text, maxNbDescriptionWords: number): string {
+  const firstContentWords = text.contents[0].split(' ');
+  const nbDescriptionWords = Math.min(
+    maxNbDescriptionWords,
+    firstContentWords.length
+  );
+  return firstContentWords.slice(0, nbDescriptionWords).join(' ') + ' ... ';
 }

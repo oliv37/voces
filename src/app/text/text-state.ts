@@ -10,6 +10,11 @@ import { Text } from './text';
 import { WordValidator, WordValidationResult } from '../word/word';
 import { CleanWordValidator } from '../word/clean-word-validator';
 import { TextCompletion } from './text-completion';
+import {
+  getCompletedPages,
+  getCurrentPage,
+  isCompleted,
+} from './text-completion-util';
 
 interface State {
   text: Text;
@@ -65,20 +70,17 @@ export class TextState {
   });
 
   completedPages = computed<number[]>(() => {
-    const text = this.#text();
     const textCompletions = this.#textCompletion.textCompletions();
+    const text = this.#text();
 
-    return textCompletions[text.id]?.completedPages || [];
+    return getCompletedPages(textCompletions, text);
   });
 
   isCompleted = computed<boolean>(() => {
+    const textCompletions = this.#textCompletion.textCompletions();
     const text = this.#text();
-    const completedPages = this.completedPages();
 
-    return (
-      text.contents.length > 0 &&
-      text.contents.every((_, idx) => completedPages.includes(idx + 1))
-    );
+    return isCompleted(textCompletions, text);
   });
 
   words = computed<string[]>(() => {
@@ -121,7 +123,8 @@ export class TextState {
   });
 
   setText = (text: Text) => {
-    const currentPage = this.#textCompletion.getCurrentPage(text);
+    const textCompletions = this.#textCompletion.textCompletions();
+    const currentPage = getCurrentPage(textCompletions, text);
 
     this.#state.set({
       text,

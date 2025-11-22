@@ -1103,3 +1103,5 @@ riada : crue
 citricos : agrumes
 flagelo : fléau
 vocero : porte-parole
+radicar : résider
+auge : apogée
