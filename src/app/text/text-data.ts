@@ -1,9 +1,9 @@
 import { Text } from './text.model';
 
 export const TEXT_IDS = [
-  'alto_fuego_israel_gaza',
-  'lluvias_bolivia_damnificados',
-  'francia_sanciones_crimen_organizado',
+  'arresto_jair_bolsonaro',
+  'g20_paz_mundial_minerales',
+  'tensiones_gobierno_bolivia',
   'juguetes_ia_riesgos_ninos',
 ];
 

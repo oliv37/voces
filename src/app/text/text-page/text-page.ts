@@ -103,4 +103,13 @@ export class TextPage {
     target.value = newInputTextValue;
     this.setInputTextValue(newInputTextValue);
   }
+
+  onFocus() {
+    this.hasInputFocus.set(true);
+  }
+
+  onBlur() {
+    this.hasInputFocus.set(false);
+    this.setInputTextValue('');
+  }
 }

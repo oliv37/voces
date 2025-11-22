@@ -820,7 +820,6 @@ agrandar : agrandir
 aguila : aigle
 arrastrar : traîner
 corazonada : pressentiment, intuition
-aferrarse : s'accrocher
 hoyo : trou
 matorral : fourré, brousse
 paraje : site, endroit
@@ -1105,3 +1104,11 @@ flagelo : fléau
 vocero : porte-parole
 radicar : résider
 auge : apogée
+cautelar : préventif
+dictaminar : décréter
+sentenciar : condamner
+reo : inculpé
+contemplar : considérer, prendre en compte
+despuntar : se distinguer
+frustrado : manqué, raté
+asaltar : agresser, attaquer 
