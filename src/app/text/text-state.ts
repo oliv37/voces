@@ -7,8 +7,8 @@ import {
   untracked,
 } from '@angular/core';
 import { Text } from './text';
-import { WordValidator, WordValidationResult } from '../word/models/word';
-import { CleanWordValidator } from '../word/services/clean-word-validator';
+import { WordValidator, WordValidationResult } from '../word/word';
+import { CleanWordValidator } from '../word/clean-word-validator';
 import { TextCompletion } from './text-completion';
 
 interface State {

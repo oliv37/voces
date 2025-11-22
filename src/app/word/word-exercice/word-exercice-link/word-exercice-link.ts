@@ -1,7 +1,7 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WordGroup } from '../../models/word';
-import { WordGroupCompletion } from '../../services/word-group-completion';
+import { WordGroup } from '../../word';
+import { WordGroupCompletion } from '../../word-group-completion';
 
 @Component({
   selector: 'app-exercice-link',

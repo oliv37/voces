@@ -10,16 +10,16 @@ import {
 } from '@angular/core';
 import { ClientSide } from '@shared/components/client-side/client-side';
 import type { OpenGraph } from '@shared/models/open-graph';
-import { type WordGroup } from '../models/word';
-import type { Level } from './models/word-exercice';
+import { type WordGroup } from '../../word';
+import type { Level } from '../word-exercice';
 import { Meta } from '@shared/directives/meta';
-import { WordExerciceState } from './services/word-exercice-state';
-import { WordGroupCompletion } from '../services/word-group-completion';
-import { WordExerciceLevel1 } from './components/word-exercice-level-1/word-exercice-level-1';
-import { WordExerciceLevel2 } from './components/word-exercice-level-2/word-exercice-level-2';
-import { AbstractWordExerciceLevel } from './components/abstract-word-exercice-level';
-import { WordExerciceButtonBar } from './components/word-exercice-button-bar/word-exercice-button-bar';
-import { WordExerciceProgressBar } from './components/word-exercice-progress-bar/word-exercice-progress-bar';
+import { WordExerciceState } from '../word-exercice-state';
+import { WordGroupCompletion } from '../../word-group-completion';
+import { WordExerciceLevel1 } from '../word-exercice-level-1/word-exercice-level-1';
+import { WordExerciceLevel2 } from '../word-exercice-level-2/word-exercice-level-2';
+import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
+import { WordExerciceButtonBar } from '../word-exercice-button-bar/word-exercice-button-bar';
+import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exercice-progress-bar';
 
 @Component({
   imports: [

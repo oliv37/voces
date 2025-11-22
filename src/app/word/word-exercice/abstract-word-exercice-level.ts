@@ -9,8 +9,8 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { WordValidator, WordValidationResult } from '../../models/word';
-import { CleanWordValidator } from '../../services/clean-word-validator';
+import { WordValidator, WordValidationResult } from '../word';
+import { CleanWordValidator } from '../clean-word-validator';
 
 @Directive()
 export abstract class AbstractWordExerciceLevel {

@@ -1,9 +1,9 @@
-import type { Word, WordGroup } from '../models/word';
+import type { Word, WordGroup } from './word';
 
 const WORD_GROUP_SIZE = 10;
 
 export const WORDS_PROMISE: Promise<Word[]> = import(
-  '../../../data/words.txt'
+  '../../data/words.txt'
 ).then((m) => buildWords(m.default));
 
 export const WORD_GROUPS_PROMISE: Promise<WordGroup[]> = WORDS_PROMISE.then(

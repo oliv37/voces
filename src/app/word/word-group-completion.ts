@@ -1,7 +1,7 @@
 import { effect, inject, Injectable, signal } from '@angular/core';
 import { Storage } from '@shared/services/storage';
-import type { WordGroupCompletions } from '../models/word';
-import { WordGroup } from '../models/word';
+import type { WordGroupCompletions } from './word';
+import { WordGroup } from './word';
 
 @Injectable({ providedIn: 'root' })
 export class WordGroupCompletion {

@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { wordGroupsResolver } from './word/resolvers/word-groups-resolver';
-import { wordGroupResolver } from './word/resolvers/word-group-resolver';
-import { HomePage } from './home/home-page';
-import { WordExercicePage } from './word/word-exercice/word-exercice-page';
-import { wordExerciceTitleResolver } from './word/word-exercice/resolvers/word-exercice-title-resolver';
-import { canMatchWordExercice } from './word/word-exercice/guards/word-exercice-guard';
-import { NotFoundPage } from './not-found/not-found-page';
-import { WordPage } from './word/word-page';
-import { nbWordsResolver } from './word/resolvers/words-resolver';
-import { TextPage } from './text/text-page/text-page';
+import { HomePage } from './home/home-page/home-page';
+import { NotFoundPage } from './not-found/not-found-page/not-found-page';
+import { wordGroupsResolver } from '@word/word-groups-resolver';
+import { wordGroupResolver } from '@word/word-group-resolver';
+import { WordExercicePage } from '@word/word-exercice/word-exercice-page/word-exercice-page';
+import { wordExerciceTitleResolver } from '@word/word-exercice/word-exercice-title-resolver';
+import { canMatchWordExercice } from '@word/word-exercice/word-exercice-guard';
+import { WordPage } from '@word/word-page/word-page';
+import { nbWordsResolver } from '@word/words-resolver';
+import { TextPage } from '@text/text-page/text-page';
 import {
   otherTextsResolver,
   textResolver,

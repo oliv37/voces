@@ -7,10 +7,10 @@ import {
   effect,
 } from '@angular/core';
 import type { OpenGraph } from '@shared/models/open-graph';
-import type { WordGroup } from './models/word';
 import { Meta } from '@shared/directives/meta';
 import { ScrollInfo } from '@shared/services/scroll-info';
-import { WordExerciceLink } from './components/word-exercice-link/word-exercice-link';
+import type { WordGroup } from '../word';
+import { WordExerciceLink } from '../word-exercice/word-exercice-link/word-exercice-link';
 
 const NB_WORD_GROUPS_TO_LOAD = 15;
 

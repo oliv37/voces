@@ -1,4 +1,4 @@
-import { Word } from '../../models/word';
+import { Word } from '../word';
 
 export const LEVELS = [1, 2] as const;
 

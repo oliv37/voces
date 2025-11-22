@@ -1,5 +1,5 @@
-import { Letter } from '../models/letter';
-import { WordValidator, WordValidationResult } from '../models/word';
+import { Letter } from './letter';
+import { WordValidator, WordValidationResult } from './word';
 
 export class CleanWordValidator implements WordValidator {
   readonly word: string;

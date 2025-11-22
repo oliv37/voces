@@ -5,9 +5,9 @@ import {
   linkedSignal,
   signal,
 } from '@angular/core';
-import type { Word, WordGroup } from '../../models/word';
-import { State, type Level, FINAL_LEVEL } from '../models/word-exercice';
-import { WordGroupCompletion } from '../../services/word-group-completion';
+import type { Word, WordGroup } from '../word';
+import { State, type Level, FINAL_LEVEL } from './word-exercice';
+import { WordGroupCompletion } from '../word-group-completion';
 import { shuffle } from '@shared/utils/array';
 
 @Injectable({ providedIn: 'root' })

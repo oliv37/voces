@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { type Level, LEVELS } from '../../models/word-exercice';
+import { type Level, LEVELS } from '../word-exercice';
 import { RouterLink } from '@angular/router';
 import { PatchQuestionIcon } from '@shared/components/icon/patch-question-icon/patch-question-icon';
 import { ArrowClockwiseIcon } from '@shared/components/icon/arrow-clockwise-icon/arrow-clockwise-icon';

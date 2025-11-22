@@ -1,6 +1,6 @@
 import { ResolveFn } from '@angular/router';
-import type { Word } from '../models/word';
-import { WORDS_PROMISE } from '../datas/word-data';
+import type { Word } from './word';
+import { WORDS_PROMISE } from './word-data';
 
 export const wordsResolver: ResolveFn<Word[]> = () => WORDS_PROMISE;
 
