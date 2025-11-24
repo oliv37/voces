@@ -17,14 +17,14 @@ import { ChevronRightIcon } from '@shared/icon/chevron-right/chevron-right-icon'
   templateUrl: './breadcrumb.html',
 })
 export class Breadcrumb {
-  router = inject(Router);
-  route = inject(ActivatedRoute);
+  readonly #router = inject(Router);
+  readonly #route = inject(ActivatedRoute);
 
-  breadcrumb = toSignal<BreadcrumbModel, BreadcrumbModel>(
-    this.router.events.pipe(
+  protected readonly breadcrumb = toSignal<BreadcrumbModel, BreadcrumbModel>(
+    this.#router.events.pipe(
       filter((e) => e instanceof NavigationEnd),
-      map(() => buildBreadcrumb(this.route))
+      map(() => buildBreadcrumb(this.#route))
     ),
-    { initialValue: buildBreadcrumb(this.route) }
+    { initialValue: buildBreadcrumb(this.#route) }
   );
 }

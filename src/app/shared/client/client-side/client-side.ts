@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './client-side.html',
 })
 export class ClientSide {
-  isWindowDefined = typeof window !== 'undefined';
+  protected readonly isWindowDefined = typeof window !== 'undefined';
 }

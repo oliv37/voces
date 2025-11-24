@@ -5,5 +5,5 @@ import { Component, input } from '@angular/core';
   templateUrl: './word-exercice-caret.html',
 })
 export class WordExerciceCaret {
-  active = input.required<boolean>();
+  readonly active = input.required<boolean>();
 }

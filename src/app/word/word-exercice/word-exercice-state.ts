@@ -12,12 +12,12 @@ import { shuffle } from '@shared/misc/array';
 
 @Injectable({ providedIn: 'root' })
 export class WordExerciceState {
-  #wordGroupCompletion = inject(WordGroupCompletion);
+  readonly #wordGroupCompletion = inject(WordGroupCompletion);
 
-  group = signal<WordGroup | undefined>(undefined);
+  readonly #wordGroup = signal<WordGroup | undefined>(undefined);
 
-  #state = linkedSignal<State>(() => {
-    const words: Word[] = this.group()?.words || [];
+  readonly #state = linkedSignal<State>(() => {
+    const words: Word[] = this.#wordGroup()?.words || [];
     return {
       words: shuffle(words),
       wordIdx: 0,
@@ -27,29 +27,37 @@ export class WordExerciceState {
     };
   });
 
-  state = this.#state.asReadonly();
-  word = computed<Word | undefined>(
+  readonly state = this.#state.asReadonly();
+  readonly word = computed<Word | undefined>(
     () => this.state().words[this.state().wordIdx]
   );
-  level = computed<Level>(() => this.state().level);
-  wordIdx = computed<number>(() => this.state().wordIdx);
-  nbWords = computed<number>(() => this.state().words.length);
-  isCompleted = computed<boolean>(() => this.state().isCompleted);
-  hasUsedHelp = computed<boolean>(() => this.state().hasUsedHelp);
-  isLastWord = computed<boolean>(() => {
+  readonly level = computed<Level>(() => this.state().level);
+  readonly wordIdx = computed<number>(() => this.state().wordIdx);
+  readonly nbWords = computed<number>(() => this.state().words.length);
+  readonly isCompleted = computed<boolean>(() => this.state().isCompleted);
+  readonly hasUsedHelp = computed<boolean>(() => this.state().hasUsedHelp);
+  readonly isLastWord = computed<boolean>(() => {
     return this.nbWords() > 0 && this.wordIdx() + 1 === this.nbWords();
   });
-  isFinalLevel = computed<boolean>(() => {
+  readonly isFinalLevel = computed<boolean>(() => {
     return this.level() === FINAL_LEVEL;
   });
 
-  progressPercent = computed<number>(
+  readonly progressPercent = computed<number>(
     () => ((this.wordIdx() + 1) * 100) / this.nbWords()
   );
 
+  init(wordGroup: WordGroup) {
+    this.#wordGroup.set(wordGroup);
+  }
+
+  destroy() {
+    this.#wordGroup.set(undefined);
+  }
+
   resetLevel({ isCompleted = false } = {}) {
     this.#state.update(({ level }) => ({
-      words: shuffle(this.group()?.words || []),
+      words: shuffle(this.#wordGroup()?.words || []),
       wordIdx: 0,
       level,
       hasUsedHelp: false,
@@ -58,19 +66,19 @@ export class WordExerciceState {
   }
 
   nextWord() {
-    const group = this.group();
+    const wordGroup = this.#wordGroup();
     const word = this.word();
     const hasNotUsedHelp = !this.hasUsedHelp();
     const isLastWord = this.isLastWord();
     const isFinalLevel = this.isFinalLevel();
     const isCompleted = this.isCompleted();
 
-    if (!group || !word) {
+    if (!wordGroup || !word) {
       return;
     }
 
     if (isLastWord && isFinalLevel && hasNotUsedHelp) {
-      this.#wordGroupCompletion.markAsCompleted(group);
+      this.#wordGroupCompletion.markAsCompleted(wordGroup);
       this.resetLevel({ isCompleted: true });
       return;
     }

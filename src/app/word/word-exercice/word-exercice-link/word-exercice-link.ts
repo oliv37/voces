@@ -9,11 +9,11 @@ import { WordGroupCompletion } from '../../word-group-completion';
   imports: [RouterLink],
 })
 export class WordExerciceLink {
-  #wordGroupCompletion = inject(WordGroupCompletion);
+  readonly #wordGroupCompletion = inject(WordGroupCompletion);
 
-  wordGroup = input.required<WordGroup>();
+  readonly wordGroup = input.required<WordGroup>();
 
-  isWordGroupCompleted = computed<boolean>(() =>
+  protected readonly isWordGroupCompleted = computed<boolean>(() =>
     this.#wordGroupCompletion.isCompleted(this.wordGroup())
   );
 }

@@ -8,7 +8,7 @@ import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
   imports: [WordExerciceCaret],
 })
 export class WordExerciceLevel1 extends AbstractWordExerciceLevel {
-  example = input<string>();
+  readonly example = input<string>();
 
   override onInput(e: Event) {
     const target = e.target as HTMLInputElement;

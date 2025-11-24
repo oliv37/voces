@@ -15,13 +15,13 @@ type TextInfo = Text & {
   imports: [BoxLink],
 })
 export class TextLinks {
-  #textCompletion = inject(TextCompletion);
+  readonly #textCompletion = inject(TextCompletion);
 
-  title = input<string>();
-  texts = input.required<Text[]>();
-  maxNbDescriptionWords = input<number>(40);
+  readonly title = input<string>();
+  readonly texts = input.required<Text[]>();
+  readonly maxNbDescriptionWords = input<number>(40);
 
-  textInfos = computed<TextInfo[]>(() => {
+  protected readonly textInfos = computed<TextInfo[]>(() => {
     const texts = this.texts();
     const textCompletions = this.#textCompletion.textCompletions();
     const nbDescriptionWords = this.maxNbDescriptionWords();

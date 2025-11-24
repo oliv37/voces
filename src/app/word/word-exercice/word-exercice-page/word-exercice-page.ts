@@ -5,12 +5,13 @@ import {
   inject,
   input,
   OnDestroy,
+  Signal,
   untracked,
   viewChild,
 } from '@angular/core';
 import { ClientSide } from '@shared/client/client-side/client-side';
 import type { OpenGraph } from '@shared/seo/open-graph.model';
-import { type WordGroup } from '../../word.model';
+import { type WordGroup, Word } from '../../word.model';
 import type { Level } from '../word-exercice.model';
 import { Meta } from '@shared/seo/meta';
 import { WordExerciceState } from '../word-exercice-state';
@@ -35,42 +36,47 @@ import { TopBar } from '@shared/bar/top-bar/top-bar';
   templateUrl: './word-exercice-page.html',
 })
 export class WordExercicePage implements OnDestroy {
-  #wordExerciceState = inject(WordExerciceState);
-  #wordGroupCompletion = inject(WordGroupCompletion);
+  readonly #wordExerciceState = inject(WordExerciceState);
+  readonly #wordGroupCompletion = inject(WordGroupCompletion);
 
-  exerciceLevelCmp = viewChild<AbstractWordExerciceLevel>('exerciceLevelCmp');
+  protected readonly exerciceLevelCmp =
+    viewChild<AbstractWordExerciceLevel>('exerciceLevelCmp');
 
-  wordGroup = input.required<WordGroup>();
-  wordGroups = input.required<WordGroup[]>();
+  readonly wordGroup = input.required<WordGroup>();
+  readonly wordGroups = input.required<WordGroup[]>();
 
-  level = this.#wordExerciceState.level;
-  wordIdx = this.#wordExerciceState.wordIdx;
-  word = this.#wordExerciceState.word;
-  nbWords = this.#wordExerciceState.nbWords;
-  progressPercent = this.#wordExerciceState.progressPercent;
-  isCompleted = this.#wordExerciceState.isCompleted;
-  hasUsedHelp = this.#wordExerciceState.hasUsedHelp;
+  protected readonly level: Signal<Level> = this.#wordExerciceState.level;
+  protected readonly wordIdx: Signal<number> = this.#wordExerciceState.wordIdx;
+  protected readonly word: Signal<Word | undefined> =
+    this.#wordExerciceState.word;
+  protected readonly nbWords: Signal<number> = this.#wordExerciceState.nbWords;
+  protected readonly progressPercent: Signal<number> =
+    this.#wordExerciceState.progressPercent;
+  protected readonly isCompleted: Signal<boolean> =
+    this.#wordExerciceState.isCompleted;
+  protected readonly hasUsedHelp: Signal<boolean> =
+    this.#wordExerciceState.hasUsedHelp;
 
-  isWordGroupCompleted = computed(() => {
+  protected readonly isWordGroupCompleted = computed(() => {
     const wordGroup = this.wordGroup();
     return this.#wordGroupCompletion.isCompleted(wordGroup);
   });
 
-  prevWordGroupId = computed<number>(() => {
+  protected readonly prevWordGroupId = computed<number>(() => {
     const wordGroups = this.wordGroups();
     const idx = wordGroups.findIndex((g) => g.id === this.wordGroup().id);
     const prevIdx = (idx - 1 + wordGroups.length) % wordGroups.length;
     return wordGroups[prevIdx].id;
   });
 
-  nextWordGroupId = computed<number>(() => {
+  protected readonly nextWordGroupId = computed<number>(() => {
     const wordGroups = this.wordGroups();
     const idx = wordGroups.findIndex((g) => g.id === this.wordGroup().id);
     const nextIdx = (idx + 1) % wordGroups.length;
     return wordGroups[nextIdx].id;
   });
 
-  metaDescription = computed<string>(() => {
+  protected readonly metaDescription = computed<string>(() => {
     const words = this.wordGroup().words;
 
     return (
@@ -79,7 +85,7 @@ export class WordExercicePage implements OnDestroy {
     );
   });
 
-  metaOg = computed<OpenGraph>(() => {
+  protected readonly metaOg = computed<OpenGraph>(() => {
     const id = this.wordGroup().id;
     const words = this.wordGroup().words;
 
@@ -91,7 +97,7 @@ export class WordExercicePage implements OnDestroy {
     };
   });
 
-  focusEffect = effect(() => {
+  protected readonly focusEffect = effect(() => {
     this.#wordExerciceState.state();
 
     untracked(() => {
@@ -99,30 +105,30 @@ export class WordExercicePage implements OnDestroy {
     });
   });
 
-  wordGroupEffect = effect(() => {
+  protected readonly wordGroupEffect = effect(() => {
     const wordGroup = this.wordGroup();
 
-    this.#wordExerciceState.group.set(wordGroup);
+    this.#wordExerciceState.init(wordGroup);
     this.#scrollToTop();
   });
 
   ngOnDestroy() {
-    this.#wordExerciceState.group.set(undefined);
+    this.#wordExerciceState.destroy();
   }
 
-  resetLevel() {
+  protected resetLevel() {
     this.#wordExerciceState.resetLevel();
   }
 
-  nextWord() {
+  protected nextWord() {
     this.#wordExerciceState.nextWord();
   }
 
-  setLevel(level: Level) {
+  protected setLevel(level: Level) {
     this.#wordExerciceState.setLevel(level);
   }
 
-  help() {
+  protected help() {
     this.exerciceLevelCmp()?.help();
     this.exerciceLevelCmp()?.focus();
     this.#wordExerciceState.setHasUsedHelp(true);

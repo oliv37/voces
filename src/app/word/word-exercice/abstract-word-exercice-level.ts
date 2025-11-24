@@ -14,34 +14,36 @@ import { CleanWordValidator } from '../clean-word-validator';
 
 @Directive()
 export abstract class AbstractWordExerciceLevel {
-  word = input.required<string>();
-  next = output();
+  readonly word = input.required<string>();
+  readonly next = output();
 
-  inputTextValue = signal('');
-  hasFocus = signal(false);
+  protected readonly inputTextValue = signal('');
+  protected readonly hasFocus = signal(false);
 
-  #wordValidator = computed<WordValidator>(() => {
+  readonly #wordValidator = computed<WordValidator>(() => {
     const word = this.word();
 
     return new CleanWordValidator(word);
   });
 
-  wordValidationResult = computed<WordValidationResult>(() => {
-    const inputTextValue = this.inputTextValue();
-    const wordValidator = this.#wordValidator();
+  protected readonly wordValidationResult = computed<WordValidationResult>(
+    () => {
+      const inputTextValue = this.inputTextValue();
+      const wordValidator = this.#wordValidator();
 
-    return wordValidator.validate(inputTextValue);
-  });
+      return wordValidator.validate(inputTextValue);
+    }
+  );
 
-  inputEl = viewChild<ElementRef>('inputEl');
+  protected readonly inputEl = viewChild<ElementRef>('inputEl');
 
-  resetEffect = effect(() => {
+  protected readonly resetEffect = effect(() => {
     this.word();
 
     this.inputTextValue.set('');
   });
 
-  nextEffect = effect(() => {
+  protected readonly nextEffect = effect(() => {
     const wordValidationResult = this.wordValidationResult();
 
     if (wordValidationResult.isValid) {
@@ -54,12 +56,12 @@ export abstract class AbstractWordExerciceLevel {
     afterNextRender(() => this.focus());
   }
 
-  onInput(e: Event) {
+  protected onInput(e: Event) {
     const target = e.target as HTMLInputElement;
     this.inputTextValue.set(target.value);
   }
 
-  onKeydown(e: KeyboardEvent) {
+  protected onKeydown(e: KeyboardEvent) {
     if (['ArrowLeft', 'ArrowRight'].includes(e.key) && !e.altKey) {
       e.preventDefault();
     }

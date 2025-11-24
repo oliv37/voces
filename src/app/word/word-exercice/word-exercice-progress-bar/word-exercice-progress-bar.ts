@@ -12,14 +12,15 @@ import {
   templateUrl: './word-exercice-progress-bar.html',
 })
 export class WordExerciceProgressBar {
-  wordIdx = input.required<number>();
-  nbWords = input.required<number>();
-  progressPercent = input.required<number>();
-  bgColor = input.required<string>();
+  readonly wordIdx = input.required<number>();
+  readonly nbWords = input.required<number>();
+  readonly progressPercent = input.required<number>();
+  readonly bgColor = input.required<string>();
 
-  wordIndexEl = viewChild<ElementRef<HTMLDivElement>>('wordIndex');
+  protected readonly wordIndexEl =
+    viewChild<ElementRef<HTMLDivElement>>('wordIndex');
 
-  animateEffect = effect(() => {
+  protected readonly animateEffect = effect(() => {
     if (this.wordIdx() == 0) {
       return;
     }

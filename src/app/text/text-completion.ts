@@ -6,10 +6,14 @@ import { hasOldLastPageCompletionTime } from './text-completion-util';
 
 @Injectable({ providedIn: 'root' })
 export class TextCompletion {
-  #storage = inject(Storage);
+  readonly #storage = inject(Storage);
 
-  #textCompletions = signal<TextCompletions>(this.#readTextCompletions());
-  textCompletions: Signal<TextCompletions> = this.#textCompletions.asReadonly();
+  readonly #textCompletions = signal<TextCompletions>(
+    this.#readTextCompletions()
+  );
+
+  readonly textCompletions: Signal<TextCompletions> =
+    this.#textCompletions.asReadonly();
 
   constructor() {
     effect(() => {

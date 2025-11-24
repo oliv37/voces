@@ -10,12 +10,12 @@ import { TextLinks } from '@text/text-links/text-links';
   templateUrl: './home-page.html',
 })
 export class HomePage {
-  nbWords = input.required<number>();
-  texts = input.required<Text[]>();
+  readonly nbWords = input.required<number>();
+  readonly texts = input.required<Text[]>();
 
-  metaDescription = `Vocabulaire et Textes en Espagnol.`;
+  protected readonly metaDescription = `Vocabulaire et Textes en Espagnol.`;
 
-  metaOg: OpenGraph = {
+  protected readonly metaOg: OpenGraph = {
     title: 'Voces - Vocabulaire et Textes en Espagnol',
     description: `Voces | Vocabulaire et Textes en Espagnol`,
   };

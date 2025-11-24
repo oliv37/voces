@@ -7,8 +7,8 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
 })
 export class BoxLink {
-  title = input.required<string>();
-  link = input.required<string | string[]>();
-  description = input<string>();
-  isHighlighted = input<boolean>(false);
+  readonly title = input.required<string>();
+  readonly link = input.required<string | string[]>();
+  readonly description = input<string>();
+  readonly isHighlighted = input<boolean>(false);
 }

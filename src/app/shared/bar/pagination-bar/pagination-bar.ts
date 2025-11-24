@@ -5,13 +5,13 @@ import { Component, computed, input, output } from '@angular/core';
   templateUrl: './pagination-bar.html',
 })
 export class PaginationBar {
-  totalPage = input.required<number>();
-  currentPage = input.required<number>();
-  highlightedPages = input<number[]>([]);
+  readonly totalPage = input.required<number>();
+  readonly currentPage = input.required<number>();
+  readonly highlightedPages = input<number[]>([]);
 
-  selectPage = output<number>();
+  readonly selectPage = output<number>();
 
-  pages = computed<number[]>(() => {
+  protected readonly pages = computed<number[]>(() => {
     const totalPage = this.totalPage();
     const currentPage = this.currentPage();
 

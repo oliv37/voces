@@ -5,5 +5,5 @@ import { Component, input } from '@angular/core';
   templateUrl: './top-bar.html',
 })
 export class TopBar {
-  isHighlighted = input.required<boolean>();
+  readonly isHighlighted = input.required<boolean>();
 }

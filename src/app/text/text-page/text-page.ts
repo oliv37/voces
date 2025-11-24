@@ -5,6 +5,7 @@ import {
   ElementRef,
   inject,
   input,
+  Signal,
   signal,
   viewChild,
 } from '@angular/core';
@@ -15,6 +16,7 @@ import { PaginationBar } from '@shared/bar/pagination-bar/pagination-bar';
 import { Meta } from '@shared/seo/meta';
 import { OpenGraph } from '@shared/seo/open-graph.model';
 import { TopBar } from '@shared/bar/top-bar/top-bar';
+import { WordValidationResult } from '@word/word.model';
 
 @Component({
   templateUrl: './text-page.html',
@@ -22,50 +24,52 @@ import { TopBar } from '@shared/bar/top-bar/top-bar';
   providers: [TextState],
 })
 export class TextPage {
-  #textState = inject(TextState);
+  readonly #textState = inject(TextState);
 
-  text = input.required<Text>();
-  otherTexts = input.required<Text[]>();
+  readonly text = input.required<Text>();
+  readonly otherTexts = input.required<Text[]>();
 
-  hasInputFocus = signal<boolean>(false);
+  protected readonly hasInputFocus = signal<boolean>(false);
 
-  inputEl = viewChild<ElementRef<HTMLInputElement>>('inputEl');
+  protected readonly inputEl =
+    viewChild<ElementRef<HTMLInputElement>>('inputEl');
 
-  currentPage = this.#textState.currentPage;
-  completedPages = this.#textState.completedPages;
-  isCompleted = this.#textState.isCompleted;
-  wordIdx = this.#textState.wordIdx;
-  inputTextValue = this.#textState.inputTextValue;
-  words = this.#textState.words;
-  word = this.#textState.word;
-  wordValidationResult = this.#textState.wordValidationResult;
+  readonly currentPage: Signal<number> = this.#textState.currentPage;
+  readonly completedPages: Signal<number[]> = this.#textState.completedPages;
+  readonly isCompleted: Signal<boolean> = this.#textState.isCompleted;
+  readonly wordIdx: Signal<number> = this.#textState.wordIdx;
+  readonly inputTextValue: Signal<string> = this.#textState.inputTextValue;
+  readonly words: Signal<string[]> = this.#textState.words;
+  readonly word: Signal<string> = this.#textState.word;
+  readonly wordValidationResult: Signal<WordValidationResult> =
+    this.#textState.wordValidationResult;
 
-  setText = this.#textState.setText;
-  setTextPage = this.#textState.setTextPage;
-  setInputTextValue = this.#textState.setInputTextValue;
+  readonly setText = this.#textState.setText;
+  readonly setTextPage = this.#textState.setTextPage;
+  readonly setInputTextValue = this.#textState.setInputTextValue;
 
-  wordLetterIdx = computed<number>(() => {
+  protected readonly wordLetterIdx = computed<number>(() => {
     const inputTextValue = this.inputTextValue();
     const word = this.word();
 
     return Math.min(inputTextValue.length, word.length - 1);
   });
 
-  metaDescription = computed<string>(
+  protected readonly metaDescription = computed<string>(
     () => `Recopiez le texte en Espagnol "${this.text().title}".`
   );
 
-  metaOg = computed<OpenGraph>(() => ({
+  protected readonly metaOg = computed<OpenGraph>(() => ({
     title: `Voces - ${this.text().title}`,
     description: `Voces | Texte en Espagnol "${this.text().title}"`,
   }));
 
-  updateTextEffect = effect(() => {
+  protected readonly updateTextEffect = effect(() => {
     const text = this.text();
     this.setText(text);
   });
 
-  resetInputTextValueEffect = effect(() => {
+  protected readonly resetInputTextValueEffect = effect(() => {
     const wordIdx = this.wordIdx();
     const inputEl = this.inputEl();
 
@@ -74,7 +78,7 @@ export class TextPage {
     }
   });
 
-  focusInputEffect = effect(() => {
+  protected readonly focusInputEffect = effect(() => {
     const words = this.words();
     const inputEl = this.inputEl();
 
@@ -83,7 +87,7 @@ export class TextPage {
     }
   });
 
-  onKeydown(e: KeyboardEvent) {
+  protected onKeydown(e: KeyboardEvent) {
     if (['ArrowLeft', 'ArrowRight'].includes(e.key) && !e.altKey) {
       e.preventDefault();
     }
@@ -92,7 +96,7 @@ export class TextPage {
     }
   }
 
-  onInput(e: Event) {
+  protected onInput(e: Event) {
     const target = e.target as HTMLInputElement;
     const word = this.word();
     const newInputTextValue =
@@ -104,11 +108,11 @@ export class TextPage {
     this.setInputTextValue(newInputTextValue);
   }
 
-  onFocus() {
+  protected onFocus() {
     this.hasInputFocus.set(true);
   }
 
-  onBlur() {
+  protected onBlur() {
     this.hasInputFocus.set(false);
     this.setInputTextValue('');
   }

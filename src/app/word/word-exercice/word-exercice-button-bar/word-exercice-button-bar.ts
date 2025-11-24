@@ -20,16 +20,16 @@ import { ArrowDownShortIcon } from '@shared/icon/arrow-down-short-icon/arrow-dow
   ],
 })
 export class WordExerciceButtonBar {
-  readonly levels = LEVELS;
+  protected readonly levels = LEVELS;
 
-  level = input.required<Level>();
-  currentWordGroupId = input.required<number>();
-  prevWordGroupId = input.required<number>();
-  nextWordGroupId = input.required<number>();
-  questionFillColor = input<string>('fill-neutral-900');
-  starFillColor = input<string>('fill-gray-900');
+  readonly level = input.required<Level>();
+  readonly currentWordGroupId = input.required<number>();
+  readonly prevWordGroupId = input.required<number>();
+  readonly nextWordGroupId = input.required<number>();
+  readonly questionFillColor = input<string>('fill-neutral-900');
+  readonly starFillColor = input<string>('fill-gray-900');
 
-  levelChange = output<Level>();
-  patchQuestion = output<void>();
-  arrowClockwise = output<void>();
+  readonly levelChange = output<Level>();
+  readonly patchQuestion = output<void>();
+  readonly arrowClockwise = output<void>();
 }

@@ -25,26 +25,30 @@ let nbWordGroupsLoaded = 0;
   },
 })
 export class WordPage {
-  #scrollInfo = inject(ScrollInfo);
+  readonly #scrollInfo = inject(ScrollInfo);
 
-  wordGroups = input.required<WordGroup[]>();
+  readonly wordGroups = input.required<WordGroup[]>();
 
-  #wordGroupsReversed = computed(() => this.wordGroups().slice().reverse());
+  readonly #wordGroupsReversed = computed(() =>
+    this.wordGroups().slice().reverse()
+  );
 
-  nbWords = computed(() => this.wordGroups().flatMap((g) => g.words).length);
+  protected readonly nbWords = computed(
+    () => this.wordGroups().flatMap((g) => g.words).length
+  );
 
-  wordGroupsToShow = linkedSignal<WordGroup[]>(() =>
+  protected readonly wordGroupsToShow = linkedSignal<WordGroup[]>(() =>
     this.#wordGroupsReversed().slice(
       0,
       Math.max(nbWordGroupsLoaded, NB_WORD_GROUPS_TO_LOAD)
     )
   );
 
-  metaDescription = computed<string>(
+  protected readonly metaDescription = computed<string>(
     () => `Visualisez les ${this.nbWords()} mots de Vocabulaire en Espagnol.`
   );
 
-  metaOg = computed<OpenGraph>(() => ({
+  protected readonly metaOg = computed<OpenGraph>(() => ({
     title: 'Voces - Vocabulaire Espagnol',
     description: `Voces | ${this.nbWords()} mots de Vocabulaire Espagnol`,
   }));
@@ -55,7 +59,7 @@ export class WordPage {
     });
   }
 
-  onScroll() {
+  protected onScroll() {
     const wordGroupsToShow = this.wordGroupsToShow();
     const { isScrollingDown, isNearBottom } = this.#scrollInfo.compute();
     const hasNext = wordGroupsToShow.length < this.#wordGroupsReversed().length;

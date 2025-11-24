@@ -1065,7 +1065,7 @@ bramar : meugler, mugir
 cuero : cuir
 agarrar : attraper, prendre
 vibora : vipère
-vendar : bander
+vendar : bander : La enfermera vendó la herida
 arrimar : approcher, rapprocher
 lomo : dos
 recobrar : récupérer, retrouver
@@ -1102,7 +1102,7 @@ riada : crue
 citricos : agrumes
 flagelo : fléau
 vocero : porte-parole
-radicar : résider
+radicar : résider : Mi familia radica en México
 auge : apogée
 cautelar : préventif
 dictaminar : décréter
@@ -1110,5 +1110,10 @@ sentenciar : condamner
 reo : inculpé
 contemplar : considérer, prendre en compte
 despuntar : se distinguer
-frustrado : manqué, raté
-asaltar : agresser, attaquer 
+frustrado : manqué, raté : Se le acusa del atentado frustrado contra el alcalde
+asaltar : agresser, attaquer
+disputa : dispute, querelle
+eje : axe
+vincular : lier
+capa : couche
+almacenar : accumuler

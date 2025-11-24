@@ -36,54 +36,58 @@ const EMPTY_STATE: State = {
 
 @Injectable()
 export class TextState {
-  #textCompletion = inject(TextCompletion);
+  readonly #textCompletion = inject(TextCompletion);
 
-  #state = signal<State>(EMPTY_STATE);
+  readonly #state = signal<State>(EMPTY_STATE);
 
-  #text = computed<Text>(() => this.#state().text);
-  #textContentIdx = computed<number>(() => this.#state().textContentIdx);
+  readonly #text = computed<Text>(() => this.#state().text);
+  readonly #textContentIdx = computed<number>(
+    () => this.#state().textContentIdx
+  );
 
-  #textContent = computed<string>(() => {
+  readonly #textContent = computed<string>(() => {
     const { text, textContentIdx } = this.#state();
 
     return text.contents[textContentIdx] || '';
   });
 
-  #wordValidator = computed<WordValidator>(() => {
+  readonly #wordValidator = computed<WordValidator>(() => {
     const word = this.word();
 
     return new CleanWordValidator(word);
   });
 
-  #isLastWord = computed<boolean>(() => {
+  readonly #isLastWord = computed<boolean>(() => {
     const words = this.words();
     const wordIdx = this.wordIdx();
 
     return wordIdx >= words.length - 1;
   });
 
-  inputTextValue = computed<string>(() => this.#state().inputTextValue);
-  wordIdx = computed<number>(() => this.#state().wordIdx);
+  readonly inputTextValue = computed<string>(
+    () => this.#state().inputTextValue
+  );
+  readonly wordIdx = computed<number>(() => this.#state().wordIdx);
 
-  currentPage = computed<number>(() => {
+  readonly currentPage = computed<number>(() => {
     return this.#textContentIdx() + 1;
   });
 
-  completedPages = computed<number[]>(() => {
+  readonly completedPages = computed<number[]>(() => {
     const textCompletions = this.#textCompletion.textCompletions();
     const text = this.#text();
 
     return getCompletedPages(textCompletions, text);
   });
 
-  isCompleted = computed<boolean>(() => {
+  readonly isCompleted = computed<boolean>(() => {
     const textCompletions = this.#textCompletion.textCompletions();
     const text = this.#text();
 
     return isCompleted(textCompletions, text);
   });
 
-  words = computed<string[]>(() => {
+  readonly words = computed<string[]>(() => {
     const textContent = this.#textContent();
     const words = textContent.split(' ').filter((word) => !!word);
 
@@ -93,21 +97,21 @@ export class TextState {
     });
   });
 
-  word = computed<string>(() => {
+  readonly word = computed<string>(() => {
     const words = this.words();
     const wordIdx = this.wordIdx();
 
     return words[wordIdx] || '';
   });
 
-  wordValidationResult = computed<WordValidationResult>(() => {
+  readonly wordValidationResult = computed<WordValidationResult>(() => {
     const inputTextValue = this.inputTextValue();
     const wordValidator = this.#wordValidator();
 
     return wordValidator.validate(inputTextValue);
   });
 
-  validateWordEffect = effect(() => {
+  protected readonly validateWordEffect = effect(() => {
     const wordValidationResult = this.wordValidationResult();
 
     if (wordValidationResult.isValid) {
@@ -115,7 +119,7 @@ export class TextState {
     }
   });
 
-  changeCurrentPageEffect = effect(() => {
+  protected readonly changeCurrentPageEffect = effect(() => {
     const text = this.#text();
     const currentPage = this.currentPage();
 

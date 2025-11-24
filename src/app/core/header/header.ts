@@ -11,7 +11,7 @@ import { ArrowClockwiseIcon } from '@shared/icon/arrow-clockwise-icon/arrow-cloc
   imports: [Breadcrumb, ArrowClockwiseIcon],
 })
 export class Header {
-  hasNewVersionAvailable = toSignal<boolean, false>(
+  protected readonly hasNewVersionAvailable = toSignal<boolean, false>(
     inject(SwUpdate).versionUpdates.pipe(
       filter((evt) => evt.type === 'VERSION_READY'),
       map(() => true)
@@ -19,7 +19,7 @@ export class Header {
     { initialValue: false }
   );
 
-  reloadPage() {
+  protected reloadPage() {
     document.location.reload();
   }
 }
