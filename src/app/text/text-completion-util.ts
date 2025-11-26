@@ -1,17 +1,5 @@
 import type { Text, TextCompletions } from './text.model';
 
-const ONE_DAY_MS = 24 * 60 * 60 * 1000;
-const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;
-
-export function hasOldLastPageCompletionTime(
-  textCompletion: TextCompletions[string]
-): boolean {
-  return (
-    textCompletion?.lastPageCompletionTimeInMs !== undefined &&
-    textCompletion?.lastPageCompletionTimeInMs > MAX_DISTANCE_MS
-  );
-}
-
 export function getCurrentPage(
   textCompletions: TextCompletions,
   text: Text

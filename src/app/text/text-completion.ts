@@ -2,7 +2,6 @@ import { effect, inject, Injectable, Signal, signal } from '@angular/core';
 import { Storage } from '@shared/storage/storage';
 import type { Text, TextCompletions } from './text.model';
 import { addIfNotPresent } from '@shared/misc/array';
-import { hasOldLastPageCompletionTime } from './text-completion-util';
 
 @Injectable({ providedIn: 'root' })
 export class TextCompletion {
@@ -43,7 +42,6 @@ export class TextCompletion {
           textCompletions[text.id]?.completedPages || [],
           page
         ),
-        lastCompletionTimeInMs: new Date().getTime(),
       },
     }));
   }
@@ -57,15 +55,7 @@ export class TextCompletion {
 
     try {
       // TODO : validate schema
-      const textCompletions = JSON.parse(value) as TextCompletions;
-
-      for (const textCompletion of Object.values(textCompletions)) {
-        if (hasOldLastPageCompletionTime(textCompletion)) {
-          textCompletion.completedPages = [];
-        }
-      }
-
-      return textCompletions;
+      return JSON.parse(value) as TextCompletions;
     } catch (e) {
       console.error('Error reading group completion', e);
       return {};
