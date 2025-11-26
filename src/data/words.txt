@@ -1107,7 +1107,7 @@ auge : apogée
 cautelar : préventif
 dictaminar : décréter
 sentenciar : condamner
-reo : inculpé
+reo : inculpé, prisonnier
 contemplar : considérer, prendre en compte
 despuntar : se distinguer
 frustrado : manqué, raté : Se le acusa del atentado frustrado contra el alcalde
@@ -1135,3 +1135,12 @@ arranque : début
 afianzar : sécuriser, consolider
 desafiante : qui représente un défi
 cortante : coupant
+tobillera : chevillère
+damnificar : endommager
+casero : maison
+soldador : fer à souder
+remedio : solution
+achacar : attribuer à
+urdir : comploter
+mandatario : dirigeant
+alojar : héberger

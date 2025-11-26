@@ -1,10 +1,9 @@
 import { Text } from './text.model';
 
 export const TEXT_IDS = [
-  'arresto_jair_bolsonaro',
-  'g20_paz_mundial_minerales',
-  'tensiones_gobierno_bolivia',
-  'juguetes_ia_riesgos_ninos',
+  'bolsonaro_sala_especial_brasilia',
+  'delarosa_emboscada_los_angeles',
+  'vaticano_superavit_2024',
 ];
 
 export const TEXTS_PROMISE: Record<string, Promise<Text>> = TEXT_IDS.reduce(
