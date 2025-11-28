@@ -2,6 +2,7 @@ import { effect, inject, Injectable, Signal, signal } from '@angular/core';
 import { Storage } from '@shared/storage/storage';
 import type { Text, TextCompletions } from './text.model';
 import { addIfNotPresent } from '@shared/misc/array';
+import { TEXT_IDS } from './text-data';
 
 @Injectable({ providedIn: 'root' })
 export class TextCompletion {
@@ -54,11 +55,47 @@ export class TextCompletion {
     }
 
     try {
-      // TODO : validate schema
-      return JSON.parse(value) as TextCompletions;
+      const textCompletions = JSON.parse(value);
+
+      return Object.fromEntries(
+        Object.entries(textCompletions).filter(
+          ([textId, textCompletion]) =>
+            TEXT_IDS.includes(textId) && isTextCompletion(textCompletion)
+        )
+      ) as TextCompletions;
     } catch (e) {
       console.error('Error reading group completion', e);
       return {};
     }
   }
+}
+
+function isTextCompletion(obj: unknown): obj is TextCompletions[string] {
+  if (typeof obj !== 'object' || obj === null) {
+    return false;
+  }
+
+  const textCompletion = obj as TextCompletions[string];
+
+  if (
+    textCompletion.currentPage !== undefined &&
+    typeof textCompletion.currentPage !== 'number'
+  ) {
+    return false;
+  }
+
+  if (
+    textCompletion.completedPages !== undefined &&
+    !Array.isArray(textCompletion.completedPages)
+  ) {
+    return false;
+  }
+
+  for (const page of textCompletion.completedPages || []) {
+    if (typeof page !== 'number') {
+      return false;
+    }
+  }
+
+  return true;
 }

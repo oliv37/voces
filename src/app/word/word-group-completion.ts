@@ -42,14 +42,12 @@ export class WordGroupCompletion {
 
     try {
       const wordGroupCompletions = JSON.parse(value);
-      // TODO : validate schema
-      return Object.keys(wordGroupCompletions).reduce((acc, groupId) => {
-        const completionTimeInMs = wordGroupCompletions[groupId];
-        if (isRecentCompletionTime(completionTimeInMs)) {
-          acc[groupId] = completionTimeInMs;
-        }
-        return acc;
-      }, {} as WordGroupCompletions);
+
+      return Object.fromEntries(
+        Object.entries(wordGroupCompletions).filter(([, completionTimeInMs]) =>
+          isRecentCompletionTime(completionTimeInMs)
+        )
+      ) as WordGroupCompletions;
     } catch (e) {
       console.error('Error reading word group completion', e);
       return {};
@@ -60,10 +58,8 @@ export class WordGroupCompletion {
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_DISTANCE_MS = 3 * ONE_DAY_MS;
 
-function isRecentCompletionTime(
-  completionTimeInMs: number | undefined
-): boolean {
-  if (!completionTimeInMs) {
+function isRecentCompletionTime(completionTimeInMs: unknown): boolean {
+  if (typeof completionTimeInMs !== 'number') {
     return false;
   }
   const distanceInMs = getCurrentTimeInMs() - completionTimeInMs;
