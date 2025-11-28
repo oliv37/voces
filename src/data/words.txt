@@ -1104,6 +1104,7 @@ flagelo : fléau
 vocero : porte-parole
 radicar : résider : Mi familia radica en México
 auge : apogée
+presuponer : présupposer
 cautelar : préventif
 dictaminar : décréter
 sentenciar : condamner
@@ -1144,3 +1145,9 @@ achacar : attribuer à
 urdir : comploter
 mandatario : dirigeant
 alojar : héberger
+medorear : rôder, tourner autour
+ileso : indemne
+profugo : fugitif
+muestra de pesar : signe de regret
+superavit : excédent
+presupuesto : budget
