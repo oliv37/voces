@@ -1145,7 +1145,7 @@ achacar : attribuer à
 urdir : comploter
 mandatario : dirigeant
 alojar : héberger
-medorear : rôder, tourner autour
+merodear : rôder, tourner autour
 ileso : indemne
 profugo : fugitif
 muestra de pesar : signe de regret
