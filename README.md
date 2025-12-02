@@ -2,18 +2,14 @@
 
 [Spanish - French translations](https://oliv37.github.io/voces/)
 
-## Translations
+## Run locally
 
-Translations are stored into the text file [data.txt](./src/data.txt)
+`pnpm i`
 
-Each translation is written on a single line with the following format :
+`pnpm start`
 
-`<spanish_word> : <french_translation> : <optional_example_in_spanish>`
+## Run in docker
 
-Here are some examples :
+`docker build -t voces .`
 
-```txt
-chirrido : grincement : El chirrido de los frenos me sobresaltó
-herir : blesser
-taner : sonner
-```
+`docker run -d -p 8080:80 --name voces-app voces`
