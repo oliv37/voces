@@ -11,7 +11,7 @@ on:
       deploy:
         description: "Deploy"
         type: boolean
-        default: "true"
+        default: true
         required: true
 
 jobs:
@@ -33,19 +33,19 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 24.x
 
       - run: git config --local user.name "github-actions[bot]"
 
       - run: git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
-      - run: npm run lint
+      - run: pnpm run lint
 
-      - run: npm version ${{ inputs.version }} --tag-version-prefix ""
+      - run: pnpm version ${{ inputs.version }} --tag-version-prefix ""
 
-      - run: npm run build:prod
+      - run: pnpm run build:prod
 
       - run: echo "PACKAGE_VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
 
