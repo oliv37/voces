@@ -12,4 +12,4 @@
 
 `docker build -t voces .`
 
-`docker run -d -p 8080:80 --name voces-app voces`
+`docker run -d -p 8080:80 voces`
