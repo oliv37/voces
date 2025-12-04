@@ -1,0 +1,141 @@
+{
+  "configVersion": 1,
+  "timestamp": 1764875977763,
+  "index": "/voces/index.csr.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/voces/chunk-CEWJEF5S.js",
+        "/voces/chunk-NWJ5J3BN.js",
+        "/voces/chunk-PW4GEWQA.js",
+        "/voces/chunk-USXGCBJJ.js",
+        "/voces/chunk-UXOQDXEF.js",
+        "/voces/favicon.ico",
+        "/voces/index.csr.html",
+        "/voces/index.html",
+        "/voces/main-SUSYQ66B.js",
+        "/voces/manifest.webmanifest",
+        "/voces/styles-5IPNZ27X.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/voces/assets/fonts/roboto-italic-100.woff2",
+        "/voces/assets/fonts/roboto-italic-300.woff2",
+        "/voces/assets/fonts/roboto-italic-400.woff2",
+        "/voces/assets/fonts/roboto-italic-500.woff2",
+        "/voces/assets/fonts/roboto-italic-700.woff2",
+        "/voces/assets/fonts/roboto-italic-900.woff2",
+        "/voces/assets/fonts/roboto-normal-100.woff2",
+        "/voces/assets/fonts/roboto-normal-300.woff2",
+        "/voces/assets/fonts/roboto-normal-400.woff2",
+        "/voces/assets/fonts/roboto-normal-500.woff2",
+        "/voces/assets/fonts/roboto-normal-700.woff2",
+        "/voces/assets/fonts/roboto-normal-900.woff2",
+        "/voces/assets/img/logo.svg",
+        "/voces/icons/icon-128x128.png",
+        "/voces/icons/icon-144x144.png",
+        "/voces/icons/icon-152x152.png",
+        "/voces/icons/icon-192x192.png",
+        "/voces/icons/icon-384x384.png",
+        "/voces/icons/icon-512x512.png",
+        "/voces/icons/icon-512x512@2.png",
+        "/voces/icons/icon-72x72.png",
+        "/voces/icons/icon-96x96.png",
+        "/voces/media/roboto-italic-100-R35EH5WL.woff2",
+        "/voces/media/roboto-italic-300-MKWIZDVG.woff2",
+        "/voces/media/roboto-italic-400-HWUXCZVY.woff2",
+        "/voces/media/roboto-italic-500-HFXPEFLS.woff2",
+        "/voces/media/roboto-italic-700-JESKXYFZ.woff2",
+        "/voces/media/roboto-italic-900-PY2OVOWD.woff2",
+        "/voces/media/roboto-normal-100-NFLPMN4P.woff2",
+        "/voces/media/roboto-normal-300-INGFAHAD.woff2",
+        "/voces/media/roboto-normal-400-JNYDHCS5.woff2",
+        "/voces/media/roboto-normal-500-7B6H4CLQ.woff2",
+        "/voces/media/roboto-normal-700-AMOPRVUF.woff2",
+        "/voces/media/roboto-normal-900-EI2ZKTXR.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/voces/assets/fonts/roboto-italic-100.woff2": "e2c2939c2cba2abeb96bfd7fb4ee60a1901e904a",
+    "/voces/assets/fonts/roboto-italic-300.woff2": "01b4b49775e9584404dcb42704f1bd6f09508ff2",
+    "/voces/assets/fonts/roboto-italic-400.woff2": "ba4bbe71d4ab266bc145305217cdf86a7777137f",
+    "/voces/assets/fonts/roboto-italic-500.woff2": "5e463c9f52e2c61ce8cd9c1b82abf00ed66a259c",
+    "/voces/assets/fonts/roboto-italic-700.woff2": "9abf0be47629f6f8be140847242b37e647bf60aa",
+    "/voces/assets/fonts/roboto-italic-900.woff2": "eefd120b7d53a10313c2213be46668afa1f05543",
+    "/voces/assets/fonts/roboto-normal-100.woff2": "cc868695f7eda94cb64aa1f578742b83b4a569b3",
+    "/voces/assets/fonts/roboto-normal-300.woff2": "b1f626e78f5f6d7be993303a49eb81f0fa4ce57c",
+    "/voces/assets/fonts/roboto-normal-400.woff2": "227fee13ceb7c410b5c0bb8000258b6643cb6255",
+    "/voces/assets/fonts/roboto-normal-500.woff2": "44f495a7f32620e51acca2e78f7e0615cb305781",
+    "/voces/assets/fonts/roboto-normal-700.woff2": "fabea5ad92ed3e2431659b02e7624df30d0c6bbc",
+    "/voces/assets/fonts/roboto-normal-900.woff2": "30f546f4ee2e6285462360355942c5898ff0bf1c",
+    "/voces/assets/img/logo.svg": "dcfd34657e6c8c817f440166db1c4e35fcf55326",
+    "/voces/chunk-CEWJEF5S.js": "3f4c8d4e6113a2df287f6b2d3e5d6431b862348a",
+    "/voces/chunk-NWJ5J3BN.js": "2543c7f0eb15dc020472356de4d8aa4a73797732",
+    "/voces/chunk-PW4GEWQA.js": "a1d66c2a2fd9a9847e1e83f88e540c8040d86035",
+    "/voces/chunk-USXGCBJJ.js": "8730f6ed40ba3164de20b9d46015e4dda34a37e4",
+    "/voces/chunk-UXOQDXEF.js": "eef98dacc98f8c163c042e5a54aebcfb38e52c14",
+    "/voces/favicon.ico": "6c36006412f49aa26d22bcab2cc55d40b170afe1",
+    "/voces/icons/icon-128x128.png": "63adda199a5056e851b684128d5caa1fb6941254",
+    "/voces/icons/icon-144x144.png": "1969a1c732c98ce350646a652f5bb823505b3c52",
+    "/voces/icons/icon-152x152.png": "9dd92fbb9f5573cc5bd4aa4fec37234faa78381b",
+    "/voces/icons/icon-192x192.png": "36c90d0a2ac074b0c28a71c246c875f186ae6e8c",
+    "/voces/icons/icon-384x384.png": "d290bc927ce8d646eab0cadcb765180ab6deb507",
+    "/voces/icons/icon-512x512.png": "b9f20dff732ceeabaabbbc9a5c936197528cac50",
+    "/voces/icons/icon-512x512@2.png": "2ee3770eb69373d276976fd927b89dba783e5299",
+    "/voces/icons/icon-72x72.png": "4144c2a26b1bfda2d38a8fbdd2f3b06719b4a33a",
+    "/voces/icons/icon-96x96.png": "09b7017e9269e55dcbb57e7d5077f0cd98b7cd5d",
+    "/voces/index.csr.html": "162fc8c0fe38dda8e6a422ded55589c8b2b039b9",
+    "/voces/index.html": "62033f70476feee9a17c1a15e95aea8a263fa2d7",
+    "/voces/main-SUSYQ66B.js": "957626fb112dcdc209b91d3cc5df249729044629",
+    "/voces/manifest.webmanifest": "8992e6c30070c6c1abcdd1e0514b48b061fd6ccd",
+    "/voces/media/roboto-italic-100-R35EH5WL.woff2": "e2c2939c2cba2abeb96bfd7fb4ee60a1901e904a",
+    "/voces/media/roboto-italic-300-MKWIZDVG.woff2": "01b4b49775e9584404dcb42704f1bd6f09508ff2",
+    "/voces/media/roboto-italic-400-HWUXCZVY.woff2": "ba4bbe71d4ab266bc145305217cdf86a7777137f",
+    "/voces/media/roboto-italic-500-HFXPEFLS.woff2": "5e463c9f52e2c61ce8cd9c1b82abf00ed66a259c",
+    "/voces/media/roboto-italic-700-JESKXYFZ.woff2": "9abf0be47629f6f8be140847242b37e647bf60aa",
+    "/voces/media/roboto-italic-900-PY2OVOWD.woff2": "eefd120b7d53a10313c2213be46668afa1f05543",
+    "/voces/media/roboto-normal-100-NFLPMN4P.woff2": "cc868695f7eda94cb64aa1f578742b83b4a569b3",
+    "/voces/media/roboto-normal-300-INGFAHAD.woff2": "b1f626e78f5f6d7be993303a49eb81f0fa4ce57c",
+    "/voces/media/roboto-normal-400-JNYDHCS5.woff2": "227fee13ceb7c410b5c0bb8000258b6643cb6255",
+    "/voces/media/roboto-normal-500-7B6H4CLQ.woff2": "44f495a7f32620e51acca2e78f7e0615cb305781",
+    "/voces/media/roboto-normal-700-AMOPRVUF.woff2": "fabea5ad92ed3e2431659b02e7624df30d0c6bbc",
+    "/voces/media/roboto-normal-900-EI2ZKTXR.woff2": "30f546f4ee2e6285462360355942c5898ff0bf1c",
+    "/voces/styles-5IPNZ27X.css": "780c1fb9d0e532a034e0caa1060e9af3f9e524fe"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
