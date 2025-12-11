@@ -2039,7 +2039,6 @@ bombilla : ampoule
 paso de cebra : passage piétons
 embestir : charger, attaquer
 atropellar : renverser, faucher, écraser
-ojera : cerne
 acuoso : mouillé, humide
 enrojecer : rougir
 hechizar : ensorceler, envoûter

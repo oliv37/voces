@@ -10,13 +10,15 @@
 
 <div
   [class]="
-    'font-mono relative text-8xl text-center ' +
-    'leading-normal border-b-4 border-b-transparent'
+    'font-mono relative text-8xl wrap-anywhere ' +
+    'text-center leading-normal border-b-4 border-b-transparent'
   "
 >
   <input
     type="text"
     class="absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-default"
+    autocomplete="off"
+    autocapitalize="off"
     [value]="inputTextValue()"
     (keydown)="onKeydown($event)"
     (input)="onInput($event)"
