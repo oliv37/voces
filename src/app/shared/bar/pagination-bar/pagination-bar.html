@@ -1,25 +1,69 @@
-@let _pages = pages(); @let _currenPage = currentPage();
 <div class="flex justify-center items-end gap-5">
-  @for(page of _pages; track page) { @let _isHighlighted =
-  highlightedPages().includes(page); @let _isCurrentPage = page === _currenPage;
-  @if ($last && _pages[$index] -_pages[$index - 1] > 1) {
-  <div class="px-1">...</div>
-  }
   <button
     type="button"
-    class="border-5 rounded-md px-4 py-1 w-16 text-center"
-    [class.font-bold]="_isCurrentPage"
-    [class.text-white]="_isCurrentPage"
-    [class.bg-blue-700]="_isCurrentPage && _isHighlighted"
-    [class.bg-black]="_isCurrentPage && !_isHighlighted"
-    [class.border-blue-700]="_isHighlighted"
-    [class.border-black]="_isCurrentPage && !_isHighlighted"
-    [class.border-gray-400]="!_isCurrentPage && !_isHighlighted"
-    (click)="selectPage.emit(page)"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
+    [class.border-blue-700]="isFirstPageHighlighted()"
+    [class.border-gray-400]="!isFirstPageHighlighted()"
+    [disabled]="currentPage() === 1"
+    (click)="selectPage.emit(1)"
   >
-    {{page}}
+    <<
+    <span
+      class="absolute w-7 h-7 bg-white border-2 flex justify-center items-center text-base rounded-full text-md top-0 left-0 -translate-y-2/3 -translate-x-2/3"
+      [class.border-blue-700]="isLastPageHighlighted()"
+      [class.border-gray-400]="!isLastPageHighlighted()"
+      >1</span
+    >
   </button>
-  @if ($first && _pages[$index + 1] -_pages[$index] > 1) {
-  <div class="px-1">...</div>
-  } }
+
+  <button
+    type="button"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
+    [class.border-blue-700]="isPreviousPageHighlighted()"
+    [class.border-gray-400]="!isPreviousPageHighlighted()"
+    [disabled]="currentPage() === previousPage()"
+    (click)="selectPage.emit(previousPage())"
+  >
+    {{"<"}}
+  </button>
+
+  <button
+    type="button"
+    class="border-5 rounded-md px-4 py-1 w-16 text-center font-bold text-white"
+    [class.bg-blue-700]="highlightedPages().includes(currentPage())"
+    [class.bg-black]="!highlightedPages().includes(currentPage())"
+    [class.border-blue-700]="highlightedPages().includes(currentPage())"
+    [class.border-black]="!highlightedPages().includes(currentPage())"
+    (click)="selectPage.emit(currentPage())"
+  >
+    {{currentPage()}}
+  </button>
+
+  <button
+    type="button"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
+    [class.border-blue-700]="isNextPageHighlighted()"
+    [class.border-gray-400]="!isNextPageHighlighted()"
+    [disabled]="currentPage() === nextPage()"
+    (click)="selectPage.emit(nextPage())"
+  >
+    {{">"}}
+  </button>
+
+  <button
+    type="button"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
+    [class.border-blue-700]="isLastPageHighlighted()"
+    [class.border-gray-400]="!isLastPageHighlighted()"
+    [disabled]="currentPage() === lastPage()"
+    (click)="selectPage.emit(lastPage())"
+  >
+    >>
+    <span
+      class="absolute w-7 h-7 bg-white border-2 flex justify-center items-center text-base rounded-full text-md top-0 right-0 -translate-y-2/3 translate-x-2/3"
+      [class.border-blue-700]="isLastPageHighlighted()"
+      [class.border-gray-400]="!isLastPageHighlighted()"
+      >{{lastPage()}}</span
+    >
+  </button>
 </div>

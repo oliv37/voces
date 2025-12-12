@@ -56,7 +56,7 @@
   </div>
 
   <app-pagination-bar
-    [totalPage]="text().contents.length"
+    [lastPage]="text().contents.length"
     [currentPage]="currentPage()"
     [highlightedPages]="completedPages()"
     (selectPage)="setTextPage($event)"
