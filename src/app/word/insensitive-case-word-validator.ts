@@ -1,13 +1,13 @@
 import { Letter } from './letter.model';
 import { WordValidator, WordValidationResult } from './word.model';
 
-export class CleanWordValidator implements WordValidator {
+export class InsensitiveCaseWordValidator implements WordValidator {
   readonly word: string;
-  readonly #wordCleaned: string;
+  readonly #wordWithReplacedLetters: string;
 
   constructor(word: string) {
     this.word = word;
-    this.#wordCleaned = this.#cleanWord(word);
+    this.#wordWithReplacedLetters = this.#replaceLetters(word);
   }
 
   validate(textValue: string): WordValidationResult {
@@ -22,16 +22,16 @@ export class CleanWordValidator implements WordValidator {
     };
   }
 
-  #cleanWord(word: string): string {
-    let wordClean = word;
+  #replaceLetters(word: string): string {
+    let wordWithReplacedLetters = word;
 
-    for (const [oldLetter, newLetter] of Object.entries(lettersToClean)) {
-      wordClean = wordClean
-        .replaceAll(oldLetter, newLetter)
+    for (const [oldLetter, newLetter] of Object.entries(lettersToReplace)) {
+      wordWithReplacedLetters = wordWithReplacedLetters
+        .replaceAll(oldLetter.toLowerCase(), newLetter.toLowerCase())
         .replaceAll(oldLetter.toUpperCase(), newLetter.toUpperCase());
     }
 
-    return wordClean;
+    return wordWithReplacedLetters;
   }
 
   #computeWordLetters(textValue: string) {
@@ -43,8 +43,9 @@ export class CleanWordValidator implements WordValidator {
         wordLetters.push({
           value: this.word[i],
           isValid:
-            letterValue === this.word[i] ||
-            letterValue === this.#wordCleaned[i],
+            letterValue.toLowerCase() === this.word[i].toLowerCase() ||
+            letterValue.toLowerCase() ===
+              this.#wordWithReplacedLetters[i].toLowerCase(),
         });
       } else {
         wordLetters.push({ value: this.word[i] });
@@ -55,7 +56,7 @@ export class CleanWordValidator implements WordValidator {
   }
 }
 
-const lettersToClean: Record<string, string> = {
+const lettersToReplace: Record<string, string> = {
   ñ: 'n',
   ó: 'o',
   ú: 'u',

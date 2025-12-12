@@ -10,7 +10,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { WordValidator, WordValidationResult } from '../word.model';
-import { CleanWordValidator } from '../clean-word-validator';
+import { InsensitiveCaseWordValidator } from '../insensitive-case-word-validator';
 
 @Directive()
 export abstract class AbstractWordExerciceLevel {
@@ -23,7 +23,7 @@ export abstract class AbstractWordExerciceLevel {
   readonly #wordValidator = computed<WordValidator>(() => {
     const word = this.word();
 
-    return new CleanWordValidator(word);
+    return new InsensitiveCaseWordValidator(word);
   });
 
   protected readonly wordValidationResult = computed<WordValidationResult>(

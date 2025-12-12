@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { Text } from './text.model';
 import { WordValidator, WordValidationResult } from '../word/word.model';
-import { CleanWordValidator } from '../word/clean-word-validator';
+import { InsensitiveCaseWordValidator } from '../word/insensitive-case-word-validator';
 import { TextCompletion } from './text-completion';
 import {
   getCompletedPages,
@@ -54,7 +54,7 @@ export class TextState {
   readonly #wordValidator = computed<WordValidator>(() => {
     const word = this.word();
 
-    return new CleanWordValidator(word);
+    return new InsensitiveCaseWordValidator(word);
   });
 
   readonly #isLastWord = computed<boolean>(() => {
