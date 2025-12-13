@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.948391mm"
+   height="29.897917mm"
+   viewBox="0 0 56.948392 29.897915"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   sodipodi:docname="voces.svg"
+   inkscape:export-filename="../a2830324/voces_1200x630.png"
+   inkscape:export-xdpi="535.22144"
+   inkscape:export-ydpi="535.22144"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.6963721"
+     inkscape:cx="113.11495"
+     inkscape:cy="46.358587"
+     inkscape:window-width="1300"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     showgrid="false" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 2"
+     style="display:inline"
+     transform="scale(1.7666667,1)">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:1.58326;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1"
+       width="32.234715"
+       height="29.898001"
+       x="0"
+       y="0"
+       inkscape:label="rect1" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="matrix(0.46397031,0,0,0.45183753,8,8)">
+    <rect
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:1.50553;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none"
+       id="rect3"
+       width="3.3464653"
+       height="0.42906901"
+       x="13.540376"
+       y="28.88051" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:5.49639;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 2.7481949,2.7481949 12.545678,27.230224"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6.54708;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 26.707024,3.27354 17.964695,26.918696 26.707024,3.27354"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#1a1a1a;stroke:#ffffff;stroke-width:2.19607;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 17.743459,27.345357 26.943946,2.6726582"
+       id="path3" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 3">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:1.05833px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       x="21.630171"
+       y="21.630171"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="21.630171"
+         y="21.630171"
+         style="letter-spacing:1.05833px">oces</tspan></text>
+  </g>
+</svg>

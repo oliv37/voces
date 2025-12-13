@@ -31,7 +31,7 @@ export class Meta implements OnInit, OnDestroy {
 
     if (og) {
       const ogDescription = og.description;
-      const ogImage = environment.baseURI + '/icons/icon-512x512@2.png';
+      const ogImage = environment.baseURI + '/assets/img/voces_1200x630.png';
       const ogTitle = og.title;
       const ogUrl = environment.baseURI + this.#location.path();
 
