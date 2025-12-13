@@ -256,7 +256,7 @@ zapatear : taper du pied
 bofeton : gifle, baffe
 pasamontanas : cagoule
 refulgir : resplendir
-oreja : cerne
+ojera : cerne
 triza : morceau
 quitamedios : rampe
 estampar : percuter
@@ -301,7 +301,6 @@ engrasar : graisser
 rastrear : suivre \xE0 la trace
 disparate : b\xEAtise, ineptie
 asombrar : \xE9merveiller, \xE9tonner
-ojera : cerne
 aderezo : assaisonnement
 barniz : vernis
 revolotear : voltiger
