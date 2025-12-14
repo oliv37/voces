@@ -2,27 +2,27 @@
   <button
     type="button"
     class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
-    [class.border-blue-700]="isFirstPageHighlighted()"
-    [class.border-gray-400]="!isFirstPageHighlighted()"
-    [disabled]="currentPage() === 1"
-    (click)="selectPage.emit(1)"
+    [class.border-blue-700]="isUpperLeftPageHighlighted()"
+    [class.border-gray-400]="!isUpperLeftPageHighlighted()"
+    [disabled]="currentPage() === upperLeftPage()"
+    (click)="selectPage.emit(upperLeftPage())"
   >
     <<
     <span
       class="absolute w-7 h-7 bg-white border-2 flex justify-center items-center text-base rounded-full text-md top-0 left-1/2 -translate-y-3/4 -translate-x-1/2"
-      [class.border-blue-700]="isLastPageHighlighted()"
-      [class.border-gray-400]="!isLastPageHighlighted()"
-      >1</span
+      [class.border-blue-700]="isUpperLeftPageHighlighted()"
+      [class.border-gray-400]="!isUpperLeftPageHighlighted()"
+      >{{upperLeftPage()}}</span
     >
   </button>
 
   <button
     type="button"
     class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
-    [class.border-blue-700]="isPreviousPageHighlighted()"
-    [class.border-gray-400]="!isPreviousPageHighlighted()"
-    [disabled]="currentPage() === previousPage()"
-    (click)="selectPage.emit(previousPage())"
+    [class.border-blue-700]="isLeftPageHighlighted()"
+    [class.border-gray-400]="!isLeftPageHighlighted()"
+    [disabled]="currentPage() === leftPage()"
+    (click)="selectPage.emit(leftPage())"
   >
     {{"<"}}
   </button>
@@ -30,10 +30,10 @@
   <button
     type="button"
     class="border-5 rounded-md px-4 py-1 w-16 text-center font-bold text-white"
-    [class.bg-blue-700]="highlightedPages().includes(currentPage())"
-    [class.bg-black]="!highlightedPages().includes(currentPage())"
-    [class.border-blue-700]="highlightedPages().includes(currentPage())"
-    [class.border-black]="!highlightedPages().includes(currentPage())"
+    [class.bg-blue-700]="isCurrentPageHighlighted()"
+    [class.bg-black]="!isCurrentPageHighlighted()"
+    [class.border-blue-700]="isCurrentPageHighlighted()"
+    [class.border-black]="!isCurrentPageHighlighted()"
     (click)="selectPage.emit(currentPage())"
   >
     {{currentPage()}}
@@ -42,10 +42,10 @@
   <button
     type="button"
     class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
-    [class.border-blue-700]="isNextPageHighlighted()"
-    [class.border-gray-400]="!isNextPageHighlighted()"
-    [disabled]="currentPage() === nextPage()"
-    (click)="selectPage.emit(nextPage())"
+    [class.border-blue-700]="isRightPageHighlighted()"
+    [class.border-gray-400]="!isRightPageHighlighted()"
+    [disabled]="currentPage() === rightPage()"
+    (click)="selectPage.emit(rightPage())"
   >
     {{">"}}
   </button>
@@ -53,17 +53,17 @@
   <button
     type="button"
     class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50 disabled:cursor-default"
-    [class.border-blue-700]="isLastPageHighlighted()"
-    [class.border-gray-400]="!isLastPageHighlighted()"
-    [disabled]="currentPage() === lastPage()"
-    (click)="selectPage.emit(lastPage())"
+    [class.border-blue-700]="isUpperRightPageHighlighted()"
+    [class.border-gray-400]="!isUpperRightPageHighlighted()"
+    [disabled]="currentPage() === upperRightPage()"
+    (click)="selectPage.emit(upperRightPage())"
   >
     >>
     <span
       class="absolute w-7 h-7 bg-white border-2 flex justify-center items-center text-base rounded-full text-md top-0 left-1/2 -translate-y-3/4 -translate-x-1/2"
-      [class.border-blue-700]="isLastPageHighlighted()"
-      [class.border-gray-400]="!isLastPageHighlighted()"
-      >{{lastPage()}}</span
+      [class.border-blue-700]="isUpperRightPageHighlighted()"
+      [class.border-gray-400]="!isUpperRightPageHighlighted()"
+      >{{upperRightPage()}}</span
     >
   </button>
 </div>

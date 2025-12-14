@@ -5,7 +5,16 @@
 />
 
 <div class="pt-2 flex flex-col gap-12">
-  @for (wordGroup of wordGroupsReversed(); track $index) {
+  @for (wordGroup of wordGroupsToShow(); track $index) {
   <app-exercice-link [wordGroup]="wordGroup" />
   }
 </div>
+
+<div class="py-6"></div>
+
+<app-pagination-bar
+  [lastPage]="lastPage()"
+  [currentPage]="currentPage()"
+  reversed
+  (selectPage)="setCurrentPage($event)"
+/>
