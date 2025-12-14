@@ -1,47 +1,22 @@
-import {
-  Component,
-  computed,
-  inject,
-  input,
-  linkedSignal,
-  effect,
-} from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import type { OpenGraph } from '@shared/seo/open-graph.model';
 import { Meta } from '@shared/seo/meta';
-import { ScrollInfo } from '@shared/scroll/scroll-info';
 import type { WordGroup } from '../word.model';
 import { WordExerciceLink } from '../word-exercice/word-exercice-link/word-exercice-link';
-
-const NB_WORD_GROUPS_TO_LOAD = 15;
-
-let nbWordGroupsLoaded = 0;
 
 @Component({
   imports: [Meta, WordExerciceLink],
   templateUrl: './word-page.html',
-  providers: [ScrollInfo],
-  host: {
-    '(window:scroll)': 'onScroll()',
-  },
 })
 export class WordPage {
-  readonly #scrollInfo = inject(ScrollInfo);
-
   readonly wordGroups = input.required<WordGroup[]>();
 
-  readonly #wordGroupsReversed = computed(() =>
+  protected readonly wordGroupsReversed = computed(() =>
     this.wordGroups().slice().reverse()
   );
 
   protected readonly nbWords = computed(
     () => this.wordGroups().flatMap((g) => g.words).length
-  );
-
-  protected readonly wordGroupsToShow = linkedSignal<WordGroup[]>(() =>
-    this.#wordGroupsReversed().slice(
-      0,
-      Math.max(nbWordGroupsLoaded, NB_WORD_GROUPS_TO_LOAD)
-    )
   );
 
   protected readonly metaDescription = computed<string>(
@@ -52,26 +27,4 @@ export class WordPage {
     title: 'Voces - Vocabulaire Espagnol',
     description: `Voces | ${this.nbWords()} mots de Vocabulaire Espagnol`,
   }));
-
-  constructor() {
-    effect(() => {
-      nbWordGroupsLoaded = this.wordGroupsToShow().length;
-    });
-  }
-
-  protected onScroll() {
-    const wordGroupsToShow = this.wordGroupsToShow();
-    const { isScrollingDown, isNearBottom } = this.#scrollInfo.compute();
-    const hasNext = wordGroupsToShow.length < this.#wordGroupsReversed().length;
-
-    const shouldLoadMoreNextGroups = hasNext && isScrollingDown && isNearBottom;
-
-    if (shouldLoadMoreNextGroups) {
-      const nextWordGroups = this.#wordGroupsReversed().slice(
-        0,
-        wordGroupsToShow.length + NB_WORD_GROUPS_TO_LOAD
-      );
-      this.wordGroupsToShow.set(nextWordGroups);
-    }
-  }
 }

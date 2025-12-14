@@ -1148,5 +1148,5 @@ merodear : rôder, tourner autour
 ileso : indemne
 profugo : fugitif
 muestra de pesar : signe de regret
-superavit : excédent
-presupuesto : budget
+superavit : excédent : Las empresas exitosas gozan de superávit
+presupuesto : budget : El director de finanzas preparó el presupuesto para el año próximo
