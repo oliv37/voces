@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1765651414680,
+  "timestamp": 1765744324246,
   "index": "/voces/index.csr.html",
   "assetGroups": [
     {
@@ -12,16 +12,16 @@
       },
       "urls": [
         "/voces/chunk-CEWJEF5S.js",
-        "/voces/chunk-CYI7TENV.js",
         "/voces/chunk-NWJ5J3BN.js",
         "/voces/chunk-PW4GEWQA.js",
         "/voces/chunk-USXGCBJJ.js",
+        "/voces/chunk-YYDICBNP.js",
         "/voces/favicon.ico",
         "/voces/index.csr.html",
         "/voces/index.html",
-        "/voces/main-EHCFV5OU.js",
+        "/voces/main-2SYOXPQP.js",
         "/voces/manifest.webmanifest",
-        "/voces/styles-3KLXOENB.css"
+        "/voces/styles-HLQ4GBAH.css"
       ],
       "patterns": []
     },
@@ -98,10 +98,10 @@
     "/voces/assets/img/voces.svg": "92cad3becfc148a92ce57e79a6174a7499244058",
     "/voces/assets/img/voces_1200x630.png": "a02c5ecb9b07e7e454555bf06febacd969ad1e54",
     "/voces/chunk-CEWJEF5S.js": "3f4c8d4e6113a2df287f6b2d3e5d6431b862348a",
-    "/voces/chunk-CYI7TENV.js": "44fc24ff5f2ea5a3276375c5e59790dd97f5d14f",
     "/voces/chunk-NWJ5J3BN.js": "2543c7f0eb15dc020472356de4d8aa4a73797732",
     "/voces/chunk-PW4GEWQA.js": "a1d66c2a2fd9a9847e1e83f88e540c8040d86035",
     "/voces/chunk-USXGCBJJ.js": "8730f6ed40ba3164de20b9d46015e4dda34a37e4",
+    "/voces/chunk-YYDICBNP.js": "f29fcfac669b4acf2d1b0a95791ecaae0e27ebdd",
     "/voces/favicon.ico": "6c36006412f49aa26d22bcab2cc55d40b170afe1",
     "/voces/icons/icon_x128.png": "63adda199a5056e851b684128d5caa1fb6941254",
     "/voces/icons/icon_x144.png": "1969a1c732c98ce350646a652f5bb823505b3c52",
@@ -117,9 +117,9 @@
     "/voces/icons/maskable_icon_x512.png": "0ea34f6ac745878fab0eb90758f31152e6bd2df5",
     "/voces/icons/maskable_icon_x72.png": "098b5ac215d7902534fbcc341ccfa06187895072",
     "/voces/icons/maskable_icon_x96.png": "6754b5693cec010c1be393c84ae49e17d43099f5",
-    "/voces/index.csr.html": "60b4d4712182c757cb403a82bd399bf2ac4851b2",
-    "/voces/index.html": "33e3cbadfe2a9950e7d668cde86033646c0df38d",
-    "/voces/main-EHCFV5OU.js": "56b763d7f6b9bf339303035df8e1ed614bf24be2",
+    "/voces/index.csr.html": "2be2d1b4827cc2a70ea607f8de2e563e28b2aa7e",
+    "/voces/index.html": "2a5ade072949d6737adbee080093f536f13834f6",
+    "/voces/main-2SYOXPQP.js": "a8b33c9ec83d96c6ce8ec9206531ec3ec02d2550",
     "/voces/manifest.webmanifest": "12784c150457ce07821d68f71b7bfe4625e5090e",
     "/voces/media/roboto-italic-100-R35EH5WL.woff2": "e2c2939c2cba2abeb96bfd7fb4ee60a1901e904a",
     "/voces/media/roboto-italic-300-MKWIZDVG.woff2": "01b4b49775e9584404dcb42704f1bd6f09508ff2",
@@ -133,7 +133,7 @@
     "/voces/media/roboto-normal-500-7B6H4CLQ.woff2": "44f495a7f32620e51acca2e78f7e0615cb305781",
     "/voces/media/roboto-normal-700-AMOPRVUF.woff2": "fabea5ad92ed3e2431659b02e7624df30d0c6bbc",
     "/voces/media/roboto-normal-900-EI2ZKTXR.woff2": "30f546f4ee2e6285462360355942c5898ff0bf1c",
-    "/voces/styles-3KLXOENB.css": "b2ea54b0b3b2572e2c78582da86d7acb7492094f"
+    "/voces/styles-HLQ4GBAH.css": "0bd9db5f383c4722ac2c40164a6061dcb6ca9eda"
   },
   "navigationUrls": [
     {

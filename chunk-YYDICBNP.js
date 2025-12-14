@@ -1148,6 +1148,6 @@ merodear : r\xF4der, tourner autour
 ileso : indemne
 profugo : fugitif
 muestra de pesar : signe de regret
-superavit : exc\xE9dent
-presupuesto : budget
+superavit : exc\xE9dent : Las empresas exitosas gozan de super\xE1vit
+presupuesto : budget : El director de finanzas prepar\xF3 el presupuesto para el a\xF1o pr\xF3ximo
 `;export{a as default};
