@@ -53,7 +53,7 @@ importers:
         version: 21.1.0(@angular/cli@21.0.3(@types/node@24.10.1)(chokidar@4.0.3))(chokidar@4.0.3)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       '@angular/build':
         specifier: ^21.0.3
-        version: 21.0.3(19dc40f3afdf828827b6b0a5b2e218c9)
+        version: 21.0.3(df1c4f08ffb4ae73bdddd4765f2f7c38)
       '@angular/cli':
         specifier: ^21.0.3
         version: 21.0.3(@types/node@24.10.1)(chokidar@4.0.3)
@@ -85,8 +85,8 @@ importers:
         specifier: ^8.5.3
         version: 8.5.6
       tailwindcss:
-        specifier: ^4.1.17
-        version: 4.1.17
+        specifier: ^4.1.18
+        version: 4.1.18
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -3696,6 +3696,9 @@ packages:
   tailwindcss@4.1.17:
     resolution: {integrity: sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q==}
 
+  tailwindcss@4.1.18:
+    resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
+
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
@@ -4243,7 +4246,7 @@ snapshots:
       eslint: 9.39.1(jiti@2.6.1)
       typescript: 5.9.3
 
-  '@angular/build@21.0.3(19dc40f3afdf828827b6b0a5b2e218c9)':
+  '@angular/build@21.0.3(df1c4f08ffb4ae73bdddd4765f2f7c38)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2100.3(chokidar@4.0.3)
@@ -4286,7 +4289,7 @@ snapshots:
       less: 4.3.0
       lmdb: 3.4.3
       postcss: 8.5.6
-      tailwindcss: 4.1.17
+      tailwindcss: 4.1.18
       vitest: 4.0.15(@types/node@24.10.1)(jiti@2.6.1)(less@4.3.0)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.39.1)
     transitivePeerDependencies:
       - '@types/node'
@@ -7832,6 +7835,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwindcss@4.1.17: {}
+
+  tailwindcss@4.1.18: {}
 
   tapable@2.3.0: {}
 
