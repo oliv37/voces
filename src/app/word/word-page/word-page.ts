@@ -10,12 +10,20 @@ import { Meta } from '@shared/seo/meta';
 import type { WordGroup } from '../word.model';
 import { WordExerciceLink } from '../word-exercice/word-exercice-link/word-exercice-link';
 import { PaginationBar } from '@shared/bar/pagination-bar/pagination-bar';
+import { ArrowRightIcon } from '@shared/icon/arrow-right-icon/arrow-right-icon';
+import { ArrowLeftIcon } from '@shared/icon/arrow-left-icon/arrow-left-icon';
 
 const NB_GROUPS_PER_PAGE = 30;
 let CURRENT_PAGE_SAVED: number | undefined;
 
 @Component({
-  imports: [Meta, WordExerciceLink, PaginationBar],
+  imports: [
+    Meta,
+    WordExerciceLink,
+    PaginationBar,
+    ArrowRightIcon,
+    ArrowLeftIcon,
+  ],
   templateUrl: './word-page.html',
 })
 export class WordPage {
@@ -26,7 +34,7 @@ export class WordPage {
   );
 
   protected readonly currentPage = linkedSignal(() =>
-    this.#readSavedCurrentPage()
+    this.#readCurrentPageSaved()
   );
 
   protected readonly wordGroupsToShow = computed(() => {
@@ -62,7 +70,18 @@ export class WordPage {
     this.#scrollToTop();
   }
 
-  #readSavedCurrentPage(): number {
+  goToPreviousPage() {
+    const currentPage = this.currentPage();
+    this.setCurrentPage(Math.max(1, currentPage - 1));
+  }
+
+  goToNextPage() {
+    const currentPage = this.currentPage();
+    const lastPage = this.lastPage();
+    this.setCurrentPage(Math.min(lastPage, currentPage + 1));
+  }
+
+  #readCurrentPageSaved(): number {
     const lastPage = this.lastPage();
 
     const currentPage = Number(CURRENT_PAGE_SAVED);
