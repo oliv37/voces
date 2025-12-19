@@ -4,10 +4,10 @@
   [og]="metaOg()"
 />
 
-<div class="flex justify-between items-center px-1">
+<div class="flex justify-between items-center">
   <button
     type="button"
-    class="disabled:invisible"
+    class="disabled:invisible transition-transform translate-x-1 active:translate-x-0"
     [disabled]="currentPage() === lastPage()"
     (click)="goToNextPage()"
   >
@@ -15,7 +15,7 @@
   </button>
   <button
     type="button"
-    class="disabled:invisible"
+    class="disabled:invisible transition-transform -translate-x-1 active:translate-x-0"
     [disabled]="currentPage() === 1"
     (click)="goToPreviousPage()"
   >
