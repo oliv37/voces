@@ -407,7 +407,7 @@ cazador : chasseur
 merienda : go\xFBter
 avispado : fut\xE9, malin, vif
 bandeja : plateau
-critalera : armoire \xE0 glace
+cristalera : armoire \xE0 glace
 desgastar : se fatiguer
 asombrar : \xE9merveiller, \xE9tonner, stup\xE9fier
 funda : \xE9tui, coque
