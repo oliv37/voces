@@ -407,7 +407,7 @@ cazador : chasseur
 merienda : goûter
 avispado : futé, malin, vif
 bandeja : plateau
-critalera : armoire à glace
+cristalera : armoire à glace
 desgastar : se fatiguer
 asombrar : émerveiller, étonner, stupéfier
 funda : étui, coque
