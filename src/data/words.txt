@@ -1150,3 +1150,43 @@ profugo : fugitif
 muestra de pesar : signe de regret
 superavit : excédent : Las empresas exitosas gozan de superávit
 presupuesto : budget : El director de finanzas preparó el presupuesto para el año próximo
+achicoria : chicorée
+alamo : peuplier
+desfallecer : s'évanouir
+patatus : évanouissement
+polilla : mite
+alcanfor : camphre
+ojeada : coup d'oeil
+diurno : de jour
+lumbre : feu
+tremulo : tremblotant
+empacho : indigestion
+dictaminar : décréter, se prononcer
+pataleta : accès de colère
+aullido : hurlement
+hondura : profondeur
+tembladera : tremblement, secousse
+esmero : soin
+aparear : accoupler
+torbellino : tourbillon
+fisgonear : fouiller, fouiner
+anima : âme
+pisotear : piétiner
+desposar : marier
+galpon : maison de plain-pied
+abrumar : accabler, troubler
+pecaminoso : immoral, impur
+barrial : local de quartier
+reformarse : changer de conduite
+soberbia : orgueil
+beneficiarse : profiter
+verruga : verrue
+empedrar : couvrir, remplir
+hereje : hérétique
+arrebatado : impulsif
+persignarse : faire le signe de croix
+achacoso : diminué, mal en point
+hurto : vol, larcin
+burdo : grossier
+dudoso : suspect
+romeria : pélerinage, procession
