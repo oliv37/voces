@@ -1190,3 +1190,25 @@ hurto : vol, larcin
 burdo : grossier
 dudoso : suspect
 romeria : pélerinage, procession
+estropajo : éponge
+portentoso : prodigieux, stupéfiant
+arrebatar : arracher
+enfoque : point de vue
+lente : verre
+propinar : donner, administrer
+agarrar : attraper, prendre, saisir
+hocico : museau, groin
+barro : boue, gadoue
+flagelo : fouet
+manotazo : d'un revers de la main
+barranco : ravin, précipice
+huevon : flemmard, fainéant
+tramite : procédure, démarche, formalité
+trepar : grimper, escalader
+hechizo : ensorcellement, envoûtement
+empolvado : poussiéreux
+comilona : gueuleton, festin
+enojar : énerver, irriter
+procurar : essayer de, chercher à
+anegar : inonder
+tibio : tiède
