@@ -7,7 +7,7 @@ import { WordExercicePage } from '@word/word-exercice/word-exercice-page/word-ex
 import { wordExerciceTitleResolver } from '@word/word-exercice/word-exercice-title-resolver';
 import { canMatchWordExercice } from '@word/word-exercice/word-exercice-guard';
 import { WordPage } from '@word/word-page/word-page';
-import { nbWordsResolver } from '@word/words-resolver';
+import { wordsResolver } from '@word/words-resolver';
 import { TextPage } from '@text/text-page/text-page';
 import {
   otherTextsResolver,
@@ -22,7 +22,7 @@ export const routes: Routes = [
     title: 'Vocabulaire et Textes en Espagnol - Voces',
     component: HomePage,
     resolve: {
-      nbWords: nbWordsResolver,
+      words: wordsResolver,
       texts: textsResolver,
     },
   },

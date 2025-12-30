@@ -7,6 +7,18 @@ export function shuffle<T>(arr: T[]): T[] {
   return res;
 }
 
+export function pickNRandomElems<T>(arr: T[], n: number): T[] {
+  const maxLength = Math.min(n, arr.length);
+  let result: T[] = [];
+
+  while (result.length < maxLength) {
+    const elem = arr[Math.floor(Math.random() * arr.length)];
+    result = addIfNotPresent(result, elem);
+  }
+
+  return shuffle(result);
+}
+
 export function addIfNotPresent<T>(arr: T[], item: T): T[] {
   return arr.includes(item) ? arr : [...arr, item];
 }
