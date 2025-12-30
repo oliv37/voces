@@ -1,5 +1,5 @@
 import { Component, input, linkedSignal } from '@angular/core';
-import { VisibleIfClient } from '@shared/client/visible-if-client';
+import { VisibleOnClient } from '@shared/client/visible-on-client';
 import { pickNRandomElems } from '@shared/misc/array';
 import { Word } from '@word/word.model';
 
@@ -11,7 +11,7 @@ interface McqState {
 
 @Component({
   selector: 'app-word-mcq',
-  imports: [VisibleIfClient],
+  imports: [VisibleOnClient],
   templateUrl: './word-mcq.html',
 })
 export class WordMcq {

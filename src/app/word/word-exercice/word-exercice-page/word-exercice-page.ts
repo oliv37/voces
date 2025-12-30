@@ -21,7 +21,7 @@ import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
 import { WordExerciceButtonBar } from '../word-exercice-button-bar/word-exercice-button-bar';
 import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exercice-progress-bar';
 import { TopBar } from '@shared/bar/top-bar/top-bar';
-import { VisibleIfClient } from '@shared/client/visible-if-client';
+import { VisibleOnClient } from '@shared/client/visible-on-client';
 
 @Component({
   imports: [
@@ -31,7 +31,7 @@ import { VisibleIfClient } from '@shared/client/visible-if-client';
     WordExerciceButtonBar,
     WordExerciceProgressBar,
     TopBar,
-    VisibleIfClient,
+    VisibleOnClient,
   ],
   templateUrl: './word-exercice-page.html',
 })
