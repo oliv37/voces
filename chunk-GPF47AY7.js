@@ -1150,4 +1150,97 @@ profugo : fugitif
 muestra de pesar : signe de regret
 superavit : exc\xE9dent : Las empresas exitosas gozan de super\xE1vit
 presupuesto : budget : El director de finanzas prepar\xF3 el presupuesto para el a\xF1o pr\xF3ximo
+achicoria : chicor\xE9e
+alamo : peuplier
+desfallecer : s'\xE9vanouir
+patatus : \xE9vanouissement
+polilla : mite
+alcanfor : camphre
+ojeada : coup d'oeil
+diurno : de jour
+lumbre : feu
+tremulo : tremblotant
+empacho : indigestion
+dictaminar : d\xE9cr\xE9ter, se prononcer
+pataleta : acc\xE8s de col\xE8re
+aullido : hurlement
+hondura : profondeur
+tembladera : tremblement, secousse
+esmero : soin
+aparear : accoupler
+torbellino : tourbillon
+fisgonear : fouiller, fouiner
+anima : \xE2me
+pisotear : pi\xE9tiner
+desposar : marier
+galpon : maison de plain-pied
+abrumar : accabler, troubler
+pecaminoso : immoral, impur
+barrial : local de quartier
+reformarse : changer de conduite
+soberbia : orgueil
+beneficiarse : profiter
+verruga : verrue
+empedrar : couvrir, remplir
+hereje : h\xE9r\xE9tique
+arrebatado : impulsif
+persignarse : faire le signe de croix
+achacoso : diminu\xE9, mal en point
+trasquilar : r\xE2ter la coupe de cheveux
+hurto : vol, larcin
+burdo : grossier
+dudoso : suspect
+romeria : p\xE9lerinage, procession
+estropajo : \xE9ponge
+portentoso : prodigieux, stup\xE9fiant
+arrebatar : arracher
+enfoque : point de vue
+lente : verre
+propinar : donner, administrer
+agarrar : attraper, prendre, saisir
+hocico : museau, groin
+barro : boue, gadoue
+flagelo : fouet
+manotazo : d'un revers de la main
+barranco : ravin, pr\xE9cipice
+huevon : flemmard, fain\xE9ant
+tramite : proc\xE9dure, d\xE9marche, formalit\xE9
+trepar : grimper, escalader
+hechizo : ensorcellement, envo\xFBtement
+empolvado : poussi\xE9reux
+comilona : gueuleton, festin
+enojar : \xE9nerver, irriter
+procurar : essayer de, chercher \xE0
+anegar : inonder
+tibio : ti\xE8de
+congoja : angoisse, inqui\xE9tude
+paraje : site, endroit
+zumbido : bourdonnement
+estremecer : faire trembler
+verdugo : bourreau
+dulzon : sucr\xE9
+morcilla : boudin
+manteca : beurre
+cabecear : piquer du nez, somnoler
+abismo : gouffre, ab\xEEme
+enagua : jupon
+sembrar : semer
+trajiner : s'affairer, aller et venir
+alambre : fil de fer
+despojo : d\xE9pouille, restes
+umbral : seuil
+dar abasto : suffire
+baraja : jeu de cartes
+desenfrenado : sans bornes, sans limites
+eslabon : cha\xEEnon, maillon
+deslizarse : glisser
+rapar : raser, tondre
+transeunte : passant, r\xE9sident temporaire
+postrarse : se prosterner
+desidia : laisser-aller, rel\xE2chement
+cancha : terrain
+zumbar : bourdonner
+colgar : accrocher, prendre
+gancho : crochet
+enloquecer : devenir fou
 `;export{a as default};
