@@ -14,8 +14,8 @@
   <div appVisibleIfClient class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     @for (choice of _mcqState.choices; track choice.id) {
     <button
-      [class]="'px-2 py-4 border border-gray-400 rounded-md wrap-break-word transition-all ' + 
-      'enabled:hover:border-gray-800 enabled:active:border-gray-800 enabled:active:scale-95 ' +
+      [class]="'px-2 py-4 border border-gray-400 rounded-md wrap-break-word transition-colors ' + 
+      'enabled:hover:border-gray-800 enabled:active:border-gray-800 ' +
       'disabled:opacity-50'"
       (click)="checkAnswer(choice)"
       [disabled]="choice.disabled"
