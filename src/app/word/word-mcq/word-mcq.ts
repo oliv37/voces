@@ -1,4 +1,5 @@
 import { Component, input, linkedSignal } from '@angular/core';
+import { VisibleIfClient } from '@shared/client/visible-if-client';
 import { pickNRandomElems } from '@shared/misc/array';
 import { Word } from '@word/word.model';
 
@@ -10,18 +11,18 @@ interface McqState {
 
 @Component({
   selector: 'app-word-mcq',
-  imports: [],
+  imports: [VisibleIfClient],
   templateUrl: './word-mcq.html',
 })
 export class WordMcq {
-  words = input.required<Word[]>();
+  readonly words = input.required<Word[]>();
 
-  mcqState = linkedSignal<McqState>(() => {
+  protected readonly mcqState = linkedSignal<McqState>(() => {
     const words = this.words();
     return this.generateMcqState(words);
   });
 
-  checkAnswer(answer: Word) {
+  protected checkAnswer(answer: Word) {
     if (answer !== this.mcqState().answer) {
       this.mcqState.update((prevMcqState) => ({
         ...prevMcqState,

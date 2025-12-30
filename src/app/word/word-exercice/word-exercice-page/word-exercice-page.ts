@@ -9,7 +9,6 @@ import {
   untracked,
   viewChild,
 } from '@angular/core';
-import { ClientSide } from '@shared/client/client-side/client-side';
 import type { OpenGraph } from '@shared/seo/open-graph.model';
 import { type WordGroup, Word } from '../../word.model';
 import type { Level } from '../word-exercice.model';
@@ -22,16 +21,17 @@ import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
 import { WordExerciceButtonBar } from '../word-exercice-button-bar/word-exercice-button-bar';
 import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exercice-progress-bar';
 import { TopBar } from '@shared/bar/top-bar/top-bar';
+import { VisibleIfClient } from '@shared/client/visible-if-client';
 
 @Component({
   imports: [
-    ClientSide,
     Meta,
     WordExerciceLevel1,
     WordExerciceLevel2,
     WordExerciceButtonBar,
     WordExerciceProgressBar,
     TopBar,
+    VisibleIfClient,
   ],
   templateUrl: './word-exercice-page.html',
 })
