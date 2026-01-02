@@ -708,7 +708,7 @@ espanto : frayeur, effroi
 transeunte : passant
 postrarse : se prosterner
 escupir : cracher
-abalanzarse : se balancer
+abalanzarse : se lancer
 zumbar : bourdonner
 cesta : panier
 arroyo : ruisseau
@@ -1235,6 +1235,7 @@ desenfrenado : sans bornes, sans limites
 eslabon : chaînon, maillon
 deslizarse : glisser
 rapar : raser, tondre
+agobiar : déranger, incommoder
 transeunte : passant, résident temporaire
 postrarse : se prosterner
 desidia : laisser-aller, relâchement
@@ -1243,3 +1244,60 @@ zumbar : bourdonner
 colgar : accrocher, prendre
 gancho : crochet
 enloquecer : devenir fou
+abalanzarse : se jeter, se ruer
+sediento : assoiffé
+roble : chêne
+anidar : faire son nid
+ardilla : écureuil
+racimo : grappe
+vertiente : versant
+rebosar : déborder
+savia : sève
+arroyo : ruisseau
+enmaranar : emmêler
+abedul : bouleau
+haya : hêtre
+bullicio : brouhaha, tapage, vacarme
+embriaguez : ivresse
+apartado : retiré, éloigné
+sauce : saule
+brincar : bondir, sauter
+chupar : sucer, aspirer
+savia : sève
+sugerencia : suggestion, proposition
+conmover : émouvoir, attendrir
+aflojarse : se détendre
+aliviar : soulager, calmer
+suegros : beaux-parents
+arduo : difficile, compliqué
+provechoso : profitable, bénéfique
+cobrar : toucher, encaisser
+temer : craindre
+docencia : enseignement
+estigma : stigmate, trace, marque
+hostilizar : harceler
+abrumar : accabler
+desemparo : détresse
+extraviarse : se perdre, s'égarer
+desmigajar : émietter
+hachazo : coup de hache
+exequias : obsèques
+agobiar : acabbler, désespérer
+risueno : avenant, souriant
+nuera : belle-fille
+porvenir : futur, avenir
+cerezo : cerisier
+marginar : marginaliser, exclure
+quebranto : affaiblissement
+pesadilla : cauchemar
+pozo : puits
+demora : retard, délai
+guerrera : veste militaire
+coraje : courage
+fornido : robuste, costaud
+desparpajo : aisance
+voltear : retourner
+polluelo : oisillon, poussin
+posada : auberge
+prenar : féconder
+gorra : casquette
