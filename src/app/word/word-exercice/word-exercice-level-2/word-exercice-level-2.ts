@@ -1,8 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { WordExerciceCaret } from '../word-exercice-caret/word-exercice-caret';
 import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
 
 @Component({
   selector: 'app-word-exercice-level-2',
   templateUrl: './word-exercice-level-2.html',
+  imports: [WordExerciceCaret],
 })
-export class WordExerciceLevel2 extends AbstractWordExerciceLevel {}
+export class WordExerciceLevel2 extends AbstractWordExerciceLevel {
+  readonly example = input<string>();
+
+  override onInput(e: Event) {
+    const target = e.target as HTMLInputElement;
+    const word = this.word();
+    const newInputTextValue =
+      target.value.length <= word.length
+        ? target.value
+        : target.value.substring(0, word.length);
+
+    target.value = newInputTextValue;
+    this.inputTextValue.set(newInputTextValue);
+  }
+}

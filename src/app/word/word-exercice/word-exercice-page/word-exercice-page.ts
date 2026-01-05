@@ -10,13 +10,14 @@ import {
   viewChild,
 } from '@angular/core';
 import type { OpenGraph } from '@shared/seo/open-graph.model';
-import { type WordGroup, Word } from '../../word.model';
+import type { WordGroup, Word } from '../../word.model';
 import type { Level } from '../word-exercice.model';
 import { Meta } from '@shared/seo/meta';
 import { WordExerciceState } from '../word-exercice-state';
 import { WordGroupCompletion } from '../../word-group-completion';
 import { WordExerciceLevel1 } from '../word-exercice-level-1/word-exercice-level-1';
 import { WordExerciceLevel2 } from '../word-exercice-level-2/word-exercice-level-2';
+import { WordExerciceLevel3 } from '../word-exercice-level-3/word-exercice-level-3';
 import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
 import { WordExerciceButtonBar } from '../word-exercice-button-bar/word-exercice-button-bar';
 import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exercice-progress-bar';
@@ -28,6 +29,7 @@ import { VisibleOnClient } from '@shared/client/visible-on-client';
     Meta,
     WordExerciceLevel1,
     WordExerciceLevel2,
+    WordExerciceLevel3,
     WordExerciceButtonBar,
     WordExerciceProgressBar,
     TopBar,
@@ -45,10 +47,11 @@ export class WordExercicePage implements OnDestroy {
   readonly wordGroup = input.required<WordGroup>();
   readonly wordGroups = input.required<WordGroup[]>();
 
-  protected readonly level: Signal<Level> = this.#wordExerciceState.level;
-  protected readonly wordIdx: Signal<number> = this.#wordExerciceState.wordIdx;
   protected readonly word: Signal<Word | undefined> =
     this.#wordExerciceState.word;
+  protected readonly words: Signal<Word[]> = this.#wordExerciceState.words;
+  protected readonly level: Signal<Level> = this.#wordExerciceState.level;
+  protected readonly wordIdx: Signal<number> = this.#wordExerciceState.wordIdx;
   protected readonly nbWords: Signal<number> = this.#wordExerciceState.nbWords;
   protected readonly progressPercent: Signal<number> =
     this.#wordExerciceState.progressPercent;

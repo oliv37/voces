@@ -1,24 +1,45 @@
-import { Component, input } from '@angular/core';
-import { WordExerciceCaret } from '../word-exercice-caret/word-exercice-caret';
-import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
+import {
+  Component,
+  computed,
+  input,
+  linkedSignal,
+  output,
+} from '@angular/core';
+import { pickNRandomElems, shuffle } from '@shared/misc/array';
+import type { Word } from '@word/word.model';
+
+type Choice = Word & { disabled?: boolean };
 
 @Component({
   selector: 'app-word-exercice-level-1',
   templateUrl: './word-exercice-level-1.html',
-  imports: [WordExerciceCaret],
 })
-export class WordExerciceLevel1 extends AbstractWordExerciceLevel {
-  readonly example = input<string>();
+export class WordExerciceLevel1 {
+  readonly word = input.required<Word>();
+  readonly words = input.required<Word[]>();
+  readonly next = output();
 
-  override onInput(e: Event) {
-    const target = e.target as HTMLInputElement;
+  readonly #otherWords = computed<Word[]>(() =>
+    this.words().filter((w) => w.id !== this.word().id)
+  );
+
+  protected readonly choices = linkedSignal<Choice[]>(() => {
     const word = this.word();
-    const newInputTextValue =
-      target.value.length <= word.length
-        ? target.value
-        : target.value.substring(0, word.length);
+    const otherWords = this.#otherWords();
 
-    target.value = newInputTextValue;
-    this.inputTextValue.set(newInputTextValue);
+    return shuffle([word, ...pickNRandomElems(otherWords, 3)]);
+  });
+
+  validate(choice: Choice) {
+    if (choice.id !== this.word().id) {
+      this.choices.update((prevChoices) =>
+        prevChoices.map((c) =>
+          c.id === choice.id ? { ...c, disabled: true } : c
+        )
+      );
+      return;
+    }
+
+    this.next.emit();
   }
 }

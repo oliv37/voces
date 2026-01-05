@@ -1,46 +1,15 @@
-@if (example()) {
-<div class="pb-4 flex justify-center">
-  <span
-    class="text-base sm:text-xl tracking-wide bg-neutral-800 text-white rounded-lg inline-block py-1 px-4"
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  @for (choice of choices(); track choice.id) {
+  <button
+    [class]="
+      'px-2 py-8 border border-gray-400 rounded-md ' +
+      'text-2xl sm:text-4xl wrap-anywhere transition-colors ' + 
+      'enabled:hover:border-gray-800 enabled:active:border-gray-800 ' +
+      'disabled:opacity-50'"
+    (click)="validate(choice)"
+    [disabled]="choice.disabled"
   >
-    {{ example() }}
-  </span>
-</div>
-}
-
-<div
-  [class]="
-    'font-mono relative text-4xl sm:text-8xl wrap-anywhere ' +
-    'text-center leading-normal border-b-4 border-b-transparent'
-  "
->
-  <input
-    type="text"
-    class="absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-default"
-    autocomplete="off"
-    autocapitalize="off"
-    [value]="inputTextValue()"
-    (keydown)="onKeydown($event)"
-    (input)="onInput($event)"
-    (focus)="hasFocus.set(true)"
-    (blur)="hasFocus.set(false)"
-    #inputEl
-  />
-  @for(letter of wordValidationResult().wordLetters; track $index) {
-  <app-word-exercice-caret
-    [active]="hasFocus() && inputTextValue().length === $index"
-  ></app-word-exercice-caret>
-  <span
-    [class.text-neutral-400]="letter.isValid === undefined"
-    [class.text-neutral-950]="letter.isValid === true"
-    [class.text-red-700]="letter.isValid === false"
-    [class.!text-transparent]="letter.value === ' '"
-    [class.bg-red-700]="letter.value === ' ' && letter.isValid === false"
-    >{{ letter.value.replace(" ", "-") }}</span
-  >
-  @if ($last) {
-  <app-word-exercice-caret
-    [active]="hasFocus() && inputTextValue().length > $index"
-  ></app-word-exercice-caret>
-  } }
+    {{ choice.es }}
+  </button>
+  }
 </div>

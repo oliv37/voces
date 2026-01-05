@@ -1,6 +1,6 @@
 import { Word } from '../word.model';
 
-export const LEVELS = [1, 2] as const;
+export const LEVELS = [1, 2, 3] as const;
 
 export const FINAL_LEVEL = LEVELS[LEVELS.length - 1];
 

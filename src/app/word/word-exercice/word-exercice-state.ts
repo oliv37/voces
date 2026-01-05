@@ -31,6 +31,7 @@ export class WordExerciceState {
   readonly word = computed<Word | undefined>(
     () => this.state().words[this.state().wordIdx]
   );
+  readonly words = computed<Word[]>(() => this.state().words);
   readonly level = computed<Level>(() => this.state().level);
   readonly wordIdx = computed<number>(() => this.state().wordIdx);
   readonly nbWords = computed<number>(() => this.state().words.length);

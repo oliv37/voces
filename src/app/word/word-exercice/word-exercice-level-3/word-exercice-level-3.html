@@ -1,0 +1,15 @@
+<div class="flex justify-center">
+  <input
+    type="text"
+    autocomplete="off"
+    autocapitalize="off"
+    [class]="
+    'w-full max-w-4xl outline-none  ' +
+    'font-mono text-5xl sm:text-8xl text-center leading-normal ' +
+    'border-b-4 border-b-neutral-800'
+  "
+    [value]="inputTextValue()"
+    (input)="onInput($event)"
+    #inputEl
+  />
+</div>

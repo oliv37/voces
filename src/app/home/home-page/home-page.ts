@@ -5,10 +5,9 @@ import type { Text } from '@text/text.model';
 import { Meta } from '@shared/seo/meta';
 import { BoxLink } from '@shared/link/box-link/box-link';
 import { TextLinks } from '@text/text-links/text-links';
-import { WordMcq } from '@word/word-mcq/word-mcq';
 
 @Component({
-  imports: [Meta, BoxLink, TextLinks, WordMcq],
+  imports: [Meta, BoxLink, TextLinks],
   templateUrl: './home-page.html',
 })
 export class HomePage {
