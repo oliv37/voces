@@ -22,7 +22,7 @@ import { AbstractWordExerciceLevel } from '../abstract-word-exercice-level';
 import { WordExerciceButtonBar } from '../word-exercice-button-bar/word-exercice-button-bar';
 import { WordExerciceProgressBar } from '../word-exercice-progress-bar/word-exercice-progress-bar';
 import { TopBar } from '@shared/bar/top-bar/top-bar';
-import { VisibleOnClient } from '@shared/client/visible-on-client';
+import { InvisibleOnServer } from '@shared/server/invisible-on-server';
 
 @Component({
   imports: [
@@ -33,7 +33,7 @@ import { VisibleOnClient } from '@shared/client/visible-on-client';
     WordExerciceButtonBar,
     WordExerciceProgressBar,
     TopBar,
-    VisibleOnClient,
+    InvisibleOnServer,
   ],
   templateUrl: './word-exercice-page.html',
 })

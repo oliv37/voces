@@ -8,9 +8,9 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[appVisibleOnClient]',
+  selector: '[appInvisibleOnServer]',
 })
-export class VisibleOnClient {
+export class InvisibleOnServer {
   private el = inject(ElementRef);
   private renderer = inject(Renderer2);
   private platformId = inject(PLATFORM_ID);
