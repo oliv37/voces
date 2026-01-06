@@ -708,7 +708,7 @@ espanto : frayeur, effroi
 transeunte : passant
 postrarse : se prosterner
 escupir : cracher
-abalanzarse : se balancer
+abalanzarse : se lancer
 zumbar : bourdonner
 cesta : panier
 arroyo : ruisseau
@@ -1235,6 +1235,7 @@ desenfrenado : sans bornes, sans limites
 eslabon : cha\xEEnon, maillon
 deslizarse : glisser
 rapar : raser, tondre
+agobiar : d\xE9ranger, incommoder
 transeunte : passant, r\xE9sident temporaire
 postrarse : se prosterner
 desidia : laisser-aller, rel\xE2chement
@@ -1243,4 +1244,61 @@ zumbar : bourdonner
 colgar : accrocher, prendre
 gancho : crochet
 enloquecer : devenir fou
+abalanzarse : se jeter, se ruer
+sediento : assoiff\xE9
+roble : ch\xEAne
+anidar : faire son nid
+ardilla : \xE9cureuil
+racimo : grappe
+vertiente : versant
+rebosar : d\xE9border
+savia : s\xE8ve
+arroyo : ruisseau
+enmaranar : emm\xEAler
+abedul : bouleau
+haya : h\xEAtre
+bullicio : brouhaha, tapage, vacarme
+embriaguez : ivresse
+apartado : retir\xE9, \xE9loign\xE9
+sauce : saule
+brincar : bondir, sauter
+chupar : sucer, aspirer
+savia : s\xE8ve
+sugerencia : suggestion, proposition
+conmover : \xE9mouvoir, attendrir
+aflojarse : se d\xE9tendre
+aliviar : soulager, calmer
+suegros : beaux-parents
+arduo : difficile, compliqu\xE9
+provechoso : profitable, b\xE9n\xE9fique
+cobrar : toucher, encaisser
+temer : craindre
+docencia : enseignement
+estigma : stigmate, trace, marque
+hostilizar : harceler
+abrumar : accabler
+desemparo : d\xE9tresse
+extraviarse : se perdre, s'\xE9garer
+desmigajar : \xE9mietter
+hachazo : coup de hache
+exequias : obs\xE8ques
+agobiar : acabbler, d\xE9sesp\xE9rer
+risueno : avenant, souriant
+nuera : belle-fille
+porvenir : futur, avenir
+cerezo : cerisier
+marginar : marginaliser, exclure
+quebranto : affaiblissement
+pesadilla : cauchemar
+pozo : puits
+demora : retard, d\xE9lai
+guerrera : veste militaire
+coraje : courage
+fornido : robuste, costaud
+desparpajo : aisance
+voltear : retourner
+polluelo : oisillon, poussin
+posada : auberge
+prenar : f\xE9conder
+gorra : casquette
 `;export{a as default};
