@@ -20,6 +20,7 @@
   <div class="flex-1 flex flex-col justify-start sm:justify-center">
     @if (level() === 1) {
     <app-word-exercice-level-1
+      #exerciceLevelCmp
       [word]="word"
       [words]="words()"
       (next)="nextWord()"

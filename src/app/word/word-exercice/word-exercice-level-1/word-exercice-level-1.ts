@@ -8,7 +8,7 @@ import {
 import { pickNRandomElems, shuffle } from '@shared/misc/array';
 import type { Word } from '@word/word.model';
 
-type Choice = Word & { disabled?: boolean };
+type Choice = Word & { disabled?: boolean; hint?: boolean };
 
 @Component({
   selector: 'app-word-exercice-level-1',
@@ -31,7 +31,8 @@ export class WordExerciceLevel1 {
   });
 
   validate(choice: Choice) {
-    if (choice.id !== this.word().id) {
+    const word = this.word();
+    if (choice.id !== word.id) {
       this.choices.update((prevChoices) =>
         prevChoices.map((c) =>
           c.id === choice.id ? { ...c, disabled: true } : c
@@ -41,5 +42,12 @@ export class WordExerciceLevel1 {
     }
 
     this.next.emit();
+  }
+
+  help() {
+    const word = this.word();
+    this.choices.update((prevChoices) =>
+      prevChoices.map((c) => (c.id === word.id ? { ...c, hint: true } : c))
+    );
   }
 }

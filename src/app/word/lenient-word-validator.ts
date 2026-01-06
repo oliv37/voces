@@ -1,7 +1,7 @@
 import { Letter } from './letter.model';
 import { WordValidator, WordValidationResult } from './word.model';
 
-export class InsensitiveCaseWordValidator implements WordValidator {
+export class LenientWordValidator implements WordValidator {
   readonly word: string;
   readonly #wordWithReplacedLetters: string;
 

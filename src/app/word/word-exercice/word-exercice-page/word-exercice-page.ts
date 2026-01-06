@@ -104,7 +104,7 @@ export class WordExercicePage implements OnDestroy {
     this.#wordExerciceState.state();
 
     untracked(() => {
-      this.exerciceLevelCmp()?.focus();
+      this.exerciceLevelCmp()?.focus?.();
     });
   });
 
@@ -132,8 +132,8 @@ export class WordExercicePage implements OnDestroy {
   }
 
   protected help() {
-    this.exerciceLevelCmp()?.help();
-    this.exerciceLevelCmp()?.focus();
+    this.exerciceLevelCmp()?.help?.();
+    this.exerciceLevelCmp()?.focus?.();
     this.#wordExerciceState.setHasUsedHelp(true);
   }
 
