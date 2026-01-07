@@ -9,7 +9,7 @@
 
 <div
   appInvisibleOnServer
-  class="flex flex-col gap-8 min-h-[calc(100dvh-6rem)] cursor-default"
+  class="flex flex-col gap-8 sm:gap-16 h-0 min-h-[calc(100dvh-6rem)] cursor-default"
 >
   <div
     class="text-center text-3xl sm:text-6xl text-gray-700 tracking-wide wrap-anywhere"
@@ -21,6 +21,7 @@
     @if (level() === 1) {
     <app-word-exercice-level-1
       #exerciceLevelCmp
+      class="sm:h-full"
       [word]="word"
       [words]="words()"
       (next)="nextWord()"
