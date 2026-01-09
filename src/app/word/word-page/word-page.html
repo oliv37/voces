@@ -11,7 +11,9 @@
     [class.invisible]="currentPage() === lastPage()"
     (click)="goToNextPage()"
   >
-    <app-arrow-left-icon className="w-6 h-6 fill-neutral-800" />
+    <app-arrow-left-icon
+      className="w-6 h-6 fill-neutral-800 transition-transform active:-translate-x-0.5"
+    />
   </button>
   <div class="w-16 text-3xl text-center font-bold cursor-default">
     {{currentPage()}}
@@ -22,7 +24,9 @@
     [class.invisible]="currentPage() === 1"
     (click)="goToPreviousPage()"
   >
-    <app-arrow-right-icon className="w-6 h-6 fill-neutral-800" />
+    <app-arrow-right-icon
+      className="w-6 h-6 fill-neutral-800 transition-transform active:translate-x-0.5"
+    />
   </button>
 </div>
 
