@@ -1388,7 +1388,7 @@ aguantar : soutenir, porter
 sopesar : soupeser
 tejado : toit
 chorrear : couler, dégouliner
-espectro: fantôme, spectre
+espectro : fantôme, spectre
 desparramar : étaler, répandre
 fisgon : fouineur
 acoso : harcèlement
