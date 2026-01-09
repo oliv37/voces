@@ -13,8 +13,8 @@ import { PaginationBar } from '@shared/bar/pagination-bar/pagination-bar';
 import { ArrowRightIcon } from '@shared/icon/arrow-right-icon/arrow-right-icon';
 import { ArrowLeftIcon } from '@shared/icon/arrow-left-icon/arrow-left-icon';
 
-const NB_GROUPS_PER_PAGE = 30;
-let CURRENT_PAGE_SAVED: number | undefined;
+const NB_GROUPS_PER_PAGE = 20;
+let LAST_CURRENT_PAGE: number | undefined;
 
 @Component({
   imports: [
@@ -34,7 +34,7 @@ export class WordPage {
   );
 
   protected readonly currentPage = linkedSignal(() =>
-    this.#readCurrentPageSaved()
+    this.#findInitCurrentPage()
   );
 
   protected readonly wordGroupsToShow = computed(() => {
@@ -62,7 +62,7 @@ export class WordPage {
 
   readonly saveCurrentPageEffect = effect(() => {
     const currentPage = this.currentPage();
-    CURRENT_PAGE_SAVED = currentPage;
+    LAST_CURRENT_PAGE = currentPage;
   });
 
   setCurrentPage(page: number) {
@@ -81,12 +81,11 @@ export class WordPage {
     this.setCurrentPage(Math.min(lastPage, currentPage + 1));
   }
 
-  #readCurrentPageSaved(): number {
+  #findInitCurrentPage(): number {
     const lastPage = this.lastPage();
 
-    const currentPage = Number(CURRENT_PAGE_SAVED);
-    const isValidCurrentPage =
-      !Number.isNaN(currentPage) && currentPage >= 1 && currentPage <= lastPage;
+    const currentPage = Number(LAST_CURRENT_PAGE);
+    const isValidCurrentPage = currentPage >= 1 && currentPage <= lastPage;
 
     return isValidCurrentPage ? currentPage : lastPage;
   }

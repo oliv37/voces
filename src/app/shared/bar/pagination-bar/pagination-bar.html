@@ -1,27 +1,27 @@
 <div class="flex justify-center items-end gap-5">
   <button
     type="button"
-    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center"
     [class.border-blue-700]="isUpperLeftPageHighlighted()"
-    [class.border-gray-400]="!isUpperLeftPageHighlighted()"
-    [disabled]="currentPage() === upperLeftPage()"
+    [class.border-gray-900]="!isUpperLeftPageHighlighted()"
+    [class.invisible]="currentPage() === upperLeftPage()"
     (click)="selectPage.emit(upperLeftPage())"
   >
     {{"<<"}}
     <span
       class="absolute w-7 h-7 bg-white border-2 flex justify-center items-center text-base rounded-full text-md top-0 left-1/2 -translate-y-3/4 -translate-x-1/2"
       [class.border-blue-700]="isUpperLeftPageHighlighted()"
-      [class.border-gray-400]="!isUpperLeftPageHighlighted()"
+      [class.border-gray-900]="!isUpperLeftPageHighlighted()"
       >{{upperLeftPage()}}</span
     >
   </button>
 
   <button
     type="button"
-    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center"
     [class.border-blue-700]="isLeftPageHighlighted()"
-    [class.border-gray-400]="!isLeftPageHighlighted()"
-    [disabled]="currentPage() === leftPage()"
+    [class.border-gray-900]="!isLeftPageHighlighted()"
+    [class.invisible]="currentPage() === leftPage()"
     (click)="selectPage.emit(leftPage())"
   >
     {{"<"}}
@@ -41,10 +41,10 @@
 
   <button
     type="button"
-    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center"
     [class.border-blue-700]="isRightPageHighlighted()"
-    [class.border-gray-400]="!isRightPageHighlighted()"
-    [disabled]="currentPage() === rightPage()"
+    [class.border-gray-900]="!isRightPageHighlighted()"
+    [class.invisible]="currentPage() === rightPage()"
     (click)="selectPage.emit(rightPage())"
   >
     {{">"}}
@@ -52,17 +52,17 @@
 
   <button
     type="button"
-    class="relative border-5 rounded-md px-4 py-1 w-16 text-center disabled:opacity-50"
+    class="relative border-5 rounded-md px-4 py-1 w-16 text-center"
     [class.border-blue-700]="isUpperRightPageHighlighted()"
-    [class.border-gray-400]="!isUpperRightPageHighlighted()"
-    [disabled]="currentPage() === upperRightPage()"
+    [class.border-gray-900]="!isUpperRightPageHighlighted()"
+    [class.invisible]="currentPage() === upperRightPage()"
     (click)="selectPage.emit(upperRightPage())"
   >
     {{">>"}}
     <span
       class="absolute w-7 h-7 bg-white border-2 flex justify-center items-center text-base rounded-full text-md top-0 left-1/2 -translate-y-3/4 -translate-x-1/2"
       [class.border-blue-700]="isUpperRightPageHighlighted()"
-      [class.border-gray-400]="!isUpperRightPageHighlighted()"
+      [class.border-gray-900]="!isUpperRightPageHighlighted()"
       >{{upperRightPage()}}</span
     >
   </button>

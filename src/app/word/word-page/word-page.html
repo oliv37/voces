@@ -4,19 +4,22 @@
   [og]="metaOg()"
 />
 
-<div class="flex justify-between items-center">
+<div class="flex justify-center items-center gap-3 py-3">
   <button
     type="button"
-    class="disabled:invisible transition-transform translate-x-1 active:translate-x-0"
-    [disabled]="currentPage() === lastPage()"
+    class="p-1"
+    [class.invisible]="currentPage() === lastPage()"
     (click)="goToNextPage()"
   >
     <app-arrow-left-icon className="w-6 h-6 fill-neutral-800" />
   </button>
+  <div class="w-16 text-3xl text-center font-bold cursor-default">
+    {{currentPage()}}
+  </div>
   <button
     type="button"
-    class="disabled:invisible transition-transform -translate-x-1 active:translate-x-0"
-    [disabled]="currentPage() === 1"
+    class="p-1"
+    [class.invisible]="currentPage() === 1"
     (click)="goToPreviousPage()"
   >
     <app-arrow-right-icon className="w-6 h-6 fill-neutral-800" />
@@ -31,7 +34,7 @@
   }
 </div>
 
-<div class="py-6"></div>
+<div class="py-10"></div>
 
 <app-pagination-bar
   [lastPage]="lastPage()"
