@@ -1189,7 +1189,7 @@ achacoso : diminué, mal en point
 trasquilar : râter la coupe de cheveux
 hurto : vol, larcin
 burdo : grossier
-dudoso : suspect
+dudoso : suspect, louche
 romeria : pélerinage, procession
 estropajo : éponge
 portentoso : prodigieux, stupéfiant
@@ -1301,3 +1301,100 @@ polluelo : oisillon, poussin
 posada : auberge
 prenar : féconder
 gorra : casquette
+insalvable : insurmontable
+irse al trase : tomber à l'eau
+desvario : bêtise, absurdité
+encubierto : dissimulé, caché
+increpar : réprimander
+surtir efecto : faire effet
+cuajar : prendre forme, se concrétiser
+malherido : blessé grave
+pergenar : ébaucher
+alumbrado : éclairage public
+suplir : remplacer
+escaparate : vitrine
+vericueto : chemin escarpé
+cortapisa : contrainte, obstacle
+inducir : inciter
+empatizar : compatir
+pudiente : riche, puissant
+sonsacar : soutirer, arracher
+cantar : chanter
+tira y afloja : négociation acharnée
+desinflar : dégonfler
+aprieto : problème économique
+trizar : fêler, fissurer
+eximir : exempter
+portada : première page
+repunta : cap (géographie)
+derrotar : vaincre
+jarro : pichet, cruche
+tipejo : type, sale type
+aval : garantie
+disparate : folie, fou
+entrampar : piéger
+reflotar : remettre à flot
+lastimoso : pitoyable
+iman : aimant, magnet
+inasequible : exorbitant, inabordable (prix)
+reembolsar : rembourser
+altillo : grenier
+campana extractora de humos : hotte aspirante
+linterna : lampe de poche, torche électrique
+arreciar : s'intensifier
+chillar : crier, hurler
+alambrada : clôture
+rayo : foudre
+bordear : longer
+fogonazo : éclair
+ladera : flanc, versant
+agazaparse : se tapir
+zarza : ronce
+matojo : buisson
+pincho : pointe, pique
+embarrar : couvrir de boue
+impotencia : impuissance
+cojo : boiteux
+aupar : encourager
+chillido : cri, hurlement
+caerse de bruces : tomber la tête la première
+barro : boue, gadoue
+meta : ligne d'arrivée
+tobillo : cheville
+empapar : absorber, éponger
+acobardar : se dérober, se dégonfler
+consuelo : consolation, réconfort
+hocico : museau
+aguacero : averse, pluie
+callejuela : ruelle
+perdido : crade
+respingo : sursaut
+a palo seco : d'un coup
+empalmarse : bander (érection)
+pringoso : collant, gluant
+aparador : vitrine
+potingue : crème cosmétique
+adefesio : mocheté, laidron
+refunfunar : grommeler, bougonner, râler
+quirofano : bloc opératoire
+escudrinar : scruter, examiner
+teson : détermination, persévérance
+resorte : ressort
+violentar : gêner, contrarier
+taxista : chauffeur de taxi
+empenar : mettre en gage
+desbocarse : se déchaîner
+aguantar : soutenir, porter
+sopesar : soupeser
+tejado : toit
+chorrear : couler, dégouliner
+espectro: fantôme, spectre
+desparramar : étaler, répandre
+fisgon : fouineur
+acoso : harcèlement
+agarrarse a un clavo ardiendo : se faire des illusions
+repuntar : émerger
+chubasquero : imperméable, k-way
+oscurecer : la nuit tombe, s'obscurcir
+mazazo : coup de massue
+pretender que : vouloir que
