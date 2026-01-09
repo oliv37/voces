@@ -1189,7 +1189,7 @@ achacoso : diminu\xE9, mal en point
 trasquilar : r\xE2ter la coupe de cheveux
 hurto : vol, larcin
 burdo : grossier
-dudoso : suspect
+dudoso : suspect, louche
 romeria : p\xE9lerinage, procession
 estropajo : \xE9ponge
 portentoso : prodigieux, stup\xE9fiant
@@ -1301,4 +1301,101 @@ polluelo : oisillon, poussin
 posada : auberge
 prenar : f\xE9conder
 gorra : casquette
+insalvable : insurmontable
+irse al trase : tomber \xE0 l'eau
+desvario : b\xEAtise, absurdit\xE9
+encubierto : dissimul\xE9, cach\xE9
+increpar : r\xE9primander
+surtir efecto : faire effet
+cuajar : prendre forme, se concr\xE9tiser
+malherido : bless\xE9 grave
+pergenar : \xE9baucher
+alumbrado : \xE9clairage public
+suplir : remplacer
+escaparate : vitrine
+vericueto : chemin escarp\xE9
+cortapisa : contrainte, obstacle
+inducir : inciter
+empatizar : compatir
+pudiente : riche, puissant
+sonsacar : soutirer, arracher
+cantar : chanter
+tira y afloja : n\xE9gociation acharn\xE9e
+desinflar : d\xE9gonfler
+aprieto : probl\xE8me \xE9conomique
+trizar : f\xEAler, fissurer
+eximir : exempter
+portada : premi\xE8re page
+repunta : cap (g\xE9ographie)
+derrotar : vaincre
+jarro : pichet, cruche
+tipejo : type, sale type
+aval : garantie
+disparate : folie, fou
+entrampar : pi\xE9ger
+reflotar : remettre \xE0 flot
+lastimoso : pitoyable
+iman : aimant, magnet
+inasequible : exorbitant, inabordable (prix)
+reembolsar : rembourser
+altillo : grenier
+campana extractora de humos : hotte aspirante
+linterna : lampe de poche, torche \xE9lectrique
+arreciar : s'intensifier
+chillar : crier, hurler
+alambrada : cl\xF4ture
+rayo : foudre
+bordear : longer
+fogonazo : \xE9clair
+ladera : flanc, versant
+agazaparse : se tapir
+zarza : ronce
+matojo : buisson
+pincho : pointe, pique
+embarrar : couvrir de boue
+impotencia : impuissance
+cojo : boiteux
+aupar : encourager
+chillido : cri, hurlement
+caerse de bruces : tomber la t\xEAte la premi\xE8re
+barro : boue, gadoue
+meta : ligne d'arriv\xE9e
+tobillo : cheville
+empapar : absorber, \xE9ponger
+acobardar : se d\xE9rober, se d\xE9gonfler
+consuelo : consolation, r\xE9confort
+hocico : museau
+aguacero : averse, pluie
+callejuela : ruelle
+perdido : crade
+respingo : sursaut
+a palo seco : d'un coup
+empalmarse : bander (\xE9rection)
+pringoso : collant, gluant
+aparador : vitrine
+potingue : cr\xE8me cosm\xE9tique
+adefesio : mochet\xE9, laidron
+refunfunar : grommeler, bougonner, r\xE2ler
+quirofano : bloc op\xE9ratoire
+escudrinar : scruter, examiner
+teson : d\xE9termination, pers\xE9v\xE9rance
+resorte : ressort
+violentar : g\xEAner, contrarier
+taxista : chauffeur de taxi
+empenar : mettre en gage
+desbocarse : se d\xE9cha\xEEner
+aguantar : soutenir, porter
+sopesar : soupeser
+tejado : toit
+chorrear : couler, d\xE9gouliner
+espectro : fant\xF4me, spectre
+desparramar : \xE9taler, r\xE9pandre
+fisgon : fouineur
+acoso : harc\xE8lement
+agarrarse a un clavo ardiendo : se faire des illusions
+repuntar : \xE9merger
+chubasquero : imperm\xE9able, k-way
+oscurecer : la nuit tombe, s'obscurcir
+mazazo : coup de massue
+pretender que : vouloir que
 `;export{a as default};

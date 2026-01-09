@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1767731849959,
+  "timestamp": 1767999422271,
   "index": "/voces/index.csr.html",
   "assetGroups": [
     {
@@ -15,13 +15,13 @@
         "/voces/chunk-5SYRKTOG.js",
         "/voces/chunk-MSQDZ5JS.js",
         "/voces/chunk-NWJ5J3BN.js",
-        "/voces/chunk-V3BIWLBQ.js",
+        "/voces/chunk-YRN4GLNK.js",
         "/voces/favicon.ico",
         "/voces/index.csr.html",
         "/voces/index.html",
-        "/voces/main-DYOJSPHD.js",
+        "/voces/main-HTG7BQ2Q.js",
         "/voces/manifest.webmanifest",
-        "/voces/styles-EKEIBKOZ.css"
+        "/voces/styles-TDLE725O.css"
       ],
       "patterns": []
     },
@@ -101,7 +101,7 @@
     "/voces/chunk-5SYRKTOG.js": "dd2a16679c87cb1d9599662fca6da2e5445f27e9",
     "/voces/chunk-MSQDZ5JS.js": "e5b17be41750fc771dac554a7a24e3b4d9585aa7",
     "/voces/chunk-NWJ5J3BN.js": "2543c7f0eb15dc020472356de4d8aa4a73797732",
-    "/voces/chunk-V3BIWLBQ.js": "6da6230602c7eec2d84f4356cff70268eaba8845",
+    "/voces/chunk-YRN4GLNK.js": "4e668953d0de1bd944f06bb5e0754d8849fa0101",
     "/voces/favicon.ico": "6c36006412f49aa26d22bcab2cc55d40b170afe1",
     "/voces/icons/icon_x128.png": "63adda199a5056e851b684128d5caa1fb6941254",
     "/voces/icons/icon_x144.png": "1969a1c732c98ce350646a652f5bb823505b3c52",
@@ -117,9 +117,9 @@
     "/voces/icons/maskable_icon_x512.png": "0ea34f6ac745878fab0eb90758f31152e6bd2df5",
     "/voces/icons/maskable_icon_x72.png": "098b5ac215d7902534fbcc341ccfa06187895072",
     "/voces/icons/maskable_icon_x96.png": "6754b5693cec010c1be393c84ae49e17d43099f5",
-    "/voces/index.csr.html": "a051fd1f896e53aecb7c4885b3bad1ac7912b86c",
-    "/voces/index.html": "1e15c11b00e2843f7ea587f8e2540467ec73d938",
-    "/voces/main-DYOJSPHD.js": "b3550556dd81a7c88dd518a2fff726a9410150eb",
+    "/voces/index.csr.html": "98a89044324550bd693a92d4a155a5c7171b7291",
+    "/voces/index.html": "3ed5c27f7af1b1016a8a8aede1b4039d9cc9e2d3",
+    "/voces/main-HTG7BQ2Q.js": "8dba00f50a5ec7fd3a965fd3996af0249602b6ba",
     "/voces/manifest.webmanifest": "6115527c068bc14d54197832ec8abb71ec416c89",
     "/voces/media/roboto-italic-100-R35EH5WL.woff2": "e2c2939c2cba2abeb96bfd7fb4ee60a1901e904a",
     "/voces/media/roboto-italic-300-MKWIZDVG.woff2": "01b4b49775e9584404dcb42704f1bd6f09508ff2",
@@ -133,7 +133,7 @@
     "/voces/media/roboto-normal-500-7B6H4CLQ.woff2": "44f495a7f32620e51acca2e78f7e0615cb305781",
     "/voces/media/roboto-normal-700-AMOPRVUF.woff2": "fabea5ad92ed3e2431659b02e7624df30d0c6bbc",
     "/voces/media/roboto-normal-900-EI2ZKTXR.woff2": "30f546f4ee2e6285462360355942c5898ff0bf1c",
-    "/voces/styles-EKEIBKOZ.css": "aa9704af26b6bb305deb151394d4e9557a2e0a9b"
+    "/voces/styles-TDLE725O.css": "af2efef7c4e04d58473f71eafb8ca1ae37e0d748"
   },
   "navigationUrls": [
     {
