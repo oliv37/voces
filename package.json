@@ -38,7 +38,7 @@
     "@eslint/js": "^9.39.3",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/express": "^5.0.6",
-    "@types/node": "^24.10.13",
+    "@types/node": "^26.1.2",
     "angular-eslint": "^21.2.0",
     "eslint": "^9.39.3",
     "gh-pages": "^6.3.0",
