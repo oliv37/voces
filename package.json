@@ -33,7 +33,7 @@
   "devDependencies": {
     "@angular-eslint/builder": "21.2.0",
     "@angular/build": "^21.1.5",
-    "@angular/cli": "^21.1.5",
+    "@angular/cli": "^21.2.19",
     "@angular/compiler-cli": "^21.1.5",
     "@eslint/js": "^9.39.3",
     "@tailwindcss/postcss": "^4.2.1",
